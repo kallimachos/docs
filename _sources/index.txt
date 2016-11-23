@@ -14,3 +14,4 @@ A collection of documents on various subjects written by
    git-guide/index.rst
    rax/index.rst
    sphinx/index.rst
+   talks/index.rst
