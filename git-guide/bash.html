@@ -93,7 +93,6 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Using Bash Scripts</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#sample-scripts">Sample Scripts</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#repocheck"><code class="docutils literal"><span class="pre">repocheck</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#master"><code class="docutils literal"><span class="pre">master</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#branchlist"><code class="docutils literal"><span class="pre">branchlist</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pullall"><code class="docutils literal"><span class="pre">pullall</span></code></a></li>
 </ul>
@@ -212,26 +211,6 @@ a message, run <code class="docutils literal"><span class="pre">git</span> <span
 </pre></div>
 </div>
 </div>
-<div class="section" id="master">
-<h3><a class="reference internal" href="scripts.html#master"><span class="std std-ref">master.sh</span></a><a class="headerlink" href="#master" title="Permalink to this headline">#</a></h3>
-<p>This script runs <code class="docutils literal"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">master</span></code> on all repositories. Note that
-if you run this command with uncommitted changes in non-master branches,
-those changes will be copied to their corresponding master branch.</p>
-<p>Example Output:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
-<span class="n">Already</span> <span class="n">on</span> <span class="s1">&#39;master&#39;</span>
-
-<span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">release</span><span class="o">-</span><span class="n">notes</span>
-<span class="n">Already</span> <span class="n">on</span> <span class="s1">&#39;master&#39;</span>
-
-<span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">-</span><span class="n">guide</span>
-<span class="n">Already</span> <span class="n">on</span> <span class="s1">&#39;master&#39;</span>
-
-<span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">user</span><span class="o">-</span><span class="n">guide</span>
-<span class="n">Already</span> <span class="n">on</span> <span class="s1">&#39;master&#39;</span>
-</pre></div>
-</div>
-</div>
 <div class="section" id="branchlist">
 <h3><a class="reference internal" href="scripts.html#branchlist"><span class="std std-ref">branchlist.sh</span></a><a class="headerlink" href="#branchlist" title="Permalink to this headline">#</a></h3>
 <p>This script runs <code class="docutils literal"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-a</span></code> on all repositories. It shows you all
@@ -269,7 +248,7 @@ checked out. Remove the <code class="docutils literal"><span class="pre">-a</spa
 <div class="section" id="pullall">
 <h3><a class="reference internal" href="scripts.html#pullall"><span class="std std-ref">pullall.sh</span></a><a class="headerlink" href="#pullall" title="Permalink to this headline">#</a></h3>
 <p>This script runs <code class="docutils literal"><span class="pre">git</span> <span class="pre">pull</span></code> on all remote repositories. It is helpful
-for pulling down changes from all the remote repositories in one action.</p>
+for pulling down changes from all your remote repositories in one action.</p>
 <p>Example Output:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
 <span class="n">Already</span> <span class="n">up</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">date</span><span class="o">.</span>

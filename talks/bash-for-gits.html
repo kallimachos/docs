@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Bash for gits: A Bash scripting tutorial for Git users &mdash; Document Repository  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Document Repository  documentation" href="../index.html"/>
+        <link rel="up" title="Talks and presentations" href="index.html"/>
+        <link rel="next" title="Software Development for Technical Writing" href="code-for-writers.html"/>
+        <link rel="prev" title="Talks and presentations" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Document Repository
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../events/index.html">Event Logs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-guide/index.html">Git Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rax/index.html">Rackspace Public Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx Docs</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Talks and presentations</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Bash for gits: A Bash scripting tutorial for Git users</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aliases-scripts-and-beyond">Aliases, scripts, and beyond</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-blocks">Building blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#some-other-useful-scripts">Some other useful scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-to-next">Where to next</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="code-for-writers.html">Software Development for Technical Writing</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Document Repository</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Talks and presentations</a> &raquo;</li>
+      
+    <li>Bash for gits: A Bash scripting tutorial for Git users</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/talks/bash-for-gits.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bash-for-gits-a-bash-scripting-tutorial-for-git-users">
+<h1>Bash for gits: A Bash scripting tutorial for Git users<a class="headerlink" href="#bash-for-gits-a-bash-scripting-tutorial-for-git-users" title="Permalink to this headline">#</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li>Assume everyone is familiar with running commands in a bash shell</li>
+<li>Note that Mac and Linux bash shells have a few minor differences; we'll see
+some examples when we look at my <code class="docutils literal"><span class="pre">.bashrc</span></code> file</li>
+<li>Windows 10 now supports Bash using a Linux subsystem, but it is not
+built-in. Still, the concepts presented here apply to the Windows command
+line, even if the syntax does not.</li>
+</ul>
+</div>
+<div class="section" id="aliases-scripts-and-beyond">
+<h2>Aliases, scripts, and beyond<a class="headerlink" href="#aliases-scripts-and-beyond" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li>Aliases are good for wrapping long commands or calling scripts: e.g.
+<code class="docutils literal"><span class="pre">master</span></code> and <code class="docutils literal"><span class="pre">la</span></code> in my <code class="docutils literal"><span class="pre">.bashrc</span></code>.</li>
+<li>Scripts are good for stringing a series of commands together or repeating
+the same commands multiple times.</li>
+<li>Bash is Turing complete, but it isn't really a general purpose programming
+language. If you start finding things getting complicated, it is probably
+time to consider a fully-featured language like Python.</li>
+<li>Of course, you can write scripts in many high-level programming languages as
+well. Python is a good example. But for automating tasks around your system
+most of the time Bash is quicker and easier to use than Python.</li>
+<li>give example of Bash script better than Python script, then example of
+Python script better than Bash script.</li>
+</ul>
+</div>
+<div class="section" id="building-blocks">
+<h2>Building blocks<a class="headerlink" href="#building-blocks" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">bump.sh</span></code>: explain sh extension, shebang, comments, how to use an alias.</li>
+<li><code class="docutils literal"><span class="pre">stable.sh</span></code>: introduces a for loop and an array.</li>
+<li><code class="docutils literal"><span class="pre">rackup.sh</span></code>: iterate through repositories and update.</li>
+<li><code class="docutils literal"><span class="pre">up.sh</span></code>: iterate through directories and repositories and update.</li>
+</ul>
+</div>
+<div class="section" id="some-other-useful-scripts">
+<h2>Some other useful scripts<a class="headerlink" href="#some-other-useful-scripts" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">repocheck.sh</span></code>: check status of all repositories.</li>
+<li><code class="docutils literal"><span class="pre">clean.sh</span></code>: cleaning your repositories.</li>
+<li>include an example of something not git.</li>
+</ul>
+</div>
+<div class="section" id="tips">
+<h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li>Tips: set -x and +x, set -e and +e, using &amp;&amp;, be very careful about running
+delete commands</li>
+<li>Use GitHub: it gives you practice and makes it easy to share your scripts
+between systems and with other people.</li>
+<li>Always document your scripts!</li>
+</ul>
+</div>
+<div class="section" id="where-to-next">
+<h2>Where to next<a class="headerlink" href="#where-to-next" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li>online tutorials, but to be honest I find with bash it is
+generally more of a need to know thing. When I need to know it, I
+cannibalize my previous work or Google it to see what people have done on
+Stack Overflow. In other words, learn by doing.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="code-for-writers.html" class="btn btn-neutral float-right" title="Software Development for Technical Writing" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Talks and presentations" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Brian Moss.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

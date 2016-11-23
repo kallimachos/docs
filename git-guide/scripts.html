@@ -93,7 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="bash.html">Using Bash Scripts</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Scripts</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#repocheck-sh">repocheck.sh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#master-sh">master.sh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#branchlist-sh">branchlist.sh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pullall-sh">pullall.sh</a></li>
 </ul>
@@ -178,26 +177,6 @@ echo
 </pre></div>
 </div>
 </div>
-<div class="section" id="master-sh">
-<span id="master"></span><h2>master.sh<a class="headerlink" href="#master-sh" title="Permalink to this headline">#</a></h2>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
-
-# This script runs &#39;git checkout master&#39; on all repositories. Note that
-# if you run this command with uncommitted changes in non-master branches,
-# those changes will be copied to their corresponding master branch.
-
-# You must change ~/docs/* to the location of the git repositories on your
-# local machine.
-
-for dir in ~/docs/*; do
-    if test -d $dir &amp;&amp; test -e $dir/.git; then
-        cd $dir &amp;&amp; echo $dir
-        git checkout master &amp;&amp; echo
-    fi
-done
-</pre></div>
-</div>
-</div>
 <div class="section" id="branchlist-sh">
 <span id="branchlist"></span><h2>branchlist.sh<a class="headerlink" href="#branchlist-sh" title="Permalink to this headline">#</a></h2>
 <div class="code highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
@@ -223,7 +202,7 @@ done
 <div class="code highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
 
 # This script runs &#39;git pull&#39; on all remote repositories. It is helpful
-# for pulling down changes from all the remote repositories in one action.
+# for pulling down changes from all your remote repositories in one action.
 
 # You must change ~/docs/* to the location of the git repositories on your
 # local machine.

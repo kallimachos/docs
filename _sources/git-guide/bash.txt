@@ -73,29 +73,6 @@ Example Output:
    /docs/user-guide
 
 
-:ref:`master`
--------------
-
-This script runs ``git checkout master`` on all repositories. Note that
-if you run this command with uncommitted changes in non-master branches,
-those changes will be copied to their corresponding master branch.
-
-Example Output:
-
-.. code::
-
-   /docs/administration-guide
-   Already on 'master'
-
-   /docs/release-notes
-   Already on 'master'
-
-   /docs/rest-api-guide
-   Already on 'master'
-
-   /docs/user-guide
-   Already on 'master'
-
 :ref:`branchlist`
 -----------------
 
@@ -137,7 +114,7 @@ Example Output:
 --------------
 
 This script runs ``git pull`` on all remote repositories. It is helpful
-for pulling down changes from all the remote repositories in one action.
+for pulling down changes from all your remote repositories in one action.
 
 Example Output:
 
