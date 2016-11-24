@@ -38,6 +38,7 @@ except ImportError:
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'hieroglyph',
     'sphinx.ext.ifconfig',
     'sphinx.ext.todo',
     'sphinx-prompt',
@@ -280,3 +281,6 @@ texinfo_documents = [('index', 'documentation-repository',
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 # texinfo_no_detailmenu = False
+
+# -- Hierogyph options ----------------------------------------------------
+slide_theme = 'slides2'

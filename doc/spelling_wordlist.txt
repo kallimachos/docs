@@ -9,6 +9,7 @@ Arduino
 arduino
 backend
 backends
+bashrc
 blog
 bolditalic
 branchlist
