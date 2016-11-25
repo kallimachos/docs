@@ -11,11 +11,16 @@ Bash for gits: A Bash scripting tutorial for Git users
 Introduction
 ~~~~~~~~~~~~
 
+-  This tutorial assumes you are familiar with running commands in a Bash
+   shell.
+
 .. rst-class:: build
 
--  This tutorial assumes you are familiar with running commands in a bash shell
 -  Mac and Linux bash shells have a few minor differences; we'll see
-   some examples when we look at my ``.bashrc`` file
+   some examples when we look at my **.bashrc** file.
+
+.. rst-class:: build
+
 -  Windows 10 now supports Bash using a Linux subsystem, but it is not
    built-in. Still, the concepts presented here apply to the Windows command
    line, even if the syntax does not.
@@ -23,14 +28,21 @@ Introduction
 .bashrc
 ~~~~~~~
 
-``.bashrc`` is executed when you open a Bash terminal. It is useful for
-setting certain configuration options and creating aliases.
+-  **.bashrc** is executed when you open a Bash terminal. It is useful for
+   setting certain configuration options and creating aliases, and is usually
+   located at **~/.bashrc**.
 
-If you make a change to ``.bashrc``, you must either open a new terminal or
-run ``source .bashrc`` in order for the changes to take effect.
+.. rst-class:: build
+
+-  If you make a change to **.bashrc**, you must either open a new terminal or
+   run ``source .bashrc`` in order for the changes to take effect.
+
+.. nextslide::
 
 In this example, we configure the prompt, add an application to the PATH, and
 create some aliases.
+
+Note that the ``#`` symbol indicates a comment.
 
 .. code::
 
@@ -41,7 +53,6 @@ create some aliases.
    export PATH=/opt/Komodo-Edit-10/bin:$PATH
 
    # User specific aliases and functions
-
    alias grep='grep --color=auto'
    alias la='ls -laG'
    alias master='git checkout master'
@@ -51,7 +62,7 @@ create some aliases.
 Handling different operating systems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Because ``.bashrc`` is executed, it can include arbitrary code.
+Because **.bashrc** is executed, it can include arbitrary code.
 
 In this example, an ``if`` clause is used to set aliases depending on the
 operating system.
@@ -77,15 +88,6 @@ Script aliases
 You can call your scripts directly from the command line, but it is much more
 convenient to give them aliases if you use them frequently.
 
-Note how the Python scripts are called using p3, which is set earlier in
-``.bashrc`` to equal ``python3``.
-
-.. warning::
-
-   Do not use an alias that is a Bash command or reserved word (e.g. ``sed``,
-   ``done``) unless you truly want to override their build-in use.
-   Doing so will cause frustrating errors that are difficult to debug.
-
 .. code::
 
    # bash script aliases
@@ -98,28 +100,35 @@ Note how the Python scripts are called using p3, which is set earlier in
    alias up='~/scripts/bash/up.sh'
    alias stable='~/scripts/bash/stable.sh'
 
-   # python script aliases
-   alias check='p3 ~/scripts/python/scripts/uptime.py'
-   alias table='p3 ~/scripts/python/scripts/table.py'
-   alias zen='p3 ~/code/python/dailyzen/dailyzen.py'
+.. warning::
+
+   Do not use an alias that is an existing command or reserved word (e.g.
+   ``sed``, ``done``) unless you truly want to override their built-in use.
+   Doing so is likely to cause frustrating errors that are difficult to debug.
 
 Scripting with Bash
 ~~~~~~~~~~~~~~~~~~~
 
 -  Scripts are good for stringing a series of commands together or repeating
    the same commands multiple times.
+
+.. rst-class:: build
+
 -  Bash is Turing complete, but it isn't really a general purpose programming
    language. If you start finding things getting complicated, it is probably
    time to consider a fully-featured language like Python.
+
+.. rst-class:: build
+
 -  Of course, you can write scripts in many high-level programming languages as
-   well. Python is a good example. But for automating tasks around your system
-   most of the time Bash is quicker and easier to use than Python.
+   well. For automating tasks around your system, however, Bash is often
+   quicker and easier.
 
 Bash > Python
 ~~~~~~~~~~~~~
 
 As a very simple example, consider what is required to list the contents of
-a directory. Using Bash is easier and faster.
+a directory.
 
 **Bash**
 
@@ -128,43 +137,40 @@ a directory. Using Bash is easier and faster.
    $ ls
    conf.py  git-guide  images  index.rst  Makefile
 
+|
+
 **Python**
 
 .. code::
 
-   $ python
+   $ python3
    >>> import os
-   >>> os.listdir(os.getcwd())
-   ['images', 'git-guide', 'Makefile', 'index.rst', 'conf.py']
+   >>> for file in os.listdir():
+   ...     print(file, end="  ")
+   conf.py  git-guide  images  index.rst  Makefile
 
 Bash < Python
 ~~~~~~~~~~~~~
 
 In this example, we fetch and parse some JSON from an online monitoring
 service, then print the status of each monitor to the command line. While this
-could be achieved with Bash, it is much easier to do with the logic structures
-and libraries available in Python.
-
-**Bash** - not going to try
+could be achieved with Bash, it is easier to do with the syntax and libraries
+available in Python.
 
 **Python**
 
 .. code::
 
    import json
-   import logging
    import requests
 
    key = fetchkey()
    url = HOST + key + FORMAT
    try:
        r = requests.get(url)
-       logging.debug('Content of request: ' + r.text)
    except Exception as e:
-       logging.error(e)
-       response = input('\nWebsite error\n')
-       exit(0)
-   logging.debug('Attempting to load json')
+       print('Error: ' + e)
+       exit(1)
    data = (json.loads(r.text))
    for monitor in data['monitors']['monitor']:
        print(status_code[monitor['status']] + monitor['friendlyname'])
@@ -172,8 +178,8 @@ and libraries available in Python.
 Updating master in a single repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``bump.sh`` is a simple script that wraps the commands required to fetch from
-upstream, merge into master, then push to origin.
+**bump.sh** wraps the commands required to fetch from upstream, merge into
+master, then push to origin.
 
 .. code::
 
@@ -186,36 +192,44 @@ upstream, merge into master, then push to origin.
    git merge upstream/master
    git push origin master
 
-file names
-   It is not required to use the ``.sh`` extension, but I prefer it so the file
-   cannot be confused with another type of file.
+.. rst-class:: build
 
-shebang
-   This line specifies the interpreter to use for running the script.
+-  **file names** - you to not have to use **.sh**, but I think extensions are
+   helpful for minimizing confusion and easier globbing (``*.sh``).
 
-#
-   This comments the rest of the line.
+-  **shebang** (``#!/bin/bash``) - this line specifies the interpreter to use
+   for running the script.
 
+-  ``#`` - the hash symbol comments the text to its right.
 
-This script is aliased in ``.bashrc``:
+.. nextslide::
 
-.. code::
+**Running the script**
 
-   alias bump='~/scripts/bash/bump.sh'
+-  This script is aliased in **.bashrc**:
 
-Thus, it can be run from the command line:
+   .. code::
 
-.. code::
+      alias bump='~/scripts/bash/bump.sh'
 
-   $ bump
+.. rst-class:: build
+
+-  Thus, it can be run from the command line when you are in an appropriate
+   directory:
+
+   .. code::
+
+      $ cd docs-rpc
+      $ bump
 
 Updating stable branches in a single repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``stable.sh`` iterates through a list of branch names, merging upstream into
-each one and pushing it to origin.
+**stable.sh** iterates through a list of branch names, merging upstream into
+each one and pushing them to origin.
 
-This script introduces the concepts of arrays and for loops.
+This script uses a ``for`` loop to iterate through an array (i.e. list of
+values).
 
 .. code::
 
@@ -235,7 +249,7 @@ This script introduces the concepts of arrays and for loops.
 Updating multiple repositories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``rackup.sh`` iterates through repository-containing directories in a single
+**rackup.sh** iterates through repository-containing directories in a single
 directory and updates each one.
 
 .. code::
@@ -252,7 +266,7 @@ directory and updates each one.
 Updating multiple directories with multiple repositories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``up.sh`` iterates through multiple directories, each containing multiple
+**up.sh** iterates through multiple directories, each containing multiple
 repository-containing directories, and updates each one.
 
 Note how this script calls other scripts using absolute paths.
@@ -274,16 +288,10 @@ Note how this script calls other scripts using absolute paths.
    bash ~/scripts/bash/rackup.sh
    echo
 
-   echo $div
-   echo 'My GitHub Repositories'
-   echo $div
-   bash ~/scripts/bash/mygit.sh
-   echo
-
 Checking the status of your repositories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``repocheck.sh`` is one of the scripts I call most often. It runs
+**repocheck.sh** is one of the scripts I use most often. It runs
 ``git status`` on all my repositories and tells me if I have uncommitted work
 or if I'm on a non-master branch. I always like to run this before running
 update scripts to prevent merge problems.
@@ -292,7 +300,6 @@ update scripts to prevent merge problems.
 
    repos=(openstack rpcdocs code code/python scripts)
 
-   echo
    for item in ${repos[@]}; do
        root=~/$item/*
        for dir in $root; do
@@ -305,18 +312,19 @@ update scripts to prevent merge problems.
            fi
        done
    done
-   echo
 
 Cleaning your repositories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``clean.sh`` performs a ``git clean`` on all repositories. It runs
-``repocheck.sh`` first and asks for confirmation to continue. This is because
+**clean.sh** performs a ``git clean`` on all repositories. It runs
+**repocheck.sh** first and asks for confirmation to continue. This is because
 it deletes uncommitted files.
 
 .. warning::
 
    Destructive. This script deletes uncommitted files.
+
+.. nextslide::
 
 .. code::
 
@@ -375,13 +383,12 @@ machine.
        /run/media/bmoss/FreeAgent\ GoFlex\ Drive/FedoraBackup/home/bmoss/
    fi
 
+.. nextslide::
+
 In a former life, I needed to clean up a few hundred XML files. Perfect time
 for a script.
 
 .. code::
-
-   # Removes whitespace between <screen> tags and swaps invalid characters for
-   # valid XML codes.
 
    sed -i ':a;N;$!ba;s/[ \t]*<screen>\n/<screen>/g' $1
    sed -i ':a;N;$!ba;s/[ \t]*<screen>\t/<screen>/g' $1
@@ -405,6 +412,17 @@ Activate debugging
 
    Cancel setting using ``set +x``.
 
+GitHub
+   Use GitHub: it gives you practice and makes it easy to share your scripts
+   between systems and with other people.
+
+Document
+   Always document your scripts! It is amazing how quickly you forget what
+   a script does when you haven't used it in a while. Plus, if it is
+   documented it is a lot easier to share it with other people.
+
+.. nextslide::
+
 Stringing together commands
    To execute commands in a series, separate with ``;`` or put each command
    on a newline.
@@ -426,20 +444,12 @@ Stringing together commands
       /home/scripts/doc
       cat: temp.rst: No such file or directory
 
-GitHub
-   Use GitHub: it gives you practice and makes it easy to share your scripts
-   between systems and with other people.
-
-Document
-   Always document your scripts! It is amazing how quickly you forget what
-   a script does when you haven't used it in a while. Plus, if it is
-   documented it is a lot easier to share it with other people.
-
 Warning
 ~~~~~~~
 
-Be very careful when scripting destructive commands. If you feel tempted to use
-``-f``, think long and hard.
+Be very careful when scripting destructive commands. Iterating through
+directories and deleting is an easy way to cause problems. If you feel tempted
+to use ``-f``, think long and hard.
 
 **BAD**
 
