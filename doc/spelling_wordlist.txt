@@ -38,6 +38,7 @@ Gerrit
 gerrit
 GitHub
 github
+globbing
 Google
 govhack
 hackable

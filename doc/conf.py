@@ -284,3 +284,4 @@ texinfo_documents = [('index', 'documentation-repository',
 
 # -- Hierogyph options ----------------------------------------------------
 slide_theme = 'slides2'
+slide_theme_options = {'custom_css': 'myslide.css'}
