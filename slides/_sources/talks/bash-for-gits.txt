@@ -359,8 +359,8 @@ Scripting other things
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Scripts can contain anything you can run from the command line, not just git
-commands. For example, script uses ``rsync`` to backup a computer running
-Fedora.
+commands. For example, this script uses ``rsync`` to backup a computer running
+Fedora:
 
 .. code::
 
@@ -384,7 +384,7 @@ Fedora.
 
 .. nextslide::
 
-Making identical changes to a large number of files is perfect for scripting.
+Making identical changes to a large number of files is perfect for scripting:
 
 .. code::
 

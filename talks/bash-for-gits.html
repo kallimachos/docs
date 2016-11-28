@@ -469,8 +469,8 @@ echo
 <div class="section" id="scripting-other-things">
 <h2>Scripting other things<a class="headerlink" href="#scripting-other-things" title="Permalink to this headline">#</a></h2>
 <p>Scripts can contain anything you can run from the command line, not just git
-commands. For example, script uses <code class="docutils literal"><span class="pre">rsync</span></code> to backup a computer running
-Fedora.</p>
+commands. For example, this script uses <code class="docutils literal"><span class="pre">rsync</span></code> to backup a computer running
+Fedora:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">[</span> <span class="s2">&quot;$1&quot;</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span> <span class="p">];</span> <span class="n">then</span>
     <span class="n">sudo</span> <span class="n">rsync</span> <span class="o">-</span><span class="n">azvACHS</span> <span class="o">--</span><span class="n">delete</span> \
     <span class="o">--</span><span class="n">progress</span> <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;/dev/&quot;</span><span class="p">,</span><span class="s2">&quot;/proc/&quot;</span><span class="p">,</span><span class="s2">&quot;/sys/&quot;</span><span class="p">,</span><span class="s2">&quot;/tmp/&quot;</span><span class="p">,</span><span class="s2">&quot;/run/&quot;</span><span class="p">,</span><span class="s2">&quot;/mnt/&quot;</span><span class="p">}</span> \
@@ -490,7 +490,7 @@ Fedora.</p>
 <span class="n">fi</span>
 </pre></div>
 </div>
-<p>Making identical changes to a large number of files is perfect for scripting.</p>
+<p>Making identical changes to a large number of files is perfect for scripting:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span>sed -i &#39;:a;N;$!ba;s/[ \t]*&lt;screen&gt;\n/&lt;screen&gt;/g&#39; $1
 sed -i &#39;:a;N;$!ba;s/[ \t]*&lt;screen&gt;\t/&lt;screen&gt;/g&#39; $1
 sed -i &quot;s/\`/&#39;/g&quot; $1
