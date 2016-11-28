@@ -1,0 +1,697 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+--><!DOCTYPE html>
+
+
+<html>
+<head>
+  <title>Bash for gits: A Bash scripting tutorial for Git users &mdash; Document Repository  documentation</title>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="hieroglyph-title" data-config-title>
+  <meta name="hieroglyph-subtitle" data-config-subtitle>
+  <meta name="hieroglyph-presenter" data-config-presenter>
+
+  
+  <link rel="stylesheet" media="all"
+        href="../_static/theme/css/default.css">
+  <link rel="stylesheet" media="all"
+        href="../_static/theme/css/hieroglyph.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)"
+        href="../_static/theme/css/phone.css">
+
+    
+    <link rel="stylesheet" href="../_static/myslide.css"
+          type="text/css" />
+    
+
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+
+    <script data-main="../_static/js/slides"
+            src="../_static/js/require-1.0.8.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Document Repository  documentation" href="../index.html" />
+    <link rel="up" title="Talks and presentations" href="index.html" />
+    <link rel="next" title="Software Development for Technical Writing" href="code-for-writers.html" />
+    <link rel="prev" title="Talks and presentations" href="index.html" /> 
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  
+
+  
+    <slide class="title-slide segue nobackground level-1" id="bash-for-gits-a-bash-scripting-tutorial-for-git-users">
+    <hgroup>
+      <h1>Bash for gits: A Bash scripting tutorial for Git users</h1>
+    </hgroup>
+    <article class="">
+      <div class="title-image figure">
+<img alt="../_images/bash-logo.png" src="../_images/bash-logo.png" />
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="introduction">
+    <hgroup>
+      <h2>Introduction</h2>
+    </hgroup>
+    <article class="">
+      <ul class="simple">
+<li>This tutorial assumes you are familiar with running commands in a Bash
+shell.</li>
+</ul>
+<ul class="build simple">
+<li>Mac and Linux bash shells have a few minor differences; we'll see
+some examples when we look at my <strong>.bashrc</strong> file.</li>
+</ul>
+<ul class="build simple">
+<li>Windows 10 now supports Bash using a Linux subsystem, but it is not
+built-in. Still, the concepts presented here apply to the Windows command
+line, even if the syntax does not.</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="bashrc">
+    <hgroup>
+      <h2>.bashrc</h2>
+    </hgroup>
+    <article class="">
+      <ul class="simple">
+<li><strong>.bashrc</strong> is executed when you open a Bash terminal. It is useful for
+setting certain configuration options and creating aliases, and is usually
+located at <strong>~/.bashrc</strong>.</li>
+</ul>
+<ul class="build simple">
+<li>If you make a change to <strong>.bashrc</strong>, you must either open a new terminal or
+run <code class="docutils literal"><span class="pre">source</span> <span class="pre">.bashrc</span></code> in order for the changes to take effect.</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="id2">
+    <hgroup>
+      <h2>.bashrc</h2>
+    </hgroup>
+    <article class="">
+      <p>In this example, we configure the prompt, add an application to the PATH, and
+create some aliases.</p>
+<p>Note that the <code class="docutils literal"><span class="pre">#</span></code> symbol indicates a comment.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span># Set prompt
+PS1=&quot;[\u \W]\$ &quot;
+
+# Path additions
+export PATH=/opt/Komodo-Edit-10/bin:$PATH
+
+# User specific aliases and functions
+alias grep=&#39;grep --color=auto&#39;
+alias la=&#39;ls -laG&#39;
+alias master=&#39;git checkout master&#39;
+alias p3=&#39;python3&#39;
+alias p=&#39;python&#39;
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="handling-different-operating-systems">
+    <hgroup>
+      <h2>Handling different operating systems</h2>
+    </hgroup>
+    <article class="">
+      <p>Because <strong>.bashrc</strong> is executed, it can include arbitrary code.</p>
+<p>In this example, an <code class="docutils literal"><span class="pre">if</span></code> clause is used to set aliases depending on the
+operating system.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span># Handle differences between Mac and Linux OS
+if [[ $OSTYPE =~ ^darwin ]]; then
+    alias fox=&#39;open -a &quot;firefox&quot;&#39;
+    alias go=&#39;open&#39;
+    alias ls=&#39;ls -G&#39;
+    alias music=&#39;open -a &quot;itunes&quot;&#39;
+else
+    alias fox=&#39;setsid firefox &gt;/dev/null 2&gt;&amp;1&#39;
+    alias go=&#39;gnome-open&#39;
+    alias ls=&#39;ls -G --color=auto&#39;
+    alias music=&#39;setsid vlc &gt;/dev/null 2&gt;&amp;1&#39;
+fi
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="script-aliases">
+    <hgroup>
+      <h2>Script aliases</h2>
+    </hgroup>
+    <article class="">
+      <p>You can call your scripts directly from the command line, but it is much more
+convenient to give them aliases if you use them frequently.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># bash script aliases</span>
+<span class="n">alias</span> <span class="n">backup</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/backup.sh&#39;</span>
+<span class="n">alias</span> <span class="n">bump</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/bump.sh&#39;</span>
+<span class="n">alias</span> <span class="n">clean</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/clean.sh&#39;</span>
+<span class="n">alias</span> <span class="n">mygit</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/mygit.sh&#39;</span>
+<span class="n">alias</span> <span class="n">rackup</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/rackup.sh&#39;</span>
+<span class="n">alias</span> <span class="n">repocheck</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/repocheck.sh&#39;</span>
+<span class="n">alias</span> <span class="n">up</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/up.sh&#39;</span>
+<span class="n">alias</span> <span class="n">stable</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/stable.sh&#39;</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Do not use an alias that is an existing command or reserved word (e.g.
+<code class="docutils literal"><span class="pre">sed</span></code>, <code class="docutils literal"><span class="pre">done</span></code>) unless you truly want to override their built-in use.
+Doing so is likely to cause frustrating errors that are difficult to debug.</p>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="scripting-with-bash">
+    <hgroup>
+      <h2>Scripting with Bash</h2>
+    </hgroup>
+    <article class="">
+      <ul class="simple">
+<li>Scripts are good for stringing a series of commands together or repeating
+the same commands multiple times.</li>
+</ul>
+<ul class="build simple">
+<li>Bash is Turing complete, but it isn't really a general purpose programming
+language. If you start finding things getting complicated, it is probably
+time to consider a fully-featured language like Python.</li>
+</ul>
+<ul class="build simple">
+<li>Of course, you can write scripts in many high-level programming languages as
+well. For automating tasks around your system, however, Bash is often
+quicker and easier.</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="bash-python">
+    <hgroup>
+      <h2>Bash &gt; Python</h2>
+    </hgroup>
+    <article class="">
+      <p>As a very simple example, consider what is required to list the contents of
+a directory.</p>
+<p><strong>Bash</strong></p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ ls
+conf.py  git-guide  images  index.rst  Makefile
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Python</strong></p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ python3
+&gt;&gt;&gt; import os
+&gt;&gt;&gt; for file in os.listdir():
+...     print(file, end=&quot;  &quot;)
+conf.py  git-guide  images  index.rst  Makefile
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="id1">
+    <hgroup>
+      <h2>Bash &lt; Python</h2>
+    </hgroup>
+    <article class="">
+      <p>In this example, we fetch and parse some JSON from an online monitoring
+service, then print the status of each monitor to the command line. While this
+could be achieved with Bash, it is easier to do with the syntax and libraries
+available in Python.</p>
+<p><strong>Python</strong></p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">key</span> <span class="o">=</span> <span class="n">fetchkey</span><span class="p">()</span>
+<span class="n">url</span> <span class="o">=</span> <span class="n">HOST</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="n">FORMAT</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="n">e</span><span class="p">)</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">monitor</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;monitors&#39;</span><span class="p">][</span><span class="s1">&#39;monitor&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">status_code</span><span class="p">[</span><span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]]</span> <span class="o">+</span> <span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;friendlyname&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="updating-master-in-a-single-repository">
+    <hgroup>
+      <h2>Updating master in a single repository</h2>
+    </hgroup>
+    <article class="">
+      <p><strong>bump.sh</strong> wraps the commands required to fetch from upstream, merge into
+master, then push to origin.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Merges upstream into local branch for a Rackspace repository</span>
+<span class="c1"># and pushes the result to origin.</span>
+
+<span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
+</pre></div>
+</div>
+<ul class="build simple">
+<li><strong>file names</strong> - you to not have to use <strong>.sh</strong>, but I think extensions are
+helpful for minimizing confusion and easier globbing (<code class="docutils literal"><span class="pre">*.sh</span></code>).</li>
+<li><strong>shebang</strong> (<code class="docutils literal"><span class="pre">#!/bin/bash</span></code>) - this line specifies the interpreter to use
+for running the script.</li>
+<li><code class="docutils literal"><span class="pre">#</span></code> - the hash symbol comments the text to its right.</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="id3">
+    <hgroup>
+      <h2>Updating master in a single repository</h2>
+    </hgroup>
+    <article class="">
+      <p><strong>Running the script</strong></p>
+<ul>
+<li><p class="first">This script is aliased in <strong>.bashrc</strong>:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">bump</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/bump.sh&#39;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<ul class="build">
+<li><p class="first">Thus, it can be run from the command line when you are in an appropriate
+directory:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ cd docs-rpc
+$ bump
+</pre></div>
+</div>
+</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="updating-stable-branches-in-a-single-repository">
+    <hgroup>
+      <h2>Updating stable branches in a single repository</h2>
+    </hgroup>
+    <article class="">
+      <p><strong>stable.sh</strong> iterates through a list of branch names, merging upstream into
+each one and pushing them to origin.</p>
+<p>This script uses a <code class="docutils literal"><span class="pre">for</span></code> loop to iterate through an array (i.e. list of
+values).</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>branches=(v10 v11 v12 v13)
+
+echo
+for item in ${branches[@]}; do
+    git checkout $item
+    git fetch upstream
+    git merge upstream/$item
+    git push origin $item
+done
+git checkout master
+git branch
+echo
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="updating-multiple-repositories">
+    <hgroup>
+      <h2>Updating multiple repositories</h2>
+    </hgroup>
+    <article class="">
+      <p><strong>rackup.sh</strong> iterates through repository-containing directories in a single
+directory and updates each one.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>for dir in ~/rpcdocs/*; do
+    if test -d $dir &amp;&amp; test -e $dir/.git; then
+        cd $dir
+        git fetch upstream
+        git merge upstream/master
+        git push origin master
+    fi
+done
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="updating-multiple-directories-with-multiple-repositories">
+    <hgroup>
+      <h2>Updating multiple directories with multiple repositories</h2>
+    </hgroup>
+    <article class="">
+      <p><strong>up.sh</strong> iterates through multiple directories, each containing multiple
+repository-containing directories, and updates each one.</p>
+<p>Note how this script calls other scripts using absolute paths.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>div=&#39;======================&#39;
+
+echo
+echo $div
+echo &#39;OpenStack Repositories&#39;
+echo $div
+bash ~/scripts/bash/stack.sh
+echo
+
+echo $div
+echo &#39;Rackspace Repositories&#39;
+echo $div
+bash ~/scripts/bash/rackup.sh
+echo
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="checking-the-status-of-your-repositories">
+    <hgroup>
+      <h2>Checking the status of your repositories</h2>
+    </hgroup>
+    <article class="">
+      <p><strong>repocheck.sh</strong> is one of the scripts I use most often. It runs
+<code class="docutils literal"><span class="pre">git</span> <span class="pre">status</span></code> on all my repositories and tells me if I have uncommitted work
+or if I'm on a non-master branch. I always like to run this before running
+update scripts to prevent merge problems.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>repos=(openstack rpcdocs code code/python scripts)
+
+for item in ${repos[@]}; do
+    root=~/$item/*
+    for dir in $root; do
+        if test -d $dir &amp;&amp; test -e $dir/.git; then
+            cd $dir &amp;&amp; echo $dir
+            branch=$(git status -s -b)
+            if ! [ &quot;$branch&quot; = &quot;## master...origin/master&quot; ]; then
+                git status -s -b
+            fi
+        fi
+    done
+done
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="cleaning-your-repositories">
+    <hgroup>
+      <h2>Cleaning your repositories</h2>
+    </hgroup>
+    <article class="">
+      <p><strong>clean.sh</strong> performs a <code class="docutils literal"><span class="pre">git</span> <span class="pre">clean</span></code> on all repositories. It runs
+<strong>repocheck.sh</strong> first and asks for confirmation to continue. This is because
+it deletes uncommitted files.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Destructive. This script deletes uncommitted files.</p>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="id4">
+    <hgroup>
+      <h2>Cleaning your repositories</h2>
+    </hgroup>
+    <article class="">
+      <div class="code highlight-default"><div class="highlight"><pre><span></span>bash ~/scripts/bash/repocheck.sh
+echo -n &quot;Proceed with git clean? (y/n): &quot;
+read proceed
+if [ &quot;$proceed&quot; != &quot;y&quot; ]; then
+    exit
+else
+    echo &quot;Cleaning git repos...&quot;
+fi
+echo
+
+repos=(openstack rpcdocs code code/python scripts)
+
+for item in ${repos[@]}; do
+    root=~/$item/*
+    for dir in $root; do
+        if test -d $dir &amp;&amp; test -e $dir/.git; then
+            if [ $dir == ~/rpcdocs/internal-docs-rpc ]; then
+                true
+            else
+                cd $dir &amp;&amp; echo $dir
+                git clean -xfd &amp;&amp; git remote prune origin
+            fi
+        fi
+    done
+done
+echo
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="scripting-other-things">
+    <hgroup>
+      <h2>Scripting other things</h2>
+    </hgroup>
+    <article class="">
+      <p>Scripts can contain anything you can run from the command line, not just git
+commands. For example, I use an aliased script to run backups for my Fedora
+machine.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">[</span> <span class="s2">&quot;$1&quot;</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span> <span class="p">];</span> <span class="n">then</span>
+    <span class="n">sudo</span> <span class="n">rsync</span> <span class="o">-</span><span class="n">azvACHS</span> <span class="o">--</span><span class="n">delete</span> \
+    <span class="o">--</span><span class="n">progress</span> <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;/dev/&quot;</span><span class="p">,</span><span class="s2">&quot;/proc/&quot;</span><span class="p">,</span><span class="s2">&quot;/sys/&quot;</span><span class="p">,</span><span class="s2">&quot;/tmp/&quot;</span><span class="p">,</span><span class="s2">&quot;/run/&quot;</span><span class="p">,</span><span class="s2">&quot;/mnt/&quot;</span><span class="p">}</span> \
+    <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;/media/&quot;</span><span class="p">,</span><span class="s2">&quot;/lost+found/&quot;</span><span class="p">}</span> <span class="o">/*</span> \
+    <span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">media</span><span class="o">/</span><span class="n">bmoss</span><span class="o">/</span><span class="n">FreeAgent</span>\ <span class="n">GoFlex</span>\ <span class="n">Drive</span><span class="o">/</span><span class="n">FedoraBackup</span><span class="o">/</span>
+<span class="k">else</span>
+    <span class="n">rsync</span> <span class="o">-</span><span class="n">azvACHS</span> <span class="o">--</span><span class="n">delete</span> \
+    <span class="o">--</span><span class="n">progress</span> <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;/dev/&quot;</span><span class="p">,</span><span class="s2">&quot;/proc/&quot;</span><span class="p">,</span><span class="s2">&quot;/sys/&quot;</span><span class="p">,</span><span class="s2">&quot;/tmp/&quot;</span><span class="p">,</span><span class="s2">&quot;/run/&quot;</span><span class="p">,</span><span class="s2">&quot;/mnt/&quot;</span><span class="p">}</span> \
+    <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;/media/&quot;</span><span class="p">,</span><span class="s2">&quot;/lost+found/&quot;</span><span class="p">,</span><span class="s2">&quot;.gem/&quot;</span><span class="p">,</span><span class="s2">&quot;.ICEauthority/&quot;</span><span class="p">}</span> \
+    <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;.macromedia/&quot;</span><span class="p">,</span><span class="s2">&quot;.pki/&quot;</span><span class="p">,</span><span class="s2">&quot;.shutter/&quot;</span><span class="p">,</span><span class="s2">&quot;.gimp-2.8/&quot;</span><span class="p">,</span><span class="s2">&quot;.java/&quot;</span><span class="p">}</span> \
+    <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;.mozilla/&quot;</span><span class="p">,</span><span class="s2">&quot;.python_history/&quot;</span><span class="p">,</span><span class="s2">&quot;.adobe/&quot;</span><span class="p">,</span><span class="s2">&quot;.cache/&quot;</span><span class="p">}</span> \
+    <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;.dropbox/&quot;</span><span class="p">,</span><span class="s2">&quot;.gnome2/&quot;</span><span class="p">,</span><span class="s2">&quot;.gnome2_private/&quot;</span><span class="p">,</span><span class="s2">&quot;.novaclient/&quot;</span><span class="p">}</span> \
+    <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;.thumbnails/&quot;</span><span class="p">,</span><span class="s2">&quot;.bash_history/&quot;</span><span class="p">,</span><span class="s2">&quot;.dropbox-dist/&quot;</span><span class="p">,</span><span class="s2">&quot;.gnupg/&quot;</span><span class="p">}</span> \
+    <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;.tox/&quot;</span><span class="p">,</span><span class="s2">&quot;.bash_logout/&quot;</span><span class="p">,</span><span class="s2">&quot;.esd_auth/&quot;</span><span class="p">,</span><span class="s2">&quot;.gphoto/&quot;</span><span class="p">,</span><span class="s2">&quot;.m2/&quot;</span><span class="p">}</span> \
+    <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">bmoss</span><span class="o">/</span> \
+    <span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">media</span><span class="o">/</span><span class="n">bmoss</span><span class="o">/</span><span class="n">FreeAgent</span>\ <span class="n">GoFlex</span>\ <span class="n">Drive</span><span class="o">/</span><span class="n">FedoraBackup</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">bmoss</span><span class="o">/</span>
+<span class="n">fi</span>
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="id5">
+    <hgroup>
+      <h2>Scripting other things</h2>
+    </hgroup>
+    <article class="">
+      <p>In a former life, I needed to clean up a few hundred XML files. Perfect time
+for a script.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>sed -i &#39;:a;N;$!ba;s/[ \t]*&lt;screen&gt;\n/&lt;screen&gt;/g&#39; $1
+sed -i &#39;:a;N;$!ba;s/[ \t]*&lt;screen&gt;\t/&lt;screen&gt;/g&#39; $1
+sed -i &quot;s/\`/&#39;/g&quot; $1
+sed -i &#39;s/C\&amp;U/C\&amp;amp\;U/g&#39; $1
+sed -i &#39;s/ \&amp; / and /g&#39; $1
+sed -i &#39;s/ \#&lt;/ \&amp;lt\;/g&#39; $1
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="tips">
+    <hgroup>
+      <h2>Tips</h2>
+    </hgroup>
+    <article class="">
+      <dl class="docutils">
+<dt>Exit on error</dt>
+<dd><p class="first">Add <code class="docutils literal"><span class="pre">set</span> <span class="pre">-e</span></code> to the top of your script in order to exit immediately if a
+command exits with a non-zero status.</p>
+<p class="last">Cancel setting using <code class="docutils literal"><span class="pre">set</span> <span class="pre">+e</span></code>.</p>
+</dd>
+<dt>Activate debugging</dt>
+<dd><p class="first">Add <code class="docutils literal"><span class="pre">set</span> <span class="pre">-x</span></code> at the point you want to start debugging. This causes all
+commands being run to output to the command line.</p>
+<p class="last">Cancel setting using <code class="docutils literal"><span class="pre">set</span> <span class="pre">+x</span></code>.</p>
+</dd>
+<dt>GitHub</dt>
+<dd>Use GitHub: it gives you practice and makes it easy to share your scripts
+between systems and with other people.</dd>
+<dt>Document</dt>
+<dd>Always document your scripts! It is amazing how quickly you forget what
+a script does when you haven't used it in a while. Plus, if it is
+documented it is a lot easier to share it with other people.</dd>
+</dl>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="id6">
+    <hgroup>
+      <h2>Tips</h2>
+    </hgroup>
+    <article class="">
+      <dl class="docutils">
+<dt>Stringing together commands</dt>
+<dd><p class="first">To execute commands in a series, separate with <code class="docutils literal"><span class="pre">;</span></code> or put each command
+on a newline.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ pwd; cat temp.rst; ls
+
+/home/scripts/doc
+cat: temp.rst: No such file or directory
+conf.py  git-guide  images  index.rst  Makefile
+</pre></div>
+</div>
+<p>Use <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> if you want the line to stop if a command fails.</p>
+<div class="code last highlight-default"><div class="highlight"><pre><span></span>$ pwd &amp;&amp; cat temp.rst &amp;&amp; ls
+
+/home/scripts/doc
+cat: temp.rst: No such file or directory
+</pre></div>
+</div>
+</dd>
+</dl>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="warning">
+    <hgroup>
+      <h2>Warning</h2>
+    </hgroup>
+    <article class="">
+      <p>Be very careful when scripting destructive commands. Iterating through
+directories and deleting is an easy way to cause problems. If you feel tempted
+to use <code class="docutils literal"><span class="pre">-f</span></code>, think long and hard.</p>
+<p><strong>BAD</strong></p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">f</span>
+
+<span class="n">rm</span> <span class="o">-</span><span class="n">rf</span>
+</pre></div>
+</div>
+<p>To some extent, this is mitigated when working in Git repositories as you can
+almost always go back to a previous commit. You will, however, be sad if a
+day's uncommitted work gets wiped out or you clobber someone else's branch
+by force pushing to it.</p>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="where-to-next">
+    <hgroup>
+      <h2>Where to next</h2>
+    </hgroup>
+    <article class="">
+      <p>There are many online tutorials and old-school guides to using Bash. To be
+honest though, I generally find it better to search for solutions to specific
+problems. No one is a Bash programmer by trade, rather it is something you use
+to get things done around your system.</p>
+<p>So Google, use Stack Overflow, and cannibalize other people's work.</p>
+<p>For better of for worse, my bash scripts are all on GitHub:</p>
+<p><a class="reference external" href="https://github.com/kallimachos/bash">https://github.com/kallimachos/bash</a></p>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="congratulations">
+    <hgroup>
+      <h2>Congratulations!</h2>
+    </hgroup>
+    <article class="">
+      <p>You now know enough to be dangerous. Go forth and iterate!</p>
+
+
+
+
+    </article>
+  </slide>
+
+
+    <slide class="thank-you-slide segue nobackground">
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

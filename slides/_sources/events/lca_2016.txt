@@ -1,0 +1,621 @@
+===================================
+linux.conf.au Geelong February 2016
+===================================
+
+Documentation Miniconf Monday Feb 1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+History of tech writing
+-----------------------
+Zac Dover
+
+- First known example of English technical writing in 1391, Chaucer's
+  *Treatise on the Astrolobe*.
+- history of telecommunication, with special focus on trans-Atlantic cables
+
+
+Home and Away: Working from home
+--------------------------------
+Alex Settle
+
+- technical writing is all about communicating with people
+- when in an office, this is facilitated by being able to interact face-to-face
+  with people
+- "explosive introversion" - the sudden desire to be on your own during
+  social interactions
+- *Healthy Operations* on YouTube
+
+
+Talking to engineers
+--------------------
+Dayle Parker
+
+- engineers and writers often communicate in different ways
+- ask simple but specific questions
+- ask one question at a time
+- number your questions
+- write up something that can be acked or nacked
+- do your homework
+- communicate in the most comfortable way for everyone
+- give a deadline
+- if one communication method isn't working, use another
+
+
+opensource.com
+--------------
+Rikki Endsley
+
+- submit writing about any open source things
+- also have subjects that people can write on if they need ideas
+
+
+Let's talk about debt
+---------------------
+Lucy Bopf
+
+- technical debt: the cost incurred by doing things now that you will need to
+  fix later, whether that is because you did it quickly originally to get
+  something running, or for some other reason
+- planning is the best way to prevent debt
+
+  - establish requirements
+  - establish time frame
+  - don't over commit
+  - 90% research and planning, 10% writing
+
+- Accuracy, both technical and writing, helps prevent debt
+
+  - verify and understand technical elements
+  - communicate technical concepts in ways that readers can understand
+
+- Establish conventions early then apply them consistently
+
+
+My awesome jacket: All I have are questions
+-------------------------------------------
+Andrew Burden
+
+- Ask questions. Lots and lots of questions.
+- Also, my jacket is awesome.
+
+
+Write the f'ing manual
+----------------------
+Jodi Biddle
+
+- topic, EPPO, markdown, all good! Simplify for profit.
+
+-----
+
+Tuesday Feb 2
+~~~~~~~~~~~~~
+
+Keynote
+-------
+George Fong
+
+- The cavalry is not coming. We are the cavalry.
+
+
+Beyond boundaries: Open Council Data
+------------------------------------
+Steve Bennett
+
+- http://opencouncildata.org/
+- encourages councils to publish their data so that people can use it for
+  research and building applications
+- often used as the subject for things like govhack events
+
+
+Open Tech School: Open learning in practice
+-------------------------------------------
+Lily Ryan
+
+- http://www.opentechschool.org/
+- what is 'open'? Removing barriers: open = accessible
+- how can a workshop provide laptops for people who want to learn?
+- venues should be accessible for mobility-impaired participants
+- workshops should be available in multiple languages
+- access for hearing and sight impaired people
+- outreach/advertising is important, with accessible features highlighted
+
+
+Open data + video games = win
+-----------------------------
+Jon Manning and Paris Buttfield-Addison
+
+- hackathons are great, but they are rarely followed up on
+- game jams are aware of this, thus they:
+
+  - focus on making *something*
+  - show something cool
+  - make quickly and abandon quickly
+  - are designed for practice and honing skills
+  - don't care about productization
+
+- games matter, even in serious environments
+- games can teach things and help the audience understand things in different
+  ways
+- games are engaging
+- if creating games at a hackathon, do it within the context of the event
+- appliance battle Pokemon style based on government data star ratings
+- match the department to the area multiplayer matching game
+- games are based on systems, and if you can find a system in data, you can
+  make a game out of it
+
+  - don't try to model real-world processes
+  - taking liberties is absolutely fine, but not so far as to make the player
+    lose sight of the point
+
+- at a hackathon, engage:
+
+  - players
+  - fellow participants
+  - whoever deals out the prizes (but don't worry too much about it)
+
+- multiplayer is the easiest way to engage people, and it means you don't need
+  to create an AI. It also more fun to show in person or to create demo videos
+  for.
+
+  - but multiplayer is hard
+  - do it locally, or over a network. Do not use the internet.
+  - real time is hard, turn based is better. If you must do real time keep
+    it simple
+
+- at a hackathon you can do things you wouldn't get away with in production
+
+  - the game only has to be fun for 30 seconds
+  - doesn't need to deal with cheating, latency, and all sorts of other
+    problems
+
+- but stay on-message
+- you're already being subversive by doing a game, so keep it simple
+- cut often and early; cut in the direction of the theme
+- sound in games is great
+- time is your enemy but not in the way you think
+
+  - fosters deadline-oriented thinking
+  - all-nighters are deceptive; you will never do your best work on an
+    all-nighter so go home at night and arrive rested at a decent time
+  - cutting things mercilessly is a great way of keeping things on schedule
+
+- raising engagement in a topic, rather than going in depth, is usually enough
+- the best way to make a game is to make a game, but games are hard, big
+  projects
+- use the external pressure of a hackathon to set limits to your game and
+  to motivate yourself
+
+
+Prying Open Government
+----------------------
+Dan Hawke
+
+- how to use freedom of information laws to benefit the community
+- anyone anywhere can request information from Australia
+- each Australian state has its own privacy laws, but are governed by the same
+  national laws
+- http://alaveteli.org/ is an open source website for making information
+  requests
+- example: requesting passenger numbers from Auckland transport
+
+
+Internet Archive: Universal access. Open APIs.
+----------------------------------------------
+Vicky Brasseur
+
+- https://github.com/internetarchive
+- https://archive.org/index.php
+- non-profit digital archive with the goal of getting more information to more
+  people
+- currently have 25 petabytes of unique data
+- where does the money come from ($14-15 million):
+
+  - 40% digitization projects
+  - 20% web archiving projects
+  - 40% foundations and donations
+
+- about 100 employees at the archive
+- who uses the archive?
+
+  - in top 250 websites
+  - 3-4 million people per day
+  - 4 million downloads/streams per day
+  - no IP addresses kept
+
+- 400+ billion web captures, 1996 to present
+- Wayback Machine updated within hours
+- 700,000 people per day
+- 80 TB crawl open for bulk download
+- you can save a webpage on the internet archive using the Wayback Machine
+- https://openlibrary.org/
+- they archive movies, TV, music, and software
+- Wayback Machine has a easy-to-use API
+- The Open Library has an extensive API
+- Internet Archive search API: https://archive.org/advancedsearch.php
+- Docs for the IAS3 API: https://github.com/vmbrasseur/IAS3API
+- python module: internetarchive
+
+
+Wednesday Feb 3
+~~~~~~~~~~~~~~~
+
+Keynote
+-------
+Catarina Mota
+
+- the faster we fail the faster we learn
+- RepRap democratizes manufacturing
+- Catarina lives in a open source, crowd-sourced, and hackable house
+- the perfect storm: internet + communities + fabrication tools
+- machines are not neutral
+- the affordances of technologies define realms of possibilities
+
+
+Going faster: Continuous delivery for Firefox
+---------------------------------------------
+Laura Thomson
+
+- get features and fixes to end users through continuous delivery using
+  browser add-ons
+
+
+Education and the AGPL: A case study
+------------------------------------
+Molly de Blanc
+
+- study of the AGPL as applied to the Open edX MOOC
+- two kinds of community:
+
+  - contributors: technical and non-technical
+  - users/learners
+
+- definitions of community success:
+
+  - quantity
+  - quality
+  - strength
+
+
+Wait, ?tahW: The twisted road to right-to-left language support
+---------------------------------------------------------------
+Moriel Schottlender - Wikimedia Foundation
+
+- thinking about RTL issues exposes general issues with language software
+- RTL user base is growing
+- RTL readers also see other things RTL, for example where a logo or navigation
+  controls on top right rather than top left
+- initial solution for internet RTL was simply to write things backwards using
+  conversion scripts
+- next solution was logical and visual rendering: you write RTL and the text
+  is displayed RTL
+- this works reasonable well for many things but not everything should be
+  flipped, for example left/right justification buttons or undo/redo buttons
+- when mixing LTR and RTL, think carefully about the differences between
+  content and interface
+- instead of left/right, one must think before/after, backwards/forwards,
+  start/end
+- control characters can be used to set direction explicitly
+
+
+The future belongs to unikernels
+--------------------------------
+Andrew Stuart
+
+- unikernel = stripped down operating system running a single application
+- small, fast to start
+- there is no user log in to a unikernel, which provides security benefits
+
+
+Challenges when scaling: Adventures in Swift's sharding
+-------------------------------------------------------
+Matt Oliver
+
+- Object storage system
+- REST API
+- eventually consistent (not immediately consistent)
+- hugely scalable
+- high concurrency
+- distributed system
+- can use commodity hardware
+- flexible
+- multi region
+- customizable (open source)
+- storage policies and erasure coding
+- 3 basic resources in Swift that are all treated as objects:
+
+  - account - SQLite DB
+  - container - SQLite DB
+  - object
+
+- this arrangement does lead to problems caused by large SQLite DBs
+- Swift uses a modified consistent hash ring to find the data placement in the
+  cluster
+
+   - replica count (even in EC)
+   - part power - defines the number of partitions
+   - partitions - represents a place in the ring
+   - primary and hand-off nodes
+
+- Swift's hashing scales well
+
+
+Thursday Feb 4
+~~~~~~~~~~~~~~
+
+Building museum exhibits with open hardware: Raspberry Pi and Arduino
+---------------------------------------------------------------------
+Michael Borthwick
+
+- audio/visual experience of Oxfam Refugee Realities has a much greater
+  impact on the attendees, mainly school-age children
+
+  - minefield would have foot switches in the sand connected to an interface,
+    with connected sound as well
+  - but they didn't have any of these parts so Michael used an Arduino as the
+    interface
+  - bright LEDs are helpful when testing so you know for sure if a signal
+    is coming through
+
+- Nick Cave exhibit
+
+  - used an arduino to power up DVD players embedded in the walls through
+    infra red
+
+- RAAF cut-away engine that visitors could watch operate for 30 seconds at a
+  time
+
+  - made custom board from various arduino add-ons
+  - was able to use open source libraries for arduino add-ons to build
+    the code
+
+- AC/DC exhibit at Art Gallery Victoria
+
+  - only needed 2.1 sound channels, so used extra channels to control lighting
+  - used Arduino as controller
+
+- Raspberry Pi offers the ability to show HD video, but you can also show
+  historical video in native resolutions and aspect ratios
+- they can run long term on minimal power without issues
+- can easily be hidden or mounted in small places
+- great for making cultural material more accessible by providing subtitles
+  and close-captioning
+- simple touch sensor to turn subtitles on or off
+- subtitles can be added on the fly by the Raspberry Pi rather than hard-coded
+  into the video
+
+He aha te mea nui?
+------------------
+Chris Cormack
+
+- Koha library project, and open source Integrated Library System
+- https://koha-community.org/
+- started as a bespoke system for a local library in NZ, and is now used in
+  thousands of libraries around the world
+- open sourced so the library wouldn't get locked in
+
+
+A detailed look at erasure codes in OpenStack Swift
+---------------------------------------------------
+John Dickinson
+
+- how do we reliably store something? Store multiple copies.
+- problem is that this increases the size required for large DBs
+  exponentially
+- erasure codes store multiple copies through fractions of the data rather
+  than storing complete copies
+- represent data as coefficients of polynomials
+- even if you lose some parts, you can reconstruct them using the polynomial:
+
+  .. code::
+
+     g'day
+
+     [7, 27, 4, 1, 25]
+
+     f(x) = 7x(4) + 27x(3) + 4x(2) + 1x(1) + 25
+
+- uses http to communicate
+- when a request is made, the server returns a 100 Continue status, which
+  informs the client that it is ok to start transmitting data
+- multiple 100 Continue calls are used to create a back and forth
+  interaction between the client and the server
+- a proxy between the client and the Object server performs the erasure code
+  transformation. Thus the client and the server do not need to know anything
+  about the erasure coding.
+- after writing the erasure coded data, the proxy directs the server to write
+  *.durable*, then the proxy sends a response to the client.
+
+
+edlib: because one more editor is never enough
+----------------------------------------------
+Neil Brown
+
+- everything is pluggable
+- multiple document backends
+- multiple language bindings
+- multiple multistage renderers
+- multiple display managers
+- configurable key/event bindings
+- loadable libraries for everything else
+- core provides essential abstractions
+- panes represent areas of interactions
+
+  - may have children with depth
+  - send and receive all messages
+
+- documents and marks
+
+  - set of interfaces provided by a pane
+  - multiple panes can access one document
+
+- commands
+
+  - pass control between panes
+  - can pass control between languages
+
+- attributes
+
+  - attributes are named strings
+  - elements (characters) in a document have attributes
+  - panes, marks, and documents have attributes
+  - can be used to pass extra information between commands
+
+
+Speaking their language: How to write for technical and non-technical audiences
+-------------------------------------------------------------------------------
+Rikki Endsley
+
+- what are you writing about
+- why are you writing about it
+- who is your reader (lay, managerial, experts)
+- will you re-use your content
+- research
+- create an outline
+- write
+- revise
+- `The care and feeding of the press
+  <http://netpress.org/care-feeding-press/>`_: best practices for working with
+  tech journalists:
+- becoming a good writer requires lots of reading and lots of writing
+- read examples of the type of document you intend to make
+- `How to: Writing an excellent post-event wrap up report
+  <http://hawthornlandings.org/2013/02/15/how-to-writing-an-excellent-post-event-wrap-up-report/>`_
+- consider how your content might be re-used
+- invite the reader in with your introduction
+- tell a story
+- leave out the boring parts
+- edit, edit, edit
+
+
+Friday Feb 5
+~~~~~~~~~~~~
+
+Keynote
+-------
+Genevieve Bell
+
+- started career as an anthropologist at Stanford before taking a position at
+  Intel in 1998
+- initially Intel wanted her to find out what women and the "rest of the
+  world", aka not America, want. Basically, what do humans need and want, and
+  how can technology meet those needs and wants.
+- our present is messy and myriad
+- context matters: we don't necessarily want everything to be seamless
+- our solutions need to human
+
+
+Python's dark corners
+---------------------
+Peter Lovett
+
+- whitespace can cause unexpected behavior:
+
+  - run python -t to give warnings if you mix tabs and spaces
+  - python interprets a tab as 8 spaces
+
+- everything is an object
+
+  - builtin types (int, float, etc)
+  - functions
+  - modules
+  - use ``id(name)`` to see what a name is pointing to, e.g. ``id(a)``
+  - ``b = list(a)`` -> creates a copy of the object, in this case a list
+  - ``b = a -> b`` and a point to the same object
+  - ``is`` compares objects, ``==`` compares values
+
+- if you accidentally rebind a builtin, you can ``import __builtin__`` and
+  use it to access the builtin: ``a = __builtin__.str('hi')``
+- Python does not prevent accidental name creation, but there are testing
+  tools and IDEs that can help
+- scope is localized when you do any assignment within a function; trying to
+  use a global within a function then assigning in that function will cause
+  an ``unboundlocalvariable`` error
+- no void return type, so you don't get an error if you assign to something
+  you shouldn't it just returns ``None``
+- Fedora 23 to have Python 3 by default. Debian and Ubuntu will soon do the
+  same.
+
+
+Raspberry Pi hacks
+------------------
+Ruth Suehle
+
+- early 2006 concept based on Atmel ATmega644
+- designed for educational use
+- intended for Python but friendly for multiple languages
+- http://elinux.org/Main_Page has a wealth of PI info
+- Pi 2 has 40 GPIO as apposed to the Pi's 26, but the first 26 are in the same
+  order
+- find your Pi: ``cat /proc/cpuinfo`` -> revision number tells you the version
+- If you have Hynyx RAM it may cause problems
+- there is a display specifically for the Pi that uses the DSI output
+- Fedora ARM Installer for loading OSes on SD cards
+- you can use power bricks as a portable power source
+- dx.com
+- TP1 and TP2 are the pins for checking your power
+- use a powered hub for peripherals
+- https://www.raspberrypi.org/blog/raspberry-leaf/
+- use a case to protect your Pi - Lego works great
+- RaspBMC/XBMC is now Kodi
+- Running classic games works well on the Pi
+- *Raspberry Pi Hacks* written by Ruth Suehle and Tom Calloway
+- Pi wants 5v 1amp. No more, no less.
+
+
+National Wool Museum
+--------------------
+Demonstration of rug weaving machine that uses hundreds of cardboard cards
+to create the design. Very cool!
+
+
+.. spelling::
+
+   au
+   Zac
+   acked
+   nacked
+   opensource
+   Endsley
+   Bopf
+   f'ing
+   Fong
+   Buttfield
+   hackathons
+   productization
+   nighter
+   Hawke
+   Brasseur
+   petabytes
+   Wayback
+   internetarchive
+   Mota
+   affordances
+   de
+   Blanc
+   edX
+   tahW
+   Moriel
+   Schottlender
+   unikernels
+   Borthwick
+   te
+   mea
+   nui
+   Koha
+   edlib
+   renderers
+   Endsley
+   Lovett
+   Suehle
+   Atmel
+   ATmega
+   Hynyx
+   OSes
+   dx
+   Kodi
+   Suehle
+   Calloway
+   nighters
+   pluggable
+   add-ons
+   ons

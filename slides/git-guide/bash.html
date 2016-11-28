@@ -1,0 +1,245 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+--><!DOCTYPE html>
+
+
+<html>
+<head>
+  <title>Using Bash Scripts &mdash; Document Repository  documentation</title>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="hieroglyph-title" data-config-title>
+  <meta name="hieroglyph-subtitle" data-config-subtitle>
+  <meta name="hieroglyph-presenter" data-config-presenter>
+
+  
+  <link rel="stylesheet" media="all"
+        href="../_static/theme/css/default.css">
+  <link rel="stylesheet" media="all"
+        href="../_static/theme/css/hieroglyph.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)"
+        href="../_static/theme/css/phone.css">
+
+    
+    <link rel="stylesheet" href="../_static/myslide.css"
+          type="text/css" />
+    
+
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+
+    <script data-main="../_static/js/slides"
+            src="../_static/js/require-1.0.8.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Document Repository  documentation" href="../index.html" />
+    <link rel="up" title="Git Guide" href="index.html" />
+    <link rel="next" title="Scripts" href="scripts.html" />
+    <link rel="prev" title="Merging Branches" href="merge.html" /> 
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  
+
+  
+    <slide class="title-slide segue nobackground level-1" id="using-bash-scripts">
+    <hgroup>
+      <h1>Using Bash Scripts</h1>
+    </hgroup>
+    <article class="">
+      <p>The following bash scripts can be used to run certain git commands
+across several repositories. These scripts can be run from any
+directory, and will return you to the directory in which you started.
+Creating aliases for your scripts for easy access is recommended.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You must change <code class="docutils literal"><span class="pre">~/docs/*</span></code> in each script to the location of the git
+repositories on your local machine.</p>
+</div>
+<p><strong>Creating Bash Aliases</strong></p>
+<ol class="arabic">
+<li><p class="first">Create the script in a convenient location, for example
+<strong>~/scripts/</strong></p>
+</li>
+<li><p class="first">Make the script executable:</p>
+<pre class="highlight"><style type="text/css">
+span.prompt1:before {
+  content: "$ ";
+}
+</style><span class="prompt1">chmod a+x myscript.sh</span>
+</pre></li>
+<li><p class="first">Open <strong>~/.bashrc</strong> and add an alias for the script:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">myscript</span><span class="o">=</span><span class="s1">&#39;~/scripts/myscript.sh&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Save the change, then reload the file for the current terminal
+session:</p>
+<pre class="highlight"><span class="prompt1"><span class="nb">source</span> ~/.bashrc</span>
+</pre></li>
+<li><p class="first">Run the script by using the alias on the command line:</p>
+<pre class="highlight"><span class="prompt1">myscript</span>
+</pre></li>
+</ol>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="sample-scripts">
+    <hgroup>
+      <h2>Sample Scripts</h2>
+    </hgroup>
+    <article class="">
+      
+
+
+
+    </article>
+  </slide>  <slide class="level-3" id="repocheck">
+    <hgroup>
+      <h3><a class="reference internal" href="scripts.html#repocheck"><span class="std std-ref">repocheck.sh</span></a></h3>
+    </hgroup>
+    <article class="">
+      <p>Prints <code class="docutils literal"><span class="pre">git</span> <span class="pre">status</span> <span class="pre">-s</span> <span class="pre">-b</span></code> of repositories in the listed directories if they
+have uncommitted changes or if they are not on the master branch.</p>
+<p>This script is helpful for checking if you have any work that has not been
+committed or pushed, and also for ensuring that you are on the master branches
+of each repo before attempting to merge from origin or upstream master.
+Note that the output is the short (-s) version. No message means that
+the working directory is clean and you are on the master branch. If you receive
+a message, run <code class="docutils literal"><span class="pre">git</span> <span class="pre">status</span></code> on the indicated repository for full information.</p>
+<p>Example Output:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
+<span class="c1">## v10...origin/v10</span>
+<span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">release</span><span class="o">-</span><span class="n">notes</span>
+<span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">-</span><span class="n">guide</span>
+<span class="c1">## master...origin/master</span>
+<span class="n">M</span> <span class="n">api</span><span class="o">-</span><span class="n">guide</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">rst</span>
+<span class="n">M</span> <span class="n">api</span><span class="o">-</span><span class="n">guide</span><span class="o">/</span><span class="n">chapter1</span><span class="o">.</span><span class="n">rst</span>
+<span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">user</span><span class="o">-</span><span class="n">guide</span>
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-3" id="branchlist">
+    <hgroup>
+      <h3><a class="reference internal" href="scripts.html#branchlist"><span class="std std-ref">branchlist.sh</span></a></h3>
+    </hgroup>
+    <article class="">
+      <p>This script runs <code class="docutils literal"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-a</span></code> on all repositories. It shows you all
+the local and remote branches, and indicates which branches you have
+checked out. Remove the <code class="docutils literal"><span class="pre">-a</span></code> option to view only local branches.</p>
+<p>Example Output:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
+<span class="o">*</span> <span class="n">master</span>
+  <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="mf">1.0</span>
+  <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="mf">1.1</span>
+  <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">master</span>
+
+<span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">release</span><span class="o">-</span><span class="n">notes</span>
+  <span class="n">Enterprise</span>
+  <span class="n">Online</span>
+<span class="o">*</span> <span class="n">master</span>
+  <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">Enterprise</span>
+  <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">Online</span>
+  <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">master</span>
+
+<span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">-</span><span class="n">guide</span>
+  <span class="n">Enterprise</span>
+<span class="o">*</span> <span class="n">master</span>
+  <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">Enterprise</span>
+  <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">master</span>
+
+<span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">user</span><span class="o">-</span><span class="n">guide</span>
+  <span class="n">Enterprise</span>
+<span class="o">*</span> <span class="n">master</span>
+  <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">Enterprise</span>
+  <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">master</span>
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-3" id="pullall">
+    <hgroup>
+      <h3><a class="reference internal" href="scripts.html#pullall"><span class="std std-ref">pullall.sh</span></a></h3>
+    </hgroup>
+    <article class="">
+      <p>This script runs <code class="docutils literal"><span class="pre">git</span> <span class="pre">pull</span></code> on all remote repositories. It is helpful
+for pulling down changes from all your remote repositories in one action.</p>
+<p>Example Output:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
+<span class="n">Already</span> <span class="n">up</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">date</span><span class="o">.</span>
+
+<span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">release</span><span class="o">-</span><span class="n">notes</span>
+<span class="n">Already</span> <span class="n">up</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">date</span><span class="o">.</span>
+
+<span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">REST</span><span class="o">-</span><span class="n">api</span><span class="o">-</span><span class="n">guide</span>
+<span class="n">Already</span> <span class="n">up</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">date</span><span class="o">.</span>
+
+<span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">user</span><span class="o">-</span><span class="n">guide</span>
+<span class="n">Already</span> <span class="n">up</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">date</span><span class="o">.</span>
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>
+
+
+    <slide class="thank-you-slide segue nobackground">
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

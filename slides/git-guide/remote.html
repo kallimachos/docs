@@ -1,0 +1,170 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+--><!DOCTYPE html>
+
+
+<html>
+<head>
+  <title>Working with Remote Branches &mdash; Document Repository  documentation</title>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="hieroglyph-title" data-config-title>
+  <meta name="hieroglyph-subtitle" data-config-subtitle>
+  <meta name="hieroglyph-presenter" data-config-presenter>
+
+  
+  <link rel="stylesheet" media="all"
+        href="../_static/theme/css/default.css">
+  <link rel="stylesheet" media="all"
+        href="../_static/theme/css/hieroglyph.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)"
+        href="../_static/theme/css/phone.css">
+
+    
+    <link rel="stylesheet" href="../_static/myslide.css"
+          type="text/css" />
+    
+
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+
+    <script data-main="../_static/js/slides"
+            src="../_static/js/require-1.0.8.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Document Repository  documentation" href="../index.html" />
+    <link rel="up" title="Git Guide" href="index.html" />
+    <link rel="next" title="Merging Branches" href="merge.html" />
+    <link rel="prev" title="Working with Local Branches" href="local.html" /> 
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  
+
+  
+    <slide class="title-slide segue nobackground level-1" id="working-with-remote-branches">
+    <hgroup>
+      <h1>Working with Remote Branches</h1>
+    </hgroup>
+    <article class="">
+      <table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Result</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>git checkout --track origin/<em>branch</em></td>
+<td>creates and checks out a local tracking branch for the specified remote
+branch</td>
+</tr>
+<tr class="row-odd"><td>git fetch origin</td>
+<td>fetches the remote repository and stores it locally, but does not merge
+it with the current branch</td>
+</tr>
+<tr class="row-even"><td>git pull</td>
+<td>fetches and merges the remote repository with the local repository</td>
+</tr>
+<tr class="row-odd"><td>git pull origin <em>branch</em></td>
+<td>fetches and merges the specified remote branch with the current local
+branch</td>
+</tr>
+<tr class="row-even"><td>git push</td>
+<td>pushes all committed changes on all branches to the remote repo</td>
+</tr>
+<tr class="row-odd"><td>git push origin <em>branch1</em>:<em>branch2</em></td>
+<td>creates a remote branch <em>branch2</em> and pushes the local branch <em>branch1</em>
+to it</td>
+</tr>
+<tr class="row-even"><td>git push origin :<em>branch</em></td>
+<td>deletes the specified remote branch (note there is a space between
+<code class="docutils literal"><span class="pre">origin</span></code> and <code class="docutils literal"><span class="pre">:branch</span></code>)</td>
+</tr>
+<tr class="row-odd"><td>git reset --hard origin/<em>branch</em></td>
+<td>resets the checked-out local branch to the status of the specified
+remote branch; running <code class="docutils literal"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">origin</span></code> first is recommended</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="troubleshooting">
+    <hgroup>
+      <h2>Troubleshooting</h2>
+    </hgroup>
+    <article class="">
+      <p>To reset origin remote to upstream remote, run the following commands:</p>
+<blockquote>
+<div><pre class="highlight"><style type="text/css">
+span.prompt1:before {
+  content: "$ ";
+}
+</style><span class="prompt1">git remote update</span>
+<span class="prompt1">git reset --hard upstream/master --</span>
+<span class="prompt1">git push origin +master</span>
+</pre></div></blockquote>
+<p>The double hyphen ensures that <code class="docutils literal"><span class="pre">upstream/master</span></code> is considered as a revision
+and not confused as a path.</p>
+
+
+
+
+    </article>
+  </slide>
+
+
+    <slide class="thank-you-slide segue nobackground">
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

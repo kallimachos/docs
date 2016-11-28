@@ -1,0 +1,539 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+--><!DOCTYPE html>
+
+
+<html>
+<head>
+  <title>PyConAu Brisbane August 2015 &mdash; Document Repository  documentation</title>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="hieroglyph-title" data-config-title>
+  <meta name="hieroglyph-subtitle" data-config-subtitle>
+  <meta name="hieroglyph-presenter" data-config-presenter>
+
+  
+  <link rel="stylesheet" media="all"
+        href="../_static/theme/css/default.css">
+  <link rel="stylesheet" media="all"
+        href="../_static/theme/css/hieroglyph.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)"
+        href="../_static/theme/css/phone.css">
+
+    
+    <link rel="stylesheet" href="../_static/myslide.css"
+          type="text/css" />
+    
+
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+
+    <script data-main="../_static/js/slides"
+            src="../_static/js/require-1.0.8.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Document Repository  documentation" href="../index.html" />
+    <link rel="up" title="Python Event Logs" href="python.html" />
+    <link rel="next" title="Git Guide" href="../git-guide/index.html" />
+    <link rel="prev" title="Python Event Logs" href="python.html" /> 
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  
+
+  
+    <slide class="title-slide segue nobackground level-1" id="pyconau-brisbane-august-2015">
+    <hgroup>
+      <h1>PyConAu Brisbane August 2015</h1>
+    </hgroup>
+    <article class="">
+      
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="openstack-a-vision-for-the-future">
+    <hgroup>
+      <h2>OpenStack: A vision for the future</h2>
+    </hgroup>
+    <article class="">
+      <p>Monty Taylor</p>
+<ul class="simple">
+<li>psychoanalytic thespia</li>
+<li>are we making a toolkit for people to use to develop clouds? Or to deploy
+clouds in various place?</li>
+<li>OS should provide computers and networks that work</li>
+<li>OS should not chase 12-factor apps; there are other, new tools that can do
+this (e.g. Kubernetes)</li>
+<li>OS should provide a happy home for app frameworks</li>
+<li>OS should, by default, give me a directly routable IP</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="using-pycharm-educational-edition">
+    <hgroup>
+      <h2>Using PyCharm Educational Edition</h2>
+    </hgroup>
+    <article class="">
+      <p>Thea Koutsoukis</p>
+<ul class="simple">
+<li>PyCharm is an IDE<ul>
+<li>Syntax and error highlighting</li>
+<li>code completion</li>
+<li>version control integration</li>
+<li>python console</li>
+<li>free and open source</li>
+<li>&quot;fill in the missing code&quot; projects (course creator plugin)</li>
+<li>easy to pick up, but offers good IDE functionality as they progress</li>
+<li>jetbrains.com/pycharm-educational</li>
+</ul>
+</li>
+<li>suitable for school age kids</li>
+<li>courses<ul>
+<li>allows students to learn at their own pace</li>
+<li>provides progress status and hints when the students make errors</li>
+<li>warning: plan lessons before you start, as currently you can't change files
+around easily</li>
+<li>no external file input, can't keep code, no reading and writing to files</li>
+<li>good for very specific syntax and output</li>
+</ul>
+</li>
+<li>can also function as a regular IDE that is student friendly<ul>
+<li>good error messages</li>
+<li>syntax highlighting</li>
+<li>code completion</li>
+</ul>
+</li>
+<li>lesson plan idea<ul>
+<li>recap</li>
+<li>teach class</li>
+<li>do lessons</li>
+<li>big project</li>
+</ul>
+</li>
+<li>alternatives<ul>
+<li>online interpreters</li>
+<li>useful because you don't have to install anything</li>
+<li>may not have a great deal of features</li>
+<li>rely on good internet connections</li>
+<li>make not work on all browsers</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="using-flask-and-python-anywhere-in-the-classroom">
+    <hgroup>
+      <h2>Using Flask and Python Anywhere in the Classroom</h2>
+    </hgroup>
+    <article class="">
+      <p>Brad Nielsen</p>
+<ul class="simple">
+<li>easier to work online than worrying about configuration in a BYOD school</li>
+<li>prefers Python because it is easier to get into than things like Java</li>
+<li>online environments are good because it lets the students try things they are
+interested in while the teacher functions as a mentor</li>
+<li>was looking for a python web server kids could program on both inside and
+outside the school network</li>
+<li>Flask and Django solve the same problems but Django can be more complex and
+restrictive</li>
+<li>pythonprogramming.net has some good Flask, Django, SQL, and other python
+learning resources</li>
+<li>Flask<ul>
+<li>easy to handle server requests, responses, and posted form data</li>
+<li>easy to render dynamic content using the Jinja template library</li>
+<li>easy to interact with a SQLite database without having to build database
+objects like Django</li>
+<li>simple session handling</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="orchestration-and-ci-cd-with-ansible-and-openstack">
+    <hgroup>
+      <h2>Orchestration and CI/CD with Ansible and OpenStack</h2>
+    </hgroup>
+    <article class="">
+      <p>Simone Soldateschi</p>
+<ul class="simple">
+<li>Rackspace devops guy</li>
+<li>CI pipeline to build container</li>
+<li>full stack</li>
+<li>orchestration</li>
+<li>service discovery</li>
+<li>CI pipeline go live</li>
+<li>Desired state: write code to tell systems how to manage themselves</li>
+<li>Full stack: hardware -&gt; OpenStack -&gt; CoreOS -&gt; Docker</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="trials-tribulations-teaching-python-at-coderdojo">
+    <hgroup>
+      <h2>Trials &amp; tribulations teaching Python at CoderDojo</h2>
+    </hgroup>
+    <article class="">
+      <p>Caleb Hattingh</p>
+<ul class="simple">
+<li>Short, complete programs</li>
+<li>better to start with something that works and let the students make changes
+from there than to give them something broken and ask them to fix it</li>
+<li>use these to launch discussions into real world computer and programming
+topics</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="writing-python-for-kids">
+    <hgroup>
+      <h2>Writing Python For Kids</h2>
+    </hgroup>
+    <article class="">
+      <p>Brendan Scott</p>
+<ul class="simple">
+<li>wrote Python for Kids for Dummies, published by Wiley</li>
+<li>publisher saw Brendan's blog and asked him to write a book</li>
+<li>took about 12 months from initial contact to publication</li>
+<li>only about a month of that was drafting the content</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="open-edx-an-edx-partner-perspective">
+    <hgroup>
+      <h2>Open edX: An edX partner perspective</h2>
+    </hgroup>
+    <article class="">
+      <p>John Zornig</p>
+<ul class="simple">
+<li>edX is a non-profit, open-source Massive Open Online Course (MOOC) set up by
+Harvard and MIT in 2012</li>
+<li>edX code is available on GitHub</li>
+<li>UQ was one of the first universities to get involved with edX (UQx)</li>
+<li>primarily written in Python and Django</li>
+<li>edX.org is a SaaS based on open edX which is free but must be self-managed
+and hosted</li>
+<li>due to the number of universities involved, it can take a while to get pull
+requests merged to edX</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="openstack-works-so-now-what">
+    <hgroup>
+      <h2>OpenStack Works, so now what?</h2>
+    </hgroup>
+    <article class="">
+      <p>Monty Taylor</p>
+<ul class="simple">
+<li>as an app dev, I want to deploy and run an app on the internet so that my
+customers all over the world can consume it</li>
+<li>as an app dev, I want to deploy the application across multiple clouds so
+that my service survives issues in any one of them</li>
+<li>spin up and tear down 10-20k VMs on 3 clouds a day using only OS API</li>
+<li>2000 devs work on OS, and every patch is integration tested twice before
+merging; 1.7 million test jobs in the last six months; 18 Terabytes of log
+data in six months</li>
+<li>each test runs on a single use cloud slave</li>
+<li>they run no hardware servers for these tests; everything is run on Rackspace
+and HP clouds</li>
+<li>Gerrit<ul>
+<li>traditional enterprise Java application (i.e. not particularly
+cloud-native)</li>
+<li>run as a single Nova VM with a Cinder volume (which works well enough)</li>
+<li>scale out farm of git replicas</li>
+<li>2500 changes every week</li>
+<li>15,000 change revisions every week</li>
+<li>10,000 new changes merged every 42 days</li>
+</ul>
+</li>
+<li>nodepool<ul>
+<li>cloud native</li>
+<li>purpose build in Python</li>
+<li>keeps a pool of nodes ready to go so tests can be run immediately</li>
+<li>tears down used nodes and creates new ones to replace them</li>
+<li>multi-cloud</li>
+<li>fully elastic -&gt; responds to demand automatically</li>
+</ul>
+</li>
+<li>All of this works, so what next? Make it easier!</li>
+<li>Basic things you want to do which are currently harder than they should be:<ul>
+<li>get (make/fetch/find) a base image</li>
+<li>upload it to each cloud</li>
+<li>boot a VM on one or more clouds</li>
+<li>available on the internet</li>
+</ul>
+</li>
+<li>Get a base image<ul>
+<li>OS diskimage-builder</li>
+<li>packer</li>
+<li>images from Ubuntu/RH/SUSE</li>
+<li>problem: hypervisor image file format<ul>
+<li>Rackspace uses VHD</li>
+<li>HP uses qcow2</li>
+<li>DreamHost uses RAW</li>
+</ul>
+</li>
+<li>problem: image API version<ul>
+<li>HP uses v1</li>
+<li>vechost uses v2</li>
+</ul>
+</li>
+<li>problem: image task vs. PUT</li>
+<li>problem: ensure it's on the internet<ul>
+<li>there are a whole bunch of different combinations between vendors</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>solutions:<ul>
+<li><code class="docutils literal"><span class="pre">os-client-config</span></code></li>
+<li>shade<ul>
+<li>a library to wrap business logic around client libraries</li>
+<li>in use in infra nodepool and ansible (v2.0, multi-cloud support)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Future directions:<ul>
+<li>get back to basics</li>
+<li>shade existence is a bug</li>
+<li>make some decision about divergences in the basic levels</li>
+<li>take a stand even if one of our product managers disagrees</li>
+<li>ensure that simple things are simple</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="keynote-consequences-of-an-insightful-algorithm">
+    <hgroup>
+      <h2>Keynote: Consequences of an Insightful Algorithm</h2>
+    </hgroup>
+    <article class="">
+      <p>Carina C. Zona</p>
+<ul class="simple">
+<li>algorithms impose consequences on people all the time<ul>
+<li>an algorithm is a step-by-step set of operations for predictably arriving
+at a given outcome</li>
+<li>in CS = patterns of instructions articulated in code</li>
+<li>in the world generally = patterns articulated in a variety of ways</li>
+</ul>
+</li>
+<li>deep learning is a way of training artificial neural networks<ul>
+<li>relies on an automated discovery of patterns</li>
+</ul>
+</li>
+<li>a false positive or false negative when dealing with human data must be dealt
+with very carefully<ul>
+<li>people cannot be treated simply as numbers</li>
+</ul>
+</li>
+<li>standards for ethical research involving humans and human data tend to be
+only considered carefully in academia, but should be observed in other areas
+too.</li>
+<li>we cannot intuit inner state, emotions, private subjectivity</li>
+<li>consent is permission granted != informed consent is permission freely
+granted<ul>
+<li>'no' is the consequence-free alternative and the default value with
+informed appreciation and understanding (ahead of time) of the consequences</li>
+</ul>
+</li>
+<li>we need to learn from professional/academic ethics<ul>
+<li>avoid harm to others</li>
+<li>consider the potential impact on others</li>
+<li>be honest and trustworthy</li>
+<li>actively counter bias and inequality</li>
+<li>audit outcomes</li>
+</ul>
+</li>
+<li>insightful algorithms are growing in precision but the risk of damage is also
+rising</li>
+<li>anticipate diverse ways to screw up<ul>
+<li>this requires truly diverse teams having decision authority</li>
+</ul>
+</li>
+<li>cultivate informed consent</li>
+<li>audit constantly</li>
+<li>recognize bias is inherent</li>
+<li>visionary about countering bias</li>
+<li>aim mining tools at public benefit consequences<ul>
+<li>currently these are mostly aimed at corporate uses</li>
+</ul>
+</li>
+<li>commit to transparency</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="learn-you-a-flask">
+    <hgroup>
+      <h2>Learn You a Flask</h2>
+    </hgroup>
+    <article class="">
+      <p>Lachlan Blackhall</p>
+<ul class="simple">
+<li>example of Flask app running on Heroku</li>
+<li>flask at the core doesn't provide much before serving requests</li>
+<li>further functionality is provided by plugins</li>
+<li>use an ORM, such as SQLAlCHEMY to access SQL database; don't use raw SQL<ul>
+<li>we're Python programmers, work high up the stack!</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="easy-wins-with-cython-fast-and-multi-core">
+    <hgroup>
+      <h2>Easy wins with Cython: fast and multi-core</h2>
+    </hgroup>
+    <article class="">
+      <p>Caleb Hattingh</p>
+<ul class="simple">
+<li>Cython lets you specify object/variable types to save time as Python doesn't
+have to determine type</li>
+<li>Cython is a super set of Python; it can compile anything written in Python
+into a C file</li>
+<li>easycython is a useful wrapper to help with cython code</li>
+<li>it speeds up Python code significantly when crunching large amounts of data<ul>
+<li>can be applied just to the bits of the code that need speeding up, the
+rest can just be standard python</li>
+</ul>
+</li>
+<li>PyPy and Numba are both options for speeding up Python code as well</li>
+<li>Cython can be run multi-core (with no global interpreter lock)</li>
+<li>but limit your Cython to only the bit that really need it, as it adds some
+complexity and debugging difficulties</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="rapid-prototyping-with-teenagers">
+    <hgroup>
+      <h2>Rapid prototyping with teenagers</h2>
+    </hgroup>
+    <article class="">
+      <p>Katie Bell</p>
+<ul class="simple">
+<li>NCSS program</li>
+<li>also run a summer school (has been running for 20 years)<ul>
+<li>2.5 days of teaching python</li>
+<li>3 days of project time, with an all-nighter on the last night</li>
+</ul>
+</li>
+<li>three things excite kids for learning:<ul>
+<li>How stuff works</li>
+<li>Building cool stuff</li>
+<li>Problem solving</li>
+</ul>
+</li>
+<li>goal of the project was to build a completely functioning social networking
+site</li>
+<li>build a site quickly with minimal magic</li>
+<li>used tornado for building the web page, but tornado can look a bit
+complicated so they built a wrapper and let the kids use that</li>
+<li>sqlite for persistent data as it is relatively simple and built into Python</li>
+<li>use simple tools</li>
+<li>group brainstorm only at the beginning</li>
+<li>use version control</li>
+<li>communication is paramount</li>
+<li>continual integration -&gt; always have something working, have students demo
+often</li>
+<li>explain new procedures to the whole class at the same time</li>
+<li>share successes</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="on-being-pythonic">
+    <hgroup>
+      <h2>On Being Pythonic</h2>
+    </hgroup>
+    <article class="">
+      <p>Peter Lovett</p>
+
+
+
+
+    </article>
+  </slide>
+
+
+    <slide class="thank-you-slide segue nobackground">
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
