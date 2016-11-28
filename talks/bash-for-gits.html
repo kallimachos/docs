@@ -104,6 +104,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#checking-the-status-of-your-repositories">Checking the status of your repositories</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cleaning-your-repositories">Cleaning your repositories</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#scripting-other-things">Scripting other things</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stringing-together-commands">Stringing together commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#warning">Warning</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#where-to-next">Where to next</a></li>
@@ -296,8 +297,8 @@ available in Python.</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">key</span> <span class="o">=</span> <span class="n">fetchkey</span><span class="p">()</span>
-<span class="n">url</span> <span class="o">=</span> <span class="n">HOST</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="n">FORMAT</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://api.uptimerobot.com/getMonitors?apikey=12345&#39;</span>
+
 <span class="k">try</span><span class="p">:</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
@@ -324,29 +325,33 @@ master, then push to origin.</p>
 </pre></div>
 </div>
 <ul class="build simple">
-<li><strong>file names</strong> - you to not have to use <strong>.sh</strong>, but I think extensions are
+<li><strong>file names</strong> - you to not have to use <strong>.sh</strong>, but extensions are
 helpful for minimizing confusion and easier globbing (<code class="docutils literal"><span class="pre">*.sh</span></code>).</li>
 <li><strong>shebang</strong> (<code class="docutils literal"><span class="pre">#!/bin/bash</span></code>) - this line specifies the interpreter to use
 for running the script.</li>
 <li><code class="docutils literal"><span class="pre">#</span></code> - the hash symbol comments the text to its right.</li>
 </ul>
 <p><strong>Running the script</strong></p>
-<ul>
-<li><p class="first">This script is aliased in <strong>.bashrc</strong>:</p>
+<ol class="arabic">
+<li><p class="first">Make the script executable:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ chmod +x ~/scripts/bash/bump.sh
+</pre></div>
+</div>
+</li>
+</ol>
+<ol class="build arabic" start="2">
+<li><p class="first">Alias in <strong>.bashrc</strong>:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">bump</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/bump.sh&#39;</span>
 </pre></div>
 </div>
 </li>
-</ul>
-<ul class="build">
-<li><p class="first">Thus, it can be run from the command line when you are in an appropriate
-directory:</p>
+<li><p class="first">Run from the command line when you are in an appropriate directory:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span>$ cd docs-rpc
 $ bump
 </pre></div>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div class="section" id="updating-stable-branches-in-a-single-repository">
 <h2>Updating stable branches in a single repository<a class="headerlink" href="#updating-stable-branches-in-a-single-repository" title="Permalink to this headline">#</a></h2>
@@ -388,7 +393,7 @@ done
 <h2>Updating multiple directories with multiple repositories<a class="headerlink" href="#updating-multiple-directories-with-multiple-repositories" title="Permalink to this headline">#</a></h2>
 <p><strong>up.sh</strong> iterates through multiple directories, each containing multiple
 repository-containing directories, and updates each one.</p>
-<p>Note how this script calls other scripts using absolute paths.</p>
+<p>Note how this script calls other scripts.</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span>div=&#39;======================&#39;
 
 echo
@@ -453,14 +458,8 @@ repos=(openstack rpcdocs code code/python scripts)
 for item in ${repos[@]}; do
     root=~/$item/*
     for dir in $root; do
-        if test -d $dir &amp;&amp; test -e $dir/.git; then
-            if [ $dir == ~/rpcdocs/internal-docs-rpc ]; then
-                true
-            else
-                cd $dir &amp;&amp; echo $dir
-                git clean -xfd &amp;&amp; git remote prune origin
-            fi
-        fi
+        cd $dir &amp;&amp; echo $dir
+        git clean -xfd &amp;&amp; git remote prune origin
     done
 done
 echo
@@ -470,8 +469,8 @@ echo
 <div class="section" id="scripting-other-things">
 <h2>Scripting other things<a class="headerlink" href="#scripting-other-things" title="Permalink to this headline">#</a></h2>
 <p>Scripts can contain anything you can run from the command line, not just git
-commands. For example, I use an aliased script to run backups for my Fedora
-machine.</p>
+commands. For example, script uses <code class="docutils literal"><span class="pre">rsync</span></code> to backup a computer running
+Fedora.</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">[</span> <span class="s2">&quot;$1&quot;</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span> <span class="p">];</span> <span class="n">then</span>
     <span class="n">sudo</span> <span class="n">rsync</span> <span class="o">-</span><span class="n">azvACHS</span> <span class="o">--</span><span class="n">delete</span> \
     <span class="o">--</span><span class="n">progress</span> <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;/dev/&quot;</span><span class="p">,</span><span class="s2">&quot;/proc/&quot;</span><span class="p">,</span><span class="s2">&quot;/sys/&quot;</span><span class="p">,</span><span class="s2">&quot;/tmp/&quot;</span><span class="p">,</span><span class="s2">&quot;/run/&quot;</span><span class="p">,</span><span class="s2">&quot;/mnt/&quot;</span><span class="p">}</span> \
@@ -491,8 +490,7 @@ machine.</p>
 <span class="n">fi</span>
 </pre></div>
 </div>
-<p>In a former life, I needed to clean up a few hundred XML files. Perfect time
-for a script.</p>
+<p>Making identical changes to a large number of files is perfect for scripting.</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span>sed -i &#39;:a;N;$!ba;s/[ \t]*&lt;screen&gt;\n/&lt;screen&gt;/g&#39; $1
 sed -i &#39;:a;N;$!ba;s/[ \t]*&lt;screen&gt;\t/&lt;screen&gt;/g&#39; $1
 sed -i &quot;s/\`/&#39;/g&quot; $1
@@ -502,70 +500,81 @@ sed -i &#39;s/ \#&lt;/ \&amp;lt\;/g&#39; $1
 </pre></div>
 </div>
 </div>
-<div class="section" id="tips">
-<h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">#</a></h2>
-<dl class="docutils">
-<dt>Exit on error</dt>
-<dd><p class="first">Add <code class="docutils literal"><span class="pre">set</span> <span class="pre">-e</span></code> to the top of your script in order to exit immediately if a
-command exits with a non-zero status.</p>
-<p class="last">Cancel setting using <code class="docutils literal"><span class="pre">set</span> <span class="pre">+e</span></code>.</p>
-</dd>
-<dt>Activate debugging</dt>
-<dd><p class="first">Add <code class="docutils literal"><span class="pre">set</span> <span class="pre">-x</span></code> at the point you want to start debugging. This causes all
-commands being run to output to the command line.</p>
-<p class="last">Cancel setting using <code class="docutils literal"><span class="pre">set</span> <span class="pre">+x</span></code>.</p>
-</dd>
-<dt>GitHub</dt>
-<dd>Use GitHub: it gives you practice and makes it easy to share your scripts
-between systems and with other people.</dd>
-<dt>Document</dt>
-<dd>Always document your scripts! It is amazing how quickly you forget what
-a script does when you haven't used it in a while. Plus, if it is
-documented it is a lot easier to share it with other people.</dd>
-</dl>
-<dl class="docutils">
-<dt>Stringing together commands</dt>
-<dd><p class="first">To execute commands in a series, separate with <code class="docutils literal"><span class="pre">;</span></code> or put each command
+<div class="section" id="stringing-together-commands">
+<h2>Stringing together commands<a class="headerlink" href="#stringing-together-commands" title="Permalink to this headline">#</a></h2>
+<ul>
+<li><p class="first">To execute commands in a series, separate with <code class="docutils literal"><span class="pre">;</span></code> or put each command
 on a newline.</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ pwd; cat temp.rst; ls
-
-/home/scripts/doc
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ cat temp.rst; ls
 cat: temp.rst: No such file or directory
 conf.py  git-guide  images  index.rst  Makefile
 </pre></div>
 </div>
-<p>Use <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> if you want the line to stop if a command fails.</p>
-<div class="code last highlight-default"><div class="highlight"><pre><span></span>$ pwd &amp;&amp; cat temp.rst &amp;&amp; ls
-
-/home/scripts/doc
+</li>
+</ul>
+<ul class="build">
+<li><p class="first">Use <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> if you want the line to stop when a command fails.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ cat temp.rst &amp;&amp; ls
 cat: temp.rst: No such file or directory
 </pre></div>
 </div>
-</dd>
-</dl>
+</li>
+<li><p class="first">Use <code class="docutils literal"><span class="pre">|</span></code> to pipe the output of one command to another command.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ ls | wc
+12    12    105
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="tips">
+<h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">#</a></h2>
+<p><strong>Exit on error</strong></p>
+<ul class="simple">
+<li>Add <code class="docutils literal"><span class="pre">set</span> <span class="pre">-e</span></code> to the top of your script in order to exit immediately if a
+command exits with a non-zero status.</li>
+<li>Cancel using <code class="docutils literal"><span class="pre">set</span> <span class="pre">+e</span></code>.</li>
+</ul>
+<p class="build"><strong>Debugging</strong></p>
+<ul class="build simple">
+<li>Add <code class="docutils literal"><span class="pre">set</span> <span class="pre">-x</span></code> at the point you want to start debugging.</li>
+<li>Cancel using <code class="docutils literal"><span class="pre">set</span> <span class="pre">+x</span></code>.</li>
+</ul>
+<p class="build"><strong>GitHub</strong></p>
+<ul class="build simple">
+<li>Keep your code in version control. It gives you practice and makes it
+easier to share your scripts between systems and with other people.</li>
+</ul>
+<p class="build"><strong>Document</strong></p>
+<ul class="build simple">
+<li>Comment your scripts so you know what they do and how they work. Sharing
+is easier with documentation!</li>
+</ul>
 </div>
 <div class="section" id="warning">
 <h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">#</a></h2>
-<p>Be very careful when scripting destructive commands. Iterating through
-directories and deleting is an easy way to cause problems. If you feel tempted
-to use <code class="docutils literal"><span class="pre">-f</span></code>, think long and hard.</p>
+<p><strong>Be very careful when scripting destructive commands.</strong> Iterating through
+directories and changing or deleting files is an easy way to cause problems.
+Test your script several times on dummy files before using in production.</p>
+<p>Be especially careful if you feel tempted to use the force; it leads to the
+dark side.</p>
 <p><strong>BAD</strong></p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">f</span>
 
 <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span>
 </pre></div>
 </div>
-<p>To some extent, this is mitigated when working in Git repositories as you can
-almost always go back to a previous commit. You will, however, be sad if a
-day's uncommitted work gets wiped out or you clobber someone else's branch
-by force pushing to it.</p>
+<p>To some extent, the risks of running destructive commands are mitigated when
+working in Git repositories as you can almost always go back to a previous
+commit. You will be sad, however, if a day's uncommitted work gets wiped out or
+you clobber someone else's branch by force pushing to it.</p>
 </div>
 <div class="section" id="where-to-next">
 <h2>Where to next<a class="headerlink" href="#where-to-next" title="Permalink to this headline">#</a></h2>
 <p>There are many online tutorials and old-school guides to using Bash. To be
 honest though, I generally find it better to search for solutions to specific
-problems. No one is a Bash programmer by trade, rather it is something you use
-to get things done around your system.</p>
+problems. No one is a Bash programmer by trade; it is something you use to get
+things done around your system.</p>
 <p>So Google, use Stack Overflow, and cannibalize other people's work.</p>
 <p>For better of for worse, my bash scripts are all on GitHub:</p>
 <p><a class="reference external" href="https://github.com/kallimachos/bash">https://github.com/kallimachos/bash</a></p>

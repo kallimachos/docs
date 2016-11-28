@@ -164,8 +164,8 @@ available in Python.
    import json
    import requests
 
-   key = fetchkey()
-   url = HOST + key + FORMAT
+   url = 'http://api.uptimerobot.com/getMonitors?apikey=12345'
+
    try:
        r = requests.get(url)
    except Exception as e:
@@ -194,7 +194,7 @@ master, then push to origin.
 
 .. rst-class:: build
 
--  **file names** - you to not have to use **.sh**, but I think extensions are
+-  **file names** - you to not have to use **.sh**, but extensions are
    helpful for minimizing confusion and easier globbing (``*.sh``).
 
 -  **shebang** (``#!/bin/bash``) - this line specifies the interpreter to use
@@ -206,16 +206,21 @@ master, then push to origin.
 
 **Running the script**
 
--  This script is aliased in **.bashrc**:
+#. Make the script executable:
+
+   .. code::
+
+      $ chmod +x ~/scripts/bash/bump.sh
+
+.. rst-class:: build
+
+2. Alias in **.bashrc**:
 
    .. code::
 
       alias bump='~/scripts/bash/bump.sh'
 
-.. rst-class:: build
-
--  Thus, it can be run from the command line when you are in an appropriate
-   directory:
+3. Run from the command line when you are in an appropriate directory:
 
    .. code::
 
@@ -269,7 +274,7 @@ Updating multiple directories with multiple repositories
 **up.sh** iterates through multiple directories, each containing multiple
 repository-containing directories, and updates each one.
 
-Note how this script calls other scripts using absolute paths.
+Note how this script calls other scripts.
 
 .. code::
 
@@ -343,14 +348,8 @@ it deletes uncommitted files.
    for item in ${repos[@]}; do
        root=~/$item/*
        for dir in $root; do
-           if test -d $dir && test -e $dir/.git; then
-               if [ $dir == ~/rpcdocs/internal-docs-rpc ]; then
-                   true
-               else
-                   cd $dir && echo $dir
-                   git clean -xfd && git remote prune origin
-               fi
-           fi
+           cd $dir && echo $dir
+           git clean -xfd && git remote prune origin
        done
    done
    echo
@@ -360,8 +359,8 @@ Scripting other things
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Scripts can contain anything you can run from the command line, not just git
-commands. For example, I use an aliased script to run backups for my Fedora
-machine.
+commands. For example, script uses ``rsync`` to backup a computer running
+Fedora.
 
 .. code::
 
@@ -385,8 +384,7 @@ machine.
 
 .. nextslide::
 
-In a former life, I needed to clean up a few hundred XML files. Perfect time
-for a script.
+Making identical changes to a large number of files is perfect for scripting.
 
 .. code::
 
@@ -397,59 +395,69 @@ for a script.
    sed -i 's/ \& / and /g' $1
    sed -i 's/ \#</ \&lt\;/g' $1
 
-Tips
-~~~~
-
-Exit on error
-   Add ``set -e`` to the top of your script in order to exit immediately if a
-   command exits with a non-zero status.
-
-   Cancel setting using ``set +e``.
-
-Activate debugging
-   Add ``set -x`` at the point you want to start debugging. This causes all
-   commands being run to output to the command line.
-
-   Cancel setting using ``set +x``.
-
-GitHub
-   Use GitHub: it gives you practice and makes it easy to share your scripts
-   between systems and with other people.
-
-Document
-   Always document your scripts! It is amazing how quickly you forget what
-   a script does when you haven't used it in a while. Plus, if it is
-   documented it is a lot easier to share it with other people.
-
-.. nextslide::
-
 Stringing together commands
-   To execute commands in a series, separate with ``;`` or put each command
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-  To execute commands in a series, separate with ``;`` or put each command
    on a newline.
 
    .. code::
 
-      $ pwd; cat temp.rst; ls
-
-      /home/scripts/doc
+      $ cat temp.rst; ls
       cat: temp.rst: No such file or directory
       conf.py  git-guide  images  index.rst  Makefile
 
-   Use ``&&`` if you want the line to stop if a command fails.
+.. rst-class:: build
 
-   .. code::
+   -  Use ``&&`` if you want the line to stop when a command fails.
 
-      $ pwd && cat temp.rst && ls
+      .. code::
 
-      /home/scripts/doc
-      cat: temp.rst: No such file or directory
+         $ cat temp.rst && ls
+         cat: temp.rst: No such file or directory
+
+
+   -  Use ``|`` to pipe the output of one command to another command.
+
+      .. code::
+
+         $ ls | wc
+         12    12    105
+
+Tips
+~~~~
+
+**Exit on error**
+
+-  Add ``set -e`` to the top of your script in order to exit immediately if a
+   command exits with a non-zero status.
+-  Cancel using ``set +e``.
+
+.. rst-class:: build
+
+   **Debugging**
+
+   -  Add ``set -x`` at the point you want to start debugging.
+   -  Cancel using ``set +x``.
+
+   **GitHub**
+
+   -  Keep your code in version control. It gives you practice and makes it
+      easier to share your scripts between systems and with other people.
+
+   **Document**
+
+   -  Comment your scripts so you know what they do and how they work. Sharing
+      is easier with documentation!
 
 Warning
 ~~~~~~~
 
-Be very careful when scripting destructive commands. Iterating through
-directories and deleting is an easy way to cause problems. If you feel tempted
-to use ``-f``, think long and hard.
+**Be very careful when scripting destructive commands.** Iterating through
+directories and changing or deleting files is an easy way to cause problems.
+Test your script several times on dummy files before using in production.
+
+Be especially careful if you feel tempted to use the force; it leads to the
+dark side.
 
 **BAD**
 
@@ -459,18 +467,18 @@ to use ``-f``, think long and hard.
 
    rm -rf
 
-To some extent, this is mitigated when working in Git repositories as you can
-almost always go back to a previous commit. You will, however, be sad if a
-day's uncommitted work gets wiped out or you clobber someone else's branch
-by force pushing to it.
+To some extent, the risks of running destructive commands are mitigated when
+working in Git repositories as you can almost always go back to a previous
+commit. You will be sad, however, if a day's uncommitted work gets wiped out or
+you clobber someone else's branch by force pushing to it.
 
 Where to next
 ~~~~~~~~~~~~~
 
 There are many online tutorials and old-school guides to using Bash. To be
 honest though, I generally find it better to search for solutions to specific
-problems. No one is a Bash programmer by trade, rather it is something you use
-to get things done around your system.
+problems. No one is a Bash programmer by trade; it is something you use to get
+things done around your system.
 
 So Google, use Stack Overflow, and cannibalize other people's work.
 
