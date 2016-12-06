@@ -2,6 +2,11 @@
 Bash for gits: A Bash scripting tutorial for Git users
 ======================================================
 
+.. ifnotslides::
+
+   `View slide presentation
+   <http://kallimachos.github.io/docs/slides/talks/bash-for-gits.html#1>`_
+
 .. ifslides::
 
    .. rst-class:: title-image
@@ -44,7 +49,7 @@ create some aliases.
 
 Note that the ``#`` symbol indicates a comment.
 
-.. code::
+.. code-block:: bash
 
    # Set prompt
    PS1="[\u \W]\$ "
@@ -67,7 +72,7 @@ Because **.bashrc** is executed, it can include arbitrary code.
 In this example, an ``if`` clause is used to set aliases depending on the
 operating system.
 
-.. code::
+.. code-block:: bash
 
    # Handle differences between Mac and Linux OS
    if [[ $OSTYPE =~ ^darwin ]]; then
@@ -88,7 +93,7 @@ Script aliases
 You can call your scripts directly from the command line, but it is much more
 convenient to give them aliases if you use them frequently.
 
-.. code::
+.. code-block:: bash
 
    # bash script aliases
    alias backup='~/scripts/bash/backup.sh'
@@ -159,7 +164,7 @@ available in Python.
 
 **Python**
 
-.. code::
+.. code:: python
 
    import json
    import requests
@@ -181,7 +186,7 @@ Updating master in a single repository
 **bump.sh** wraps the commands required to fetch from upstream, merge into
 master, then push to origin.
 
-.. code::
+.. code-block:: bash
 
    #!/bin/bash
 
@@ -216,7 +221,7 @@ master, then push to origin.
 
 2. Alias in **.bashrc**:
 
-   .. code::
+   .. code-block:: bash
 
       alias bump='~/scripts/bash/bump.sh'
 
@@ -236,7 +241,9 @@ each one and pushing them to origin.
 This script uses a ``for`` loop to iterate through an array (i.e. list of
 values).
 
-.. code::
+The ``$`` symbol indicates that you want to access the value of a variable.
+
+.. code-block:: bash
 
    branches=(v10 v11 v12 v13)
 
@@ -257,7 +264,7 @@ Updating multiple repositories
 **rackup.sh** iterates through repository-containing directories in a single
 directory and updates each one.
 
-.. code::
+.. code-block:: bash
 
    for dir in ~/rpcdocs/*; do
        if test -d $dir && test -e $dir/.git; then
@@ -276,7 +283,7 @@ repository-containing directories, and updates each one.
 
 Note how this script calls other scripts.
 
-.. code::
+.. code-block:: bash
 
    div='======================'
 
@@ -301,7 +308,7 @@ Checking the status of your repositories
 or if I'm on a non-master branch. I always like to run this before running
 update scripts to prevent merge problems.
 
-.. code::
+.. code-block:: bash
 
    repos=(openstack rpcdocs code code/python scripts)
 
@@ -331,7 +338,7 @@ it deletes uncommitted files.
 
 .. nextslide::
 
-.. code::
+.. code-block:: bash
 
    bash ~/scripts/bash/repocheck.sh
    echo -n "Proceed with git clean? (y/n): "
@@ -362,7 +369,7 @@ Scripts can contain anything you can run from the command line, not just git
 commands. For example, this script uses ``rsync`` to backup a computer running
 Fedora:
 
-.. code::
+.. code-block:: bash
 
    if [ "$1" = "all" ]; then
        sudo rsync -azvACHS --delete \
@@ -386,7 +393,7 @@ Fedora:
 
 Making identical changes to a large number of files is perfect for scripting:
 
-.. code::
+.. code-block:: bash
 
    sed -i ':a;N;$!ba;s/[ \t]*<screen>\n/<screen>/g' $1
    sed -i ':a;N;$!ba;s/[ \t]*<screen>\t/<screen>/g' $1
@@ -482,9 +489,14 @@ things done around your system.
 
 So Google, use Stack Overflow, and cannibalize other people's work.
 
-For better of for worse, my bash scripts are all on GitHub:
+For better of for worse, my bash scripts and **.bashrc** file are all on
+GitHub:
 
-https://github.com/kallimachos/bash
+- https://github.com/kallimachos/bash
+
+This tutorial is also available for reference:
+
+- http://kallimachos.github.io/docs/talks/bash-for-gits.html
 
 Congratulations!
 ~~~~~~~~~~~~~~~~
