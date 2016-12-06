@@ -60,6 +60,11 @@ code.docutils.literal {
     margin-right: 23px
 }
 
+.highlight-bash {
+    margin-left: 70px;
+    margin-right: 23px
+}
+
 pre {
     background-color: whitesmoke;
     font-size: medium;

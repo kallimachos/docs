@@ -134,18 +134,18 @@ run <code class="docutils literal"><span class="pre">source</span> <span class="
       <p>In this example, we configure the prompt, add an application to the PATH, and
 create some aliases.</p>
 <p>Note that the <code class="docutils literal"><span class="pre">#</span></code> symbol indicates a comment.</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span># Set prompt
-PS1=&quot;[\u \W]\$ &quot;
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Set prompt</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;[\u \W]\$ &quot;</span>
 
-# Path additions
-export PATH=/opt/Komodo-Edit-10/bin:$PATH
+<span class="c1"># Path additions</span>
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/opt/Komodo-Edit-10/bin:<span class="nv">$PATH</span>
 
-# User specific aliases and functions
-alias grep=&#39;grep --color=auto&#39;
-alias la=&#39;ls -laG&#39;
-alias master=&#39;git checkout master&#39;
-alias p3=&#39;python3&#39;
-alias p=&#39;python&#39;
+<span class="c1"># User specific aliases and functions</span>
+<span class="nb">alias</span> <span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep --color=auto&#39;</span>
+<span class="nb">alias</span> <span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ls -laG&#39;</span>
+<span class="nb">alias</span> <span class="nv">master</span><span class="o">=</span><span class="s1">&#39;git checkout master&#39;</span>
+<span class="nb">alias</span> <span class="nv">p3</span><span class="o">=</span><span class="s1">&#39;python3&#39;</span>
+<span class="nb">alias</span> <span class="nv">p</span><span class="o">=</span><span class="s1">&#39;python&#39;</span>
 </pre></div>
 </div>
 
@@ -161,18 +161,18 @@ alias p=&#39;python&#39;
       <p>Because <strong>.bashrc</strong> is executed, it can include arbitrary code.</p>
 <p>In this example, an <code class="docutils literal"><span class="pre">if</span></code> clause is used to set aliases depending on the
 operating system.</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span># Handle differences between Mac and Linux OS
-if [[ $OSTYPE =~ ^darwin ]]; then
-    alias fox=&#39;open -a &quot;firefox&quot;&#39;
-    alias go=&#39;open&#39;
-    alias ls=&#39;ls -G&#39;
-    alias music=&#39;open -a &quot;itunes&quot;&#39;
-else
-    alias fox=&#39;setsid firefox &gt;/dev/null 2&gt;&amp;1&#39;
-    alias go=&#39;gnome-open&#39;
-    alias ls=&#39;ls -G --color=auto&#39;
-    alias music=&#39;setsid vlc &gt;/dev/null 2&gt;&amp;1&#39;
-fi
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Handle differences between Mac and Linux OS</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$OSTYPE</span> <span class="o">=</span>~ ^darwin <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">alias</span> <span class="nv">fox</span><span class="o">=</span><span class="s1">&#39;open -a &quot;firefox&quot;&#39;</span>
+    <span class="nb">alias</span> <span class="nv">go</span><span class="o">=</span><span class="s1">&#39;open&#39;</span>
+    <span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls -G&#39;</span>
+    <span class="nb">alias</span> <span class="nv">music</span><span class="o">=</span><span class="s1">&#39;open -a &quot;itunes&quot;&#39;</span>
+<span class="k">else</span>
+    <span class="nb">alias</span> <span class="nv">fox</span><span class="o">=</span><span class="s1">&#39;setsid firefox &gt;/dev/null 2&gt;&amp;1&#39;</span>
+    <span class="nb">alias</span> <span class="nv">go</span><span class="o">=</span><span class="s1">&#39;gnome-open&#39;</span>
+    <span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls -G --color=auto&#39;</span>
+    <span class="nb">alias</span> <span class="nv">music</span><span class="o">=</span><span class="s1">&#39;setsid vlc &gt;/dev/null 2&gt;&amp;1&#39;</span>
+<span class="k">fi</span>
 </pre></div>
 </div>
 
@@ -187,15 +187,15 @@ fi
     <article class="">
       <p>You can call your scripts directly from the command line, but it is much more
 convenient to give them aliases if you use them frequently.</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># bash script aliases</span>
-<span class="n">alias</span> <span class="n">backup</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/backup.sh&#39;</span>
-<span class="n">alias</span> <span class="n">bump</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/bump.sh&#39;</span>
-<span class="n">alias</span> <span class="n">clean</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/clean.sh&#39;</span>
-<span class="n">alias</span> <span class="n">mygit</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/mygit.sh&#39;</span>
-<span class="n">alias</span> <span class="n">rackup</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/rackup.sh&#39;</span>
-<span class="n">alias</span> <span class="n">repocheck</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/repocheck.sh&#39;</span>
-<span class="n">alias</span> <span class="n">up</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/up.sh&#39;</span>
-<span class="n">alias</span> <span class="n">stable</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/stable.sh&#39;</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># bash script aliases</span>
+<span class="nb">alias</span> <span class="nv">backup</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/backup.sh&#39;</span>
+<span class="nb">alias</span> <span class="nv">bump</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/bump.sh&#39;</span>
+<span class="nb">alias</span> <span class="nv">clean</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/clean.sh&#39;</span>
+<span class="nb">alias</span> <span class="nv">mygit</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/mygit.sh&#39;</span>
+<span class="nb">alias</span> <span class="nv">rackup</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/rackup.sh&#39;</span>
+<span class="nb">alias</span> <span class="nv">repocheck</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/repocheck.sh&#39;</span>
+<span class="nb">alias</span> <span class="nv">up</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/up.sh&#39;</span>
+<span class="nb">alias</span> <span class="nv">stable</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/stable.sh&#39;</span>
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -271,7 +271,7 @@ service, then print the status of each monitor to the command line. While this
 could be achieved with Bash, it is easier to do with the syntax and libraries
 available in Python.</p>
 <p><strong>Python</strong></p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://api.uptimerobot.com/getMonitors?apikey=12345&#39;</span>
@@ -298,14 +298,14 @@ available in Python.</p>
     <article class="">
       <p><strong>bump.sh</strong> wraps the commands required to fetch from upstream, merge into
 master, then push to origin.</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Merges upstream into local branch for a Rackspace repository</span>
 <span class="c1"># and pushes the result to origin.</span>
 
-<span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
-<span class="n">git</span> <span class="n">merge</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
-<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
+git fetch upstream
+git merge upstream/master
+git push origin master
 </pre></div>
 </div>
 <ul class="build simple">
@@ -335,7 +335,7 @@ for running the script.</li>
 </ol>
 <ol class="build arabic" start="2">
 <li><p class="first">Alias in <strong>.bashrc</strong>:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">bump</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/bump.sh&#39;</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">bump</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/bump.sh&#39;</span>
 </pre></div>
 </div>
 </li>
@@ -360,18 +360,19 @@ $ bump
 each one and pushing them to origin.</p>
 <p>This script uses a <code class="docutils literal"><span class="pre">for</span></code> loop to iterate through an array (i.e. list of
 values).</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>branches=(v10 v11 v12 v13)
+<p>The <code class="docutils literal"><span class="pre">$</span></code> symbol indicates that you want to access the value of a variable.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nv">branches</span><span class="o">=(</span>v10 v11 v12 v13<span class="o">)</span>
 
-echo
-for item in ${branches[@]}; do
-    git checkout $item
+<span class="nb">echo</span>
+<span class="k">for</span> item in <span class="si">${</span><span class="nv">branches</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
+    git checkout <span class="nv">$item</span>
     git fetch upstream
-    git merge upstream/$item
-    git push origin $item
-done
+    git merge upstream/<span class="nv">$item</span>
+    git push origin <span class="nv">$item</span>
+<span class="k">done</span>
 git checkout master
 git branch
-echo
+<span class="nb">echo</span>
 </pre></div>
 </div>
 
@@ -386,14 +387,14 @@ echo
     <article class="">
       <p><strong>rackup.sh</strong> iterates through repository-containing directories in a single
 directory and updates each one.</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>for dir in ~/rpcdocs/*; do
-    if test -d $dir &amp;&amp; test -e $dir/.git; then
-        cd $dir
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="k">for</span> dir in ~/rpcdocs/*<span class="p">;</span> <span class="k">do</span>
+    <span class="k">if</span> <span class="nb">test</span> -d <span class="nv">$dir</span> <span class="o">&amp;&amp;</span> <span class="nb">test</span> -e <span class="nv">$dir</span>/.git<span class="p">;</span> <span class="k">then</span>
+        <span class="nb">cd</span> <span class="nv">$dir</span>
         git fetch upstream
         git merge upstream/master
         git push origin master
-    fi
-done
+    <span class="k">fi</span>
+<span class="k">done</span>
 </pre></div>
 </div>
 
@@ -409,20 +410,20 @@ done
       <p><strong>up.sh</strong> iterates through multiple directories, each containing multiple
 repository-containing directories, and updates each one.</p>
 <p>Note how this script calls other scripts.</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>div=&#39;======================&#39;
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nv">div</span><span class="o">=</span><span class="s1">&#39;======================&#39;</span>
 
-echo
-echo $div
-echo &#39;OpenStack Repositories&#39;
-echo $div
+<span class="nb">echo</span>
+<span class="nb">echo</span> <span class="nv">$div</span>
+<span class="nb">echo</span> <span class="s1">&#39;OpenStack Repositories&#39;</span>
+<span class="nb">echo</span> <span class="nv">$div</span>
 bash ~/scripts/bash/stack.sh
-echo
+<span class="nb">echo</span>
 
-echo $div
-echo &#39;Rackspace Repositories&#39;
-echo $div
+<span class="nb">echo</span> <span class="nv">$div</span>
+<span class="nb">echo</span> <span class="s1">&#39;Rackspace Repositories&#39;</span>
+<span class="nb">echo</span> <span class="nv">$div</span>
 bash ~/scripts/bash/rackup.sh
-echo
+<span class="nb">echo</span>
 </pre></div>
 </div>
 
@@ -439,20 +440,20 @@ echo
 <code class="docutils literal"><span class="pre">git</span> <span class="pre">status</span></code> on all my repositories and tells me if I have uncommitted work
 or if I'm on a non-master branch. I always like to run this before running
 update scripts to prevent merge problems.</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>repos=(openstack rpcdocs code code/python scripts)
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nv">repos</span><span class="o">=(</span>openstack rpcdocs code code/python scripts<span class="o">)</span>
 
-for item in ${repos[@]}; do
-    root=~/$item/*
-    for dir in $root; do
-        if test -d $dir &amp;&amp; test -e $dir/.git; then
-            cd $dir &amp;&amp; echo $dir
-            branch=$(git status -s -b)
-            if ! [ &quot;$branch&quot; = &quot;## master...origin/master&quot; ]; then
+<span class="k">for</span> item in <span class="si">${</span><span class="nv">repos</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
+    <span class="nv">root</span><span class="o">=</span>~/<span class="nv">$item</span>/*
+    <span class="k">for</span> dir in <span class="nv">$root</span><span class="p">;</span> <span class="k">do</span>
+        <span class="k">if</span> <span class="nb">test</span> -d <span class="nv">$dir</span> <span class="o">&amp;&amp;</span> <span class="nb">test</span> -e <span class="nv">$dir</span>/.git<span class="p">;</span> <span class="k">then</span>
+            <span class="nb">cd</span> <span class="nv">$dir</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$dir</span>
+            <span class="nv">branch</span><span class="o">=</span><span class="k">$(</span>git status -s -b<span class="k">)</span>
+            <span class="k">if</span> ! <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$branch</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;## master...origin/master&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
                 git status -s -b
-            fi
-        fi
-    done
-done
+            <span class="k">fi</span>
+        <span class="k">fi</span>
+    <span class="k">done</span>
+<span class="k">done</span>
 </pre></div>
 </div>
 
@@ -482,26 +483,26 @@ it deletes uncommitted files.</p>
       <h2>Cleaning your repositories</h2>
     </hgroup>
     <article class="">
-      <div class="code highlight-default"><div class="highlight"><pre><span></span>bash ~/scripts/bash/repocheck.sh
-echo -n &quot;Proceed with git clean? (y/n): &quot;
-read proceed
-if [ &quot;$proceed&quot; != &quot;y&quot; ]; then
-    exit
-else
-    echo &quot;Cleaning git repos...&quot;
-fi
-echo
+      <div class="highlight-bash"><div class="highlight"><pre><span></span>bash ~/scripts/bash/repocheck.sh
+<span class="nb">echo</span> -n <span class="s2">&quot;Proceed with git clean? (y/n): &quot;</span>
+<span class="nb">read</span> proceed
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$proceed</span><span class="s2">&quot;</span> !<span class="o">=</span> <span class="s2">&quot;y&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">exit</span>
+<span class="k">else</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Cleaning git repos...&quot;</span>
+<span class="k">fi</span>
+<span class="nb">echo</span>
 
-repos=(openstack rpcdocs code code/python scripts)
+<span class="nv">repos</span><span class="o">=(</span>openstack rpcdocs code code/python scripts<span class="o">)</span>
 
-for item in ${repos[@]}; do
-    root=~/$item/*
-    for dir in $root; do
-        cd $dir &amp;&amp; echo $dir
-        git clean -xfd &amp;&amp; git remote prune origin
-    done
-done
-echo
+<span class="k">for</span> item in <span class="si">${</span><span class="nv">repos</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
+    <span class="nv">root</span><span class="o">=</span>~/<span class="nv">$item</span>/*
+    <span class="k">for</span> dir in <span class="nv">$root</span><span class="p">;</span> <span class="k">do</span>
+        <span class="nb">cd</span> <span class="nv">$dir</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$dir</span>
+        git clean -xfd <span class="o">&amp;&amp;</span> git remote prune origin
+    <span class="k">done</span>
+<span class="k">done</span>
+<span class="nb">echo</span>
 </pre></div>
 </div>
 
@@ -517,23 +518,23 @@ echo
       <p>Scripts can contain anything you can run from the command line, not just git
 commands. For example, this script uses <code class="docutils literal"><span class="pre">rsync</span></code> to backup a computer running
 Fedora:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">[</span> <span class="s2">&quot;$1&quot;</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span> <span class="p">];</span> <span class="n">then</span>
-    <span class="n">sudo</span> <span class="n">rsync</span> <span class="o">-</span><span class="n">azvACHS</span> <span class="o">--</span><span class="n">delete</span> \
-    <span class="o">--</span><span class="n">progress</span> <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;/dev/&quot;</span><span class="p">,</span><span class="s2">&quot;/proc/&quot;</span><span class="p">,</span><span class="s2">&quot;/sys/&quot;</span><span class="p">,</span><span class="s2">&quot;/tmp/&quot;</span><span class="p">,</span><span class="s2">&quot;/run/&quot;</span><span class="p">,</span><span class="s2">&quot;/mnt/&quot;</span><span class="p">}</span> \
-    <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;/media/&quot;</span><span class="p">,</span><span class="s2">&quot;/lost+found/&quot;</span><span class="p">}</span> <span class="o">/*</span> \
-    <span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">media</span><span class="o">/</span><span class="n">bmoss</span><span class="o">/</span><span class="n">FreeAgent</span>\ <span class="n">GoFlex</span>\ <span class="n">Drive</span><span class="o">/</span><span class="n">FedoraBackup</span><span class="o">/</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    sudo rsync -azvACHS --delete <span class="se">\</span>
+    --progress --exclude<span class="o">={</span><span class="s2">&quot;/dev/&quot;</span>,<span class="s2">&quot;/proc/&quot;</span>,<span class="s2">&quot;/sys/&quot;</span>,<span class="s2">&quot;/tmp/&quot;</span>,<span class="s2">&quot;/run/&quot;</span>,<span class="s2">&quot;/mnt/&quot;</span><span class="o">}</span> <span class="se">\</span>
+    --exclude<span class="o">={</span><span class="s2">&quot;/media/&quot;</span>,<span class="s2">&quot;/lost+found/&quot;</span><span class="o">}</span> /* <span class="se">\</span>
+    /run/media/bmoss/FreeAgent<span class="se">\ </span>GoFlex<span class="se">\ </span>Drive/FedoraBackup/
 <span class="k">else</span>
-    <span class="n">rsync</span> <span class="o">-</span><span class="n">azvACHS</span> <span class="o">--</span><span class="n">delete</span> \
-    <span class="o">--</span><span class="n">progress</span> <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;/dev/&quot;</span><span class="p">,</span><span class="s2">&quot;/proc/&quot;</span><span class="p">,</span><span class="s2">&quot;/sys/&quot;</span><span class="p">,</span><span class="s2">&quot;/tmp/&quot;</span><span class="p">,</span><span class="s2">&quot;/run/&quot;</span><span class="p">,</span><span class="s2">&quot;/mnt/&quot;</span><span class="p">}</span> \
-    <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;/media/&quot;</span><span class="p">,</span><span class="s2">&quot;/lost+found/&quot;</span><span class="p">,</span><span class="s2">&quot;.gem/&quot;</span><span class="p">,</span><span class="s2">&quot;.ICEauthority/&quot;</span><span class="p">}</span> \
-    <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;.macromedia/&quot;</span><span class="p">,</span><span class="s2">&quot;.pki/&quot;</span><span class="p">,</span><span class="s2">&quot;.shutter/&quot;</span><span class="p">,</span><span class="s2">&quot;.gimp-2.8/&quot;</span><span class="p">,</span><span class="s2">&quot;.java/&quot;</span><span class="p">}</span> \
-    <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;.mozilla/&quot;</span><span class="p">,</span><span class="s2">&quot;.python_history/&quot;</span><span class="p">,</span><span class="s2">&quot;.adobe/&quot;</span><span class="p">,</span><span class="s2">&quot;.cache/&quot;</span><span class="p">}</span> \
-    <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;.dropbox/&quot;</span><span class="p">,</span><span class="s2">&quot;.gnome2/&quot;</span><span class="p">,</span><span class="s2">&quot;.gnome2_private/&quot;</span><span class="p">,</span><span class="s2">&quot;.novaclient/&quot;</span><span class="p">}</span> \
-    <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;.thumbnails/&quot;</span><span class="p">,</span><span class="s2">&quot;.bash_history/&quot;</span><span class="p">,</span><span class="s2">&quot;.dropbox-dist/&quot;</span><span class="p">,</span><span class="s2">&quot;.gnupg/&quot;</span><span class="p">}</span> \
-    <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;.tox/&quot;</span><span class="p">,</span><span class="s2">&quot;.bash_logout/&quot;</span><span class="p">,</span><span class="s2">&quot;.esd_auth/&quot;</span><span class="p">,</span><span class="s2">&quot;.gphoto/&quot;</span><span class="p">,</span><span class="s2">&quot;.m2/&quot;</span><span class="p">}</span> \
-    <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">bmoss</span><span class="o">/</span> \
-    <span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">media</span><span class="o">/</span><span class="n">bmoss</span><span class="o">/</span><span class="n">FreeAgent</span>\ <span class="n">GoFlex</span>\ <span class="n">Drive</span><span class="o">/</span><span class="n">FedoraBackup</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">bmoss</span><span class="o">/</span>
-<span class="n">fi</span>
+    rsync -azvACHS --delete <span class="se">\</span>
+    --progress --exclude<span class="o">={</span><span class="s2">&quot;/dev/&quot;</span>,<span class="s2">&quot;/proc/&quot;</span>,<span class="s2">&quot;/sys/&quot;</span>,<span class="s2">&quot;/tmp/&quot;</span>,<span class="s2">&quot;/run/&quot;</span>,<span class="s2">&quot;/mnt/&quot;</span><span class="o">}</span> <span class="se">\</span>
+    --exclude<span class="o">={</span><span class="s2">&quot;/media/&quot;</span>,<span class="s2">&quot;/lost+found/&quot;</span>,<span class="s2">&quot;.gem/&quot;</span>,<span class="s2">&quot;.ICEauthority/&quot;</span><span class="o">}</span> <span class="se">\</span>
+    --exclude<span class="o">={</span><span class="s2">&quot;.macromedia/&quot;</span>,<span class="s2">&quot;.pki/&quot;</span>,<span class="s2">&quot;.shutter/&quot;</span>,<span class="s2">&quot;.gimp-2.8/&quot;</span>,<span class="s2">&quot;.java/&quot;</span><span class="o">}</span> <span class="se">\</span>
+    --exclude<span class="o">={</span><span class="s2">&quot;.mozilla/&quot;</span>,<span class="s2">&quot;.python_history/&quot;</span>,<span class="s2">&quot;.adobe/&quot;</span>,<span class="s2">&quot;.cache/&quot;</span><span class="o">}</span> <span class="se">\</span>
+    --exclude<span class="o">={</span><span class="s2">&quot;.dropbox/&quot;</span>,<span class="s2">&quot;.gnome2/&quot;</span>,<span class="s2">&quot;.gnome2_private/&quot;</span>,<span class="s2">&quot;.novaclient/&quot;</span><span class="o">}</span> <span class="se">\</span>
+    --exclude<span class="o">={</span><span class="s2">&quot;.thumbnails/&quot;</span>,<span class="s2">&quot;.bash_history/&quot;</span>,<span class="s2">&quot;.dropbox-dist/&quot;</span>,<span class="s2">&quot;.gnupg/&quot;</span><span class="o">}</span> <span class="se">\</span>
+    --exclude<span class="o">={</span><span class="s2">&quot;.tox/&quot;</span>,<span class="s2">&quot;.bash_logout/&quot;</span>,<span class="s2">&quot;.esd_auth/&quot;</span>,<span class="s2">&quot;.gphoto/&quot;</span>,<span class="s2">&quot;.m2/&quot;</span><span class="o">}</span> <span class="se">\</span>
+    /home/bmoss/ <span class="se">\</span>
+    /run/media/bmoss/FreeAgent<span class="se">\ </span>GoFlex<span class="se">\ </span>Drive/FedoraBackup/home/bmoss/
+<span class="k">fi</span>
 </pre></div>
 </div>
 
@@ -547,12 +548,12 @@ Fedora:</p>
     </hgroup>
     <article class="">
       <p>Making identical changes to a large number of files is perfect for scripting:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>sed -i &#39;:a;N;$!ba;s/[ \t]*&lt;screen&gt;\n/&lt;screen&gt;/g&#39; $1
-sed -i &#39;:a;N;$!ba;s/[ \t]*&lt;screen&gt;\t/&lt;screen&gt;/g&#39; $1
-sed -i &quot;s/\`/&#39;/g&quot; $1
-sed -i &#39;s/C\&amp;U/C\&amp;amp\;U/g&#39; $1
-sed -i &#39;s/ \&amp; / and /g&#39; $1
-sed -i &#39;s/ \#&lt;/ \&amp;lt\;/g&#39; $1
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sed -i <span class="s1">&#39;:a;N;$!ba;s/[ \t]*&lt;screen&gt;\n/&lt;screen&gt;/g&#39;</span> <span class="nv">$1</span>
+sed -i <span class="s1">&#39;:a;N;$!ba;s/[ \t]*&lt;screen&gt;\t/&lt;screen&gt;/g&#39;</span> <span class="nv">$1</span>
+sed -i <span class="s2">&quot;s/\`/&#39;/g&quot;</span> <span class="nv">$1</span>
+sed -i <span class="s1">&#39;s/C\&amp;U/C\&amp;amp\;U/g&#39;</span> <span class="nv">$1</span>
+sed -i <span class="s1">&#39;s/ \&amp; / and /g&#39;</span> <span class="nv">$1</span>
+sed -i <span class="s1">&#39;s/ \#&lt;/ \&amp;lt\;/g&#39;</span> <span class="nv">$1</span>
 </pre></div>
 </div>
 
@@ -660,8 +661,15 @@ honest though, I generally find it better to search for solutions to specific
 problems. No one is a Bash programmer by trade; it is something you use to get
 things done around your system.</p>
 <p>So Google, use Stack Overflow, and cannibalize other people's work.</p>
-<p>For better of for worse, my bash scripts are all on GitHub:</p>
-<p><a class="reference external" href="https://github.com/kallimachos/bash">https://github.com/kallimachos/bash</a></p>
+<p>For better of for worse, my bash scripts and <strong>.bashrc</strong> file are all on
+GitHub:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kallimachos/bash">https://github.com/kallimachos/bash</a></li>
+</ul>
+<p>This tutorial is also available for reference:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://kallimachos.github.io/docs/talks/bash-for-gits.html">http://kallimachos.github.io/docs/talks/bash-for-gits.html</a></li>
+</ul>
 
 
 
