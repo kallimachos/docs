@@ -122,7 +122,19 @@ line, even if the syntax does not.</li>
 setting certain configuration options and creating aliases.</li>
 </ul>
 <ul class="build simple">
-<li>Usually located at <strong>~/.bashrc</strong>.</li>
+<li>Usually located at <strong>~/.bashrc</strong>. If this file does not exist, you can
+create it.</li>
+</ul>
+<ul class="build">
+<li><p class="first">You may need to add the following code at the top of your
+<strong>~/.bash_profile</strong> in order to read <strong>.bashrc</strong>:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Get aliases and functions</span>
+<span class="k">if</span> <span class="o">[</span> -f ~/.bashrc <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    . ~/.bashrc
+<span class="k">fi</span>
+</pre></div>
+</div>
+</li>
 </ul>
 <ul class="build simple">
 <li>If you make a change to <strong>.bashrc</strong>, you must either open a new terminal or
