@@ -21,6 +21,11 @@ Introduction
 
 .. rst-class:: build
 
+-  It is not a systematic introduction, but is about giving you an idea
+   of how Bash scripting can help with your work flow.
+
+.. rst-class:: build
+
 -  Mac and Linux bash shells have a few minor differences; we'll see
    some examples when we look at my **.bashrc** file.
 
@@ -39,6 +44,8 @@ Introduction
 .. rst-class:: build
 
 -  Usually located at **~/.bashrc**.
+
+.. rst-class:: build
 
 -  If you make a change to **.bashrc**, you must either open a new terminal or
    run ``source .bashrc`` in order for the changes to take effect.
@@ -495,9 +502,11 @@ GitHub:
 
 - https://github.com/kallimachos/bash
 
-This tutorial is also available for reference:
+.. ifslides::
 
-- http://kallimachos.github.io/docs/talks/bash-for-gits.html
+   This tutorial is also available for reference:
+
+   - http://kallimachos.github.io/docs/talks/bash-for-gits.html
 
 Congratulations!
 ~~~~~~~~~~~~~~~~
