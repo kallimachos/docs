@@ -34,10 +34,11 @@ Introduction
 ~~~~~~~
 
 -  **.bashrc** is executed when you open a Bash terminal. It is useful for
-   setting certain configuration options and creating aliases, and is usually
-   located at **~/.bashrc**.
+   setting certain configuration options and creating aliases.
 
 .. rst-class:: build
+
+-  Usually located at **~/.bashrc**.
 
 -  If you make a change to **.bashrc**, you must either open a new terminal or
    run ``source .bashrc`` in order for the changes to take effect.
