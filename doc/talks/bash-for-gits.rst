@@ -43,7 +43,20 @@ Introduction
 
 .. rst-class:: build
 
--  Usually located at **~/.bashrc**.
+-  Usually located at **~/.bashrc**. If this file does not exist, you can
+   create it.
+
+.. rst-class:: build
+
+-  You may need to add the following code at the top of your
+   **~/.bash_profile** in order to read **.bashrc**:
+
+   .. code-block:: bash
+
+      # Get aliases and functions
+      if [ -f ~/.bashrc ]; then
+          . ~/.bashrc
+      fi
 
 .. rst-class:: build
 
