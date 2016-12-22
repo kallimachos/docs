@@ -16,7 +16,7 @@ Some alternative options are:
 CentOS DevStack on RAX
 ~~~~~~~~~~~~~~~~~~~~~~
 
-#. Create a CentOS 7 server using the 4GB General Purpose v1 flavor
+#. Create a CentOS 7 server using the 8GB General Purpose v1 flavor
    with an appropriate ssh key, and the standard public and service
    networks.
 
