@@ -61,9 +61,9 @@ URL: https://code.google.com/p/io-2012-slides
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Document Repository  documentation" href="../index.html" />
-    <link rel="up" title="Python Docs" href="index.html" />
+    <link rel="up" title="Python" href="index.html" />
     <link rel="next" title="Rackspace Public Cloud" href="../rax/index.html" />
-    <link rel="prev" title="Python Docs" href="index.html" /> 
+    <link rel="prev" title="Python" href="index.html" /> 
 </head>
 <body style="opacity: 0">
 
@@ -77,12 +77,39 @@ URL: https://code.google.com/p/io-2012-slides
       <h1>Tox</h1>
     </hgroup>
     <article class="">
-      <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">deps</span><span class="o">=</span>
-    <span class="p">{</span><span class="n">distshare</span><span class="p">}</span><span class="o">/</span><span class="n">chios</span><span class="o">*.</span><span class="n">zip</span>
+      <p>Tips and tricks for using <a class="reference external" href="https://tox.readthedocs.io/en/latest/">tox</a>.</p>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="testing-in-development-packages">
+    <hgroup>
+      <h2>Testing in-development packages</h2>
+    </hgroup>
+    <article class="">
+      <p>Test local, in-development packages using tox's <code class="docutils literal"><span class="pre">distshare</span></code> feature:</p>
+<ol class="arabic">
+<li><p class="first">Run <code class="docutils literal"><span class="pre">tox</span></code> for the development package. Ensure sdist builds are enabled in
+<strong>tox.ini</strong>:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">skipsdist</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># skipdist = True</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">The package's sdist file is now available in <em>~/.tox/distshare/</em>. You can
+use this file as a dependency by forcing two pip runs in <strong>tox.ini</strong>:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">deps</span><span class="o">=</span>
+    <span class="p">{</span><span class="n">distshare</span><span class="p">}</span><span class="o">/</span><span class="n">packagename</span><span class="o">*.</span><span class="n">zip</span>
 <span class="n">commands</span><span class="o">=</span>
     <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">qr</span><span class="p">{</span><span class="n">toxinidir</span><span class="p">}</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
+</li>
+</ol>
 
 
 

@@ -1,6 +1,6 @@
-===========
-Python Docs
-===========
+======
+Python
+======
 
 A collection of documents dealing with various aspects of Python.
 

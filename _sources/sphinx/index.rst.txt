@@ -1,6 +1,6 @@
-===========
-Sphinx Docs
-===========
+======
+Sphinx
+======
 
 A collection of documents dealing with various aspects of using Sphinx and
 reStructuredText.
