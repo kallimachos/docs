@@ -90,6 +90,7 @@ RST
 rst
 SaaS
 scalable
+sdist
 sharding
 Sim
 sqlite
