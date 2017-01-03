@@ -8,6 +8,20 @@ The writer's guide to writing code
 Some advice based on my experience as a tech writer with no software
 development training.
 
+Abstract
+--------
+
+The increasing prevalence of the docs-as-code approach to technical writing,
+especially in open source projects, means that writers have more opportunity
+than ever to be involved with infrastructure. This is an excellent trend for
+many reasons, not least because writers are best positioned to know their
+development requirements and the needs of their users.
+
+Many writers, however, do not have a formal background in software development.
+
+Notes
+-----
+
 .. warning::
 
    I am going to show some examples from my own code. Developers with
@@ -21,9 +35,10 @@ development training.
 - Do have some formal introduction to coding. Many free courses are available
   online that can get you far enough to start experimenting on your own.
 - automating little things on your own system is a good place to start
-- even if someone else runs your infrastructure, try to understand as much of
-  it as you can. Knowledge is power and it is very useful if you can fix things
-  when they break.
+- Coding knowledge is especially useful if you practice docs-as-code, but even
+  if someone else runs your infrastructure, try to understand as much of it as
+  you can. Knowledge is power and it is very useful if you can fix things when
+  they break.
 - I know I'm preaching to the choir, but document as you go and for a user that
   doesn't know the work
 - gather requirements before you begin
@@ -32,7 +47,7 @@ development training.
 - work on a branch, not on production, and always be able to roll back
 - code with reuse in mind and structure your work with an eye to future changes
 - code consistently; look to upstream style guides (this applies to docs too;
-  don't waste time writing and maintaining an entire guide that when you can
+  don't waste time writing and maintaining an entire guide when you can
   adopt one and add your own bits to it)
 - contribute upstream; avoid bespoke solutions when possible (don't just help
   yourself, help everyone)
