@@ -1,6 +1,6 @@
-====================
-Docs Down Under 2017
-====================
+===============
+Docs Down Under
+===============
 
 .. ifnotslides::
 
@@ -11,7 +11,7 @@ Docs Down Under 2017
 
    .. rst-class:: title-image
 
-      .. figure:: ../images/bash-logo.png
+      .. figure:: ../images/kangaroo.png
 
 
 Welcome
@@ -22,10 +22,13 @@ Welcome
 .. rst-class:: build
 
 -  Please hold questions until the end of each talk.
--  For speakers, we will give you a signal when you have 5 minutes remaining.
 
-Docs-as-code
-~~~~~~~~~~~~
+.. rst-class:: build
+
+-  We will give speakers a signal with 5 minutes remaining.
+
+Docs like code
+~~~~~~~~~~~~~~
 
 -  definition goes here with link to Anne's site (http://docslikecode.com/)
 
@@ -42,8 +45,18 @@ Treating docs like code is:
 .. rst-class:: build
 
 -  Not a new idea in open source communities, but still evolving.
--  Writers have more opportunity than to be involved with infrastructure.
+
+.. rst-class:: build
+
+-  Writers have more opportunity to be involved with infrastructure.
+
+.. rst-class:: build
+
 -  Writers know their development requirements and the needs of their users.
+
+.. rst-class:: build
+
+-  Encourages contributions from developers.
 
 
 Impostor!
@@ -55,10 +68,22 @@ Impostor!
 .. rst-class:: build
 
 -  But we are called **technical** writers for a reason.
+
+.. rst-class:: build
+
 -  **Give it a go.** Struggling to get things working is a great way to learn.
+
+.. rst-class:: build
+
 -  It is empowering to solve problems with code, and we don't always have
    access to a developer.
+
+.. rst-class:: build
+
 -  What's the worst that could happen?
+
+.. rst-class:: build
+
 -  The story of sphinxmark (https://kallimachos.github.io/sphinxmark/).
 
 
@@ -81,14 +106,26 @@ Research
 
 -  Get approval as required and consensus from your colleagues for changes that
    affect work flow or UX.
+
+.. rst-class:: build
+
 -  Search for existing solutions before you start coding; there's a reasonable
    chance someone else has had the same problem. Learn from their work and
    use it if you can can; there's no point reinventing the wheel. Look for
    ideas in established projects.
+
+.. rst-class:: build
+
 -  Google and Stack Overflow are your friends.
+
+.. rst-class:: build
+
 -  Reading documentation is a pretty good idea too. Consuming tech docs
    improves your own writing no end, and you might even find a new project to
    contribute to.
+
+.. rst-class:: build
+
 -  Simplify as much as possible: stick to one language, framework, CI/CD tool,
    etc. Unless your company has mandated products that they buy for you, I
    strongly recommend free and open source software. Most documentation will
@@ -104,10 +141,22 @@ Draft
 .. rst-class:: build
 
 -  You have never gone so far down one path that you can't try another.
+
+.. rst-class:: build
+
 -  Work on a branch, not on production, and always be able to roll back.
+
+.. rst-class:: build
+
 -  Code with reuse in mind; structure your work with consideration for future
    changes.
+
+.. rst-class:: build
+
 -  Code consistently; adopt an upstream style guide.
+
+.. rst-class:: build
+
 -  Document your work. You **will** thank yourself later.
 
 
@@ -119,7 +168,13 @@ Review
 .. rst-class:: build
 
 -  Ask other writers to test your work.
+
+.. rst-class:: build
+
 -  Ask your friendly neighborhood developer to have a look at your code.
+
+.. rst-class:: build
+
 -  Advertise your changes.
 
 
@@ -132,12 +187,48 @@ Publish
 
 -  Contribute your tools work upstream; avoid bespoke solutions when possible
    (don't just help yourself, help everyone).
+
+.. rst-class:: build
+
 -  http://kallimachos.github.io/docs/
+
 
 Schedule
 ~~~~~~~~
 
-Table goes here.
+.. list-table::
+   :header-rows: 1
+   :widths: 10 60 30
+
+   * - Time
+     - Title
+     - Speaker
+   * - 10:40
+     - Welcome
+     - Brian Moss
+   * - 11:00
+     - Quiz
+     - Lana Brindley
+
+
+12:00 PM	Prize Session
+12:20 PM	LUNCH
+1:20 PM	Stephen King's practical advice for tech writers	Rikki Endsley
+1:40 PM
+
+2:00 PM	Sorting out the mess: How information architecture can help	Darren Chan
+2:20 PM	Kernel documentation: What we have and where it's going	Jonathan Corbet
+2:40 PM
+
+3:00 PM	Afternoon tea
+3:40 PM	Writing less, saying more: UX lessons from the small screen	Claire Mahoney
+4:00 PM
+
+4:20 PM	Effective docs writing: Practical writing style explained with computer science.	Joe Robinson
+4:40 PM	Helping caterpillars fly	Nicola Nye
+5:00 PM
+
+5:20 PM	End
 
 
 Questions
