@@ -27,7 +27,17 @@ Welcome
 Docs-as-code
 ~~~~~~~~~~~~
 
--  definition goes here with link to Anne's site
+-  definition goes here with link to Anne's site (http://docslikecode.com/)
+
+Treating docs like code is:
+
+    Collaborating with contributors efficiently by keeping docs close to code or in the same system as code, with a source file concept and an output for deliverables.
+    Building documentation as repeatably and consistently as possible across multiple platforms. While typically done with open source tools, the main driver is not open source but open, repeatable, consistent collaboration.
+    Applying software development tools and techniques to documentation about software, application programming interfaces (APIs), or other technical topics.
+    Learning enough about web development to be dangerous and create beautiful, modern docs.
+    Valuing technical accuracy and consistency.
+    Trusting team members to value documentation, respect end-users needs, and advocate for the best deliverables for consumers of the documentation.
+    Automating and integrating documentation builds so you and your teams can focus on content.
 
 .. rst-class:: build
 
@@ -36,7 +46,7 @@ Docs-as-code
 -  Writers know their development requirements and the needs of their users.
 
 
-Imposter!
+Impostor!
 ~~~~~~~~~
 
 -  Writers may not have a background in software development and may be
@@ -49,7 +59,7 @@ Imposter!
 -  It is empowering to solve problems with code, and we don't always have
    access to a developer.
 -  What's the worst that could happen?
--  The story of sphinxmark <link>.
+-  The story of sphinxmark (https://kallimachos.github.io/sphinxmark/).
 
 
 Think like a writer

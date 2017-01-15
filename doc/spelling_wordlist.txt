@@ -94,6 +94,7 @@ scalable
 sdist
 sharding
 Sim
+sphinxmark
 sqlite
 Stacker
 Stefano
