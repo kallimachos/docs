@@ -34,4 +34,54 @@ Aurynn Shaw
 -  in open source communities, this also leads to loss of community members
 -  dominion-centric thinking gets in the way of building better communities
    and better technology
--
+-  How do we fix this?
+
+   -  ask questions
+   -  listen
+   -  inclusive hiring
+
+-  human-driven development
+
+   -  focus on humans
+   -  admit we don't know everything; ignorance is not status
+   -  speak up
+   -  codes of contact
+   -  training
+   -  don't let bad apples ruin the barrel
+   -  this is critical, because we are building the future of our community
+
+Almost Open - Just close the door behind you
+--------------------------------------------
+Steven Ellis
+
+-  What does open mean to you?
+-  open vs free: just because something is libre doesn't mean it is gratis
+
+   -  note that in many cases gratis actually means you are the product
+   -  e.g. Google, Facebook, etc.
+
+-  the shift from traditional apps to SaaS actually makes it harder to get
+   access to the source and the data
+-  if we don't feed the ecosystem that creates libre technology, it will die
+-  some high-level security problems (e.g. heartbleed) are results of libre
+   software that isn't being maintained adequately
+-  how do we encourage organizations to give back?
+
+   -  acknowledge that we use open libraries
+   -  engage and educate
+   -  encourage contribution
+
+-  there are many ways to contribute back upstream
+
+   -  bugs
+   -  testers
+   -  documentation
+   -  designers
+   -  marketing
+   -  project management
+   -  code
+   -  open data
+   -  open APIs
+
+-  change our own practices
+-  help change the practices of others

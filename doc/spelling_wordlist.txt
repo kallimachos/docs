@@ -25,6 +25,7 @@ Cython
 cython
 Dayle
 Debian
+deliverables
 deprecations
 dev
 devops
@@ -34,6 +35,7 @@ Django
 django
 Endsley
 extensibility
+Facebook
 Firefox
 Florian
 Geelong
@@ -47,6 +49,7 @@ Google
 govhack
 hackable
 hackathon
+heartbleed
 Heroku
 html
 http
@@ -55,6 +58,7 @@ imposter
 internet
 kallimachos
 Lana
+libre
 Linux
 linux
 Mahoney
