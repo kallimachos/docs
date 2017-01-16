@@ -162,3 +162,20 @@ Grace Nolan
 
 -  historically locks were a symbol of wealth and power
 -  The era of Perfect Security: 1777-1851
+-  nothing is truly secure
+
+Mamas don't let your babies grow up to be rock star developers
+--------------------------------------------------------------
+Rikki Endsley
+
+-  people are still recruiting for rock stars
+-  but rock star programmers are an unfortunate myth
+-  the rest of the team loses motivation if one person gets all the attention
+-  we need Willie Nelson developers:
+
+   -  help others succeed
+   -  learn new skills
+   -  accessible
+   -  use the best tool for the job
+   -  lead
+   -  collaborate with a diverse mix of people and groups
