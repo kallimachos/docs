@@ -155,3 +155,10 @@ Amber Brown
 -  an open source, event-driven networking engine written in Python
 -  your application is implemented as protocols connected by transports
 -  reactor = event loop
+
+Condensed history of lock picking
+---------------------------------
+Grace Nolan
+
+-  historically locks were a symbol of wealth and power
+-  The era of Perfect Security: 1777-1851
