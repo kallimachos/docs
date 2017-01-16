@@ -179,3 +179,30 @@ Rikki Endsley
    -  use the best tool for the job
    -  lead
    -  collaborate with a diverse mix of people and groups
+
+-----
+
+Tuesday Jan 17
+~~~~~~~~~~~~~~
+
+Choose your own adventure, please!
+----------------------------------
+Pia Waugh
+
+-  we need to make active choices about our future
+-  with great power comes great inequality, and we periodically break down
+   the system to redistribute power
+-  individuals have more power now than at any point in history
+-  technology, especially the internet, has enhanced individual power
+-  all our human systems are self-created; we can recreate them as we wish
+-  (B) we should embrace a technological existentialism
+-  We are only as free as what we do
+
+
+Docs Down Under Miniconf
+------------------------
+Brian Moss and Lana Brindley
+
+-  The most amazing miniconf ever!
+-  `Schedule and Brian's talk
+   <http://kallimachos.github.io/docs/talks/DDU-2017.html>`_
