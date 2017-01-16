@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Linux Event Logs &mdash; Document Repository  documentation</title>
+  <title>linux.conf.au Hobart January 2017 &mdash; Document Repository  documentation</title>
   
 
   
@@ -38,9 +38,9 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Document Repository  documentation" href="../index.html"/>
-        <link rel="up" title="Event Logs" href="index.html"/>
-        <link rel="next" title="linux.conf.au Geelong February 2016" href="lca_2016.html"/>
-        <link rel="prev" title="Event Logs" href="index.html"/> 
+        <link rel="up" title="Linux Event Logs" href="lca.html"/>
+        <link rel="next" title="OpenStack Event Logs" href="openstack.html"/>
+        <link rel="prev" title="linux.conf.au Geelong February 2016" href="lca_2016.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -90,9 +90,12 @@
             
                 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Event Logs</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Linux Event Logs</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="lca.html">Linux Event Logs</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="lca_2016.html">linux.conf.au Geelong February 2016</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lca_2017.html">linux.conf.au Hobart January 2017</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">linux.conf.au Hobart January 2017</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#miniconfs-monday-jan-16">Miniconfs Monday Jan 16</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="openstack.html">OpenStack Event Logs</a></li>
@@ -136,11 +139,13 @@
       
           <li><a href="index.html">Event Logs</a> &raquo;</li>
       
-    <li>Linux Event Logs</li>
+          <li><a href="lca.html">Linux Event Logs</a> &raquo;</li>
+      
+    <li>linux.conf.au Hobart January 2017</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/events/lca.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/events/lca_2017.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -150,24 +155,94 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="linux-event-logs">
-<h1>Linux Event Logs<a class="headerlink" href="#linux-event-logs" title="Permalink to this headline">#</a></h1>
-<p>Session logs from Linux conferences and events.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="lca_2016.html">linux.conf.au Geelong February 2016</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lca_2016.html#documentation-miniconf-monday-feb-1">Documentation Miniconf Monday Feb 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lca_2016.html#tuesday-feb-2">Tuesday Feb 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lca_2016.html#wednesday-feb-3">Wednesday Feb 3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lca_2016.html#thursday-feb-4">Thursday Feb 4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lca_2016.html#friday-feb-5">Friday Feb 5</a></li>
+  <div class="section" id="linux-conf-au-hobart-january-2017">
+<h1>linux.conf.au Hobart January 2017<a class="headerlink" href="#linux-conf-au-hobart-january-2017" title="Permalink to this headline">#</a></h1>
+<div class="section" id="miniconfs-monday-jan-16">
+<h2>Miniconfs Monday Jan 16<a class="headerlink" href="#miniconfs-monday-jan-16" title="Permalink to this headline">#</a></h2>
+<div class="section" id="human-driven-development">
+<h3>Human-Driven Development<a class="headerlink" href="#human-driven-development" title="Permalink to this headline">#</a></h3>
+<p>Aurynn Shaw</p>
+<ul class="simple">
+<li>split between dev and ops causes sadness and tears</li>
+<li>this is caused by split priorities<ul>
+<li>ops doesn't want to break anything, so they say no to new things</li>
+<li>thus dev isn't allowed to use new things, so they are sad</li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="lca_2017.html">linux.conf.au Hobart January 2017</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lca_2017.html#miniconfs-monday-jan-16">Miniconfs Monday Jan 16</a></li>
+<li>devops solves this problem by aligning development with operations through
+work flow and tools</li>
+<li>devops is a culture of collaboration</li>
+<li><em>but</em> development culture can get in the way of collaboration due to a
+culture of dominion<ul>
+<li>many developers gain a sense of control and power through the development
+domain</li>
+<li>this leads to a desire to keep the culture exclusive</li>
+<li>this elitism leads some developers to look down on ops</li>
+<li>even between developers this elitism exists (contempt culture)</li>
+<li>asking questions admits to lack of knowledge = loss of status</li>
+<li>forms the basis of imposter syndrome</li>
+</ul>
+</li>
+<li>these attitudes make people unwilling to ask for help and destroy
+team cohesion</li>
+<li>in open source communities, this also leads to loss of community members</li>
+<li>dominion-centric thinking gets in the way of building better communities
+and better technology</li>
+<li>How do we fix this?<ul>
+<li>ask questions</li>
+<li>listen</li>
+<li>inclusive hiring</li>
+</ul>
+</li>
+<li>human-driven development<ul>
+<li>focus on humans</li>
+<li>admit we don't know everything; ignorance is not status</li>
+<li>speak up</li>
+<li>codes of contact</li>
+<li>training</li>
+<li>don't let bad apples ruin the barrel</li>
+<li>this is critical, because we are building the future of our community</li>
 </ul>
 </li>
 </ul>
+</div>
+<div class="section" id="almost-open-just-close-the-door-behind-you">
+<h3>Almost Open - Just close the door behind you<a class="headerlink" href="#almost-open-just-close-the-door-behind-you" title="Permalink to this headline">#</a></h3>
+<p>Steven Ellis</p>
+<ul class="simple">
+<li>What does open mean to you?</li>
+<li>open vs free: just because something is libre doesn't mean it is gratis<ul>
+<li>note that in many cases gratis actually means you are the product</li>
+<li>e.g. Google, Facebook, etc.</li>
+</ul>
+</li>
+<li>the shift from traditional apps to SaaS actually makes it harder to get
+access to the source and the data</li>
+<li>if we don't feed the ecosystem that creates libre technology, it will die</li>
+<li>some high-level security problems (e.g. heartbleed) are results of libre
+software that isn't being maintained adequately</li>
+<li>how do we encourage organizations to give back?<ul>
+<li>acknowledge that we use open libraries</li>
+<li>engage and educate</li>
+<li>encourage contribution</li>
+</ul>
+</li>
+<li>there are many ways to contribute back upstream<ul>
+<li>bugs</li>
+<li>testers</li>
+<li>documentation</li>
+<li>designers</li>
+<li>marketing</li>
+<li>project management</li>
+<li>code</li>
+<li>open data</li>
+<li>open APIs</li>
+</ul>
+</li>
+<li>change our own practices</li>
+<li>help change the practices of others</li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -178,10 +253,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="lca_2016.html" class="btn btn-neutral float-right" title="linux.conf.au Geelong February 2016" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="openstack.html" class="btn btn-neutral float-right" title="OpenStack Event Logs" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Event Logs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="lca_2016.html" class="btn btn-neutral" title="linux.conf.au Geelong February 2016" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

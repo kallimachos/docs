@@ -7,3 +7,4 @@ Talks and presentations
 
    bash-for-gits.rst
    code-for-writers.rst
+   DDU-2017.rst

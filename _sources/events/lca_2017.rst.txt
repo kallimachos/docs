@@ -1,0 +1,87 @@
+=================================
+linux.conf.au Hobart January 2017
+=================================
+
+Miniconfs Monday Jan 16
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Human-Driven Development
+------------------------
+Aurynn Shaw
+
+-  split between dev and ops causes sadness and tears
+-  this is caused by split priorities
+
+   -  ops doesn't want to break anything, so they say no to new things
+   -  thus dev isn't allowed to use new things, so they are sad
+
+-  devops solves this problem by aligning development with operations through
+   work flow and tools
+-  devops is a culture of collaboration
+-  *but* development culture can get in the way of collaboration due to a
+   culture of dominion
+
+   -  many developers gain a sense of control and power through the development
+      domain
+   -  this leads to a desire to keep the culture exclusive
+   -  this elitism leads some developers to look down on ops
+   -  even between developers this elitism exists (contempt culture)
+   -  asking questions admits to lack of knowledge = loss of status
+   -  forms the basis of imposter syndrome
+
+-  these attitudes make people unwilling to ask for help and destroy
+   team cohesion
+-  in open source communities, this also leads to loss of community members
+-  dominion-centric thinking gets in the way of building better communities
+   and better technology
+-  How do we fix this?
+
+   -  ask questions
+   -  listen
+   -  inclusive hiring
+
+-  human-driven development
+
+   -  focus on humans
+   -  admit we don't know everything; ignorance is not status
+   -  speak up
+   -  codes of contact
+   -  training
+   -  don't let bad apples ruin the barrel
+   -  this is critical, because we are building the future of our community
+
+Almost Open - Just close the door behind you
+--------------------------------------------
+Steven Ellis
+
+-  What does open mean to you?
+-  open vs free: just because something is libre doesn't mean it is gratis
+
+   -  note that in many cases gratis actually means you are the product
+   -  e.g. Google, Facebook, etc.
+
+-  the shift from traditional apps to SaaS actually makes it harder to get
+   access to the source and the data
+-  if we don't feed the ecosystem that creates libre technology, it will die
+-  some high-level security problems (e.g. heartbleed) are results of libre
+   software that isn't being maintained adequately
+-  how do we encourage organizations to give back?
+
+   -  acknowledge that we use open libraries
+   -  engage and educate
+   -  encourage contribution
+
+-  there are many ways to contribute back upstream
+
+   -  bugs
+   -  testers
+   -  documentation
+   -  designers
+   -  marketing
+   -  project management
+   -  code
+   -  open data
+   -  open APIs
+
+-  change our own practices
+-  help change the practices of others
