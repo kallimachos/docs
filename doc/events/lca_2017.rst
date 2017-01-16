@@ -1,0 +1,37 @@
+=================================
+linux.conf.au Hobart January 2017
+=================================
+
+Miniconfs Monday Jan 16
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Human-Driven Development
+------------------------
+Aurynn Shaw
+
+-  split between dev and ops causes sadness and tears
+-  this is caused by split priorities
+
+   -  ops doesn't want to break anything, so they say no to new things
+   -  thus dev isn't allowed to use new things, so they are sad
+
+-  devops solves this problem by aligning development with operations through
+   work flow and tools
+-  devops is a culture of collaboration
+-  *but* development culture can get in the way of collaboration due to a
+   culture of dominion
+
+   -  many developers gain a sense of control and power through the development
+      domain
+   -  this leads to a desire to keep the culture exclusive
+   -  this elitism leads some developers to look down on ops
+   -  even between developers this elitism exists (contempt culture)
+   -  asking questions admits to lack of knowledge = loss of status
+   -  forms the basis of imposter syndrome
+
+-  these attitudes make people unwilling to ask for help and destroy
+   team cohesion
+-  in open source communities, this also leads to loss of community members
+-  dominion-centric thinking gets in the way of building better communities
+   and better technology
+-
