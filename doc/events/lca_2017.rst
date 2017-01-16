@@ -85,3 +85,20 @@ Steven Ellis
 
 -  change our own practices
 -  help change the practices of others
+
+Knit one compute one
+--------------------
+Kris Howard
+
+-  knitting is binary: knit and purl
+-  cast on x stitches = for loop
+-  repeat to end of row = while loop
+-  size adjustment by stitch number = switch statement
+-  stitch patterns = subroutines
+-  more than one pattern at the same time = coroutines/yield
+-  there are many different ways of conveying stitch patterns
+-  `KnitML <www.knitml.com>`_
+
+Mice and Maps
+-------------
+Rhiana Heath
