@@ -62,12 +62,16 @@ libre
 Linux
 linux
 Mahoney
+Minecraft
+minecraft
 Miniconf
 miniconf
 Miniconfs
 Mirantis
 Mitaka
 mitaka
+modders
+modding
 multi
 multiplayer
 ok
@@ -83,6 +87,7 @@ progressbar
 pullall
 py
 pycharm
+pycode
 Pytest
 pytest
 Pythonic
@@ -96,6 +101,7 @@ rebasing
 repo
 repocheck
 reStructuredText
+Rhiana
 Rikki
 RST
 rst
