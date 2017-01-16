@@ -85,3 +85,80 @@ Steven Ellis
 
 -  change our own practices
 -  help change the practices of others
+
+Knit one compute one
+--------------------
+Kris Howard
+
+-  knitting is binary: knit and purl
+-  cast on x stitches = for loop
+-  repeat to end of row = while loop
+-  size adjustment by stitch number = switch statement
+-  stitch patterns = subroutines
+-  more than one pattern at the same time = coroutines/yield
+-  there are many different ways of conveying stitch patterns
+-  `KnitML <www.knitml.com>`_
+
+Mice and Maps
+-------------
+Rhiana Heath
+
+-  Mouse Guard role playing game, kind of like Lord of the Rings with mice
+-  Leaflet: an open-source JavaScript library for mobile-friendly apps
+-  Ruby on Rails as the backend
+-  maps need to be cut into tiles to enable zoom
+
+The Openness of Closed Systems
+------------------------------
+Richard Jones
+
+-  aka Minecraft and Open Source
+-  Minecraft is closed source, but that hasn't stopped the modders
+-  pi.minecraft.net runs on the Raspberry Pi
+
+   -  free, but very limited subset of the game
+   -  not a great programming experience, but low barrier to entry
+
+-  Minecraft is a Java program first released in April 2009
+-  Four main developments in Minecraft modding:
+
+   -  modified Minecraft: edit the binary; owner reacted by obfuscating the
+      code
+   -  custom servers: allow mods server side so the client code doesn't need to
+      be changed
+   -  golden age begins: community removes obfuscation from the source code
+   -  forge: unified mod loader and mod developer pack
+
+-  bit.do/pycode-minecraft
+
+Hannah gets Going
+-----------------
+Hannah Thompson
+
+-  new to Go, new to programming, new to Arduino
+-  `Gobot <https://gobot.io/>`_ is a Go framework for the internet of things
+-  Arduino is fun, but probably not the best way to learn a new programming
+   language
+-  books are ok but become out of date quickly with a fast moving language like
+   Go
+-  online tutorials can be more current, but may not be at the correct level
+-  specific goals with an ending are useful
+-  changing your learning method is ok
+-  don't let tutorials make you feel stupid
+-  don't copy and paste: write it again
+-  use all the resources available to you
+
+Why Twisted is the best and will make your application awesome
+--------------------------------------------------------------
+Amber Brown
+
+-  an open source, event-driven networking engine written in Python
+-  your application is implemented as protocols connected by transports
+-  reactor = event loop
+
+Condensed history of lock picking
+---------------------------------
+Grace Nolan
+
+-  historically locks were a symbol of wealth and power
+-  The era of Perfect Security: 1777-1851
