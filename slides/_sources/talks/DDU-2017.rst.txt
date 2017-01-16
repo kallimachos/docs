@@ -1,6 +1,6 @@
-===============
-Docs Down Under
-===============
+====================
+Docs Down Under 2017
+====================
 
 .. ifnotslides::
 
@@ -17,188 +17,109 @@ Docs Down Under
 Welcome
 ~~~~~~~
 
--  Your hosts for the day: Brian Moss and Lana Brindley
+-  Your hosts for the day:
 
-.. rst-class:: build
+   -  Brian Moss
+   -  Lana Brindley
 
--  Please hold questions until the end of each talk.
-
-.. rst-class:: build
-
--  We will give speakers a signal with 5 minutes remaining.
 
 Docs like code
 ~~~~~~~~~~~~~~
 
--  definition goes here with link to Anne's site (http://docslikecode.com/)
-
-Treating docs like code is:
+.. rst-class:: build
 
 -  Collaborating with contributors efficiently by keeping docs close to code or
    in the same system as code, with a source file concept and an output for
    deliverables.
--  Building documentation as repeatably and consistently as possible across
-   multiple platforms. While typically done with open source tools, the main
-   driver is not open source but open, repeatable, consistent collaboration.
--  Applying software development tools and techniques to documentation about
-   software, application programming interfaces (APIs), or other technical
-   topics.
--  Learning enough about web development to be dangerous and create beautiful,
-   modern docs.
--  Valuing technical accuracy and consistency.
--  Trusting team members to value documentation, respect end-users needs, and
-   advocate for the best deliverables for consumers of the documentation.
+-  Applying software development tools and techniques to documentation
+   development.
 -  Automating and integrating documentation builds so you and your teams can
    focus on content.
+-  http://docslikecode.com/
 
 .. rst-class:: build
 
 -  Not a new idea in open source communities, but still evolving.
-
-.. rst-class:: build
-
 -  Writers have more opportunity to be involved with infrastructure.
-
-.. rst-class:: build
-
 -  Writers know their development requirements and the needs of their users.
-
-.. rst-class:: build
-
--  Encourages contributions from developers.
+-  Encourages contributions from other contributors.
 
 
 Imposter!
 ~~~~~~~~~
 
+.. rst-class:: build
+
 -  Writers may not have a background in software development and may be
    hesitant to mess around with tools.
-
-.. rst-class:: build
-
 -  But we are called **technical** writers for a reason.
-
-.. rst-class:: build
-
 -  **Give it a go.** Struggling to get things working is a great way to learn.
-
-.. rst-class:: build
-
 -  It is empowering to solve problems with code, and we don't always have
    access to a developer.
-
-.. rst-class:: build
-
 -  What's the worst that could happen?
-
-.. rst-class:: build
-
 -  The story of sphinxmark (https://kallimachos.github.io/sphinxmark/).
 
 
 Think like a writer
 ~~~~~~~~~~~~~~~~~~~
 
--  Writers have a highly useful skill set, so use it!
-
 .. rst-class:: build
 
+-  Writers have a highly useful skill set, so use it!
 -  "We can teach you technology; we can't teach you how to write."
 
 
 Research
 ~~~~~~~~
 
+.. rst-class:: build
+
 -  Gather requirements before you begin.
-
-.. rst-class:: build
-
--  Get approval as required and consensus from your colleagues for changes that
-   affect work flow or UX.
-
-.. rst-class:: build
-
+-  Get approval.
+-  Get consensus from your colleagues for changes that affect work flow or UX.
 -  Search for existing solutions before you start coding; there's a reasonable
-   chance someone else has had the same problem. Learn from their work and
-   use it if you can can; there's no point reinventing the wheel. Look for
-   ideas in established projects.
-
-.. rst-class:: build
-
+   chance someone else has had the same problem.
 -  Google and Stack Overflow are your friends.
-
-.. rst-class:: build
-
 -  Reading documentation is a pretty good idea too. Consuming tech docs
    improves your own writing no end, and you might even find a new project to
    contribute to.
-
-.. rst-class:: build
-
 -  Simplify as much as possible: stick to one language, framework, CI/CD tool,
-   etc. Unless your company has mandated products that they buy for you, I
-   strongly recommend free and open source software. Most documentation will
-   come nowhere close to outgrowing free-tier tools.
+   etc.
 
 
 Draft
 ~~~~~
 
--  Think about how you want to organize scripts/code on your system; changing
-   later is hard.
-
 .. rst-class:: build
 
+-  Think about structure; changing later is hard.
 -  You have never gone so far down one path that you can't try another.
-
-.. rst-class:: build
-
 -  Work on a branch, not on production, and always be able to roll back.
-
-.. rst-class:: build
-
 -  Code with reuse in mind; structure your work with consideration for future
    changes.
-
-.. rst-class:: build
-
 -  Code consistently; adopt an upstream style guide.
-
-.. rst-class:: build
-
 -  Document your work. You **will** thank yourself later.
 
 
 Review
 ~~~~~~
 
+.. rst-class:: build
+
 -  Automated testing is great, although it does have limitations.
-
-.. rst-class:: build
-
 -  Ask other writers to test your work.
-
-.. rst-class:: build
-
 -  Ask your friendly neighborhood developer to have a look at your code.
-
-.. rst-class:: build
-
 -  Advertise your changes.
 
 
 Publish
 ~~~~~~~
 
--  Continuous integration and continuous deployment are great.
-
 .. rst-class:: build
 
+-  Continuous integration and continuous deployment are great.
 -  Contribute your tools work upstream; avoid bespoke solutions when possible
    (don't just help yourself, help everyone).
-
-.. rst-class:: build
-
 -  http://kallimachos.github.io/docs/
 
 
