@@ -207,3 +207,283 @@ Brian Moss and Lana Brindley
 -  The most amazing miniconf ever!
 -  `Schedule and Brian's talk
    <http://kallimachos.github.io/docs/talks/DDU-2017.html>`_
+
+
+Stephen King's Practical Advice for Tech Writers
+------------------------------------------------
+Rikki Endsley
+
+-  opensource.com
+-  opensource.com/stephen-king
+-  before you start writing you need to ask the what, why, who, and how
+-  research
+-  create an outline
+-  write
+-  revise
+-  3 main categories of reader:
+
+   -  lay audience
+   -  managerial
+   -  experts
+
+-  http://netpress.org/care-feeding-press/
+-  opensource.com/write-better-docs
+-  *On Writing: A Memoir of the Craft* by Stephen King
+-  "If you want to be a writer, you must do two things above all others: read a
+   lot and write a lot. There's no way around these two things that I'm aware
+   of, no shortcut." Stephen King
+-  be clear on expectations and read examples
+-  opensource.com/write-event-recap
+-  consider how your content might be reused
+-  write the longest, hardest version of a piece first
+-  "An opening line should invite the reader to begin the story. It should say:
+   Listen. Come in here. You want to know about this." Stephen King
+-  useful to define the audience at the start of an article so the reader
+   knows if it applies to them
+-  "When you write a story, you're telling yourself the story. When you
+   rewrite, your main job is taking out all the things that are not the story."
+   Stephen King
+-  "This suggests cutting to speed the pace, and that's what most of us end up
+   having to do (kill your darlings, kill your darlings, even when it breaks
+   your egocentric little scribbler's heart, kill your darlings.)" Stephen King
+-  given less experienced writers an outline to work with can save time and
+   heartache
+-  use signposts and subheadings to give people guidance as they work through
+   an article
+-  "To write is human, to edit is divine." Stephen King
+-  "The scariest moment is always just before you start. After that, things can
+   only get better." Stephen King
+
+Sorting out the mess: How information architecture can help
+-----------------------------------------------------------
+Darren Chan
+
+-  information architect can be a good career path for writers who want to
+   progress in a technical direction rather than a management direction
+-  IA is the structural design of information or objects
+-  IA can be applied anywhere that information is being conveyed
+-  IA is critical for making information findable and understandable
+-  information is subjective, not objective
+
+   -  e.g. is tomato a vegetable or a fruit?
+
+-  Factors that impact IA design:
+
+   -  context
+   -  content
+   -  users
+
+-  IA design process:
+
+   -  user research
+   -  content analysis
+   -  designing
+   -  testing
+
+ Kernel documentation: what we have and where it's going
+ -------------------------------------------------------
+ Jonathan Corbet
+
+-  the kernel is a huge project that requires a lot of documentation
+-  90% or more of kernel code is written by paid developers
+-  but nobody is paid to write kernel documentation
+-  the kernel has a well-defined maintainer model that is very hierarchical
+-  the maintainer model closely matches the kernel file hierarchy
+-  but documentation does not fit this model because it crosses various
+   trees and often deals with multiple parts of the kernel
+-  everybody touches documenation in some way or another
+-  although Linux is at the forfront of OSS in some ways, kernel developers
+   tend to be very conservative
+-  so moving to a new documenation model takes some convincing
+-  Docs are made up of 2000+ .txt files, some more useful than others
+-  docs are formatted using docbook, which uses 34 template files to build
+   the docs into various outputs
+-  docbook also pulls from kerneldoc comments, of which there are about 55,000
+-  so the kernel has lots of documentation but it is difficult to work with,
+   as it has no IA design. Things have just been thrown in as they happened.
+-  there is also no cross-document linkage. They are truly 2000+ individual
+   docs.
+-  basically, this is a documentation system written by kernel developers
+
+   -  there is specialized code in the XML, so the source cannot use standard
+      docbook tools
+   -  no formatting in kerneldoc comments
+   -  ugly output
+   -  hard to set up and make work
+   -  slow
+   -  brittle
+   -  no integration with rest of Documentation directory
+
+-  toward better kernel docs
+
+   -  clean up the mess
+   -  better formatted output with a logical toolchain
+   -  must retain a plain text format
+
+-  Recent work
+
+   -  added markdown (later asciidoc) to processing kerneldoc comments
+   -  but this added more tools and dependencies to the docs build, still slow,
+      still no linkage between documents, conflicts between tools
+
+-  Ideal
+
+   -  dispense with Docbook entirely
+   -  but using what?
+
+-  Sphinx and ReStructured text
+
+   -  designed for documenting code
+   -  designed for large documents in multiple files
+   -  widely used, well supported
+   -  output to HTML, ePub, PDF
+
+-  Jon put together a POC, discussion ensued, POC was expanded, consensus
+   was formed
+-  kerneldoc comments work as always using ``kernel-doc`` directive, so no
+   need to change them
+-  but those comments can now contain RST directives
+-  cross-references now available
+-  function / data structure indexes
+-  much nicer output
+-  simpler, faster focument build
+-  uses the RTD theme
+-  to add to the docs just drop an RST file in the Documentation directory and
+   add it to index.rst
+-  Current status:
+
+   -  merged for 4.8
+   -  Sphinx documents, kernel documentation HOWTO, GPU documentation, Media
+      subsystem
+
+-  For 4.9:
+
+   -  Documentation/driver-api
+   -  merge disparate files so HSI is documented in one place
+   -  dev-tools book
+   -  PDF output (painful, using LaTex)
+
+-  For 4.10:
+
+   -  process book
+   -  core-api book
+   -  admin-guide book
+
+-  Future work:
+
+   -  convert other DocBook docs and eventually eliminate DocBook entirely
+   -  rethink the kernel-doc utility (20 years of Perl cruft)
+   -  incorporate more plain-text documents
+   -  bring some order to the Documentation directory
+   -  more and better documentation
+
+Writing less, saying more: UX lessions from the small screen
+------------------------------------------------------------
+Claire Mahoney
+
+-  in UX the small stuff is actually often the big stuff
+-  think of the user as someone to help, someone you want to give a good
+   product experience
+-  don't want them to spend time in docs; they need the answer and they need
+   to get back to work
+-  mobile user is "on the go" is a misconception
+   -  really, mobiles are used everywhere
+   -  device + location + what the user wants to do
+-  "lite is alright": myth that mobiles are for casual stuff; people will go to
+   bigger devices for real work
+
+   -  but this is not necessarily true; we want the same functionality
+      regardless of the device
+   -  mobile users are very needy humans: they want parity between devices
+
+-  parity is great, but not always realistic. It can lead to excess noise.
+-  so simplification of the interface while retaining features is important
+-  shake to send feedback is a neat way to hide some of the complexity of the
+   full UI
+-  context can be better thn words
+
+   -  screen design and function can be better than words
+
+-  context can't do everything, sometimes you need words
+
+   -  but it can be very challenging to reduce text down to the appropriate
+      size
+   -  you need to sweat the details, like push notifications
+
+-  UX testing takes place in Atlab in Sydney
+-  Style nests
+
+   -  Atlassian (ADG)
+   -  Native (iOS and Android)
+   -  Web mirroring style
+   -  Discretionary styles
+
+-  patterns are good, repetition is not
+-  voice and tone are important and form a pattern as a well. For example,
+   Atlassian uses "practical with a wink".
+-  it is important to remember that you are not your customer; you are not your
+   user
+-  ease of use and clear purpose > attractive design and quality of
+   microinteractions
+-  user -> app -> objective
+
+Effective docs writing: Practical writing style explained with computer science
+-------------------------------------------------------------------------------
+Joe Robinson
+
+-  I was at the back of the room and couldn't take notes :(
+
+
+Helping Caterpillars Fly
+------------------------
+Nicola Nye
+
+-  Cyrus is an open source email providing platform
+-  the lifecycle of a caterpillar is similar to the lifecycle of software
+-  FOSSy the Caterpillar
+-  you have a good idea and get it upstream, then it starts catching on and
+   people start adding to it until it gets so big it forms a cocoon.
+-  it will either turn into a butterfly, or it will fail to hatch
+-  so how do we turn into a butterfly?
+-  reasons for failure and how docs can help:
+
+   -  poor documentation -> better documentation
+   -  contributor turnover -> knowledge sharing
+   -  creeping feature bloat -> define core goals
+   -  poor quality -> document standards
+   -  poor usability -> feedback to developers
+   -  no users -> marketing docs - explain what and why
+
+-  people
+
+   -  paid technical writer (identify stakeholders, make a business case,
+      cost/benefit analysis, company already 'paying' for FOSS)
+   -  audiences (existing user, marketing, new user, administrator,
+      contributors, 'help me, I saw an error message this one time')
+   -  communication (global contributors and users, community, tools like IRC,
+      MLs, bug trackers, etc.)
+
+-  processes
+
+   -  curators (developers, users)
+   -  regular reviews (out of date is worse than none, last reviewed date,
+      SME vs fresh eyes vs users)
+   -  cleanup (remove old docs and clean up your search results)
+
+-  tools
+
+   -  selection (consider your users, consider your contributors)
+   -  templates (document types, style guides, support tools, feed processes;
+      these lower the barrier to entry)
+
+-  danger!
+
+   -  not all documentation is good documentation
+   -  danger signs include lots of FAQs, no introduction for new folks,
+      docs not with code, lack of clear categorisation (IA)
+
+-  Three most important doc things:
+
+   -  paid documentation advocate
+   -  make it easy
+   -  regular reviews
