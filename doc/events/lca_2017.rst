@@ -431,7 +431,12 @@ Effective docs writing: Practical writing style explained with computer science
 -------------------------------------------------------------------------------
 Joe Robinson
 
--  I was at the back of the room and couldn't take notes :(
+-  inspired by Squirrel Girl, Joe explained sentence construction using
+   code logic
+-  this is a great approach for understanding language syntax, especially
+   for people who may know programming logic better than English grammar
+-  unfortunately I couldn't take more detailed notes because I was at the
+   back of the room without my laptop
 
 
 Helping Caterpillars Fly
@@ -487,3 +492,41 @@ Nicola Nye
    -  paid documentation advocate
    -  make it easy
    -  regular reviews
+
+
+Wednesday Jan 18
+~~~~~~~~~~~~~~~~
+
+Designing for Failure
+---------------------
+Dan Callahan
+
+-  Persona was an open source authentication system that let you log in
+   to an email provider, then use those credentials to log in to other sites
+-  Persona arose because 5 years ago site-specific passwords were causing
+   serious problems with security and there were many password breaches
+-  we needed to move away from the traditional password per site approach
+-  Persona allowed users to identify using any email address they chose
+-  Persona has now been decommissioned
+-  free licenses are not enough:
+
+   -  persona had an intractable point of centralization
+   -  bits rot more quickly online
+   -  complexity limits agency
+   -  in other words, a free license doesn't further freedom if people can't
+      run the software
+
+-  prolong your project's life:
+
+   -  measure the right thing
+   -  explicitly define and communicate your scope
+   -  ruthlessly oppose complexity
+
+-  plan for your project's failure:
+
+   -  if you know you're dead, say so
+   -  ensure your users can recover, without your involvement
+   -  use standard data formats
+   -  consider how to minimize the harm caused when your project goes away
+
+-  talk about failures and learn from the experiences of others
