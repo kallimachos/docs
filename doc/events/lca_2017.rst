@@ -647,7 +647,7 @@ Cultural challenges
 -  short/direct responses may sound rude
 -  "i" (Portuguese) is pronounced like "e" (English)
 -  grammar: adjective position is opposite to English
--  some phonemes do not exist in Portuguese, e.g. "th" vs "f"
+-  some phonemes do not exist in Portuguese, e.g. ``th`` vs ``f``
 -  regular schools in Brazil do a poor job of teaching English
 
 Language challenges
@@ -754,3 +754,4 @@ Nadia Eghbal
 
 -  "What is clearly missing from [Eric Raymond's] statement, and is ultimately
    as important, is **how those eyeballs are organized**."
+-  everyone is a potential contributor in open source software
