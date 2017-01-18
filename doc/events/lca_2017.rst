@@ -712,3 +712,45 @@ Tips for native speakers
 -  use simple words and sentences
 -  encourage communication
 -  do not make fun
+
+
+Thursday Jan 19
+~~~~~~~~~~~~~~~
+
+Consider the Maintainer
+-----------------------
+Nadia Eghbal
+
+-  is it alright if a project struggles or dies because a maintainer can't keep
+   up with it anymore
+-  is it alright to compromise or even deliberately ignore the happiness of
+   maintainers so that we can enjoy FOSS?
+-  more people are consuming open source than ever before
+-  two-thirds of top GitHub projects are maintained by one or two people
+-  why haven't the number of maintainers grown in proportion with consumption?
+
+   -  style of production has changed (more small projects)
+   -  maintaining isn't glamorous
+   -  maintainers lack support and mentoring
+   -  the open source ecosystem encourages contribution but not maintenance
+   -  both free and open source software are oriented around the user, not the
+      producer
+
+-  four proposed freedoms of open source producers:
+
+   -  to decide who participates in your community
+   -  to say no to contributions or requests
+   -  to define the priorities and polices of the project
+   -  to step down and move on from a project, temporarily or permanently
+
+-  things maintainers need help with:
+
+   -  community best practices
+   -  project analytics
+   -  tools and bots
+   -  conveying support status
+   -  finding funding
+   -  existential questions
+
+-  "What is clearly missing from [Eric Raymond's] statement, and is ultimately
+   as important, is **how those eyeballs are organized**."
