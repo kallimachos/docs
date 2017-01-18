@@ -213,8 +213,8 @@ Stephen King's Practical Advice for Tech Writers
 ------------------------------------------------
 Rikki Endsley
 
--  opensource.com
--  opensource.com/stephen-king
+-  `opensource.com <https://opensource.com/>`_
+-  `opensource.com/stephen-king <https://opensource.com/stephen-king>`_
 -  before you start writing you need to ask the what, why, who, and how
 -  research
 -  create an outline
@@ -227,13 +227,15 @@ Rikki Endsley
    -  experts
 
 -  http://netpress.org/care-feeding-press/
--  opensource.com/write-better-docs
+-  `opensource.com/write-better-docs
+   <https://opensource.com/write-better-docs>`_
 -  *On Writing: A Memoir of the Craft* by Stephen King
 -  "If you want to be a writer, you must do two things above all others: read a
    lot and write a lot. There's no way around these two things that I'm aware
    of, no shortcut." Stephen King
 -  be clear on expectations and read examples
--  opensource.com/write-event-recap
+-  `opensource.com/write-event-recap
+   <https://opensource.com/write-event-recap>`_
 -  consider how your content might be reused
 -  write the longest, hardest version of a piece first
 -  "An opening line should invite the reader to begin the story. It should say:
@@ -280,9 +282,9 @@ Darren Chan
    -  designing
    -  testing
 
- Kernel documentation: what we have and where it's going
- -------------------------------------------------------
- Jonathan Corbet
+Kernel documentation: what we have and where it's going
+-------------------------------------------------------
+Jonathan Corbet
 
 -  the kernel is a huge project that requires a lot of documentation
 -  90% or more of kernel code is written by paid developers
@@ -291,14 +293,14 @@ Darren Chan
 -  the maintainer model closely matches the kernel file hierarchy
 -  but documentation does not fit this model because it crosses various
    trees and often deals with multiple parts of the kernel
--  everybody touches documenation in some way or another
--  although Linux is at the forfront of OSS in some ways, kernel developers
+-  everybody touches documentation in some way or another
+-  although Linux is at the forefront of OSS in some ways, kernel developers
    tend to be very conservative
--  so moving to a new documenation model takes some convincing
+-  so moving to a new documentation model takes some convincing
 -  Docs are made up of 2000+ .txt files, some more useful than others
--  docs are formatted using docbook, which uses 34 template files to build
+-  docs are formatted using Docbook, which uses 34 template files to build
    the docs into various outputs
--  docbook also pulls from kerneldoc comments, of which there are about 55,000
+-  Docbook also pulls from kerneldoc comments, of which there are about 55,000
 -  so the kernel has lots of documentation but it is difficult to work with,
    as it has no IA design. Things have just been thrown in as they happened.
 -  there is also no cross-document linkage. They are truly 2000+ individual
@@ -306,7 +308,7 @@ Darren Chan
 -  basically, this is a documentation system written by kernel developers
 
    -  there is specialized code in the XML, so the source cannot use standard
-      docbook tools
+      Docbook tools
    -  no formatting in kerneldoc comments
    -  ugly output
    -  hard to set up and make work
@@ -317,12 +319,12 @@ Darren Chan
 -  toward better kernel docs
 
    -  clean up the mess
-   -  better formatted output with a logical toolchain
+   -  better formatted output with a logical tool chain
    -  must retain a plain text format
 
 -  Recent work
 
-   -  added markdown (later asciidoc) to processing kerneldoc comments
+   -  added Markdown (later AsciiDoc) to processing kerneldoc comments
    -  but this added more tools and dependencies to the docs build, still slow,
       still no linkage between documents, conflicts between tools
 
@@ -346,7 +348,7 @@ Darren Chan
 -  cross-references now available
 -  function / data structure indexes
 -  much nicer output
--  simpler, faster focument build
+-  simpler, faster document build
 -  uses the RTD theme
 -  to add to the docs just drop an RST file in the Documentation directory and
    add it to index.rst
@@ -377,8 +379,8 @@ Darren Chan
    -  bring some order to the Documentation directory
    -  more and better documentation
 
-Writing less, saying more: UX lessions from the small screen
-------------------------------------------------------------
+Writing less, saying more: UX lessons from the small screen
+-----------------------------------------------------------
 Claire Mahoney
 
 -  in UX the small stuff is actually often the big stuff
@@ -400,7 +402,7 @@ Claire Mahoney
 -  so simplification of the interface while retaining features is important
 -  shake to send feedback is a neat way to hide some of the complexity of the
    full UI
--  context can be better thn words
+-  context can be better than words
 
    -  screen design and function can be better than words
 
@@ -444,7 +446,7 @@ Helping Caterpillars Fly
 Nicola Nye
 
 -  Cyrus is an open source email providing platform
--  the lifecycle of a caterpillar is similar to the lifecycle of software
+-  the life cycle of a caterpillar is similar to the life cycle of software
 -  FOSSy the Caterpillar
 -  you have a good idea and get it upstream, then it starts catching on and
    people start adding to it until it gets so big it forms a cocoon.
@@ -485,7 +487,7 @@ Nicola Nye
 
    -  not all documentation is good documentation
    -  danger signs include lots of FAQs, no introduction for new folks,
-      docs not with code, lack of clear categorisation (IA)
+      docs not with code, lack of clear categorization (IA)
 
 -  Three most important doc things:
 
@@ -530,3 +532,47 @@ Dan Callahan
    -  consider how to minimize the harm caused when your project goes away
 
 -  talk about failures and learn from the experiences of others
+
+
+Listening to the Needs of Your Global Open Source Community
+-----------------------------------------------------------
+Elizabeth K. Joseph
+
+-  provides simple way for contributors to contact project owners
+-  acknowledge every piece of feedback
+-  stay calm
+-  communicate changes and ask for feedback
+-  check in with your teams
+-  document your processes
+-  but don't beat people with the documentation, still be polite and
+   responsive to questions
+-  read between the lines; understand what isn't being said
+-  developing principles:
+
+   -  have clear software choices
+   -  establish an open source policy
+   -  boundaries for support
+   -  define what you're willing to compromise on
+   -  trust your high level view
+   -  consider your users: what makes your life easier as a developer may not
+      be the best option for your user
+
+Stranger in a strange land: Breaking language monocultures with open source
+---------------------------------------------------------------------------
+Russell Keith-Magee
+
+-  Python is a very popular language because it is both powerful and accessible
+-  Python works for many purposes, but does not work natively on many platforms
+-  polylingualism is required to work on multiple platforms
+-  for professional devs this isn't necessarily a problem, but for other
+   people this is a barrier to multi-platform development
+-  and it is not really polylingualism, it is parallelized monolingualism
+-  BeeWare: The IDEs of Python
+-  what is python?
+
+   -  a language specification
+   -  a reference implementation (CPython)
+   -  this distinction is useful, because it means Python can be run using
+      different implementations
+
+-  monolingualism isn't healthy for platforms

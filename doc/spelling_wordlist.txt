@@ -3,10 +3,14 @@ admin
 admins
 Ansible
 ansible
+api
 app
 apps
 Arduino
 arduino
+Asciidoc
+Atlab
+Atlassian
 au
 Aurynn
 backend
@@ -21,6 +25,7 @@ Catarina
 cirros
 conf
 coroutines
+CPython
 customizable
 Cython
 cython
@@ -34,7 +39,9 @@ devs
 devstack
 Django
 django
+Docbook
 Endsley
+ePub
 extensibility
 Facebook
 Firefox
@@ -57,12 +64,16 @@ http
 hypervisor
 imposter
 internet
+iOS
 kallimachos
+kerneldoc
 Lana
 libre
 Linux
 linux
+Magee
 Mahoney
+microinteractions
 Minecraft
 minecraft
 Miniconf
@@ -73,6 +84,7 @@ Mitaka
 mitaka
 modders
 modding
+monocultures
 multi
 multiplayer
 ok
@@ -84,6 +96,7 @@ Oxfam
 pandoc
 plugin
 plugins
+polylingualism
 progressbar
 pullall
 py
