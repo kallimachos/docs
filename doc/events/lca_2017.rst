@@ -595,3 +595,23 @@ Katie McLaughlin
    BeeWare), which cross-compile Python to JavaScript
 -  for a list of Python to JavaScript cross-compilers, see
    https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js
+
+Challenges when scaling: Continued adventures in Swift's sharding
+-----------------------------------------------------------------
+Matthew Oliver
+
+-  at Geelong last year Matt claimed he had a solution. It didn't quite pan
+   out. So he is back to talk about his new solution.
+-  Journey so far:
+
+   -  object hashing: ``shard_no = md5(object) >> shard_power``
+   -  distributed prefix trees
+   -  pivot points / split tree: this worked fine in small scale testing but
+      didn't scale
+   -  snipping: but at any point in time primary nodes could be in any other
+      state
+
+-  current POC:
+
+   -  read only DB to hold metadata, pivot references, and objects
+
