@@ -16,6 +16,7 @@ Aurynn
 backend
 backends
 bashrc
+Batavia
 blog
 bolditalic
 branchlist
@@ -85,8 +86,10 @@ mitaka
 modders
 modding
 monocultures
+monolingualism
 multi
 multiplayer
+natively
 ok
 online
 OpenStack
@@ -94,6 +97,7 @@ openstack
 org
 Oxfam
 pandoc
+parallelized
 plugin
 plugins
 polylingualism
