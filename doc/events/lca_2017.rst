@@ -576,3 +576,22 @@ Russell Keith-Magee
       different implementations
 
 -  monolingualism isn't healthy for platforms
+
+JavaScript is Awful
+-------------------
+Katie McLaughlin
+
+-  variables are global by default
+-  duck typing can be confusing
+-  == is not the same as ===
+-  JavaScript was developed in 10 days and has no versions
+-  it has been owned by a few different companies over time, and its
+   evolution reflects this
+-  ECMAScript is the name of the actual standard
+-  because there are no versions, you can never make an update that breaks the
+   API because the internet would break
+-  CSS and HTML5 can implement most of what JavaScript can do
+-  Or you could use a cross-compiler, such as Skulpt or Batavia (part of
+   BeeWare), which cross-compile Python to JavaScript
+-  for a list of Python to JavaScript cross-compilers, see
+   https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js

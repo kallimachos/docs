@@ -124,6 +124,7 @@ scalable
 sdist
 sharding
 Sim
+Skulpt
 sphinxmark
 sqlite
 Stacker
