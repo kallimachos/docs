@@ -95,6 +95,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">linux.conf.au Hobart January 2017</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#miniconfs-monday-jan-16">Miniconfs Monday Jan 16</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tuesday-jan-17">Tuesday Jan 17</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wednesday-jan-18">Wednesday Jan 18</a></li>
 </ul>
 </li>
 </ul>
@@ -377,6 +378,402 @@ the system to redistribute power</li>
 <ul class="simple">
 <li>The most amazing miniconf ever!</li>
 <li><a class="reference external" href="http://kallimachos.github.io/docs/talks/DDU-2017.html">Schedule and Brian's talk</a></li>
+</ul>
+</div>
+<div class="section" id="stephen-king-s-practical-advice-for-tech-writers">
+<h3>Stephen King's Practical Advice for Tech Writers<a class="headerlink" href="#stephen-king-s-practical-advice-for-tech-writers" title="Permalink to this headline">#</a></h3>
+<p>Rikki Endsley</p>
+<ul class="simple">
+<li><a class="reference external" href="https://opensource.com/">opensource.com</a></li>
+<li><a class="reference external" href="https://opensource.com/stephen-king">opensource.com/stephen-king</a></li>
+<li>before you start writing you need to ask the what, why, who, and how</li>
+<li>research</li>
+<li>create an outline</li>
+<li>write</li>
+<li>revise</li>
+<li>3 main categories of reader:<ul>
+<li>lay audience</li>
+<li>managerial</li>
+<li>experts</li>
+</ul>
+</li>
+<li><a class="reference external" href="http://netpress.org/care-feeding-press/">http://netpress.org/care-feeding-press/</a></li>
+<li><a class="reference external" href="https://opensource.com/write-better-docs">opensource.com/write-better-docs</a></li>
+<li><em>On Writing: A Memoir of the Craft</em> by Stephen King</li>
+<li>&quot;If you want to be a writer, you must do two things above all others: read a
+lot and write a lot. There's no way around these two things that I'm aware
+of, no shortcut.&quot; Stephen King</li>
+<li>be clear on expectations and read examples</li>
+<li><a class="reference external" href="https://opensource.com/write-event-recap">opensource.com/write-event-recap</a></li>
+<li>consider how your content might be reused</li>
+<li>write the longest, hardest version of a piece first</li>
+<li>&quot;An opening line should invite the reader to begin the story. It should say:
+Listen. Come in here. You want to know about this.&quot; Stephen King</li>
+<li>useful to define the audience at the start of an article so the reader
+knows if it applies to them</li>
+<li>&quot;When you write a story, you're telling yourself the story. When you
+rewrite, your main job is taking out all the things that are not the story.&quot;
+Stephen King</li>
+<li>&quot;This suggests cutting to speed the pace, and that's what most of us end up
+having to do (kill your darlings, kill your darlings, even when it breaks
+your egocentric little scribbler's heart, kill your darlings.)&quot; Stephen King</li>
+<li>given less experienced writers an outline to work with can save time and
+heartache</li>
+<li>use signposts and subheadings to give people guidance as they work through
+an article</li>
+<li>&quot;To write is human, to edit is divine.&quot; Stephen King</li>
+<li>&quot;The scariest moment is always just before you start. After that, things can
+only get better.&quot; Stephen King</li>
+</ul>
+</div>
+<div class="section" id="sorting-out-the-mess-how-information-architecture-can-help">
+<h3>Sorting out the mess: How information architecture can help<a class="headerlink" href="#sorting-out-the-mess-how-information-architecture-can-help" title="Permalink to this headline">#</a></h3>
+<p>Darren Chan</p>
+<ul class="simple">
+<li>information architect can be a good career path for writers who want to
+progress in a technical direction rather than a management direction</li>
+<li>IA is the structural design of information or objects</li>
+<li>IA can be applied anywhere that information is being conveyed</li>
+<li>IA is critical for making information findable and understandable</li>
+<li>information is subjective, not objective<ul>
+<li>e.g. is tomato a vegetable or a fruit?</li>
+</ul>
+</li>
+<li>Factors that impact IA design:<ul>
+<li>context</li>
+<li>content</li>
+<li>users</li>
+</ul>
+</li>
+<li>IA design process:<ul>
+<li>user research</li>
+<li>content analysis</li>
+<li>designing</li>
+<li>testing</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="kernel-documentation-what-we-have-and-where-it-s-going">
+<h3>Kernel documentation: what we have and where it's going<a class="headerlink" href="#kernel-documentation-what-we-have-and-where-it-s-going" title="Permalink to this headline">#</a></h3>
+<p>Jonathan Corbet</p>
+<ul class="simple">
+<li>the kernel is a huge project that requires a lot of documentation</li>
+<li>90% or more of kernel code is written by paid developers</li>
+<li>but nobody is paid to write kernel documentation</li>
+<li>the kernel has a well-defined maintainer model that is very hierarchical</li>
+<li>the maintainer model closely matches the kernel file hierarchy</li>
+<li>but documentation does not fit this model because it crosses various
+trees and often deals with multiple parts of the kernel</li>
+<li>everybody touches documentation in some way or another</li>
+<li>although Linux is at the forefront of OSS in some ways, kernel developers
+tend to be very conservative</li>
+<li>so moving to a new documentation model takes some convincing</li>
+<li>Docs are made up of 2000+ .txt files, some more useful than others</li>
+<li>docs are formatted using Docbook, which uses 34 template files to build
+the docs into various outputs</li>
+<li>Docbook also pulls from kerneldoc comments, of which there are about 55,000</li>
+<li>so the kernel has lots of documentation but it is difficult to work with,
+as it has no IA design. Things have just been thrown in as they happened.</li>
+<li>there is also no cross-document linkage. They are truly 2000+ individual
+docs.</li>
+<li>basically, this is a documentation system written by kernel developers<ul>
+<li>there is specialized code in the XML, so the source cannot use standard
+Docbook tools</li>
+<li>no formatting in kerneldoc comments</li>
+<li>ugly output</li>
+<li>hard to set up and make work</li>
+<li>slow</li>
+<li>brittle</li>
+<li>no integration with rest of Documentation directory</li>
+</ul>
+</li>
+<li>toward better kernel docs<ul>
+<li>clean up the mess</li>
+<li>better formatted output with a logical tool chain</li>
+<li>must retain a plain text format</li>
+</ul>
+</li>
+<li>Recent work<ul>
+<li>added Markdown (later AsciiDoc) to processing kerneldoc comments</li>
+<li>but this added more tools and dependencies to the docs build, still slow,
+still no linkage between documents, conflicts between tools</li>
+</ul>
+</li>
+<li>Ideal<ul>
+<li>dispense with Docbook entirely</li>
+<li>but using what?</li>
+</ul>
+</li>
+<li>Sphinx and ReStructured text<ul>
+<li>designed for documenting code</li>
+<li>designed for large documents in multiple files</li>
+<li>widely used, well supported</li>
+<li>output to HTML, ePub, PDF</li>
+</ul>
+</li>
+<li>Jon put together a POC, discussion ensued, POC was expanded, consensus
+was formed</li>
+<li>kerneldoc comments work as always using <code class="docutils literal"><span class="pre">kernel-doc</span></code> directive, so no
+need to change them</li>
+<li>but those comments can now contain RST directives</li>
+<li>cross-references now available</li>
+<li>function / data structure indexes</li>
+<li>much nicer output</li>
+<li>simpler, faster document build</li>
+<li>uses the RTD theme</li>
+<li>to add to the docs just drop an RST file in the Documentation directory and
+add it to index.rst</li>
+<li>Current status:<ul>
+<li>merged for 4.8</li>
+<li>Sphinx documents, kernel documentation HOWTO, GPU documentation, Media
+subsystem</li>
+</ul>
+</li>
+<li>For 4.9:<ul>
+<li>Documentation/driver-api</li>
+<li>merge disparate files so HSI is documented in one place</li>
+<li>dev-tools book</li>
+<li>PDF output (painful, using LaTex)</li>
+</ul>
+</li>
+<li>For 4.10:<ul>
+<li>process book</li>
+<li>core-api book</li>
+<li>admin-guide book</li>
+</ul>
+</li>
+<li>Future work:<ul>
+<li>convert other DocBook docs and eventually eliminate DocBook entirely</li>
+<li>rethink the kernel-doc utility (20 years of Perl cruft)</li>
+<li>incorporate more plain-text documents</li>
+<li>bring some order to the Documentation directory</li>
+<li>more and better documentation</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="writing-less-saying-more-ux-lessons-from-the-small-screen">
+<h3>Writing less, saying more: UX lessons from the small screen<a class="headerlink" href="#writing-less-saying-more-ux-lessons-from-the-small-screen" title="Permalink to this headline">#</a></h3>
+<p>Claire Mahoney</p>
+<ul class="simple">
+<li>in UX the small stuff is actually often the big stuff</li>
+<li>think of the user as someone to help, someone you want to give a good
+product experience</li>
+<li>don't want them to spend time in docs; they need the answer and they need
+to get back to work</li>
+<li>mobile user is &quot;on the go&quot; is a misconception
+-  really, mobiles are used everywhere
+-  device + location + what the user wants to do</li>
+<li>&quot;lite is alright&quot;: myth that mobiles are for casual stuff; people will go to
+bigger devices for real work<ul>
+<li>but this is not necessarily true; we want the same functionality
+regardless of the device</li>
+<li>mobile users are very needy humans: they want parity between devices</li>
+</ul>
+</li>
+<li>parity is great, but not always realistic. It can lead to excess noise.</li>
+<li>so simplification of the interface while retaining features is important</li>
+<li>shake to send feedback is a neat way to hide some of the complexity of the
+full UI</li>
+<li>context can be better than words<ul>
+<li>screen design and function can be better than words</li>
+</ul>
+</li>
+<li>context can't do everything, sometimes you need words<ul>
+<li>but it can be very challenging to reduce text down to the appropriate
+size</li>
+<li>you need to sweat the details, like push notifications</li>
+</ul>
+</li>
+<li>UX testing takes place in Atlab in Sydney</li>
+<li>Style nests<ul>
+<li>Atlassian (ADG)</li>
+<li>Native (iOS and Android)</li>
+<li>Web mirroring style</li>
+<li>Discretionary styles</li>
+</ul>
+</li>
+<li>patterns are good, repetition is not</li>
+<li>voice and tone are important and form a pattern as a well. For example,
+Atlassian uses &quot;practical with a wink&quot;.</li>
+<li>it is important to remember that you are not your customer; you are not your
+user</li>
+<li>ease of use and clear purpose &gt; attractive design and quality of
+microinteractions</li>
+<li>user -&gt; app -&gt; objective</li>
+</ul>
+</div>
+<div class="section" id="effective-docs-writing-practical-writing-style-explained-with-computer-science">
+<h3>Effective docs writing: Practical writing style explained with computer science<a class="headerlink" href="#effective-docs-writing-practical-writing-style-explained-with-computer-science" title="Permalink to this headline">#</a></h3>
+<p>Joe Robinson</p>
+<ul class="simple">
+<li>inspired by Squirrel Girl, Joe explained sentence construction using
+code logic</li>
+<li>this is a great approach for understanding language syntax, especially
+for people who may know programming logic better than English grammar</li>
+<li>unfortunately I couldn't take more detailed notes because I was at the
+back of the room without my laptop</li>
+</ul>
+</div>
+<div class="section" id="helping-caterpillars-fly">
+<h3>Helping Caterpillars Fly<a class="headerlink" href="#helping-caterpillars-fly" title="Permalink to this headline">#</a></h3>
+<p>Nicola Nye</p>
+<ul class="simple">
+<li>Cyrus is an open source email providing platform</li>
+<li>the life cycle of a caterpillar is similar to the life cycle of software</li>
+<li>FOSSy the Caterpillar</li>
+<li>you have a good idea and get it upstream, then it starts catching on and
+people start adding to it until it gets so big it forms a cocoon.</li>
+<li>it will either turn into a butterfly, or it will fail to hatch</li>
+<li>so how do we turn into a butterfly?</li>
+<li>reasons for failure and how docs can help:<ul>
+<li>poor documentation -&gt; better documentation</li>
+<li>contributor turnover -&gt; knowledge sharing</li>
+<li>creeping feature bloat -&gt; define core goals</li>
+<li>poor quality -&gt; document standards</li>
+<li>poor usability -&gt; feedback to developers</li>
+<li>no users -&gt; marketing docs - explain what and why</li>
+</ul>
+</li>
+<li>people<ul>
+<li>paid technical writer (identify stakeholders, make a business case,
+cost/benefit analysis, company already 'paying' for FOSS)</li>
+<li>audiences (existing user, marketing, new user, administrator,
+contributors, 'help me, I saw an error message this one time')</li>
+<li>communication (global contributors and users, community, tools like IRC,
+MLs, bug trackers, etc.)</li>
+</ul>
+</li>
+<li>processes<ul>
+<li>curators (developers, users)</li>
+<li>regular reviews (out of date is worse than none, last reviewed date,
+SME vs fresh eyes vs users)</li>
+<li>cleanup (remove old docs and clean up your search results)</li>
+</ul>
+</li>
+<li>tools<ul>
+<li>selection (consider your users, consider your contributors)</li>
+<li>templates (document types, style guides, support tools, feed processes;
+these lower the barrier to entry)</li>
+</ul>
+</li>
+<li>danger!<ul>
+<li>not all documentation is good documentation</li>
+<li>danger signs include lots of FAQs, no introduction for new folks,
+docs not with code, lack of clear categorization (IA)</li>
+</ul>
+</li>
+<li>Three most important doc things:<ul>
+<li>paid documentation advocate</li>
+<li>make it easy</li>
+<li>regular reviews</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="wednesday-jan-18">
+<h2>Wednesday Jan 18<a class="headerlink" href="#wednesday-jan-18" title="Permalink to this headline">#</a></h2>
+<div class="section" id="designing-for-failure">
+<h3>Designing for Failure<a class="headerlink" href="#designing-for-failure" title="Permalink to this headline">#</a></h3>
+<p>Dan Callahan</p>
+<ul class="simple">
+<li>Persona was an open source authentication system that let you log in
+to an email provider, then use those credentials to log in to other sites</li>
+<li>Persona arose because 5 years ago site-specific passwords were causing
+serious problems with security and there were many password breaches</li>
+<li>we needed to move away from the traditional password per site approach</li>
+<li>Persona allowed users to identify using any email address they chose</li>
+<li>Persona has now been decommissioned</li>
+<li>free licenses are not enough:<ul>
+<li>persona had an intractable point of centralization</li>
+<li>bits rot more quickly online</li>
+<li>complexity limits agency</li>
+<li>in other words, a free license doesn't further freedom if people can't
+run the software</li>
+</ul>
+</li>
+<li>prolong your project's life:<ul>
+<li>measure the right thing</li>
+<li>explicitly define and communicate your scope</li>
+<li>ruthlessly oppose complexity</li>
+</ul>
+</li>
+<li>plan for your project's failure:<ul>
+<li>if you know you're dead, say so</li>
+<li>ensure your users can recover, without your involvement</li>
+<li>use standard data formats</li>
+<li>consider how to minimize the harm caused when your project goes away</li>
+</ul>
+</li>
+<li>talk about failures and learn from the experiences of others</li>
+</ul>
+</div>
+<div class="section" id="listening-to-the-needs-of-your-global-open-source-community">
+<h3>Listening to the Needs of Your Global Open Source Community<a class="headerlink" href="#listening-to-the-needs-of-your-global-open-source-community" title="Permalink to this headline">#</a></h3>
+<p>Elizabeth K. Joseph</p>
+<ul class="simple">
+<li>provides simple way for contributors to contact project owners</li>
+<li>acknowledge every piece of feedback</li>
+<li>stay calm</li>
+<li>communicate changes and ask for feedback</li>
+<li>check in with your teams</li>
+<li>document your processes</li>
+<li>but don't beat people with the documentation, still be polite and
+responsive to questions</li>
+<li>read between the lines; understand what isn't being said</li>
+<li>developing principles:<ul>
+<li>have clear software choices</li>
+<li>establish an open source policy</li>
+<li>boundaries for support</li>
+<li>define what you're willing to compromise on</li>
+<li>trust your high level view</li>
+<li>consider your users: what makes your life easier as a developer may not
+be the best option for your user</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="stranger-in-a-strange-land-breaking-language-monocultures-with-open-source">
+<h3>Stranger in a strange land: Breaking language monocultures with open source<a class="headerlink" href="#stranger-in-a-strange-land-breaking-language-monocultures-with-open-source" title="Permalink to this headline">#</a></h3>
+<p>Russell Keith-Magee</p>
+<ul class="simple">
+<li>Python is a very popular language because it is both powerful and accessible</li>
+<li>Python works for many purposes, but does not work natively on many platforms</li>
+<li>polylingualism is required to work on multiple platforms</li>
+<li>for professional devs this isn't necessarily a problem, but for other
+people this is a barrier to multi-platform development</li>
+<li>and it is not really polylingualism, it is parallelized monolingualism</li>
+<li>BeeWare: The IDEs of Python</li>
+<li>what is python?<ul>
+<li>a language specification</li>
+<li>a reference implementation (CPython)</li>
+<li>this distinction is useful, because it means Python can be run using
+different implementations</li>
+</ul>
+</li>
+<li>monolingualism isn't healthy for platforms</li>
+</ul>
+</div>
+<div class="section" id="javascript-is-awful">
+<h3>JavaScript is Awful<a class="headerlink" href="#javascript-is-awful" title="Permalink to this headline">#</a></h3>
+<p>Katie McLaughlin</p>
+<ul class="simple">
+<li>variables are global by default</li>
+<li>duck typing can be confusing</li>
+<li>== is not the same as ===</li>
+<li>JavaScript was developed in 10 days and has no versions</li>
+<li>it has been owned by a few different companies over time, and its
+evolution reflects this</li>
+<li>ECMAScript is the name of the actual standard</li>
+<li>because there are no versions, you can never make an update that breaks the
+API because the internet would break</li>
+<li>CSS and HTML5 can implement most of what JavaScript can do</li>
+<li>Or you could use a cross-compiler, such as Skulpt or Batavia (part of
+BeeWare), which cross-compile Python to JavaScript</li>
+<li>for a list of Python to JavaScript cross-compilers, see
+<a class="reference external" href="https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js">https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js</a></li>
 </ul>
 </div>
 </div>
