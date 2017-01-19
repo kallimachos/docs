@@ -595,3 +595,163 @@ Katie McLaughlin
    BeeWare), which cross-compile Python to JavaScript
 -  for a list of Python to JavaScript cross-compilers, see
    https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js
+
+Challenges when scaling: Continued adventures in Swift's sharding
+-----------------------------------------------------------------
+Matthew Oliver
+
+-  at Geelong last year Matt claimed he had a solution. It didn't quite pan
+   out. So he is back to talk about his new solution.
+-  Journey so far:
+
+   -  object hashing: ``shard_no = md5(object) >> shard_power``
+   -  distributed prefix trees
+   -  pivot points / split tree: this worked fine in small scale testing but
+      didn't scale
+   -  snipping: but at any point in time primary nodes could be in any other
+      state
+
+-  current POC:
+
+   -  read only DB to hold metadata, pivot references, and objects
+
+Non-native English speakers in Open Source communities: A True Story
+--------------------------------------------------------------------
+Masayuki Igawa, Dong Ma, Samuel de Medeiros Queiroz
+
+Cultural challenges
+^^^^^^^^^^^^^^^^^^^
+
+**Japanese**
+
+-  NOT say "yes/no" clearly
+-  tend to be perfect
+-  keep intonation
+-  size of economy
+-  focus on reading and writing
+-  pronunciation and grammar are very different
+
+**Chinese**
+
+-  Confucian culture
+-  *Doctrine of the Mean*: one guideline is Leniency
+-  like to say yes, don't like to say no
+-  like to listen, don't like to negotiate
+-  pronunciation not well understood
+-  grammar is quite different from English grammar; this makes writing and
+   speaking difficult
+
+**Brazilian - Portuguese**
+
+-  not as big differences as Asian cultures, but still some differences
+-  short/direct responses may sound rude
+-  "i" (Portuguese) is pronounced like "e" (English)
+-  grammar: adjective position is opposite to English
+-  some phonemes do not exist in Portuguese, e.g. ``th`` vs ``f``
+-  regular schools in Brazil do a poor job of teaching English
+
+Language challenges
+^^^^^^^^^^^^^^^^^^^
+
+**Reading**
+
+-  easiest most of the time
+-  one of the most important
+-  IRC conversation goes fast
+-  long emails are tiring and conclusions can be difficult to follow
+-  difficult to read between the lines
+
+**Writing**
+
+-  grammar
+-  idiomatic English and/or long sentences is difficult
+-  the speed of conversation in IRC is a challenge
+
+**Listening**
+
+-  variety of accents is harder for non-English speakers
+-  speed
+-  vocabulary, slang, idiomatic phrases and grammar
+-  noisy environments make it much harder to hear accurately and it is
+   difficult for non-native speakers to fill in the gaps
+
+**Speaking**
+
+-  vocabulary and idiom
+-  grammar
+-  pronunciation
+-  speed and fluency
+
+Overcoming obstacles
+^^^^^^^^^^^^^^^^^^^^
+
+-  cultural challenges are harder than language challenges
+-  language immersion is the best approach to learning
+-  forget limitations; do your best and you will eventually improve
+-  reading improves vocabulary
+-  communicate daily
+-  use available tools
+-  practice with yourself and others
+-  one-to-one conversations are really good practice
+
+How newcomers can help themselves
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+-  be friendly
+-  find a mentor
+-  share your opinion
+-  prepare in advance
+-  ask questions
+-  brush up on your English skills
+
+Tips for native speakers
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+-  be patient
+-  speak slowly
+-  use simple words and sentences
+-  encourage communication
+-  do not make fun
+
+
+Thursday Jan 19
+~~~~~~~~~~~~~~~
+
+Consider the Maintainer
+-----------------------
+Nadia Eghbal
+
+-  is it alright if a project struggles or dies because a maintainer can't keep
+   up with it anymore
+-  is it alright to compromise or even deliberately ignore the happiness of
+   maintainers so that we can enjoy FOSS?
+-  more people are consuming open source than ever before
+-  two-thirds of top GitHub projects are maintained by one or two people
+-  why haven't the number of maintainers grown in proportion with consumption?
+
+   -  style of production has changed (more small projects)
+   -  maintaining isn't glamorous
+   -  maintainers lack support and mentoring
+   -  the open source ecosystem encourages contribution but not maintenance
+   -  both free and open source software are oriented around the user, not the
+      producer
+
+-  four proposed freedoms of open source producers:
+
+   -  to decide who participates in your community
+   -  to say no to contributions or requests
+   -  to define the priorities and polices of the project
+   -  to step down and move on from a project, temporarily or permanently
+
+-  things maintainers need help with:
+
+   -  community best practices
+   -  project analytics
+   -  tools and bots
+   -  conveying support status
+   -  finding funding
+   -  existential questions
+
+-  "What is clearly missing from [Eric Raymond's] statement, and is ultimately
+   as important, is **how those eyeballs are organized**."
+-  everyone is a potential contributor in open source software

@@ -868,6 +868,189 @@ BeeWare), which cross-compile Python to JavaScript</li>
 
 
     </article>
+  </slide>  <slide class="level-3" id="challenges-when-scaling-continued-adventures-in-swift-s-sharding">
+    <hgroup>
+      <h3>Challenges when scaling: Continued adventures in Swift's sharding</h3>
+    </hgroup>
+    <article class="">
+      <p>Matthew Oliver</p>
+<ul class="simple">
+<li>at Geelong last year Matt claimed he had a solution. It didn't quite pan
+out. So he is back to talk about his new solution.</li>
+<li>Journey so far:<ul>
+<li>object hashing: <code class="docutils literal"><span class="pre">shard_no</span> <span class="pre">=</span> <span class="pre">md5(object)</span> <span class="pre">&gt;&gt;</span> <span class="pre">shard_power</span></code></li>
+<li>distributed prefix trees</li>
+<li>pivot points / split tree: this worked fine in small scale testing but
+didn't scale</li>
+<li>snipping: but at any point in time primary nodes could be in any other
+state</li>
+</ul>
+</li>
+<li>current POC:<ul>
+<li>read only DB to hold metadata, pivot references, and objects</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-3" id="non-native-english-speakers-in-open-source-communities-a-true-story">
+    <hgroup>
+      <h3>Tips for native speakers</h3>
+    </hgroup>
+    <article class="">
+      <p>Masayuki Igawa, Dong Ma, Samuel de Medeiros Queiroz</p>
+<div class="section level-4" id="cultural-challenges">
+<p><strong>Japanese</strong></p>
+<ul class="simple">
+<li>NOT say &quot;yes/no&quot; clearly</li>
+<li>tend to be perfect</li>
+<li>keep intonation</li>
+<li>size of economy</li>
+<li>focus on reading and writing</li>
+<li>pronunciation and grammar are very different</li>
+</ul>
+<p><strong>Chinese</strong></p>
+<ul class="simple">
+<li>Confucian culture</li>
+<li><em>Doctrine of the Mean</em>: one guideline is Leniency</li>
+<li>like to say yes, don't like to say no</li>
+<li>like to listen, don't like to negotiate</li>
+<li>pronunciation not well understood</li>
+<li>grammar is quite different from English grammar; this makes writing and
+speaking difficult</li>
+</ul>
+<p><strong>Brazilian - Portuguese</strong></p>
+<ul class="simple">
+<li>not as big differences as Asian cultures, but still some differences</li>
+<li>short/direct responses may sound rude</li>
+<li>&quot;i&quot; (Portuguese) is pronounced like &quot;e&quot; (English)</li>
+<li>grammar: adjective position is opposite to English</li>
+<li>some phonemes do not exist in Portuguese, e.g. <code class="docutils literal"><span class="pre">th</span></code> vs <code class="docutils literal"><span class="pre">f</span></code></li>
+<li>regular schools in Brazil do a poor job of teaching English</li>
+</ul>
+</div><div class="section level-4" id="language-challenges">
+<p><strong>Reading</strong></p>
+<ul class="simple">
+<li>easiest most of the time</li>
+<li>one of the most important</li>
+<li>IRC conversation goes fast</li>
+<li>long emails are tiring and conclusions can be difficult to follow</li>
+<li>difficult to read between the lines</li>
+</ul>
+<p><strong>Writing</strong></p>
+<ul class="simple">
+<li>grammar</li>
+<li>idiomatic English and/or long sentences is difficult</li>
+<li>the speed of conversation in IRC is a challenge</li>
+</ul>
+<p><strong>Listening</strong></p>
+<ul class="simple">
+<li>variety of accents is harder for non-English speakers</li>
+<li>speed</li>
+<li>vocabulary, slang, idiomatic phrases and grammar</li>
+<li>noisy environments make it much harder to hear accurately and it is
+difficult for non-native speakers to fill in the gaps</li>
+</ul>
+<p><strong>Speaking</strong></p>
+<ul class="simple">
+<li>vocabulary and idiom</li>
+<li>grammar</li>
+<li>pronunciation</li>
+<li>speed and fluency</li>
+</ul>
+</div><div class="section level-4" id="overcoming-obstacles">
+<ul class="simple">
+<li>cultural challenges are harder than language challenges</li>
+<li>language immersion is the best approach to learning</li>
+<li>forget limitations; do your best and you will eventually improve</li>
+<li>reading improves vocabulary</li>
+<li>communicate daily</li>
+<li>use available tools</li>
+<li>practice with yourself and others</li>
+<li>one-to-one conversations are really good practice</li>
+</ul>
+</div><div class="section level-4" id="how-newcomers-can-help-themselves">
+<ul class="simple">
+<li>be friendly</li>
+<li>find a mentor</li>
+<li>share your opinion</li>
+<li>prepare in advance</li>
+<li>ask questions</li>
+<li>brush up on your English skills</li>
+</ul>
+</div><div class="section level-4" id="tips-for-native-speakers">
+<ul class="simple">
+<li>be patient</li>
+<li>speak slowly</li>
+<li>use simple words and sentences</li>
+<li>encourage communication</li>
+<li>do not make fun</li>
+</ul>
+</div>
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="thursday-jan-19">
+    <hgroup>
+      <h2>Thursday Jan 19</h2>
+    </hgroup>
+    <article class="">
+      
+
+
+
+    </article>
+  </slide>  <slide class="level-3" id="consider-the-maintainer">
+    <hgroup>
+      <h3>Consider the Maintainer</h3>
+    </hgroup>
+    <article class="">
+      <p>Nadia Eghbal</p>
+<ul class="simple">
+<li>is it alright if a project struggles or dies because a maintainer can't keep
+up with it anymore</li>
+<li>is it alright to compromise or even deliberately ignore the happiness of
+maintainers so that we can enjoy FOSS?</li>
+<li>more people are consuming open source than ever before</li>
+<li>two-thirds of top GitHub projects are maintained by one or two people</li>
+<li>why haven't the number of maintainers grown in proportion with consumption?<ul>
+<li>style of production has changed (more small projects)</li>
+<li>maintaining isn't glamorous</li>
+<li>maintainers lack support and mentoring</li>
+<li>the open source ecosystem encourages contribution but not maintenance</li>
+<li>both free and open source software are oriented around the user, not the
+producer</li>
+</ul>
+</li>
+<li>four proposed freedoms of open source producers:<ul>
+<li>to decide who participates in your community</li>
+<li>to say no to contributions or requests</li>
+<li>to define the priorities and polices of the project</li>
+<li>to step down and move on from a project, temporarily or permanently</li>
+</ul>
+</li>
+<li>things maintainers need help with:<ul>
+<li>community best practices</li>
+<li>project analytics</li>
+<li>tools and bots</li>
+<li>conveying support status</li>
+<li>finding funding</li>
+<li>existential questions</li>
+</ul>
+</li>
+<li>&quot;What is clearly missing from [Eric Raymond's] statement, and is ultimately
+as important, is <strong>how those eyeballs are organized</strong>.&quot;</li>
+<li>everyone is a potential contributor in open source software</li>
+</ul>
+
+
+
+
+    </article>
   </slide>
 
 
