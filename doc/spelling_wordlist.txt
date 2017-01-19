@@ -1,3 +1,4 @@
+abugida
 Admin
 admin
 admins
@@ -27,6 +28,7 @@ cirros
 conf
 coroutines
 CPython
+curation
 customizable
 Cython
 cython
@@ -39,6 +41,8 @@ dev
 devops
 devs
 devstack
+diff
+diffs
 Django
 django
 Docbook
@@ -141,6 +145,7 @@ sqlite
 Stacker
 Stefano
 SUSE
+syllabary
 tox
 txt
 Ubuntu
@@ -148,9 +153,12 @@ unikernel
 VMware
 webpage
 webserver
+whitepaper
+whitepapers
 whitespace
 wiki
 Wikimedia
+Wikipedia
 work flow
 Zanata
 zanata
