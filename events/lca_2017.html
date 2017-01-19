@@ -942,6 +942,128 @@ as important, is <strong>how those eyeballs are organized</strong>.&quot;</li>
 <li>everyone is a potential contributor in open source software</li>
 </ul>
 </div>
+<div class="section" id="reproducible-builds-for-a-better-future">
+<h3>Reproducible Builds for a Better Future<a class="headerlink" href="#reproducible-builds-for-a-better-future" title="Permalink to this headline">#</a></h3>
+<p>Valerie Young</p>
+<ul class="simple">
+<li><a class="reference external" href="https://reproducible-builds.org/">reproducible-builds.org</a></li>
+<li>&quot;a build is reproducible if given the same source code, build environment
+and build instructions, any party can recreate it.&quot;</li>
+<li>Goals:<ul>
+<li>reproducible binaries</li>
+<li>reproducible build environments</li>
+</ul>
+</li>
+<li>reproducible builds improve security and reliability</li>
+<li>Debian started continuous testing of all packages at the end of 2014</li>
+<li>2013: 24% reproducible</li>
+<li>2017: 97% reproducible</li>
+<li>tested by building twice then comparing the bits</li>
+<li><a class="reference external" href="https://diffoscope.org/">diffoscope</a> is used to compare diffs of binaries</li>
+<li>common issues:<ul>
+<li>build timestamps: these are not really necessary; better to use
+<code class="docutils literal"><span class="pre">SOURCE_DATE_EPOCH</span></code></li>
+<li>build paths: no solution yet, but <code class="docutils literal"><span class="pre">SOURCE_PREFIX_MAP</span></code> variable is in
+development</li>
+</ul>
+</li>
+<li>but reproducible binaries are not enough, you also need reproducible
+build environments so all users can reproduce the build</li>
+<li>a sandbox (bundled the environment) is one approach<ul>
+<li>but can you trust the bundled OS?</li>
+<li>the process may be big and/or slow</li>
+</ul>
+</li>
+<li><code class="docutils literal"><span class="pre">.buildinfo</span></code> files<ul>
+<li>standard in Debian</li>
+<li>created and signed when building a binary</li>
+<li>links source, binary, and build environment</li>
+<li>ongoing work to improve <code class="docutils literal"><span class="pre">.buildinfo</span></code> file distribution, provide RPMs
+and create tools to build the environment from a <code class="docutils literal"><span class="pre">.buildinfo</span></code> file</li>
+</ul>
+</li>
+<li>delivering build environment metadata with binary software delivers the
+freedom to users to study and modify the software</li>
+<li>makes GPL compliance easier</li>
+<li>guaranteed compilation</li>
+<li>easier to audit binaries</li>
+<li>insurance against compromised developers and tools; you would need to
+compromise everything, otherwise the bit difference would flag a problem</li>
+</ul>
+</div>
+<div class="section" id="content-as-a-driver-of-change-then-and-now">
+<h3>Content as a driver of change: then and now<a class="headerlink" href="#content-as-a-driver-of-change-then-and-now" title="Permalink to this headline">#</a></h3>
+<p>Lana Brindley</p>
+<ul class="simple">
+<li>technical documents have long been a part of human communication</li>
+<li>master and apprentice model is a form of oral technical communication</li>
+<li>by the time of the industrial revolution, literacy and writing materials
+became more widely available</li>
+<li>at this time, journals and letters became more common</li>
+<li>recipe books became a common form of manual</li>
+<li>in recent times, paper manuals were the standard for technical manuals</li>
+<li>whitepapers are halfway between technical writing and marketing<ul>
+<li>printed whitepapers are nearly dead though, as electronic versions
+are more prevalent</li>
+</ul>
+</li>
+<li>training courses are also moving online</li>
+<li>online books are good, but they are not necessarily the best format for
+the internet</li>
+<li>massive open online courses are the future of training courses<ul>
+<li>they can reach more people than traditional training</li>
+<li>they can offer online labs to supplement the teaching</li>
+</ul>
+</li>
+<li>data typing (DITA) allows writers to organize content in useful ways, to
+streamline content, and to store discreet pieces of content in databases<ul>
+<li>DITA has the benefits of being simple enough to use easily, but complex
+enough to provide a strong structural model for recording knowledge</li>
+</ul>
+</li>
+<li>single sourcing allowed us to move away from telling a story to presenting
+information in pieces as people wanted it<ul>
+<li>users could access information when they want</li>
+<li>content could be presented in a variety of ways</li>
+</ul>
+</li>
+<li>user-side content curation<ul>
+<li>shifts the responsibility of content curation from the writer to the user</li>
+<li>Wikipedia is a good example of this model</li>
+<li>but we do lack tools for doing this well with large sets of technical
+documentation</li>
+</ul>
+</li>
+<li>the future:<ul>
+<li>the internet offers new possibilities for technical communication</li>
+<li>content development is shifting to consumers</li>
+<li>users want control of the information they receive</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="the-journey-of-a-word-how-text-ends-up-on-a-page">
+<h3>The journey of a word: how text ends up on a page<a class="headerlink" href="#the-journey-of-a-word-how-text-ends-up-on-a-page" title="Permalink to this headline">#</a></h3>
+<p>Simon Cozens</p>
+<ul class="simple">
+<li>text layout doesn't just happen</li>
+<li>certain characters, such as letters with diacritics, can be represented in
+multiple ways by Unicode and the displaying application must be able to
+render it correctly</li>
+<li>Unicode encodes the semantics of a letter: an 'm' is an 'm' is an 'm'; it
+does not care how the letters are displayed</li>
+<li>abugida is a kind of syllabary in which the vowel is changed by modifying
+the base consonant symbol, so that all the forms that represent a given
+consonant plus each vowel resemble one another</li>
+<li>a font is a database, and a font file is a list of database tables</li>
+<li>advanced configuration options like kerning and diacritic/character
+attachment positions can be set</li>
+<li>HarfBuzz works with text and font to shape the output</li>
+<li>PDFs are flat files that contain metadata in the form of
+dictionaries, arrays, and objects. PDF essentially is a tree storage
+format, similar in concept to something like JSON.</li>
+</ul>
+</div>
 </div>
 </div>
 

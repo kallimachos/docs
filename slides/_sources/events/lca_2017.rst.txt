@@ -755,3 +755,121 @@ Nadia Eghbal
 -  "What is clearly missing from [Eric Raymond's] statement, and is ultimately
    as important, is **how those eyeballs are organized**."
 -  everyone is a potential contributor in open source software
+
+Reproducible Builds for a Better Future
+---------------------------------------
+Valerie Young
+
+-  `reproducible-builds.org <https://reproducible-builds.org/>`_
+-  "a build is reproducible if given the same source code, build environment
+   and build instructions, any party can recreate it."
+-  Goals:
+
+   -  reproducible binaries
+   -  reproducible build environments
+
+-  reproducible builds improve security and reliability
+-  Debian started continuous testing of all packages at the end of 2014
+-  2013: 24% reproducible
+-  2017: 97% reproducible
+-  tested by building twice then comparing the bits
+-  `diffoscope <https://diffoscope.org/>`_ is used to compare diffs of binaries
+-  common issues:
+
+   -  build timestamps: these are not really necessary; better to use
+      ``SOURCE_DATE_EPOCH``
+   -  build paths: no solution yet, but ``SOURCE_PREFIX_MAP`` variable is in
+      development
+
+-  but reproducible binaries are not enough, you also need reproducible
+   build environments so all users can reproduce the build
+-  a sandbox (bundled the environment) is one approach
+
+   -  but can you trust the bundled OS?
+   -  the process may be big and/or slow
+
+-  ``.buildinfo`` files
+
+   -  standard in Debian
+   -  created and signed when building a binary
+   -  links source, binary, and build environment
+   -  ongoing work to improve ``.buildinfo`` file distribution, provide RPMs
+      and create tools to build the environment from a ``.buildinfo`` file
+
+-  delivering build environment metadata with binary software delivers the
+   freedom to users to study and modify the software
+-  makes GPL compliance easier
+-  guaranteed compilation
+-  easier to audit binaries
+-  insurance against compromised developers and tools; you would need to
+   compromise everything, otherwise the bit difference would flag a problem
+
+Content as a driver of change: then and now
+-------------------------------------------
+Lana Brindley
+
+-  technical documents have long been a part of human communication
+-  master and apprentice model is a form of oral technical communication
+-  by the time of the industrial revolution, literacy and writing materials
+   became more widely available
+-  at this time, journals and letters became more common
+-  recipe books became a common form of manual
+-  in recent times, paper manuals were the standard for technical manuals
+-  whitepapers are halfway between technical writing and marketing
+
+   -  printed whitepapers are nearly dead though, as electronic versions
+      are more prevalent
+
+-  training courses are also moving online
+-  online books are good, but they are not necessarily the best format for
+   the internet
+-  massive open online courses are the future of training courses
+
+   -  they can reach more people than traditional training
+   -  they can offer online labs to supplement the teaching
+
+-  data typing (DITA) allows writers to organize content in useful ways, to
+   streamline content, and to store discreet pieces of content in databases
+
+   -  DITA has the benefits of being simple enough to use easily, but complex
+      enough to provide a strong structural model for recording knowledge
+
+-  single sourcing allowed us to move away from telling a story to presenting
+   information in pieces as people wanted it
+
+   -  users could access information when they want
+   -  content could be presented in a variety of ways
+
+-  user-side content curation
+
+   -  shifts the responsibility of content curation from the writer to the user
+   -  Wikipedia is a good example of this model
+   -  but we do lack tools for doing this well with large sets of technical
+      documentation
+
+-  the future:
+
+   -  the internet offers new possibilities for technical communication
+   -  content development is shifting to consumers
+   -  users want control of the information they receive
+
+The journey of a word: how text ends up on a page
+-------------------------------------------------
+Simon Cozens
+
+-  text layout doesn't just happen
+-  certain characters, such as letters with diacritics, can be represented in
+   multiple ways by Unicode and the displaying application must be able to
+   render it correctly
+-  Unicode encodes the semantics of a letter: an 'm' is an 'm' is an 'm'; it
+   does not care how the letters are displayed
+-  abugida is a kind of syllabary in which the vowel is changed by modifying
+   the base consonant symbol, so that all the forms that represent a given
+   consonant plus each vowel resemble one another
+-  a font is a database, and a font file is a list of database tables
+-  advanced configuration options like kerning and diacritic/character
+   attachment positions can be set
+-  HarfBuzz works with text and font to shape the output
+-  PDFs are flat files that contain metadata in the form of
+   dictionaries, arrays, and objects. PDF essentially is a tree storage
+   format, similar in concept to something like JSON.
