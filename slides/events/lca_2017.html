@@ -82,9 +82,9 @@ URL: https://code.google.com/p/io-2012-slides
 
 
     </article>
-  </slide>  <slide class="level-2" id="miniconfs-monday-jan-16">
+  </slide>  <slide class="level-2" id="monday-jan-16">
     <hgroup>
-      <h2>Miniconfs Monday Jan 16</h2>
+      <h2>Monday Jan 16</h2>
     </hgroup>
     <article class="">
       
@@ -1188,6 +1188,51 @@ attachment positions can be set</li>
 <li>PDFs are flat files that contain metadata in the form of
 dictionaries, arrays, and objects. PDF essentially is a tree storage
 format, similar in concept to something like JSON.</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-3" id="at-rest-encryption-in-openstack-swift">
+    <hgroup>
+      <h3>At-rest Encryption in OpenStack Swift</h3>
+    </hgroup>
+    <article class="">
+      <p>John Dickinson</p>
+<ul class="simple">
+<li>at-rest encryption feature landed in 2016</li>
+<li>Swift is an object storage system that can store unstructured content
+at massive scale, with redundancy and high availability</li>
+<li>Swift uses a REST API<ul>
+<li><code class="docutils literal"><span class="pre">https://swift.example.com/v1/AUTH_acct/cont/obj</span></code></li>
+<li>this provides us with the account, container, and object</li>
+<li>client &lt;-&gt; proxy &lt;-&gt; storage node</li>
+</ul>
+</li>
+<li>So where should we encrypt the data? Client-side or server-side?<ul>
+<li>answer depends on the threat model</li>
+<li>Swift needs to secure data on hard drives from being exposed if the hard
+drive leaves the cluster</li>
+<li>so Swift needs data at-rest server side encryption</li>
+</ul>
+</li>
+<li>data, metadata, and tags need to be encrypted</li>
+<li>but not everything, such as the size of the object, needs to be encrypted</li>
+<li>encryption requires a whole lot of keys and keys encrypting keys</li>
+<li>master and derived keys are kept on the proxy server, so if a storage node
+leaves the cluster it is physically separate</li>
+<li>a random key is used to encrypt each object, then the random key is
+encrypted using a derived key. The encrypted random key is sent with the
+object to the storage node with the data</li>
+<li>currently the master key is stored in a configuration file; remember that
+the threat model is hardware leaving the cluster, not people with access to
+the server</li>
+<li>metadata is generally stored in extended attributes on top of the object
+file</li>
+<li>performance is good; in fact there is no discernible difference between
+plain data and encrypted data. This is aided by recent changes in chip
+design that improve encryption speeds.</li>
 </ul>
 
 

@@ -2,8 +2,8 @@
 linux.conf.au Hobart January 2017
 =================================
 
-Miniconfs Monday Jan 16
-~~~~~~~~~~~~~~~~~~~~~~~
+Monday Jan 16
+~~~~~~~~~~~~~
 
 Human-Driven Development
 ------------------------
@@ -873,3 +873,40 @@ Simon Cozens
 -  PDFs are flat files that contain metadata in the form of
    dictionaries, arrays, and objects. PDF essentially is a tree storage
    format, similar in concept to something like JSON.
+
+At-rest Encryption in OpenStack Swift
+-------------------------------------
+John Dickinson
+
+-  at-rest encryption feature landed in 2016
+-  Swift is an object storage system that can store unstructured content
+   at massive scale, with redundancy and high availability
+-  Swift uses a REST API
+
+   -  ``https://swift.example.com/v1/AUTH_acct/cont/obj``
+   -  this provides us with the account, container, and object
+   -  client <-> proxy <-> storage node
+
+-  So where should we encrypt the data? Client-side or server-side?
+
+   -  answer depends on the threat model
+   -  Swift needs to secure data on hard drives from being exposed if the hard
+      drive leaves the cluster
+   -  so Swift needs data at-rest server side encryption
+
+-  data, metadata, and tags need to be encrypted
+-  but not everything, such as the size of the object, needs to be encrypted
+-  encryption requires a whole lot of keys and keys encrypting keys
+-  master and derived keys are kept on the proxy server, so if a storage node
+   leaves the cluster it is physically separate
+-  a random key is used to encrypt each object, then the random key is
+   encrypted using a derived key. The encrypted random key is sent with the
+   object to the storage node with the data
+-  currently the master key is stored in a configuration file; remember that
+   the threat model is hardware leaving the cluster, not people with access to
+   the server
+-  metadata is generally stored in extended attributes on top of the object
+   file
+-  performance is good; in fact there is no discernible difference between
+   plain data and encrypted data. This is aided by recent changes in chip
+   design that improve encryption speeds.
