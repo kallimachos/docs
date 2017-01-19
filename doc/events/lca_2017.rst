@@ -910,3 +910,30 @@ John Dickinson
 -  performance is good; in fact there is no discernible difference between
    plain data and encrypted data. This is aided by recent changes in chip
    design that improve encryption speeds.
+
+Keeping Linux Great
+-------------------
+Robert M. "r0ml" Lefkowitz
+
+-  FLOSS is yesterday's gravy; it is in decline
+-  therefore we should:
+
+   -  build: small pieces on an expanding base (lithification)
+   -  so we can have: free running software (app freedom)
+   -  because what we really want is: end user development
+
+-  "We won the battle for Linux, but we're losing the battle for freedom." -
+   Doc Searls
+-  Dependencies should be >5 million lines of code, 20 better. That way there
+   are only a handful of them. Anything smaller and you should just copy it
+   into your own code.
+-  Advanced programming environments conflate the runtime with the devtime -
+   Bret Victor
+-  open source at devtime isn't enough; we need to ensure open runtime =
+   Liberal Software
+-  35% of needs could be addressed by a high-level development tool that offers
+   basic data collection and manipulation
+-  40% could be satisfied by 5 generic web apps (mail, shopping cart, etc.)
+   that can be customized
+-  we had to convince the world that code is literary so we could copyright it;
+   if it was a useful artifact, we would patent it
