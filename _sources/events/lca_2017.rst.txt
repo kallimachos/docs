@@ -910,3 +910,152 @@ John Dickinson
 -  performance is good; in fact there is no discernible difference between
    plain data and encrypted data. This is aided by recent changes in chip
    design that improve encryption speeds.
+
+Keeping Linux Great
+-------------------
+Robert M. "r0ml" Lefkowitz
+
+-  FLOSS is yesterday's gravy; it is in decline
+-  therefore we should:
+
+   -  build: small pieces on an expanding base (lithification)
+   -  so we can have: free running software (app freedom)
+   -  because what we really want is: end user development
+
+-  "We won the battle for Linux, but we're losing the battle for freedom." -
+   Doc Searls
+-  Dependencies should be >5 million lines of code, 20 better. That way there
+   are only a handful of them. Anything smaller and you should just copy it
+   into your own code.
+-  Advanced programming environments conflate the runtime with devtime -
+   Bret Victor
+-  open source at devtime isn't enough; we need to ensure open runtime =
+   Liberal Software
+-  35% of needs could be addressed by a high-level development tool that offers
+   basic data collection and manipulation
+-  40% could be satisfied by 5 generic web apps (mail, shopping cart, etc.)
+   that can be customized
+-  we had to convince the world that code is literary so we could copyright it;
+   if it was a useful artifact, we would patent it
+
+Data Structures and Algorithms in the 21st Century
+--------------------------------------------------
+Jacinta Catherine Richardson
+
+-  the word *algorithm* is a Latin transliteration of an Arab scholar's name
+   who was an early father of algebra
+-  with scattered points, how do you predict usage? Voronoi diagram.
+-  Fourier Transform: decomposes a function of time (a signal) into the
+   frequencies that make it up, in a way similar to how a musical chord can be
+   expressed as the frequencies (or pitches) of its constituent notes. Often
+   used for compression.
+
+   -  Nearly Optimal Sparse Fourier Transform: O(K log N)
+   -  developed in 2012, this can dramatically speed up transforms
+
+-  Single Value Decomposition: a factorization of a real or complex matrix.
+   Used for signal processing, pattern recognition, etc.
+
+-  Genetic algorithms: can be applied to engineering problems, such as
+   designing a better antenna
+
+My personal fight against the modern laptop
+-------------------------------------------
+Hamish Coleman
+
+-  Ideal laptop:
+
+   -  easily portable
+   -  suitable for all-day use
+   -  runs Linux
+   -  no blobs
+   -  actually a laptop
+   -  durable
+
+-  Scope:
+
+   -  skills to do only one or two things
+   -  look at needs and focus on the important things
+   -  what can one do to change the keyboard?
+
+-  connectors were the same, so they could just be swapped in
+-  but some key placements were different
+-  rather than rewire the board, one could update the software
+-  but the initial patch for the firmware didn't work fully
+-  so needed to patch some software to enable analysis of firmware
+
+A guide to selecting FOSS licenses for programmers and open culture enthusiasts
+-------------------------------------------------------------------------------
+James Scheibner
+
+-  ultimately, open source licenses allow developers to control what is done
+   with their code
+-  releasing source code without a license != public domain
+
+   -  great if you want your software to be used as widely as possible
+   -  no control over how software is used
+   -  there is a bare copyright applied
+   -  may discourage others from using your code
+
+-  license your code if you want to control:
+
+   -  who uses it
+   -  how they use it
+   -  what software they use it with
+
+-  how do open source licenses work at law?
+
+   -  combination of contract and copyright law
+   -  contract law used to give effect to license formation: "by modifying and
+      distributing the program, you indicate acceptance of this license".
+      Notify users of the license!
+   -  copyright law gives effect to the conditions that control use of the
+      software and attaches to the originality of the work
+
+-  different types of FOSS license:
+
+   -  permissive: includes an attribution requirement only (BSD/MIT)
+   -  restrictive: includes a relicensing requirement for "derivative works"
+      (GPL/AGPL/LGPL/CC-BY-SA)
+
+-  when is an open source license breached?
+
+   -  permissive: breached when there is no attribution; you can only seek
+      damages if there is a breach
+   -  restricted: remedies for both lack of attribution and for failure to
+      relicense derivative work
+
+-  "derivative work" is still being defined for software as cases are decided
+
+   -  is it common or unique?
+   -  is it a simple or complex?
+
+-  in Australia, the term used is "adaptation", not "derivative work". It is
+   unclear whether these are the same thing
+
+-  open data licensing
+
+   -  mere compilations of data are not original
+   -  note the EU's ``sui generis`` rights
+
+-  license choice:
+
+   -  public domain: if you don't care about controlling it
+   -  permissive: if you want attribution but don't care who/how it is used
+   -  restricted: if you want attribution and some control over the use of your
+      code
+   -  data: you may want to license data separately from code
+
+Designing a Race Car with Open Source Tools
+-------------------------------------------
+Dave Chinner
+
+-  building a Locost Clubman
+-  it is a simple car built around the design of the 1950s Lotus 7
+-  tools used:
+
+   -  FreeCAD: includes 3D CAD, finite element analysis software, Python
+      scripting
+   -  suspension geometry modeling
+   -  CFD software for aerodynamic modeling
+   -  CNC controller
