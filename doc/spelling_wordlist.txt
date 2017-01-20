@@ -167,3 +167,6 @@ Wikipedia
 work flow
 Zanata
 zanata
+Scheibner
+Locost
+Clubman

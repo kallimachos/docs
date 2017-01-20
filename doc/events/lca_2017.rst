@@ -983,3 +983,79 @@ Hamish Coleman
 -  rather than rewire the board, one could update the software
 -  but the initial patch for the firmware didn't work fully
 -  so needed to patch some software to enable analysis of firmware
+
+A guide to selecting FOSS licenses for programmers and open culture enthusiasts
+-------------------------------------------------------------------------------
+James Scheibner
+
+-  ultimately, open source licenses allow developers to control what is done
+   with their code
+-  releasing source code without a license != public domain
+
+   -  great if you want your software to be used as widely as possible
+   -  no control over how software is used
+   -  there is a bare copyright applied
+   -  may discourage others from using your code
+
+-  license your code if you want to control:
+
+   -  who uses it
+   -  how they use it
+   -  what software they use it with
+
+-  how do open source licenses work at law?
+
+   -  combination of contract and copyright law
+   -  contract law used to give effect to license formation: "by modifying and
+      distributing the program, you indicate acceptance of this license".
+      Notify users of the license!
+   -  copyright law gives effect to the conditions that control use of the
+      software and attaches to the originality of the work
+
+-  different types of FOSS license:
+
+   -  permissive: includes an attribution requirement only (BSD/MIT)
+   -  restrictive: includes a relicensing requirement for "derivative works"
+      (GPL/AGPL/LGPL/CC-BY-SA)
+
+-  when is an open source license breached?
+
+   -  permissive: breached when there is no attribution; you can only seek
+      damages if there is a breach
+   -  restricted: remedies for both lack of attribution and for failure to
+      relicense derivative work
+
+-  "derivative work" is still being defined for software as cases are decided
+
+   -  is it common or unique?
+   -  is it a simple or complex?
+
+-  in Australia, the term used is "adaptation", not "derivative work". It is
+   unclear whether these are the same thing
+
+-  open data licensing
+
+   -  mere compilations of data are not original
+   -  note the EU's ``sui generis`` rights
+
+-  license choice:
+
+   -  public domain: if you don't care about controlling it
+   -  permissive: if you want attribution but don't care who/how it is used
+   -  restricted: if you want attribution and some control over the use of your
+      code
+   -  data: you may want to license data separately from code
+
+Designing a Race Car with Open Source Tools
+-------------------------------------------
+Dave Chinner
+
+-  building a Locost Clubman
+-  it is a simple car built around the design of the 1950s Lotus 7
+-  tools used:
+
+   -  FreeCAD: includes 3D CAD, finite element analysis software, Python
+      scripting
+   -  suspension geometry modeling
+   -  CFD software for aerodynamic modeling
+   -  CNC controller
