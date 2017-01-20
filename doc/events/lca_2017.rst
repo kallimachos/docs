@@ -927,7 +927,7 @@ Robert M. "r0ml" Lefkowitz
 -  Dependencies should be >5 million lines of code, 20 better. That way there
    are only a handful of them. Anything smaller and you should just copy it
    into your own code.
--  Advanced programming environments conflate the runtime with the devtime -
+-  Advanced programming environments conflate the runtime with devtime -
    Bret Victor
 -  open source at devtime isn't enough; we need to ensure open runtime =
    Liberal Software
@@ -937,3 +937,49 @@ Robert M. "r0ml" Lefkowitz
    that can be customized
 -  we had to convince the world that code is literary so we could copyright it;
    if it was a useful artifact, we would patent it
+
+Data Structures and Algorithms in the 21st Century
+--------------------------------------------------
+Jacinta Catherine Richardson
+
+-  the word *algorithm* is a Latin transliteration of an Arab scholar's name
+   who was an early father of algebra
+-  with scattered points, how do you predict usage? Voronoi diagram.
+-  Fourier Transform: decomposes a function of time (a signal) into the
+   frequencies that make it up, in a way similar to how a musical chord can be
+   expressed as the frequencies (or pitches) of its constituent notes. Often
+   used for compression.
+
+   -  Nearly Optimal Sparse Fourier Transform: O(K log N)
+   -  developed in 2012, this can dramatically speed up transforms
+
+-  Single Value Decomposition: a factorization of a real or complex matrix.
+   Used for signal processing, pattern recognition, etc.
+
+-  Genetic algorithms: can be applied to engineering problems, such as
+   designing a better antenna
+
+My personal fight against the modern laptop
+-------------------------------------------
+Hamish Coleman
+
+-  Ideal laptop:
+
+   -  easily portable
+   -  suitable for all-day use
+   -  runs Linux
+   -  no blobs
+   -  actually a laptop
+   -  durable
+
+-  Scope:
+
+   -  skills to do only one or two things
+   -  look at needs and focus on the important things
+   -  what can one do to change the keyboard?
+
+-  connectors were the same, so they could just be swapped in
+-  but some key placements were different
+-  rather than rewire the board, one could update the software
+-  but the initial patch for the firmware didn't work fully
+-  so needed to patch some software to enable analysis of firmware

@@ -41,6 +41,7 @@ dev
 devops
 devs
 devstack
+devtime
 diff
 diffs
 Django
@@ -76,9 +77,11 @@ iOS
 kallimachos
 kerneldoc
 Lana
+Lefkowitz
 libre
 Linux
 linux
+lithification
 Magee
 Mahoney
 Masayuki
@@ -137,6 +140,7 @@ rst
 SaaS
 scalable
 sdist
+Searls
 sharding
 Sim
 Skulpt
@@ -151,6 +155,7 @@ txt
 Ubuntu
 unikernel
 VMware
+Voronoi
 webpage
 webserver
 whitepaper
