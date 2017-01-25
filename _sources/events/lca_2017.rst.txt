@@ -911,6 +911,10 @@ John Dickinson
    plain data and encrypted data. This is aided by recent changes in chip
    design that improve encryption speeds.
 
+
+Friday Jan 20
+~~~~~~~~~~~~~
+
 Keeping Linux Great
 -------------------
 Robert M. "r0ml" Lefkowitz
