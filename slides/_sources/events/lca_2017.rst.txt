@@ -45,7 +45,7 @@ Aurynn Shaw
    -  focus on humans
    -  admit we don't know everything; ignorance is not status
    -  speak up
-   -  codes of contact
+   -  codes of conduct
    -  training
    -  don't let bad apples ruin the barrel
    -  this is critical, because we are building the future of our community
@@ -386,9 +386,9 @@ Claire Mahoney
 -  in UX the small stuff is actually often the big stuff
 -  think of the user as someone to help, someone you want to give a good
    product experience
--  don't want them to spend time in docs; they need the answer and they need
-   to get back to work
--  mobile user is "on the go" is a misconception
+-  you don't want them to spend time in docs; they need the answer and they
+   need to get back to work
+-  mobile user "on the go" is a misconception
    -  really, mobiles are used everywhere
    -  device + location + what the user wants to do
 -  "lite is alright": myth that mobiles are for casual stuff; people will go to
@@ -439,7 +439,6 @@ Joe Robinson
    for people who may know programming logic better than English grammar
 -  unfortunately I couldn't take more detailed notes because I was at the
    back of the room without my laptop
-
 
 Helping Caterpillars Fly
 ------------------------
@@ -495,6 +494,7 @@ Nicola Nye
    -  make it easy
    -  regular reviews
 
+-----
 
 Wednesday Jan 18
 ~~~~~~~~~~~~~~~~
@@ -713,6 +713,7 @@ Tips for native speakers
 -  encourage communication
 -  do not make fun
 
+-----
 
 Thursday Jan 19
 ~~~~~~~~~~~~~~~
@@ -911,6 +912,7 @@ John Dickinson
    plain data and encrypted data. This is aided by recent changes in chip
    design that improve encryption speeds.
 
+-----
 
 Friday Jan 20
 ~~~~~~~~~~~~~
