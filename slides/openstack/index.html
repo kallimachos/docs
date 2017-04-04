@@ -10,7 +10,7 @@ URL: https://code.google.com/p/io-2012-slides
 
 <html>
 <head>
-  <title>Scripts &mdash; Document Repository  documentation</title>
+  <title>OpenStack &mdash; Document Repository  documentation</title>
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -61,9 +61,8 @@ URL: https://code.google.com/p/io-2012-slides
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Document Repository  documentation" href="../index.html" />
-    <link rel="up" title="Git Guide" href="index.html" />
-    <link rel="next" title="OpenStack" href="../openstack/index.html" />
-    <link rel="prev" title="Using Bash Scripts" href="bash.html" /> 
+    <link rel="next" title="Releasing tools" href="tools-release.html" />
+    <link rel="prev" title="Scripts" href="../git-guide/scripts.html" /> 
 </head>
 <body style="opacity: 0">
 
@@ -72,97 +71,19 @@ URL: https://code.google.com/p/io-2012-slides
   
 
   
-    <slide class="title-slide segue nobackground level-1" id="scripts">
+    <slide class="title-slide segue nobackground level-1" id="openstack">
     <hgroup>
-      <h1>Scripts</h1>
+      <h1>OpenStack</h1>
     </hgroup>
     <article class="">
-      
-
-
-
-    </article>
-  </slide>  <slide class="level-2" id="repocheck-sh">
-    <hgroup>
-      <h2>repocheck.sh</h2>
-    </hgroup>
-    <article class="">
-      <div class="code highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
-
-# Print ``git status -s -b`` of repos in the listed directories if they have
-# uncommitted changes or if they are not on the master branch.
-
-repos=(openstack rpcdocs code code/python scripts)
-
-echo
-
-for item in ${repos[@]}; do
-    root=~/$item/*
-    for dir in $root; do
-        if test -d $dir &amp;&amp; test -e $dir/.git; then
-            cd $dir &amp;&amp; echo $dir
-            branch=$(git status -s -b)
-            if ! [ &quot;$branch&quot; = &quot;## master...origin/master&quot; ]; then
-                git status -s -b
-            fi
-        fi
-    done
-done
-echo
-</pre></div>
-</div>
-
-
-
-
-    </article>
-  </slide>  <slide class="level-2" id="branchlist-sh">
-    <hgroup>
-      <h2>branchlist.sh</h2>
-    </hgroup>
-    <article class="">
-      <div class="code highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
-
-# This script runs &#39;git branch -a&#39; on all repositories. It shows you all
-# the local and remote branches, and indicates which branches you have
-# checked out. Remove the &#39;-a&#39; option to view only local branches.
-
-# You must change ~/docs/* to the location of the git repositories on your
-# local machine.
-
-for dir in ~/docs/*; do
-    if test -d $dir &amp;&amp; test -e $dir/.git; then
-        cd $dir &amp;&amp; echo $dir
-        git branch -a &amp;&amp; echo
-    fi
-done
-</pre></div>
-</div>
-
-
-
-
-    </article>
-  </slide>  <slide class="level-2" id="pullall-sh">
-    <hgroup>
-      <h2>pullall.sh</h2>
-    </hgroup>
-    <article class="">
-      <div class="code highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
-
-# This script runs &#39;git pull&#39; on all remote repositories. It is helpful
-# for pulling down changes from all your remote repositories in one action.
-
-# You must change ~/docs/* to the location of the git repositories on your
-# local machine.
-
-for dir in ~/docs/*; do
-    if test -d $dir &amp;&amp; test -e $dir/.git; then
-        cd $dir &amp;&amp; echo $dir
-        git pull &amp;&amp; echo
-    fi
-done
-</pre></div>
+      <p>OpenStack documents written by &#64;kallimachos.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tools-release.html">Releasing tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tools-release.html#triggering-a-release">Triggering a release</a></li>
+</ul>
+</li>
+</ul>
 </div>
 
 
