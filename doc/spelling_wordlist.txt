@@ -2,6 +2,7 @@ abugida
 Admin
 admin
 admins
+analytics
 Ansible
 ansible
 api
@@ -24,10 +25,12 @@ branchlist
 Brindley
 builtin
 Catarina
+centric
 Chinner
 cirros
 Clubman
 conf
+Corbet
 coroutines
 CPython
 curation
@@ -54,6 +57,7 @@ Endsley
 ePub
 extensibility
 Facebook
+findable
 Firefox
 Florian
 Geelong
@@ -67,6 +71,7 @@ Google
 govhack
 hackable
 hackathon
+Hamish
 heartbleed
 Heroku
 html
@@ -76,8 +81,10 @@ Igawa
 imposter
 internet
 iOS
+Jacinta
 kallimachos
 kerneldoc
+kerning
 Lana
 Lefkowitz
 libre
@@ -106,14 +113,18 @@ monolingualism
 multi
 multiplayer
 natively
+Nye
 ok
 online
 OpenStack
 openstack
+openstackdocstheme
 org
+os
 Oxfam
 pandoc
 parallelized
+Pia
 plugin
 plugins
 polylingualism
@@ -157,6 +168,7 @@ Stacker
 Stefano
 SUSE
 syllabary
+timestamps
 tox
 txt
 Ubuntu
