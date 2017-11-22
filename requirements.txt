@@ -1,5 +1,3 @@
-bashate
-doc8
 hieroglyph
 pyenchant
 sphinx>=1.4.1
