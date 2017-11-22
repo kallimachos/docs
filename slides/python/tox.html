@@ -32,13 +32,12 @@ URL: https://code.google.com/p/io-2012-slides
   <link rel="stylesheet" media="only screen and (max-device-width: 480px)"
         href="../_static/theme/css/phone.css">
 
-    
-    <link rel="stylesheet" href="../_static/myslide.css"
-          type="text/css" />
-    
-
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  
+  <link rel="stylesheet" href="../_static/myslide.css"
+        type="text/css" />
+  
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
   
     <script type="text/javascript">
@@ -88,7 +87,7 @@ URL: https://code.google.com/p/io-2012-slides
       <h2>Testing in-development packages</h2>
     </hgroup>
     <article class="">
-      <p>Test local, in-development packages using tox's <code class="docutils literal"><span class="pre">distshare</span></code> feature:</p>
+      <p>Test local, in-development packages using tox’s <code class="docutils literal"><span class="pre">distshare</span></code> feature:</p>
 <ol class="arabic">
 <li><p class="first">Run <code class="docutils literal"><span class="pre">tox</span></code> for the development package. Ensure sdist builds are enabled in
 <strong>tox.ini</strong>:</p>
@@ -100,7 +99,7 @@ URL: https://code.google.com/p/io-2012-slides
 </pre></div>
 </div>
 </li>
-<li><p class="first">The package's sdist file is now available in <em>~/.tox/distshare/</em>. You can
+<li><p class="first">The package’s sdist file is now available in <em>~/.tox/distshare/</em>. You can
 use this file as a dependency by forcing two pip runs in <strong>tox.ini</strong>:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">deps</span><span class="o">=</span>
     <span class="p">{</span><span class="n">distshare</span><span class="p">}</span><span class="o">/</span><span class="n">packagename</span><span class="o">*.</span><span class="n">zip</span>
@@ -118,14 +117,7 @@ use this file as a dependency by forcing two pip runs in <strong>tox.ini</strong
   </slide>
 
 
-    <slide class="thank-you-slide segue nobackground">
-    <article class="flexbox vleft auto-fadein">
-      <h2>&lt;Thank You!&gt;</h2>
-    </article>
-    <p class="auto-fadein" data-config-contact>
-      <!-- populated from slide_config.json -->
-    </p>
-  </slide>
+  
 
   <slide class="backdrop"></slide>
 

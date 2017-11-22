@@ -21,9 +21,14 @@ Working with Remote Branches
        branch
    * - git push
      - pushes all committed changes on all branches to the remote repo
+   * - git push -f
+     - force pushes all committed changes on all branches to the remote repo.
+       **Warning:** this can overwrite commits on the remote branches.
+   * - git push origin +\ *branch*
+     - force pushes committed changes on the specified branch.
+       **Warning:** this can overwrite commits on the remote branch.
    * - git push origin *branch1*:*branch2*
-     - creates a remote branch *branch2* and pushes the local branch *branch1*
-       to it
+     - creates a remote *branch2* and pushes the local *branch1* to it
    * - git push origin :*branch*
      - deletes the specified remote branch (note there is a space between
        ``origin`` and ``:branch``)

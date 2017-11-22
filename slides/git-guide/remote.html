@@ -32,13 +32,12 @@ URL: https://code.google.com/p/io-2012-slides
   <link rel="stylesheet" media="only screen and (max-device-width: 480px)"
         href="../_static/theme/css/phone.css">
 
-    
-    <link rel="stylesheet" href="../_static/myslide.css"
-          type="text/css" />
-    
-
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  
+  <link rel="stylesheet" href="../_static/myslide.css"
+        type="text/css" />
+  
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
   
     <script type="text/javascript">
@@ -88,7 +87,7 @@ URL: https://code.google.com/p/io-2012-slides
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>git checkout --track origin/<em>branch</em></td>
+<tr class="row-even"><td>git checkout –track origin/<em>branch</em></td>
 <td>creates and checks out a local tracking branch for the specified remote
 branch</td>
 </tr>
@@ -106,15 +105,22 @@ branch</td>
 <tr class="row-even"><td>git push</td>
 <td>pushes all committed changes on all branches to the remote repo</td>
 </tr>
+<tr class="row-odd"><td>git push -f</td>
+<td>force pushes all committed changes on all branches to the remote repo.
+<strong>Warning:</strong> this can overwrite commits on the remote branches.</td>
+</tr>
+<tr class="row-even"><td>git push origin +<em>branch</em></td>
+<td>force pushes committed changes on the specified branch.
+<strong>Warning:</strong> this can overwrite commits on the remote branch.</td>
+</tr>
 <tr class="row-odd"><td>git push origin <em>branch1</em>:<em>branch2</em></td>
-<td>creates a remote branch <em>branch2</em> and pushes the local branch <em>branch1</em>
-to it</td>
+<td>creates a remote <em>branch2</em> and pushes the local <em>branch1</em> to it</td>
 </tr>
 <tr class="row-even"><td>git push origin :<em>branch</em></td>
 <td>deletes the specified remote branch (note there is a space between
 <code class="docutils literal"><span class="pre">origin</span></code> and <code class="docutils literal"><span class="pre">:branch</span></code>)</td>
 </tr>
-<tr class="row-odd"><td>git reset --hard origin/<em>branch</em></td>
+<tr class="row-odd"><td>git reset –hard origin/<em>branch</em></td>
 <td>resets the checked-out local branch to the status of the specified
 remote branch; running <code class="docutils literal"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">origin</span></code> first is recommended</td>
 </tr>
@@ -150,14 +156,7 @@ and not confused as a path.</p>
   </slide>
 
 
-    <slide class="thank-you-slide segue nobackground">
-    <article class="flexbox vleft auto-fadein">
-      <h2>&lt;Thank You!&gt;</h2>
-    </article>
-    <p class="auto-fadein" data-config-contact>
-      <!-- populated from slide_config.json -->
-    </p>
-  </slide>
+  
 
   <slide class="backdrop"></slide>
 

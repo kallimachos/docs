@@ -178,7 +178,7 @@
 <p>Tips and tricks for using <a class="reference external" href="https://tox.readthedocs.io/en/latest/">tox</a>.</p>
 <div class="section" id="testing-in-development-packages">
 <h2>Testing in-development packages<a class="headerlink" href="#testing-in-development-packages" title="Permalink to this headline">#</a></h2>
-<p>Test local, in-development packages using tox's <code class="docutils literal"><span class="pre">distshare</span></code> feature:</p>
+<p>Test local, in-development packages using tox’s <code class="docutils literal"><span class="pre">distshare</span></code> feature:</p>
 <ol class="arabic">
 <li><p class="first">Run <code class="docutils literal"><span class="pre">tox</span></code> for the development package. Ensure sdist builds are enabled in
 <strong>tox.ini</strong>:</p>
@@ -190,7 +190,7 @@
 </pre></div>
 </div>
 </li>
-<li><p class="first">The package's sdist file is now available in <em>~/.tox/distshare/</em>. You can
+<li><p class="first">The package’s sdist file is now available in <em>~/.tox/distshare/</em>. You can
 use this file as a dependency by forcing two pip runs in <strong>tox.ini</strong>:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">deps</span><span class="o">=</span>
     <span class="p">{</span><span class="n">distshare</span><span class="p">}</span><span class="o">/</span><span class="n">packagename</span><span class="o">*.</span><span class="n">zip</span>
