@@ -27,29 +27,20 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Document Repository  documentation" href="../index.html"/>
-        <link rel="up" title="Linux Event Logs" href="lca.html"/>
-        <link rel="next" title="OpenStack Event Logs" href="openstack.html"/>
-        <link rel="prev" title="linux.conf.au Geelong February 2016" href="lca_2016.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OpenStack Event Logs" href="openstack.html" />
+    <link rel="prev" title="linux.conf.au Geelong February 2016" href="lca_2016.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -66,7 +57,7 @@
 
           
             
-            <img src="../_static/red_square.png" class="logo" />
+            <img src="../_static/red_square.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -129,7 +120,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Document Repository</a>
@@ -137,9 +128,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -542,7 +534,7 @@ still no linkage between documents, conflicts between tools</li>
 </li>
 <li>Jon put together a POC, discussion ensued, POC was expanded, consensus
 was formed</li>
-<li>kerneldoc comments work as always using <code class="docutils literal"><span class="pre">kernel-doc</span></code> directive, so no
+<li>kerneldoc comments work as always using <code class="docutils literal notranslate"><span class="pre">kernel-doc</span></code> directive, so no
 need to change them</li>
 <li>but those comments can now contain RST directives</li>
 <li>cross-references now available</li>
@@ -812,7 +804,7 @@ BeeWare), which cross-compile Python to JavaScript</li>
 <li>at Geelong last year Matt claimed he had a solution. It didn’t quite pan
 out. So he is back to talk about his new solution.</li>
 <li>Journey so far:<ul>
-<li>object hashing: <code class="docutils literal"><span class="pre">shard_no</span> <span class="pre">=</span> <span class="pre">md5(object)</span> <span class="pre">&gt;&gt;</span> <span class="pre">shard_power</span></code></li>
+<li>object hashing: <code class="docutils literal notranslate"><span class="pre">shard_no</span> <span class="pre">=</span> <span class="pre">md5(object)</span> <span class="pre">&gt;&gt;</span> <span class="pre">shard_power</span></code></li>
 <li>distributed prefix trees</li>
 <li>pivot points / split tree: this worked fine in small scale testing but
 didn’t scale</li>
@@ -856,7 +848,7 @@ speaking difficult</li>
 <li>short/direct responses may sound rude</li>
 <li>“i” (Portuguese) is pronounced like “e” (English)</li>
 <li>grammar: adjective position is opposite to English</li>
-<li>some phonemes do not exist in Portuguese, e.g. <code class="docutils literal"><span class="pre">th</span></code> vs <code class="docutils literal"><span class="pre">f</span></code></li>
+<li>some phonemes do not exist in Portuguese, e.g. <code class="docutils literal notranslate"><span class="pre">th</span></code> vs <code class="docutils literal notranslate"><span class="pre">f</span></code></li>
 <li>regular schools in Brazil do a poor job of teaching English</li>
 </ul>
 </div>
@@ -991,8 +983,8 @@ and build instructions, any party can recreate it.”</li>
 <li><a class="reference external" href="https://diffoscope.org/">diffoscope</a> is used to compare diffs of binaries</li>
 <li>common issues:<ul>
 <li>build timestamps: these are not really necessary; better to use
-<code class="docutils literal"><span class="pre">SOURCE_DATE_EPOCH</span></code></li>
-<li>build paths: no solution yet, but <code class="docutils literal"><span class="pre">SOURCE_PREFIX_MAP</span></code> variable is in
+<code class="docutils literal notranslate"><span class="pre">SOURCE_DATE_EPOCH</span></code></li>
+<li>build paths: no solution yet, but <code class="docutils literal notranslate"><span class="pre">SOURCE_PREFIX_MAP</span></code> variable is in
 development</li>
 </ul>
 </li>
@@ -1003,12 +995,12 @@ build environments so all users can reproduce the build</li>
 <li>the process may be big and/or slow</li>
 </ul>
 </li>
-<li><code class="docutils literal"><span class="pre">.buildinfo</span></code> files<ul>
+<li><code class="docutils literal notranslate"><span class="pre">.buildinfo</span></code> files<ul>
 <li>standard in Debian</li>
 <li>created and signed when building a binary</li>
 <li>links source, binary, and build environment</li>
-<li>ongoing work to improve <code class="docutils literal"><span class="pre">.buildinfo</span></code> file distribution, provide RPMs
-and create tools to build the environment from a <code class="docutils literal"><span class="pre">.buildinfo</span></code> file</li>
+<li>ongoing work to improve <code class="docutils literal notranslate"><span class="pre">.buildinfo</span></code> file distribution, provide RPMs
+and create tools to build the environment from a <code class="docutils literal notranslate"><span class="pre">.buildinfo</span></code> file</li>
 </ul>
 </li>
 <li>delivering build environment metadata with binary software delivers the
@@ -1101,7 +1093,7 @@ format, similar in concept to something like JSON.</li>
 <li>Swift is an object storage system that can store unstructured content
 at massive scale, with redundancy and high availability</li>
 <li>Swift uses a REST API<ul>
-<li><code class="docutils literal"><span class="pre">https://swift.example.com/v1/AUTH_acct/cont/obj</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">https://swift.example.com/v1/AUTH_acct/cont/obj</span></code></li>
 <li>this provides us with the account, container, and object</li>
 <li>client &lt;-&gt; proxy &lt;-&gt; storage node</li>
 </ul>
@@ -1260,7 +1252,7 @@ relicense derivative work</li>
 unclear whether these are the same thing</li>
 <li>open data licensing<ul>
 <li>mere compilations of data are not original</li>
-<li>note the EU’s <code class="docutils literal"><span class="pre">sui</span> <span class="pre">generis</span></code> rights</li>
+<li>note the EU’s <code class="docutils literal notranslate"><span class="pre">sui</span> <span class="pre">generis</span></code> rights</li>
 </ul>
 </li>
 <li>license choice:<ul>
@@ -1294,9 +1286,7 @@ scripting</li>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -1318,7 +1308,7 @@ scripting</li>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -1337,6 +1327,7 @@ scripting</li>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -1354,14 +1345,13 @@ scripting</li>
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

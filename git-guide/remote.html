@@ -27,29 +27,20 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Document Repository  documentation" href="../index.html"/>
-        <link rel="up" title="Git Guide" href="index.html"/>
-        <link rel="next" title="Merging Branches" href="merge.html"/>
-        <link rel="prev" title="Working with Local Branches" href="local.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Merging Branches" href="merge.html" />
+    <link rel="prev" title="Working with Local Branches" href="local.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -66,7 +57,7 @@
 
           
             
-            <img src="../_static/red_square.png" class="logo" />
+            <img src="../_static/red_square.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -124,7 +115,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Document Repository</a>
@@ -132,9 +123,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -222,11 +214,11 @@ branch</td>
 </tr>
 <tr class="row-even"><td>git push origin :<em>branch</em></td>
 <td>deletes the specified remote branch (note there is a space between
-<code class="docutils literal"><span class="pre">origin</span></code> and <code class="docutils literal"><span class="pre">:branch</span></code>)</td>
+<code class="docutils literal notranslate"><span class="pre">origin</span></code> and <code class="docutils literal notranslate"><span class="pre">:branch</span></code>)</td>
 </tr>
 <tr class="row-odd"><td>git reset –hard origin/<em>branch</em></td>
 <td>resets the checked-out local branch to the status of the specified
-remote branch; running <code class="docutils literal"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">origin</span></code> first is recommended</td>
+remote branch; running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">origin</span></code> first is recommended</td>
 </tr>
 </tbody>
 </table>
@@ -242,16 +234,14 @@ span.prompt1:before {
 <span class="prompt1">git reset --hard upstream/master --</span>
 <span class="prompt1">git push origin +master</span>
 </pre></div></blockquote>
-<p>The double hyphen ensures that <code class="docutils literal"><span class="pre">upstream/master</span></code> is considered as a revision
+<p>The double hyphen ensures that <code class="docutils literal notranslate"><span class="pre">upstream/master</span></code> is considered as a revision
 and not confused as a path.</p>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -273,7 +263,7 @@ and not confused as a path.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -292,6 +282,7 @@ and not confused as a path.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -309,14 +300,13 @@ and not confused as a path.</p>
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

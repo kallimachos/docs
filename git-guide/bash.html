@@ -27,29 +27,20 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Document Repository  documentation" href="../index.html"/>
-        <link rel="up" title="Git Guide" href="index.html"/>
-        <link rel="next" title="Scripts" href="scripts.html"/>
-        <link rel="prev" title="Merging Branches" href="merge.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Scripts" href="scripts.html" />
+    <link rel="prev" title="Merging Branches" href="merge.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -66,7 +57,7 @@
 
           
             
-            <img src="../_static/red_square.png" class="logo" />
+            <img src="../_static/red_square.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -103,9 +94,9 @@
 <li class="toctree-l2"><a class="reference internal" href="merge.html">Merging Branches</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Using Bash Scripts</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#sample-scripts">Sample Scripts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#repocheck"><code class="docutils literal"><span class="pre">repocheck</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#branchlist"><code class="docutils literal"><span class="pre">branchlist</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pullall"><code class="docutils literal"><span class="pre">pullall</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#repocheck"><code class="docutils literal notranslate"><span class="pre">repocheck</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#branchlist"><code class="docutils literal notranslate"><span class="pre">branchlist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pullall"><code class="docutils literal notranslate"><span class="pre">pullall</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -129,7 +120,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Document Repository</a>
@@ -137,9 +128,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -191,7 +183,7 @@ directory, and will return you to the directory in which you started.
 Creating aliases for your scripts for easy access is recommended.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You must change <code class="docutils literal"><span class="pre">~/docs/*</span></code> in each script to the location of the git
+<p class="last">You must change <code class="docutils literal notranslate"><span class="pre">~/docs/*</span></code> in each script to the location of the git
 repositories on your local machine.</p>
 </div>
 <p><strong>Creating Bash Aliases</strong></p>
@@ -207,7 +199,7 @@ span.prompt1:before {
 </style><span class="prompt1">chmod a+x myscript.sh</span>
 </pre></li>
 <li><p class="first">Open <strong>~/.bashrc</strong> and add an alias for the script:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">myscript</span><span class="o">=</span><span class="s1">&#39;~/scripts/myscript.sh&#39;</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">myscript</span><span class="o">=</span><span class="s1">&#39;~/scripts/myscript.sh&#39;</span>
 </pre></div>
 </div>
 </li>
@@ -223,16 +215,16 @@ session:</p>
 <h2>Sample Scripts<a class="headerlink" href="#sample-scripts" title="Permalink to this headline">#</a></h2>
 <div class="section" id="repocheck">
 <h3><a class="reference internal" href="scripts.html#repocheck"><span class="std std-ref">repocheck.sh</span></a><a class="headerlink" href="#repocheck" title="Permalink to this headline">#</a></h3>
-<p>Prints <code class="docutils literal"><span class="pre">git</span> <span class="pre">status</span> <span class="pre">-s</span> <span class="pre">-b</span></code> of repositories in the listed directories if they
+<p>Prints <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span> <span class="pre">-s</span> <span class="pre">-b</span></code> of repositories in the listed directories if they
 have uncommitted changes or if they are not on the master branch.</p>
 <p>This script is helpful for checking if you have any work that has not been
 committed or pushed, and also for ensuring that you are on the master branches
 of each repo before attempting to merge from origin or upstream master.
 Note that the output is the short (-s) version. No message means that
 the working directory is clean and you are on the master branch. If you receive
-a message, run <code class="docutils literal"><span class="pre">git</span> <span class="pre">status</span></code> on the indicated repository for full information.</p>
+a message, run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> on the indicated repository for full information.</p>
 <p>Example Output:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
 <span class="c1">## v10...origin/v10</span>
 <span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">release</span><span class="o">-</span><span class="n">notes</span>
 <span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">-</span><span class="n">guide</span>
@@ -245,11 +237,11 @@ a message, run <code class="docutils literal"><span class="pre">git</span> <span
 </div>
 <div class="section" id="branchlist">
 <h3><a class="reference internal" href="scripts.html#branchlist"><span class="std std-ref">branchlist.sh</span></a><a class="headerlink" href="#branchlist" title="Permalink to this headline">#</a></h3>
-<p>This script runs <code class="docutils literal"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-a</span></code> on all repositories. It shows you all
+<p>This script runs <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-a</span></code> on all repositories. It shows you all
 the local and remote branches, and indicates which branches you have
-checked out. Remove the <code class="docutils literal"><span class="pre">-a</span></code> option to view only local branches.</p>
+checked out. Remove the <code class="docutils literal notranslate"><span class="pre">-a</span></code> option to view only local branches.</p>
 <p>Example Output:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
 <span class="o">*</span> <span class="n">master</span>
   <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="mf">1.0</span>
   <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="mf">1.1</span>
@@ -279,10 +271,10 @@ checked out. Remove the <code class="docutils literal"><span class="pre">-a</spa
 </div>
 <div class="section" id="pullall">
 <h3><a class="reference internal" href="scripts.html#pullall"><span class="std std-ref">pullall.sh</span></a><a class="headerlink" href="#pullall" title="Permalink to this headline">#</a></h3>
-<p>This script runs <code class="docutils literal"><span class="pre">git</span> <span class="pre">pull</span></code> on all remote repositories. It is helpful
+<p>This script runs <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> on all remote repositories. It is helpful
 for pulling down changes from all your remote repositories in one action.</p>
 <p>Example Output:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
 <span class="n">Already</span> <span class="n">up</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">date</span><span class="o">.</span>
 
 <span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">release</span><span class="o">-</span><span class="n">notes</span>
@@ -301,9 +293,7 @@ for pulling down changes from all your remote repositories in one action.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -325,7 +315,7 @@ for pulling down changes from all your remote repositories in one action.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -344,6 +334,7 @@ for pulling down changes from all your remote repositories in one action.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -361,14 +352,13 @@ for pulling down changes from all your remote repositories in one action.</p>
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

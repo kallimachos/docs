@@ -127,7 +127,7 @@ create it.</li>
 <ul class="build">
 <li><p class="first">You may need to add the following code at the top of your
 <strong>~/.bash_profile</strong> in order to read <strong>.bashrc</strong>:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Get aliases and functions</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get aliases and functions</span>
 <span class="k">if</span> <span class="o">[</span> -f ~/.bashrc <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
     . ~/.bashrc
 <span class="k">fi</span>
@@ -137,7 +137,7 @@ create it.</li>
 </ul>
 <ul class="build simple">
 <li>If you make a change to <strong>.bashrc</strong>, you must either open a new terminal or
-run <code class="docutils literal"><span class="pre">source</span> <span class="pre">.bashrc</span></code> in order for the changes to take effect.</li>
+run <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">.bashrc</span></code> in order for the changes to take effect.</li>
 </ul>
 
 
@@ -151,8 +151,8 @@ run <code class="docutils literal"><span class="pre">source</span> <span class="
     <article class="">
       <p>In this example, we configure the prompt, add an application to the PATH, and
 create some aliases.</p>
-<p>Note that the <code class="docutils literal"><span class="pre">#</span></code> symbol indicates a comment.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Set prompt</span>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol indicates a comment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set prompt</span>
 <span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;[\u \W]\$ &quot;</span>
 
 <span class="c1"># Path additions</span>
@@ -177,9 +177,9 @@ create some aliases.</p>
     </hgroup>
     <article class="">
       <p>Because <strong>.bashrc</strong> is executed, it can include arbitrary code.</p>
-<p>In this example, an <code class="docutils literal"><span class="pre">if</span></code> clause is used to set aliases depending on the
+<p>In this example, an <code class="docutils literal notranslate"><span class="pre">if</span></code> clause is used to set aliases depending on the
 operating system.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Handle differences between Mac and Linux OS</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Handle differences between Mac and Linux OS</span>
 <span class="k">if</span> <span class="o">[[</span> <span class="nv">$OSTYPE</span> <span class="o">=</span>~ ^darwin <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
     <span class="nb">alias</span> <span class="nv">fox</span><span class="o">=</span><span class="s1">&#39;open -a &quot;firefox&quot;&#39;</span>
     <span class="nb">alias</span> <span class="nv">go</span><span class="o">=</span><span class="s1">&#39;open&#39;</span>
@@ -205,7 +205,7 @@ operating system.</p>
     <article class="">
       <p>You can call your scripts directly from the command line, but it is much more
 convenient to give them aliases if you use them frequently.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># bash script aliases</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># bash script aliases</span>
 <span class="nb">alias</span> <span class="nv">backup</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/backup.sh&#39;</span>
 <span class="nb">alias</span> <span class="nv">bump</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/bump.sh&#39;</span>
 <span class="nb">alias</span> <span class="nv">clean</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/clean.sh&#39;</span>
@@ -219,7 +219,7 @@ convenient to give them aliases if you use them frequently.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Do not use an alias that is an existing command or reserved word (e.g.
-<code class="docutils literal"><span class="pre">sed</span></code>, <code class="docutils literal"><span class="pre">done</span></code>) unless you truly want to override their built-in use.
+<code class="docutils literal notranslate"><span class="pre">sed</span></code>, <code class="docutils literal notranslate"><span class="pre">done</span></code>) unless you truly want to override their built-in use.
 Doing so is likely to cause frustrating errors that are difficult to debug.</p>
 </div>
 
@@ -259,7 +259,7 @@ quicker and easier.</li>
       <p>As a very simple example, consider what is required to list the contents of
 a directory.</p>
 <p><strong>Bash</strong></p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ ls
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls
 conf.py  git-guide  images  index.rst  Makefile
 </pre></div>
 </div>
@@ -267,7 +267,7 @@ conf.py  git-guide  images  index.rst  Makefile
 <div class="line"><br /></div>
 </div>
 <p><strong>Python</strong></p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ python3
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ python3
 &gt;&gt;&gt; import os
 &gt;&gt;&gt; for file in os.listdir():
 ...     print(file, end=&quot;  &quot;)
@@ -289,7 +289,7 @@ service, then print the status of each monitor to the command line. While this
 could be achieved with Bash, it is easier to do with the syntax and libraries
 available in Python.</p>
 <p><strong>Python</strong></p>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://api.uptimerobot.com/getMonitors?apikey=12345&#39;</span>
@@ -316,7 +316,7 @@ available in Python.</p>
     <article class="">
       <p><strong>bump.sh</strong> wraps the commands required to fetch from upstream, merge into
 master, then push to origin.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Merges upstream into local branch for a Rackspace repository</span>
 <span class="c1"># and pushes the result to origin.</span>
@@ -328,10 +328,10 @@ git push origin master
 </div>
 <ul class="build simple">
 <li><strong>file names</strong> - you to not have to use <strong>.sh</strong>, but extensions are
-helpful for minimizing confusion and easier globbing (<code class="docutils literal"><span class="pre">*.sh</span></code>).</li>
-<li><strong>shebang</strong> (<code class="docutils literal"><span class="pre">#!/bin/bash</span></code>) - this line specifies the interpreter to use
+helpful for minimizing confusion and easier globbing (<code class="docutils literal notranslate"><span class="pre">*.sh</span></code>).</li>
+<li><strong>shebang</strong> (<code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code>) - this line specifies the interpreter to use
 for running the script.</li>
-<li><code class="docutils literal"><span class="pre">#</span></code> - the hash symbol comments the text to its right.</li>
+<li><code class="docutils literal notranslate"><span class="pre">#</span></code> - the hash symbol comments the text to its right.</li>
 </ul>
 
 
@@ -346,19 +346,19 @@ for running the script.</li>
       <p><strong>Running the script</strong></p>
 <ol class="arabic">
 <li><p class="first">Make the script executable:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ chmod +x ~/scripts/bash/bump.sh
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ chmod +x ~/scripts/bash/bump.sh
 </pre></div>
 </div>
 </li>
 </ol>
 <ol class="build arabic" start="2">
 <li><p class="first">Alias in <strong>.bashrc</strong>:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">bump</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/bump.sh&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">bump</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/bump.sh&#39;</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Run from the command line when you are in an appropriate directory:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ cd docs-rpc
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd docs-rpc
 $ bump
 </pre></div>
 </div>
@@ -376,10 +376,10 @@ $ bump
     <article class="">
       <p><strong>stable.sh</strong> iterates through a list of branch names, merging upstream into
 each one and pushing them to origin.</p>
-<p>This script uses a <code class="docutils literal"><span class="pre">for</span></code> loop to iterate through an array (i.e. list of
+<p>This script uses a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate through an array (i.e. list of
 values).</p>
-<p>The <code class="docutils literal"><span class="pre">$</span></code> symbol indicates that you want to access the value of a variable.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nv">branches</span><span class="o">=(</span>v10 v11 v12 v13<span class="o">)</span>
+<p>The <code class="docutils literal notranslate"><span class="pre">$</span></code> symbol indicates that you want to access the value of a variable.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">branches</span><span class="o">=(</span>v10 v11 v12 v13<span class="o">)</span>
 
 <span class="nb">echo</span>
 <span class="k">for</span> item in <span class="si">${</span><span class="nv">branches</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
@@ -405,7 +405,7 @@ git branch
     <article class="">
       <p><strong>rackup.sh</strong> iterates through repository-containing directories in a single
 directory and updates each one.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="k">for</span> dir in ~/rpcdocs/*<span class="p">;</span> <span class="k">do</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> dir in ~/rpcdocs/*<span class="p">;</span> <span class="k">do</span>
     <span class="k">if</span> <span class="nb">test</span> -d <span class="nv">$dir</span> <span class="o">&amp;&amp;</span> <span class="nb">test</span> -e <span class="nv">$dir</span>/.git<span class="p">;</span> <span class="k">then</span>
         <span class="nb">cd</span> <span class="nv">$dir</span>
         git fetch upstream
@@ -428,7 +428,7 @@ directory and updates each one.</p>
       <p><strong>up.sh</strong> iterates through multiple directories, each containing multiple
 repository-containing directories, and updates each one.</p>
 <p>Note how this script calls other scripts.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nv">div</span><span class="o">=</span><span class="s1">&#39;======================&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">div</span><span class="o">=</span><span class="s1">&#39;======================&#39;</span>
 
 <span class="nb">echo</span>
 <span class="nb">echo</span> <span class="nv">$div</span>
@@ -455,10 +455,10 @@ bash ~/scripts/bash/rackup.sh
     </hgroup>
     <article class="">
       <p><strong>repocheck.sh</strong> is one of the scripts I use most often. It runs
-<code class="docutils literal"><span class="pre">git</span> <span class="pre">status</span></code> on all my repositories and tells me if I have uncommitted work
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> on all my repositories and tells me if I have uncommitted work
 or if I’m on a non-master branch. I always like to run this before running
 update scripts to prevent merge problems.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nv">repos</span><span class="o">=(</span>openstack rpcdocs code code/python scripts<span class="o">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">repos</span><span class="o">=(</span>openstack rpcdocs code code/python scripts<span class="o">)</span>
 
 <span class="k">for</span> item in <span class="si">${</span><span class="nv">repos</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
     <span class="nv">root</span><span class="o">=</span>~/<span class="nv">$item</span>/*
@@ -484,7 +484,7 @@ update scripts to prevent merge problems.</p>
       <h2>Cleaning your repositories</h2>
     </hgroup>
     <article class="">
-      <p><strong>clean.sh</strong> performs a <code class="docutils literal"><span class="pre">git</span> <span class="pre">clean</span></code> on all repositories. It runs
+      <p><strong>clean.sh</strong> performs a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clean</span></code> on all repositories. It runs
 <strong>repocheck.sh</strong> first and asks for confirmation to continue. This is because
 it deletes uncommitted files.</p>
 <div class="admonition warning">
@@ -501,7 +501,7 @@ it deletes uncommitted files.</p>
       <h2>Cleaning your repositories</h2>
     </hgroup>
     <article class="">
-      <div class="highlight-bash"><div class="highlight"><pre><span></span>bash ~/scripts/bash/repocheck.sh
+      <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash ~/scripts/bash/repocheck.sh
 <span class="nb">echo</span> -n <span class="s2">&quot;Proceed with git clean? (y/n): &quot;</span>
 <span class="nb">read</span> proceed
 <span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$proceed</span><span class="s2">&quot;</span> !<span class="o">=</span> <span class="s2">&quot;y&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
@@ -534,9 +534,9 @@ it deletes uncommitted files.</p>
     </hgroup>
     <article class="">
       <p>Scripts can contain anything you can run from the command line, not just git
-commands. For example, this script uses <code class="docutils literal"><span class="pre">rsync</span></code> to backup a computer running
+commands. For example, this script uses <code class="docutils literal notranslate"><span class="pre">rsync</span></code> to backup a computer running
 Fedora:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
     sudo rsync -azvACHS --delete <span class="se">\</span>
     --progress --exclude<span class="o">={</span><span class="s2">&quot;/dev/&quot;</span>,<span class="s2">&quot;/proc/&quot;</span>,<span class="s2">&quot;/sys/&quot;</span>,<span class="s2">&quot;/tmp/&quot;</span>,<span class="s2">&quot;/run/&quot;</span>,<span class="s2">&quot;/mnt/&quot;</span><span class="o">}</span> <span class="se">\</span>
     --exclude<span class="o">={</span><span class="s2">&quot;/media/&quot;</span>,<span class="s2">&quot;/lost+found/&quot;</span><span class="o">}</span> /* <span class="se">\</span>
@@ -566,7 +566,7 @@ Fedora:</p>
     </hgroup>
     <article class="">
       <p>Making identical changes to a large number of files is perfect for scripting:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sed -i <span class="s1">&#39;:a;N;$!ba;s/[ \t]*&lt;screen&gt;\n/&lt;screen&gt;/g&#39;</span> <span class="nv">$1</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed -i <span class="s1">&#39;:a;N;$!ba;s/[ \t]*&lt;screen&gt;\n/&lt;screen&gt;/g&#39;</span> <span class="nv">$1</span>
 sed -i <span class="s1">&#39;:a;N;$!ba;s/[ \t]*&lt;screen&gt;\t/&lt;screen&gt;/g&#39;</span> <span class="nv">$1</span>
 sed -i <span class="s2">&quot;s/\`/&#39;/g&quot;</span> <span class="nv">$1</span>
 sed -i <span class="s1">&#39;s/C\&amp;U/C\&amp;amp\;U/g&#39;</span> <span class="nv">$1</span>
@@ -585,9 +585,9 @@ sed -i <span class="s1">&#39;s/ \#&lt;/ \&amp;lt\;/g&#39;</span> <span class="nv
     </hgroup>
     <article class="">
       <ul>
-<li><p class="first">To execute commands in a series, separate with <code class="docutils literal"><span class="pre">;</span></code> or put each command
+<li><p class="first">To execute commands in a series, separate with <code class="docutils literal notranslate"><span class="pre">;</span></code> or put each command
 on a newline.</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ cat temp.rst; ls
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat temp.rst; ls
 cat: temp.rst: No such file or directory
 conf.py  git-guide  images  index.rst  Makefile
 </pre></div>
@@ -595,14 +595,14 @@ conf.py  git-guide  images  index.rst  Makefile
 </li>
 </ul>
 <ul class="build">
-<li><p class="first">Use <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> if you want the line to stop when a command fails.</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ cat temp.rst &amp;&amp; ls
+<li><p class="first">Use <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> if you want the line to stop when a command fails.</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat temp.rst &amp;&amp; ls
 cat: temp.rst: No such file or directory
 </pre></div>
 </div>
 </li>
-<li><p class="first">Use <code class="docutils literal"><span class="pre">|</span></code> to pipe the output of one command to another command.</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ ls | wc
+<li><p class="first">Use <code class="docutils literal notranslate"><span class="pre">|</span></code> to pipe the output of one command to another command.</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls | wc
 12    12    105
 </pre></div>
 </div>
@@ -620,14 +620,14 @@ cat: temp.rst: No such file or directory
     <article class="">
       <p><strong>Exit on error</strong></p>
 <ul class="simple">
-<li>Add <code class="docutils literal"><span class="pre">set</span> <span class="pre">-e</span></code> to the top of your script in order to exit immediately if a
+<li>Add <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">-e</span></code> to the top of your script in order to exit immediately if a
 command exits with a non-zero status.</li>
-<li>Cancel using <code class="docutils literal"><span class="pre">set</span> <span class="pre">+e</span></code>.</li>
+<li>Cancel using <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">+e</span></code>.</li>
 </ul>
 <p class="build"><strong>Debugging</strong></p>
 <ul class="build simple">
-<li>Add <code class="docutils literal"><span class="pre">set</span> <span class="pre">-x</span></code> at the point you want to start debugging.</li>
-<li>Cancel using <code class="docutils literal"><span class="pre">set</span> <span class="pre">+x</span></code>.</li>
+<li>Add <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">-x</span></code> at the point you want to start debugging.</li>
+<li>Cancel using <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">+x</span></code>.</li>
 </ul>
 <p class="build"><strong>GitHub</strong></p>
 <ul class="build simple">
@@ -655,7 +655,7 @@ Test your script several times on dummy files before using in production.</p>
 <p>Be especially careful if you feel tempted to use the force; it leads to the
 dark side.</p>
 <p><strong>BAD</strong></p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">f</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">f</span>
 
 <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span>
 </pre></div>

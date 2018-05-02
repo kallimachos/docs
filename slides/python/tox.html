@@ -87,21 +87,21 @@ URL: https://code.google.com/p/io-2012-slides
       <h2>Testing in-development packages</h2>
     </hgroup>
     <article class="">
-      <p>Test local, in-development packages using tox’s <code class="docutils literal"><span class="pre">distshare</span></code> feature:</p>
+      <p>Test local, in-development packages using tox’s <code class="docutils literal notranslate"><span class="pre">distshare</span></code> feature:</p>
 <ol class="arabic">
-<li><p class="first">Run <code class="docutils literal"><span class="pre">tox</span></code> for the development package. Ensure sdist builds are enabled in
+<li><p class="first">Run <code class="docutils literal notranslate"><span class="pre">tox</span></code> for the development package. Ensure sdist builds are enabled in
 <strong>tox.ini</strong>:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">skipsdist</span> <span class="o">=</span> <span class="kc">False</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">skipsdist</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># skipdist = True</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># skipdist = True</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">The package’s sdist file is now available in <em>~/.tox/distshare/</em>. You can
 use this file as a dependency by forcing two pip runs in <strong>tox.ini</strong>:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">deps</span><span class="o">=</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deps</span><span class="o">=</span>
     <span class="p">{</span><span class="n">distshare</span><span class="p">}</span><span class="o">/</span><span class="n">packagename</span><span class="o">*.</span><span class="n">zip</span>
 <span class="n">commands</span><span class="o">=</span>
     <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">qr</span><span class="p">{</span><span class="n">toxinidir</span><span class="p">}</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>

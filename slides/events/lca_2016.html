@@ -685,7 +685,7 @@ than storing complete copies</p>
 <li><p class="first">represent data as coefficients of polynomials</p>
 </li>
 <li><p class="first">even if you lose some parts, you can reconstruct them using the polynomial:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">g</span><span class="s1">&#39;day</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="s1">&#39;day</span>
 
 <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
 
@@ -835,21 +835,21 @@ how can technology meet those needs and wants.</li>
 <li>builtin types (int, float, etc)</li>
 <li>functions</li>
 <li>modules</li>
-<li>use <code class="docutils literal"><span class="pre">id(name)</span></code> to see what a name is pointing to, e.g. <code class="docutils literal"><span class="pre">id(a)</span></code></li>
-<li><code class="docutils literal"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">list(a)</span></code> -&gt; creates a copy of the object, in this case a list</li>
-<li><code class="docutils literal"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">-&gt;</span> <span class="pre">b</span></code> and a point to the same object</li>
-<li><code class="docutils literal"><span class="pre">is</span></code> compares objects, <code class="docutils literal"><span class="pre">==</span></code> compares values</li>
+<li>use <code class="docutils literal notranslate"><span class="pre">id(name)</span></code> to see what a name is pointing to, e.g. <code class="docutils literal notranslate"><span class="pre">id(a)</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">list(a)</span></code> -&gt; creates a copy of the object, in this case a list</li>
+<li><code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">-&gt;</span> <span class="pre">b</span></code> and a point to the same object</li>
+<li><code class="docutils literal notranslate"><span class="pre">is</span></code> compares objects, <code class="docutils literal notranslate"><span class="pre">==</span></code> compares values</li>
 </ul>
 </li>
-<li>if you accidentally rebind a builtin, you can <code class="docutils literal"><span class="pre">import</span> <span class="pre">__builtin__</span></code> and
-use it to access the builtin: <code class="docutils literal"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">__builtin__.str('hi')</span></code></li>
+<li>if you accidentally rebind a builtin, you can <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">__builtin__</span></code> and
+use it to access the builtin: <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">__builtin__.str('hi')</span></code></li>
 <li>Python does not prevent accidental name creation, but there are testing
 tools and IDEs that can help</li>
 <li>scope is localized when you do any assignment within a function; trying to
 use a global within a function then assigning in that function will cause
-an <code class="docutils literal"><span class="pre">unboundlocalvariable</span></code> error</li>
+an <code class="docutils literal notranslate"><span class="pre">unboundlocalvariable</span></code> error</li>
 <li>no void return type, so you don’t get an error if you assign to something
-you shouldn’t it just returns <code class="docutils literal"><span class="pre">None</span></code></li>
+you shouldn’t it just returns <code class="docutils literal notranslate"><span class="pre">None</span></code></li>
 <li>Fedora 23 to have Python 3 by default. Debian and Ubuntu will soon do the
 same.</li>
 </ul>
@@ -871,7 +871,7 @@ same.</li>
 <li><a class="reference external" href="http://elinux.org/Main_Page">http://elinux.org/Main_Page</a> has a wealth of PI info</li>
 <li>Pi 2 has 40 GPIO as apposed to the Pi’s 26, but the first 26 are in the same
 order</li>
-<li>find your Pi: <code class="docutils literal"><span class="pre">cat</span> <span class="pre">/proc/cpuinfo</span></code> -&gt; revision number tells you the version</li>
+<li>find your Pi: <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">/proc/cpuinfo</span></code> -&gt; revision number tells you the version</li>
 <li>If you have Hynyx RAM it may cause problems</li>
 <li>there is a display specifically for the Pi that uses the DSI output</li>
 <li>Fedora ARM Installer for loading OSes on SD cards</li>

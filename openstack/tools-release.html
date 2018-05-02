@@ -27,29 +27,20 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Document Repository  documentation" href="../index.html"/>
-        <link rel="up" title="OpenStack" href="index.html"/>
-        <link rel="next" title="Python" href="../python/index.html"/>
-        <link rel="prev" title="OpenStack" href="index.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Python" href="../python/index.html" />
+    <link rel="prev" title="OpenStack" href="index.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -66,7 +57,7 @@
 
           
             
-            <img src="../_static/red_square.png" class="logo" />
+            <img src="../_static/red_square.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -119,7 +110,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Document Repository</a>
@@ -127,9 +118,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -175,8 +167,8 @@
             
   <div class="section" id="releasing-tools">
 <h1>Releasing tools<a class="headerlink" href="#releasing-tools" title="Permalink to this headline">#</a></h1>
-<p>The <code class="docutils literal"><span class="pre">openstackdocstheme</span></code>, <code class="docutils literal"><span class="pre">openstack-doc-tools</span></code>, and
-<code class="docutils literal"><span class="pre">os-api-ref</span></code> repositories need to be released as packages to the
+<p>The <code class="docutils literal notranslate"><span class="pre">openstackdocstheme</span></code>, <code class="docutils literal notranslate"><span class="pre">openstack-doc-tools</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">os-api-ref</span></code> repositories need to be released as packages to the
 <a class="reference external" href="http://pypi.python.org">Python Packaging Index</a>.</p>
 <p>The release is done by the OpenStack release team but needs to be triggered by
 the documentation team. For details, see <a class="reference external" href="https://docs.openstack.org/project-team-guide/release-management.html#how-to-release">Release management</a>.
@@ -191,13 +183,13 @@ repository and create a local working branch.</p>
 <li><p class="first">Edit the YAML file for the repository you want to release:</p>
 <dl class="docutils">
 <dt>openstackdocstheme</dt>
-<dd><p class="first last"><code class="docutils literal"><span class="pre">deliverables/_independent/openstackdocstheme.yaml</span></code></p>
+<dd><p class="first last"><code class="docutils literal notranslate"><span class="pre">deliverables/_independent/openstackdocstheme.yaml</span></code></p>
 </dd>
 <dt>openstack-doc-tools</dt>
-<dd><p class="first last"><code class="docutils literal"><span class="pre">deliverables/_independent/openstack-doc-tools.yaml</span></code></p>
+<dd><p class="first last"><code class="docutils literal notranslate"><span class="pre">deliverables/_independent/openstack-doc-tools.yaml</span></code></p>
 </dd>
 <dt>os-api-ref</dt>
-<dd><p class="first last"><code class="docutils literal"><span class="pre">deliverables/_independent/os-api-ref.yaml</span></code></p>
+<dd><p class="first last"><code class="docutils literal notranslate"><span class="pre">deliverables/_independent/os-api-ref.yaml</span></code></p>
 </dd>
 </dl>
 </li>
@@ -210,7 +202,7 @@ release.</li>
 contains only minor fixes, you can remove the highlights entry.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1.6.1</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1.6.1</span>
 <span class="l l-Scalar l-Scalar-Plain">projects</span><span class="p p-Indicator">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">repo</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">openstack/openstackdocstheme</span>
     <span class="l l-Scalar l-Scalar-Plain">hash</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">58823b338cbeffeacce5b524269a5e6f194bbce9</span>
@@ -221,12 +213,12 @@ contains only minor fixes, you can remove the highlights entry.</li>
 </li>
 <li><p class="first">Commit your changes, stating the package name release number in the commit
 subject line:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git commit -a -m <span class="s1">&#39;Release openstackdocstheme 1.6.1&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git commit -a -m <span class="s1">&#39;Release openstackdocstheme 1.6.1&#39;</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Push your patch for review:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git review
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git review
 </pre></div>
 </div>
 </li>
@@ -236,9 +228,7 @@ subject line:</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -260,7 +250,7 @@ subject line:</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -279,6 +269,7 @@ subject line:</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -296,14 +287,13 @@ subject line:</p>
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

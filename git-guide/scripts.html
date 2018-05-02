@@ -27,29 +27,20 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Document Repository  documentation" href="../index.html"/>
-        <link rel="up" title="Git Guide" href="index.html"/>
-        <link rel="next" title="OpenStack" href="../openstack/index.html"/>
-        <link rel="prev" title="Using Bash Scripts" href="bash.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OpenStack" href="../openstack/index.html" />
+    <link rel="prev" title="Using Bash Scripts" href="bash.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -66,7 +57,7 @@
 
           
             
-            <img src="../_static/red_square.png" class="logo" />
+            <img src="../_static/red_square.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -126,7 +117,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Document Repository</a>
@@ -134,9 +125,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -184,7 +176,7 @@
 <h1>Scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">#</a></h1>
 <div class="section" id="repocheck-sh">
 <span id="repocheck"></span><h2>repocheck.sh<a class="headerlink" href="#repocheck-sh" title="Permalink to this headline">#</a></h2>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 
 # Print ``git status -s -b`` of repos in the listed directories if they have
 # uncommitted changes or if they are not on the master branch.
@@ -211,7 +203,7 @@ echo
 </div>
 <div class="section" id="branchlist-sh">
 <span id="branchlist"></span><h2>branchlist.sh<a class="headerlink" href="#branchlist-sh" title="Permalink to this headline">#</a></h2>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 
 # This script runs &#39;git branch -a&#39; on all repositories. It shows you all
 # the local and remote branches, and indicates which branches you have
@@ -231,7 +223,7 @@ done
 </div>
 <div class="section" id="pullall-sh">
 <span id="pullall"></span><h2>pullall.sh<a class="headerlink" href="#pullall-sh" title="Permalink to this headline">#</a></h2>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 
 # This script runs &#39;git pull&#39; on all remote repositories. It is helpful
 # for pulling down changes from all your remote repositories in one action.
@@ -252,9 +244,7 @@ done
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -276,7 +266,7 @@ done
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -295,6 +285,7 @@ done
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -312,14 +303,13 @@ done
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

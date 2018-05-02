@@ -100,37 +100,37 @@ with an appropriate ssh key, and the standard public and service
 networks.</p>
 </li>
 <li><p class="first">Access the machine using <strong>ssh</strong> as root:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ ssh root@123.456.789
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh root@123.456.789
 </pre></div>
 </div>
 </li>
 <li><p class="first">Update the machine, then clone the devstack repository:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># yum update -y</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># yum update -y</span>
 <span class="c1"># git clone https://git.openstack.org/openstack-dev/devstack</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Create the stack user by running the <strong>create-stack-user.sh</strong>
 script:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ./devstack/tools/create-stack-user.sh</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ./devstack/tools/create-stack-user.sh</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Switch to the stack user and clone the devstack repository again:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span># su - stack
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span># su - stack
 $ git clone https://git.openstack.org/openstack-dev/devstack
 </pre></div>
 </div>
 </li>
 <li><p class="first">Install DevStack by running the <strong>stack.sh</strong> script:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ ./devstack/stack.sh
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./devstack/stack.sh
 </pre></div>
 </div>
 </li>
 <li><p class="first">Specify passwords when required by the installation script.</p>
 </li>
 <li><p class="first">After the installation finishes, log out as the <strong>stack</strong> user:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ exit
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ exit
 </pre></div>
 </div>
 </li>
@@ -138,7 +138,7 @@ $ git clone https://git.openstack.org/openstack-dev/devstack
 following contents. Sourcing this file sets certain environment
 variables to save typing when running openstack commands. Substitute
 the password and IP address of your devstack:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>export OS_PROJECT_DOMAIN_ID=default
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>export OS_PROJECT_DOMAIN_ID=default
 export OS_USER_DOMAIN_ID=default
 export OS_PROJECT_NAME=admin
 export OS_TENANT_NAME=admin
@@ -150,18 +150,18 @@ export OS_IDENTITY_API_VERSION=3``
 </div>
 </li>
 <li><p class="first">Source the <strong>admin-openrc.sh</strong> file:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># source admin-openrc.sh</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># source admin-openrc.sh</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Generate and add a key pair:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssh-keygen -q -N &quot;&quot;</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ssh-keygen -q -N &quot;&quot;</span>
 <span class="c1"># nova keypair-add --pub-key .ssh/id_rsa.pub mykey</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Verify addition of the key pair:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># nova keypair-list</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># nova keypair-list</span>
 <span class="o">+-------+-------------------------------------------------+</span>
 <span class="o">|</span> <span class="n">Name</span>  <span class="o">|</span> <span class="n">Fingerprint</span>                                     <span class="o">|</span>
 <span class="o">+-------+-------------------------------------------------+</span>
@@ -171,7 +171,7 @@ export OS_IDENTITY_API_VERSION=3``
 </div>
 </li>
 <li><p class="first">Add ping and SSH security rules:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># nova secgroup-add-rule default icmp -1 -1 0.0.0.0/0</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># nova secgroup-add-rule default icmp -1 -1 0.0.0.0/0</span>
 <span class="o">+-------------+-----------+---------+-----------+--------------+</span>
 <span class="o">|</span> <span class="n">IP</span> <span class="n">Protocol</span> <span class="o">|</span> <span class="n">From</span> <span class="n">Port</span> <span class="o">|</span> <span class="n">To</span> <span class="n">Port</span> <span class="o">|</span> <span class="n">IP</span> <span class="n">Range</span> <span class="o">|</span> <span class="n">Source</span> <span class="n">Group</span>  <span class="o">|</span>
 <span class="o">+-------------+-----------+---------+-----------+--------------+</span>
@@ -188,7 +188,7 @@ export OS_IDENTITY_API_VERSION=3``
 </div>
 </li>
 <li><p class="first">Add a cirros image to the Glance repository:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># wget http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># wget http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img</span>
 <span class="c1"># glance image-create --name &quot;cirros&quot; \</span>
   <span class="o">--</span><span class="n">file</span> <span class="n">cirros</span><span class="o">-</span><span class="mf">0.3</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="n">disk</span><span class="o">.</span><span class="n">img</span> <span class="o">--</span><span class="n">disk</span><span class="o">-</span><span class="nb">format</span> <span class="n">qcow2</span> \
   <span class="o">--</span><span class="n">container</span><span class="o">-</span><span class="nb">format</span> <span class="n">bare</span> <span class="o">--</span><span class="n">visibility</span> <span class="n">public</span> <span class="o">--</span><span class="n">progress</span>
@@ -196,7 +196,7 @@ export OS_IDENTITY_API_VERSION=3``
 </div>
 </li>
 <li><p class="first">List available images:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># nova image-list</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># nova image-list</span>
 <span class="o">+--------------------------------------+--------+--------+--------+</span>
 <span class="o">|</span> <span class="n">ID</span>                                   <span class="o">|</span> <span class="n">Name</span>   <span class="o">|</span> <span class="n">Status</span> <span class="o">|</span> <span class="n">Server</span> <span class="o">|</span>
 <span class="o">+--------------------------------------+--------+--------+--------+</span>
@@ -206,7 +206,7 @@ export OS_IDENTITY_API_VERSION=3``
 </div>
 </li>
 <li><p class="first">List available flavors:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># nova flavor-list</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># nova flavor-list</span>
 <span class="o">+-----+-----------+-----------+------+-----------+------+-------+-------------+-----------+</span>
 <span class="o">|</span> <span class="n">ID</span>  <span class="o">|</span> <span class="n">Name</span>      <span class="o">|</span> <span class="n">Memory_MB</span> <span class="o">|</span> <span class="n">Disk</span> <span class="o">|</span> <span class="n">Ephemeral</span> <span class="o">|</span> <span class="n">Swap</span> <span class="o">|</span> <span class="n">VCPUs</span> <span class="o">|</span> <span class="n">RXTX_Factor</span> <span class="o">|</span> <span class="n">Is_Public</span> <span class="o">|</span>
 <span class="o">+-----+-----------+-----------+------+-----------+------+-------+-------------+-----------+</span>
@@ -220,7 +220,7 @@ export OS_IDENTITY_API_VERSION=3``
 </div>
 </li>
 <li><p class="first">List available security groups:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># nova secgroup-list</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># nova secgroup-list</span>
 <span class="o">+--------------------------------------+---------+-------------+</span>
 <span class="o">|</span> <span class="n">Id</span>                                   <span class="o">|</span> <span class="n">Name</span>    <span class="o">|</span> <span class="n">Description</span> <span class="o">|</span>
 <span class="o">+--------------------------------------+---------+-------------+</span>
@@ -230,7 +230,7 @@ export OS_IDENTITY_API_VERSION=3``
 </div>
 </li>
 <li><p class="first">Launch an instance:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># nova boot --flavor m1.tiny --image cirros --security-group default \</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># nova boot --flavor m1.tiny --image cirros --security-group default \</span>
   <span class="o">--</span><span class="n">key</span><span class="o">-</span><span class="n">name</span> <span class="n">mykey</span> <span class="n">myinstance</span>
 <span class="o">+--------------------------------------+-----------------------------------------------+</span>
 <span class="o">|</span> <span class="n">Property</span>                             <span class="o">|</span> <span class="n">Value</span>                                         <span class="o">|</span>

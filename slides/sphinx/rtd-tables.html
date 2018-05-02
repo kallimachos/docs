@@ -82,21 +82,21 @@ bars.</p>
 <p>You can workaround this issue by defining a custom CCS override file.</p>
 <ol class="arabic">
 <li><p class="first">Change into your documentation directory. This is usually where
-the <code class="docutils literal"><span class="pre">index.rst</span></code> and <code class="docutils literal"><span class="pre">conf.py</span></code> files are located:</p>
+the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> and <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> files are located:</p>
 <pre class="highlight"><style type="text/css">
 span.prompt1:before {
   content: "$ ";
 }
 </style><span class="prompt1"><span class="nb">cd</span> doc</span>
 </pre></li>
-<li><p class="first">If it does not already exist, create a <code class="docutils literal"><span class="pre">_static</span></code> directory:</p>
+<li><p class="first">If it does not already exist, create a <code class="docutils literal notranslate"><span class="pre">_static</span></code> directory:</p>
 <pre class="highlight"><span class="prompt1">mkdir _static</span>
 </pre></li>
-<li><p class="first">Create a <code class="docutils literal"><span class="pre">theme_overrides.css</span></code> file in the <code class="docutils literal"><span class="pre">_static</span></code> directory:</p>
+<li><p class="first">Create a <code class="docutils literal notranslate"><span class="pre">theme_overrides.css</span></code> file in the <code class="docutils literal notranslate"><span class="pre">_static</span></code> directory:</p>
 <pre class="highlight"><span class="prompt1">touch _static/theme_overrides.css</span>
 </pre></li>
-<li><p class="first">Open the <code class="docutils literal"><span class="pre">theme_overrides.css</span></code> file and add the following CSS:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>/* override table width restrictions */
+<li><p class="first">Open the <code class="docutils literal notranslate"><span class="pre">theme_overrides.css</span></code> file and add the following CSS:</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>/* override table width restrictions */
 @media screen and (min-width: 767px) {
 
    .wy-table-responsive table td {
@@ -112,8 +112,8 @@ span.prompt1:before {
 </pre></div>
 </div>
 </li>
-<li><p class="first">Open the <code class="docutils literal"><span class="pre">conf.py</span></code> file and add the following configuration options:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+<li><p class="first">Open the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file and add the following configuration options:</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
 
 <span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;css_files&#39;</span><span class="p">:</span> <span class="p">[</span>
