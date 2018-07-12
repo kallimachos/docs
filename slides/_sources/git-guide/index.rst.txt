@@ -13,6 +13,7 @@ easier.
    introduction.rst
    local.rst
    remote.rst
+   deis.rst
    merge.rst
    bash.rst
    scripts.rst
