@@ -37,6 +37,16 @@ Working with Remote Branches
        remote branch; running ``git fetch origin`` first is recommended
 
 
+Adding commits to a pull request
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use the following formula to add commits to another person's pull request"
+
+.. code::
+
+   git push git@github.com:<user>/<repo> <local_branch_name>:<remote_branch_name>
+
+
 Troubleshooting
 ~~~~~~~~~~~~~~~
 

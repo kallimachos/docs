@@ -90,6 +90,7 @@
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="local.html">Working with Local Branches</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Working with Remote Branches</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adding-commits-to-a-pull-request">Adding commits to a pull request</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
 </ul>
 </li>
@@ -222,6 +223,13 @@ remote branch; running <code class="docutils literal notranslate"><span class="p
 </tr>
 </tbody>
 </table>
+<div class="section" id="adding-commits-to-a-pull-request">
+<h2>Adding commits to a pull request<a class="headerlink" href="#adding-commits-to-a-pull-request" title="Permalink to this headline">#</a></h2>
+<p>Use the following formula to add commits to another person’s pull request”</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;/&lt;</span><span class="n">repo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">local_branch_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">remote_branch_name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
 <p>To reset origin remote to upstream remote, run the following commands:</p>
