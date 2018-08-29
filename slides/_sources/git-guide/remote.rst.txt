@@ -40,7 +40,7 @@ Working with Remote Branches
 Adding commits to a pull request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use the following formula to add commits to another person's pull request"
+Use the following formula to add commits to another person's pull request:
 
 .. code::
 
