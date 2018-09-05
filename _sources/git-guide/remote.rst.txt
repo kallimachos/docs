@@ -37,6 +37,34 @@ Working with Remote Branches
        remote branch; running ``git fetch origin`` first is recommended
 
 
+Configuring an upstream remote for a fork
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. List the current configured remote repository for your fork:
+
+   .. code::
+
+      git remote -v
+      origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+      origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+
+2. Specify a new remote upstream repository that will be synced with the fork:
+
+   .. code::
+
+      git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+
+3. Verify the new upstream repository you've specified for your fork:
+
+   .. code::
+
+      git remote -v
+      origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+      origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+      upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
+      upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
+
+
 Adding commits to a pull request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
