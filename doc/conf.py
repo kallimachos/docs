@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 """Configuration file for Docs Repository."""
 
+from datetime import datetime
+
 try:
     import sphinx_rtd_theme
 except ImportError:
@@ -52,7 +54,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Document Repository'
-copyright = '2017, Brian Moss'
+copyright = '%s, Brian Moss' % datetime.now().year
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
