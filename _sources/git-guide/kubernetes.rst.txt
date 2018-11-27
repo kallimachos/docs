@@ -1,6 +1,19 @@
-====
+==========
+Kubernetes
+==========
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Command
+     - Result
+   * - kubectl -n cake logs -l 'release=kbdash'
+     - view the logs for the lastest build
+
+
 Deis
-====
+~~~~
 
 .. list-table::
    :widths: 50 50

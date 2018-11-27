@@ -13,7 +13,7 @@ easier.
    introduction.rst
    local.rst
    remote.rst
-   deis.rst
+   kubernetes.rst
    merge.rst
    bash.rst
    scripts.rst

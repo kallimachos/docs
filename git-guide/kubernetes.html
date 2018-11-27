@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Deis &mdash; Document Repository  documentation</title>
+  <title>Kubernetes &mdash; Document Repository  documentation</title>
   
 
   
@@ -90,7 +90,10 @@
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="local.html">Working with Local Branches</a></li>
 <li class="toctree-l2"><a class="reference internal" href="remote.html">Working with Remote Branches</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Deis</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Kubernetes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deis">Deis</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="merge.html">Merging Branches</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bash.html">Using Bash Scripts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scripts.html">Scripts</a></li>
@@ -148,13 +151,13 @@
         
           <li><a href="index.html">Git Guide</a> &raquo;</li>
         
-      <li>Deis</li>
+      <li>Kubernetes</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/git-guide/deis.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/git-guide/kubernetes.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -167,8 +170,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="deis">
-<h1>Deis<a class="headerlink" href="#deis" title="Permalink to this headline">#</a></h1>
+  <div class="section" id="kubernetes">
+<h1>Kubernetes<a class="headerlink" href="#kubernetes" title="Permalink to this headline">#</a></h1>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Result</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>kubectl -n cake logs -l ‘release=kbdash’</td>
+<td>view the logs for the lastest build</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="deis">
+<h2>Deis<a class="headerlink" href="#deis" title="Permalink to this headline">#</a></h2>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="50%" />
@@ -189,6 +210,7 @@ add <code class="docutils literal notranslate"><span class="pre">--force</span><
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 
 
@@ -236,7 +258,6 @@ add <code class="docutils literal notranslate"><span class="pre">--force</span><
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
   
