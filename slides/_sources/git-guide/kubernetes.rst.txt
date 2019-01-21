@@ -9,7 +9,7 @@ Kubernetes
    * - Command
      - Result
    * - kubectl -n cake logs -l 'release=kbdash'
-     - view the logs for the lastest build
+     - view the logs for the latest build
 
 
 Deis

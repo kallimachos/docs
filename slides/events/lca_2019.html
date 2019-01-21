@@ -1,0 +1,344 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+--><!DOCTYPE html>
+
+
+<html>
+<head>
+  <title>linux.conf.au Christchurch January 2019 &mdash; Document Repository  documentation</title>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="hieroglyph-title" data-config-title>
+  <meta name="hieroglyph-subtitle" data-config-subtitle>
+  <meta name="hieroglyph-presenter" data-config-presenter>
+
+  
+  <link rel="stylesheet" media="all"
+        href="../_static/theme/css/default.css">
+  <link rel="stylesheet" media="all"
+        href="../_static/theme/css/hieroglyph.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)"
+        href="../_static/theme/css/phone.css">
+
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  
+  <link rel="stylesheet" href="../_static/myslide.css"
+        type="text/css" />
+  
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+
+    <script data-main="../_static/js/slides"
+            src="../_static/js/require-1.0.8.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+  <link rel="shortcut icon" href="../_static/red_square.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Document Repository  documentation" href="../index.html" />
+    <link rel="up" title="Linux Event Logs" href="lca.html" />
+    <link rel="next" title="OpenStack Event Logs" href="openstack.html" />
+    <link rel="prev" title="linux.conf.au Hobart January 2017" href="lca_2017.html" /> 
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  
+
+  
+    <slide class="title-slide segue nobackground level-1" id="linux-conf-au-christchurch-january-2019">
+    <hgroup>
+      <h1>linux.conf.au Christchurch January 2019</h1>
+    </hgroup>
+    <article class="">
+      
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="monday-jan-21">
+    <hgroup>
+      <h2>Monday Jan 21</h2>
+    </hgroup>
+    <article class="">
+      
+
+
+
+    </article>
+  </slide>  <slide class="level-3" id="toolmaking">
+    <hgroup>
+      <h3>Toolmaking</h3>
+    </hgroup>
+    <article class="">
+      <p>Julien Goodwin</p>
+<ul class="simple">
+<li>in your tool set have simple examples for future work<ul>
+<li>real, but simple uses of libraries</li>
+</ul>
+</li>
+<li>toolkit for later uses<ul>
+<li>things you can plumb together are great</li>
+</ul>
+</li>
+<li>write using whatever tool makes sense and/or you know<ul>
+<li>choose one or two as a primary so you get better at it, and you can share
+with others in your shop (i.e. try to standardize)</li>
+</ul>
+</li>
+<li>keep shell scripts to a few dozen lines at most</li>
+<li>for other limits, no inherent limit, but use sensible modularity and testing</li>
+<li>testing<ul>
+<li>testing large operation tools can b hard</li>
+<li>splitting elements into testable modules, with their own fake
+implementations for larger system tests can work well</li>
+<li>try to keep a standard, shared library constants</li>
+</ul>
+</li>
+<li>for any tool you will use more than once, also write some documentation<ul>
+<li>at the minimum this means code comments or a CLI help output</li>
+</ul>
+</li>
+<li>do some input validation (doesn’t have to be perfect, but some basic checks are good)<ul>
+<li>catching gross errors and bailing with a usage message is fine</li>
+</ul>
+</li>
+<li>distribution<ul>
+<li>no personal tools for team problems</li>
+<li>have a way to distribute so all team members can run and update</li>
+</ul>
+</li>
+<li>for many ops teams having a single toolmaking-focused engineer is a great idea<ul>
+<li>but a separate team of toolmakers is often bad</li>
+<li>if scaling to a separate team have that team work on supporting infrastructure</li>
+<li>in other words, the people that use the tool should be involved in making the tool</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-3" id="python-bringing-your-code-to-the-next-level">
+    <hgroup>
+      <h3>Python: Bringing your code to the next level</h3>
+    </hgroup>
+    <article class="">
+      <p>Jan Groth</p>
+<ul class="simple">
+<li>use Python 3</li>
+<li>use a tool to manage environments and use a dedicated environment for each project</li>
+<li>aim for readability<ul>
+<li>use coding conventions</li>
+<li>use descriptive file names</li>
+<li>use descriptive names within code and don’t rely on comments</li>
+<li>break into methods</li>
+</ul>
+</li>
+<li>aim for beautiful code<ul>
+<li>use the language construct that fits best<ul>
+<li>e.g. use list comprehension instead of a for loop</li>
+</ul>
+</li>
+<li>comment the why, not the what</li>
+</ul>
+</li>
+<li>don’t separate behavior and state: use classes as a blueprint for objects
+to capture state as well as behavior (methods)<ul>
+<li>re-use code elsewhere</li>
+<li>use inheritance</li>
+<li>write unit tests</li>
+</ul>
+</li>
+<li>use an IDE</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-3" id="what-the-dep-is-going-on-with-go-dependency-management">
+    <hgroup>
+      <h3>What the dep is going on with Go dependency management?</h3>
+    </hgroup>
+    <article class="">
+      <p>Adam Harvey</p>
+<ul class="simple">
+<li>several dependency management tools have come out over time</li>
+<li>Go 1.12 (next stable release) will ship <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">mod</span></code> as the default package manager</li>
+<li><code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">mod</span></code> requires semantic versioning</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-3" id="developer-developer-lightning-talks">
+    <hgroup>
+      <h3>Developer Developer Lightning Talks</h3>
+    </hgroup>
+    <article class="">
+      <p>Adam Harvey</p>
+<ul class="simple">
+<li><a class="reference external" href="http://valgrind.org/">Valgrind</a> automatically detects many memory
+management and threading bugs, and profiles programs in detail</li>
+<li>useful for languages without automatic memory management such as C, C++, and Rust</li>
+</ul>
+<p>Brenda Wallace</p>
+<ul class="simple">
+<li>When they publish a law, they publish a reference implementation in Python
+(with unit tests)</li>
+<li>When the law changes, they can run the tests and if it breaks they can fix the law</li>
+<li><a class="reference external" href="http://www.rules.nz/">rules.nz</a></li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-3" id="how-much-do-you-trust-that-package-understanding-the-software-supply-chain">
+    <hgroup>
+      <h3>How Much Do You Trust That Package? Understanding The Software Supply Chain</h3>
+    </hgroup>
+    <article class="">
+      <p>Benno Rice</p>
+<ul class="simple">
+<li>Supply chain issues<ul>
+<li>package source tampering</li>
+<li>malware</li>
+<li>availability (bugs in or unavailability of delivery mechanisms)</li>
+<li>defects (aka code bugs)</li>
+<li>lack of maintenance</li>
+</ul>
+</li>
+<li>Mitigation<ul>
+<li>support the maintainers</li>
+<li>have a management process for third-party dependencies</li>
+<li>have an upgrade/update process</li>
+<li>have a process to review/audit third-party code</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-3" id="automated-firewall-testing">
+    <hgroup>
+      <h3>Automated firewall testing</h3>
+    </hgroup>
+    <article class="">
+      <p>Kristof Provost</p>
+<ul class="simple">
+<li>maintainer of <code class="docutils literal notranslate"><span class="pre">pf</span></code>, a packet filter (aka firewall) in freeBSD</li>
+<li>why automated testing?<ul>
+<li>make sure things actually work</li>
+<li>convenient test case</li>
+<li>prevent regressions</li>
+<li>sanity check when making changes</li>
+</ul>
+</li>
+<li>tests should be:<ul>
+<li>easy to write</li>
+<li>easy for everyone to run</li>
+<li>fast to run</li>
+<li>integrate with existing test framework</li>
+</ul>
+</li>
+<li><code class="docutils literal notranslate"><span class="pre">vnet</span></code> is a virtual networking stack you can run tests against</li>
+<li><code class="docutils literal notranslate"><span class="pre">jail</span></code> isolates the environment in a container</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-3" id="clockwork-programming-with-rules">
+    <hgroup>
+      <h3>Clockwork: Programming with rules</h3>
+    </hgroup>
+    <article class="">
+      <p>Mike O’Connor</p>
+<ul class="simple">
+<li>language for programming custom industrial machines</li>
+<li>issues:<ul>
+<li>long term custom hardware support is hard</li>
+<li>commercial solutions use binary file formats for source configuration</li>
+</ul>
+</li>
+<li>requirements:<ul>
+<li>retain control</li>
+<li>reduce risk</li>
+<li>be future-proof</li>
+<li>reuse don’t rewrite</li>
+<li>version control all source code</li>
+</ul>
+</li>
+<li>Result:<ul>
+<li>simple programming language</li>
+<li>program pieces are called <code class="docutils literal notranslate"><span class="pre">machines</span></code></li>
+<li>machine can be simulated easily</li>
+<li>a machine state resembles a physical machine state</li>
+<li>reduces risk by programming in house, simulating as developing, reusing
+what was done before</li>
+<li>future-proof by using Linux and open source software</li>
+<li>version control everything</li>
+<li>effective debugging tools</li>
+</ul>
+</li>
+<li>Clockwork<ul>
+<li>latproc language</li>
+<li>objects are <code class="docutils literal notranslate"><span class="pre">machines</span></code></li>
+<li>describe machines by states</li>
+<li>surrounding tools (shell, control daemon, interpreter, sampler, etc.)</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>
+
+
+  
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

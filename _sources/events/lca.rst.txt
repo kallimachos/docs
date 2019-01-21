@@ -9,3 +9,4 @@ Session logs from Linux conferences and events.
 
    lca_2016.rst
    lca_2017.rst
+   lca_2019.rst
