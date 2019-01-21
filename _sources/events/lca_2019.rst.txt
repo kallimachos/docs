@@ -26,7 +26,7 @@ Julien Goodwin
 -  for other limits, no inherent limit, but use sensible modularity and testing
 -  testing
 
-   -  testing large operation tools can b hard
+   -  testing large operation tools can be hard
    -  splitting elements into testable modules, with their own fake
       implementations for larger system tests can work well
    -  try to keep a standard, shared library constants
