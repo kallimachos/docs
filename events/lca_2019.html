@@ -91,6 +91,8 @@
 <li class="toctree-l3"><a class="reference internal" href="lca_2017.html">linux.conf.au Hobart January 2017</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">linux.conf.au Christchurch January 2019</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#monday-jan-21">Monday Jan 21</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tuesday-jan-22-docs-down-under-miniconf">Tuesday Jan 22 - Docs Down Under Miniconf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wednesday-jan-23">Wednesday Jan 23</a></li>
 </ul>
 </li>
 </ul>
@@ -276,7 +278,8 @@ management and threading bugs, and profiles programs in detail</li>
 <ul class="simple">
 <li>When they publish a law, they publish a reference implementation in Python
 (with unit tests)</li>
-<li>When the law changes, they can run the tests and if it breaks they can fix the law</li>
+<li>When the law changes, they can run the tests and if it breaks they can fix
+the law</li>
 <li><a class="reference external" href="http://www.rules.nz/">rules.nz</a></li>
 </ul>
 </div>
@@ -361,6 +364,447 @@ what was done before</li>
 <li>surrounding tools (shell, control daemon, interpreter, sampler, etc.)</li>
 </ul>
 </li>
+</ul>
+</div>
+</div>
+<div class="section" id="tuesday-jan-22-docs-down-under-miniconf">
+<h2>Tuesday Jan 22 - Docs Down Under Miniconf<a class="headerlink" href="#tuesday-jan-22-docs-down-under-miniconf" title="Permalink to this headline">#</a></h2>
+<div class="section" id="being-kind-to-3am-you">
+<h3>Being kind to 3am you<a class="headerlink" href="#being-kind-to-3am-you" title="Permalink to this headline">#</a></h3>
+<p>Katie McLaughlin</p>
+<ul class="simple">
+<li>the essentials<ul>
+<li>write stuff down; it doesn’t have to be fancy, just get notes in a place
+you can find them like a wiki</li>
+<li>it needs to be editable right away (don’t use a repo with PR process, for example)</li>
+<li>make it searchable (e.g. don’t put it in a paper notebook)</li>
+<li>keep it secure (e.g. behind a company firewall) since it likely has
+content that the public shouldn’t see</li>
+<li>make it discoverable for other people in your organization who need to find it</li>
+<li>keep your tools readily available; make sure nothing is dangerous, since
+you are likely to make a mistake</li>
+</ul>
+</li>
+<li>integration<ul>
+<li>think about ways to display information in various places (e.g. Slack reminder)</li>
+<li>make integration contextual</li>
+<li>perhaps integrate a documentation link with your alert system</li>
+</ul>
+</li>
+<li>post mortem<ul>
+<li>always loop back and update your documentation and tools after an incident</li>
+<li>also help junior engineers with a feedback loop</li>
+<li>focus especially on recurring issues</li>
+<li>automate where it make sense</li>
+</ul>
+</li>
+<li>share your learnings with your team</li>
+<li>make sure you always update your docs and flag changes to stakeholders</li>
+<li>show empathy for your fellow engineers</li>
+</ul>
+</div>
+<div class="section" id="making-yourself-redundant-on-day-one">
+<h3>Making Yourself Redundant on Day One<a class="headerlink" href="#making-yourself-redundant-on-day-one" title="Permalink to this headline">#</a></h3>
+<p>Alexandra Perkins</p>
+<ul class="simple">
+<li>no matter what you do, when you start a new job you are always entering the
+unknown and don’t know what is going on</li>
+<li>why?<ul>
+<li>as a new person, you know the right questions to ask when you start</li>
+<li>you won’t remember the information the first time you hear it</li>
+<li>documenting early makes on-boarding future employees faster and easier</li>
+<li>robust internal docs fosters an inclusive and diverse workspace; it is an
+easy way to make people comfortable with finding information</li>
+</ul>
+</li>
+<li>what?<ul>
+<li>document anything you find hard about the job or the company</li>
+<li>who is going to benefit from what you write? Consider the audience and
+write appropriately.</li>
+<li>how to book leave?</li>
+<li>who to ask about which topics?</li>
+<li>information on workplace social events</li>
+</ul>
+</li>
+<li>how?<ul>
+<li>wiki or sharepoint if your company has them</li>
+<li>files on your personal computer if you don’t have a shared place</li>
+<li>saved support tickets</li>
+<li>notes to yourself on Slack</li>
+<li>screenshots of useful Slack conversations</li>
+<li>keep it simple; informal content is your friend</li>
+<li>it is internal, so don’t worry about making it perfect</li>
+<li>run through your own content every once in a while just to make sure it
+is current, and to help refresh your memory</li>
+</ul>
+</li>
+<li>future proofing<ul>
+<li>create or improve the place where internal docs are stored</li>
+<li>docs should be searchable and easily editable</li>
+<li>transfer all the docs you did on your personal computer into an accessible location</li>
+<li>make others aware of the work you have done</li>
+<li>foster a culture of strong documentation. Encourage new hires to participate.</li>
+<li>“if you email the update, you write the documentation”</li>
+</ul>
+</li>
+<li>quality<ul>
+<li>accessible</li>
+<li>editable</li>
+<li>searchable</li>
+<li>peer reviewed</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="jit-learning-it-s-great-until-it-isn-t">
+<h3>JIT Learning: It’s great until it isn’t<a class="headerlink" href="#jit-learning-it-s-great-until-it-isn-t" title="Permalink to this headline">#</a></h3>
+<p>Tessa Bradbury</p>
+<ul class="simple">
+<li>When should we learn?</li>
+<li>JIT: Just in time</li>
+<li>originally a process used in manufacturing to reduce cost and waste</li>
+<li>JIT compilers are a similar concept</li>
+<li>common process: write code =&gt; hit an issue =&gt; define a problem =&gt; find a solution =&gt; write code</li>
+<li>but sometimes that doesn’t work</li>
+<li>assumption: you will ask the required questions</li>
+<li>counter example: you can’t ask if you don’t know there’s a question to ask</li>
+<li>assumption: you can figure out what you need to learn</li>
+<li>counter example: it is not always obvious what the problem is so it is
+difficult to define the problem</li>
+<li>assumption: you can find what you need to know</li>
+<li>counter example: it is not always obvious where to look for an answer; this
+can especially be a problem with proprietary software since you can’t go
+beyond the docs provided (e.g. look in the code)</li>
+<li>assumption: you know when you’ve solved the problem</li>
+<li>counter example: you may not realize your solution hasn’t actually solved the problem</li>
+<li>assumption: the benefit of getting done now outweighs the cost of getting it wrong (aka Agile)</li>
+<li>counter example: security</li>
+<li>we need to think critically about what should be trained in advance and what can be learned JIT</li>
+</ul>
+</div>
+<div class="section" id="finding-your-tribe-choosing-open-source-communities">
+<h3>Finding your tribe - choosing open source communities<a class="headerlink" href="#finding-your-tribe-choosing-open-source-communities" title="Permalink to this headline">#</a></h3>
+<p>Cintia Del Rio</p>
+<ul class="simple">
+<li>Open Source refers to the product, the development process, and the community</li>
+<li>just because a product is open source does not mean it has an open source community behind it</li>
+<li>why you want to contribute can help guide where you will contribute</li>
+<li>three types of code in public repos</li>
+<li>source available<ul>
+<li>backed by companies where open source is not their business model, core
+maintainer and road map controlled by that company</li>
+<li>you have very limited influence as an external contributor</li>
+<li>communication and decisions do not happen in public</li>
+</ul>
+</li>
+<li>one person band<ul>
+<li>single (or very few) core maintainers</li>
+<li>common for dev tools and libraries</li>
+<li>single point of failure</li>
+<li>very few resources</li>
+<li>conflicts might not be handled so well</li>
+<li>not really a community</li>
+</ul>
+</li>
+<li>communities<ul>
+<li>communication channels (forums, mail list, chat)</li>
+<li>code of conduct</li>
+<li>multiple core developers</li>
+<li>GitHub org or a website</li>
+</ul>
+</li>
+<li>Is a project dead?<ul>
+<li>commits, issues, pull requests, communication channels</li>
+</ul>
+</li>
+<li>Culture<ul>
+<li>bad issues, declined pull requests, bad communication =&gt; how do people interact?</li>
+<li>add “can you please” and if it makes a comment polite and not ironic than it is probably ok</li>
+<li>is the code of conduct enforced? How hard was it for it to be adopted?</li>
+<li>is non-coding work valued? Doing reviews, answering questions, writing documentations.</li>
+<li>if material is translated, it is often a sign of a good, diverse culture</li>
+<li>diverse cultures tend to be better</li>
+<li>reacting well to minor changes (commas, grammar) is good</li>
+<li>are there docs/resources for getting started as a contributor?</li>
+<li>projects in “cool” languages tend to attract more toxic people</li>
+<li>beware of jerks in leadership; they will form the tone of the community</li>
+<li>is there someone to ask for help</li>
+<li>“I usually end up working on things because I need them rather than
+choosing specific communities, though I have left some.”</li>
+<li>You are a volunteer; remember you can leave if you want or need to.</li>
+<li>“Does it spark joy?”</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="through-the-looking-glass-how-user-testing-can-give-technical-writers-better-perspective">
+<h3>Through the looking glass - how user testing can give technical writers better perspective<a class="headerlink" href="#through-the-looking-glass-how-user-testing-can-give-technical-writers-better-perspective" title="Permalink to this headline">#</a></h3>
+<p>Fraser Mitchell</p>
+<ul class="simple">
+<li>What is the purpose of technical writing?<ul>
+<li>give customers complex information in a format that can be understood and is engaging</li>
+</ul>
+</li>
+<li>technical writers don’t read manuals from cover to cover<ul>
+<li>most learn software by testing it out for themselves</li>
+<li>narrative of help pages are constructed based on this experience, but it
+is only the writer’s experience</li>
+<li>they also become more familiar with the product as they go along and
+forget what it is like for new users</li>
+</ul>
+</li>
+<li>think about your customer<ul>
+<li>users are searching for help, they’re frustrated</li>
+<li>with each unsuccessful click, they become more agitated</li>
+</ul>
+</li>
+<li>user testing lets you see the user experience first hand</li>
+<li>contextual inquiry is the most common way of performing user testing<ul>
+<li>user is given tasks to perform</li>
+<li>user is asked questions as they perform the tasks</li>
+<li>develop a user testing script (unleash your inner talk show host)</li>
+<li>collaborate with your support team and focus on customer pain points</li>
+<li>keep the script open ended (e.g. what do you expect to happen when you
+click this button?)</li>
+<li>don’t use words that are in the UI as that can skew the choices the user makes</li>
+</ul>
+</li>
+<li>selecting participants<ul>
+<li>start internally, maybe with family and friends</li>
+<li>external testers usually require an incentive</li>
+</ul>
+</li>
+<li>testing environment<ul>
+<li>monitor actions of the participant</li>
+<li>have colleagues assist you</li>
+<li>you only need 5 participants (studies show this finds 80% of issues)</li>
+<li>keep the testing session short (not longer than 30mins)</li>
+<li>don’t be tempted to help the participant, even though it is normally what
+we do in our job</li>
+</ul>
+</li>
+<li>analysis<ul>
+<li>organize and digest the results</li>
+<li>apply affinity diagramming methods</li>
+<li>create storyboards or experience maps</li>
+<li>what action can you take from what you’ve learned</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="the-art-and-science-of-diagramming">
+<h3>The Art and Science of Diagramming<a class="headerlink" href="#the-art-and-science-of-diagramming" title="Permalink to this headline">#</a></h3>
+<p>Adam Moszt</p>
+<ul class="simple">
+<li>diagrams are visual communication</li>
+<li>when you diagram, you need to consider your audience and anticipate their path</li>
+<li>give them the information they need; don’t go off on tangents</li>
+<li>don’t build a duck (aka a diagram is beautiful if it is functional)</li>
+<li>a diagram that is too big exceeds the cognitive bandwidth of the audience</li>
+<li>if you exceed the cognitive bandwidth of a person on a diagram they no
+longer can understand it easily</li>
+<li>cognitive bandwidth is 7 +- 2 (aka 5 to 9 items)</li>
+<li>create a consistent visual language for your audience to understand</li>
+<li>try to prevent lines from crossing</li>
+<li>keep visual styles simple and clear</li>
+<li>style distinct elements distinctly or use emphasis</li>
+<li>Gestalt law of proximity: if you put things close together, people tend to
+view them as a group<ul>
+<li>this can help extend the cognitive bandwidth</li>
+</ul>
+</li>
+<li>Gestalt law of similarity: people tend to view things as a group that look similar<ul>
+<li>for example you can color elements depending on who performs the action</li>
+</ul>
+</li>
+<li>ColorBrewer is a resource for picking distinct colors</li>
+</ul>
+</div>
+<div class="section" id="how-to-avoid-meetings">
+<h3>How to avoid meetings<a class="headerlink" href="#how-to-avoid-meetings" title="Permalink to this headline">#</a></h3>
+<p>Maia Sauren</p>
+<ul class="simple">
+<li>stereotypes are not untrue, they are incomplete</li>
+<li>when you make a private joke without context, someone is left out</li>
+<li>when you include everyone in a private joke, you create a closer culture</li>
+<li>whose governance model wins? Consider who gets left out depending on what you choose.</li>
+<li>it is harder to change a relationship over the phone than to maintain one</li>
+<li>relationships with a code of conduct are less fragile</li>
+<li>“how do you want to have arguments?”</li>
+<li>model good behavior</li>
+<li>set standards early</li>
+<li>normalize conflict resolution or you are normalizing unresolved conflict</li>
+<li>address issues early and often</li>
+<li>adulting: it’s for people who don’t want to cry even more later</li>
+<li>have “pre-meeting meetings” in order to resolve issues before the actual meeting</li>
+<li>conflict resolution can work differently in different cultures</li>
+<li>step away sometimes to let the culture grow organically</li>
+<li>“culture eats strategy for breakfast” Peter Drucker</li>
+</ul>
+<p>Any advice for creating relationships over the phone?</p>
+</div>
+<div class="section" id="disaster-recovery-book">
+<h3>Disaster recovery book<a class="headerlink" href="#disaster-recovery-book" title="Permalink to this headline">#</a></h3>
+<p>Svetlana Marina</p>
+<ul class="simple">
+<li>you can start with a simple guide: map alert types to dashboard logs and documentation</li>
+<li>consider impact, expectations, SLAs</li>
+<li>early and regular communication with the customer is crucial to maintaining their trust</li>
+<li>add to guide: communication details (email or phone numbers, who to contact when)</li>
+<li>add to guide: run book with resolution steps</li>
+<li>perform RCA and raise a bug report if required</li>
+<li>post mortem: this should have guidelines for how it is conducted</li>
+<li>post mortem feedback should be used to improve can help keep the documentation current</li>
+</ul>
+</div>
+<div class="section" id="the-bus-plan-junior-staff-training">
+<h3>The Bus Plan - Junior Staff Training<a class="headerlink" href="#the-bus-plan-junior-staff-training" title="Permalink to this headline">#</a></h3>
+<p>Andrew Jeffree</p>
+<ul class="simple">
+<li>the concern is that new staff arrive thinking only about automation (e.g.
+let’s do everything with Puppet)</li>
+<li>but they don’t really understand it</li>
+<li>how do we give people the skills to execute on the documentation</li>
+<li>you have to understand what is happening behind the scenes when you push a
+button in automation</li>
+<li>this is especially important when the function doesn’t already exist</li>
+<li>it helps to spend some time playing with the technology without automation
+in order to understand it better</li>
+<li>do things manually first, before automating</li>
+<li>training<ul>
+<li>start with a blank server</li>
+<li>give vague instructions (e.g. install Wordpress)</li>
+<li>document the steps you used</li>
+<li>then try extending it (e.g. multiple servers, SSL, backups, etc.)</li>
+<li>don’t be afraid of touching things manually</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="when-agile-doesn-t-work-anymore-managing-a-large-documentation-project">
+<h3>When Agile Doesn’t Work Anymore: Managing a Large Documentation Project<a class="headerlink" href="#when-agile-doesn-t-work-anymore-managing-a-large-documentation-project" title="Permalink to this headline">#</a></h3>
+<p>Lana Brindley</p>
+<ul class="simple">
+<li>docs age and we need to update them</li>
+</ul>
+<p>Proof of concept
+-  identify what the problem is
+-  figure out how long it will take
+-  get buy in from all the stakeholders</p>
+<p>Plan
+-  advertise your plan</p>
+<p>Research
+-  who is your audience?
+-  talk to your audience if you can, run a survey</p>
+<p>User/task analysis
+-  what tasks do your readers have?
+-  produce a matrix to see how often users consult the docs to complete a task
+-  this helps us know where to focus our attention</p>
+<p>Write
+-  keep track of what and who is doing things</p>
+<p>Review
+-  What was done? What could be done better?
+-  focus on the problem not on the people</p>
+<p>Don’t be afraid to break the Agile model when you need to. But if you are going to:</p>
+<ul class="simple">
+<li>do outreach with stakeholders</li>
+<li>track your work somehow in the Agile process, but don’t go overboard</li>
+<li>keep your work in people’s minds and give kudos</li>
+</ul>
+</div>
+</div>
+<div class="section" id="wednesday-jan-23">
+<h2>Wednesday Jan 23<a class="headerlink" href="#wednesday-jan-23" title="Permalink to this headline">#</a></h2>
+<div class="section" id="keynote-wearenotwaiting-how-open-source-is-changing-healthcare">
+<h3>Keynote: #WeAreNotWaiting: how open source is changing healthcare<a class="headerlink" href="#keynote-wearenotwaiting-how-open-source-is-changing-healthcare" title="Permalink to this headline">#</a></h3>
+<p>Dana Lewis</p>
+<ul class="simple">
+<li>food affects blood sugar in about 15 minutes</li>
+<li>but insulin can take up to an hour to take effect</li>
+<li>even with current tools, like a continuous glucose monitor CGM and an
+insulin pump, there are a lot of decisions to be made throughout the day</li>
+<li>the hardware options are limited (e.g. work on Windows but not on Mac)</li>
+<li>hacked the device and uploaded the data to Dropbox then sent appropriate alerts to mobile phone</li>
+<li>by adding a RaspPi and a battery, they could create a closed loop artificial pancreas system</li>
+<li>so a computer is in charge of the constant decisions, removing human error</li>
+<li>open sourced the solution as #OpenAPS (open artificial pancreas system)</li>
+<li>they had to design for all possible failure modes</li>
+<li>OpenAPS.org has plain language reference for doing this, as the audience is
+everyone with Type 1 diabetes and they may not be technical.</li>
+<li>they have collected over 9 million hours of data from this system, and the
+data is freely available to anyone who requests it</li>
+</ul>
+</div>
+<div class="section" id="plastic-is-forever-designing-tomu-s-injection-molded-case">
+<h3>Plastic is Forever: Designing Tomu’s Injection-Molded Case<a class="headerlink" href="#plastic-is-forever-designing-tomu-s-injection-molded-case" title="Permalink to this headline">#</a></h3>
+<p>Sean “xobs” Cross</p>
+<ul class="simple">
+<li>in order to understand how difficult a project is you need to understand it</li>
+<li>discussion on the process of injection-molding a case for the Tomu</li>
+<li>they first etch the design in copper, then use EDM to oblate the design into steel</li>
+</ul>
+</div>
+<div class="section" id="desktop-to-mobile-developing-for-multiple-platforms-without-losing-your-mind">
+<h3>Desktop to Mobile - Developing for Multiple Platforms without Losing Your Mind<a class="headerlink" href="#desktop-to-mobile-developing-for-multiple-platforms-without-losing-your-mind" title="Permalink to this headline">#</a></h3>
+<p>Dirk Hohndel</p>
+<ul class="simple">
+<li><a class="reference external" href="https://subsurface-divelog.org/">Subsurface</a> is a dive log program</li>
+<li>UI elements on a mobile are different from the desktop. For example, when
+touching something you cover what you are touching with your finger.</li>
+<li>QML is simple, but is lacks widgets, and is declarative rather than procedural</li>
+<li>this makes it very difficult to use for anything beyond basic elements</li>
+<li><a class="reference external" href="https://techbase.kde.org/Kirigami">Kirigami</a> provides a tool kit and docs</li>
+<li>Kirigami does not follow Android or iOS design patterns, which is good
+because it is consistent between them, but it is bad because it doesn’t look
+native</li>
+<li>no GUI tool to design the UI</li>
+<li>QML developers are hard to find</li>
+<li>connecting to C++<ul>
+<li>challenging documentation</li>
+<li>full of pitfalls</li>
+<li>magic names, magic rules</li>
+<li>object creation heartaches</li>
+<li>once it works it becomes easy</li>
+<li>fix bugs once and it will work on all platforms</li>
+</ul>
+</li>
+<li>packaging<ul>
+<li>poorly documented</li>
+<li>frequently broken in new Qt releases</li>
+<li>magic everywhere</li>
+<li>incredibly hard to debug</li>
+<li>maybe the biggest downside compared to using native tooling</li>
+<li>this is ignoring store and license rules</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="game-development-with-lua-for-beginners">
+<h3>Game development with Lua, for Beginners<a class="headerlink" href="#game-development-with-lua-for-beginners" title="Permalink to this headline">#</a></h3>
+<p>Seth Kenlon</p>
+<ul class="simple">
+<li><a class="reference external" href="https://mixedsignals.ml">game design blog</a></li>
+</ul>
+</div>
+<div class="section" id="why-linux-conf-au-continues-to-amaze-20-years-on">
+<h3>Why linux.conf.au continues to amaze 20 years on!<a class="headerlink" href="#why-linux-conf-au-continues-to-amaze-20-years-on" title="Permalink to this headline">#</a></h3>
+<p>Steven Hanley, Angus Lees, Hugh Blemings</p>
+</div>
+<div class="section" id="right-to-not-broadcast">
+<h3>Right to Not Broadcast<a class="headerlink" href="#right-to-not-broadcast" title="Permalink to this headline">#</a></h3>
+<p>Karen Sandler</p>
+<ul class="simple">
+<li>the experience of having an electronic heart implant changed her opinion
+from thinking that open source is cool to thinking that open source is
+essential</li>
+<li>most of the implanted defibrillators broadcast constantly</li>
+<li>but even if they don’t, the computers that read them and hold data have a
+large number of security flaws</li>
+<li>we have very limited options for people who want to opt out, especially when
+it comes to medical devices</li>
+<li>we need off switches on broadcasting and aggregating data</li>
+<li>we need to be able to revisit consent on a regular basis with a presentation
+of the alternatives</li>
 </ul>
 </div>
 </div>
