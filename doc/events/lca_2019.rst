@@ -102,7 +102,8 @@ Brenda Wallace
 -  When they publish a law, they publish a reference implementation in Python
    (with unit tests)
 
--  When the law changes, they can run the tests and if it breaks they can fix the law
+-  When the law changes, they can run the tests and if it breaks they can fix
+   the law
 -  `rules.nz <http://www.rules.nz/>`_
 
 How Much Do You Trust That Package? Understanding The Software Supply Chain
@@ -193,12 +194,15 @@ Katie McLaughlin
 
 -  the essentials
 
-   -  write stuff down; it doesn't have to be fancy, just get notes in a place you can find them like a wiki
+   -  write stuff down; it doesn't have to be fancy, just get notes in a place
+      you can find them like a wiki
    -  it needs to be editable right away (don't use a repo with PR process, for example)
    -  make it searchable (e.g. don't put it in a paper notebook)
-   -  keep it secure (e.g. behind a company firewall) since it likely has content that the public shouldn't see
-   -  make it discoverable for other people in your organisation who need to find it
-   -  keep your tools readily available; make sure nothing is dangerous, since you are likely to make a mistake
+   -  keep it secure (e.g. behind a company firewall) since it likely has
+      content that the public shouldn't see
+   -  make it discoverable for other people in your organization who need to find it
+   -  keep your tools readily available; make sure nothing is dangerous, since
+      you are likely to make a mistake
 
 -  integration
 
@@ -221,18 +225,21 @@ Making Yourself Redundant on Day One
 ------------------------------------
 Alexandra Perkins
 
--  no matter what you do, when you start a new job you are always entering the unkown and don't know what is going on
+-  no matter what you do, when you start a new job you are always entering the
+   unknown and don't know what is going on
 -  why?
 
    -  as a new person, you know the right questions to ask when you start
    -  you won't remember the information the first time you hear it
-   -  documenting early makes onboarding future employees faster and easier
-   -  robust internal docs fosters an inclusive and diverse workspace; it is an easy way to make people comfortable with finding information
+   -  documenting early makes on-boarding future employees faster and easier
+   -  robust internal docs fosters an inclusive and diverse workspace; it is an
+      easy way to make people comfortable with finding information
 
 -  what?
 
    -  document anything you find hard about the job or the company
-   -  who is going to benefit from what you write? Consider the audience and write appropriately.
+   -  who is going to benefit from what you write? Consider the audience and
+      write appropriately.
    -  how to book leave?
    -  who to ask about which topics?
    -  information on workplace social events
@@ -246,7 +253,8 @@ Alexandra Perkins
    -  screenshots of useful Slack conversations
    -  keep it simple; informal content is your friend
    -  it is internal, so don't worry about making it perfect
-   -  run through your own content every once in a while just to make sure it is current, and to help refresh your memory
+   -  run through your own content every once in a while just to make sure it
+      is current, and to help refresh your memory
 
 -  future proofing
 
@@ -277,11 +285,14 @@ Tessa Bradbury
 -  assumption: you will ask the required questions
 -  counter example: you can't ask if you don't know there's a question to ask
 -  assumption: you can figure out what you need to learn
--  counter example: it is not always obvious what the problem is so it is difficult to define the problem
+-  counter example: it is not always obvious what the problem is so it is
+   difficult to define the problem
 -  assumption: you can find what you need to know
--  counter example: it is not always obvious where to look for an answer; this can especially be a problem with proprietary software since you can't go beyond the docs provided (e.g. look in the code)
+-  counter example: it is not always obvious where to look for an answer; this
+   can especially be a problem with proprietary software since you can't go
+   beyond the docs provided (e.g. look in the code)
 -  assumption: you know when you've solved the problem
--  counter example: you may not realise your solution hasn't actually solved the problem
+-  counter example: you may not realize your solution hasn't actually solved the problem
 -  assumption: the benefit of getting done now outweighs the cost of getting it wrong (aka Agile)
 -  counter example: security
 -  we need to think critically about what should be trained in advance and what can be learned JIT
@@ -297,7 +308,8 @@ Cintia Del Rio
 -  three types of code in public repos
 -  source available
 
-   -  backed by companies where open source is not their business model, core maintainer and roadmap controlled by that company
+   -  backed by companies where open source is not their business model, core
+      maintainer and road map controlled by that company
    -  you have very limited influence as an external contributor
    -  communication and decisions do not happen in public
 
@@ -334,7 +346,8 @@ Cintia Del Rio
    -  projects in "cool" languages tend to attract more toxic people
    -  beware of jerks in leadership; they will form the tone of the community
    -  is there someone to ask for help
-   -  "I usually end up working on things because I need them rather than choosing specific communities, though I have left some."
+   -  "I usually end up working on things because I need them rather than
+      choosing specific communities, though I have left some."
    -  You are a volunteer; remember you can leave if you want or need to.
    -  "Does it spark joy?"
 
@@ -346,11 +359,13 @@ Fraser Mitchell
 
    -  give customers complex information in a format that can be understood and is engaging
 
--  technical writeres don't read manuals from cover to cover
+-  technical writers don't read manuals from cover to cover
 
    -  most learn software by testing it out for themselves
-   -  narrative of help pages are constructed based on this experience, but it is only the writer's experience
-   -  they also become more familiar with the product as they go along and forget what it is like for new users
+   -  narrative of help pages are constructed based on this experience, but it
+      is only the writer's experience
+   -  they also become more familiar with the product as they go along and
+      forget what it is like for new users
 
 -  think about your customer
 
@@ -358,13 +373,14 @@ Fraser Mitchell
    -  with each unsuccessful click, they become more agitated
 
 -  user testing lets you see the user experience first hand
--  contextual enquiry is the most common way of performing user testing
+-  contextual inquiry is the most common way of performing user testing
 
    -  user is given tasks to perform
    -  user is asked questions as they perform the tasks
    -  develop a user testing script (unleash your inner talk show host)
    -  collaborate with your support team and focus on customer pain points
-   -  keep the script open ended (e.g. what do you expect to happen when you click this button?)
+   -  keep the script open ended (e.g. what do you expect to happen when you
+      click this button?)
    -  don't use words that are in the UI as that can skew the choices the user makes
 
 -  selecting participants
@@ -375,14 +391,15 @@ Fraser Mitchell
 -  testing environment
 
    -  monitor actions of the participant
-   -  have colleagues assit you
+   -  have colleagues assist you
    -  you only need 5 participants (studies show this finds 80% of issues)
    -  keep the testing session short (not longer than 30mins)
-   -  don't be tempted to help the participant, even though it is normally what we do in our job
+   -  don't be tempted to help the participant, even though it is normally what
+      we do in our job
 
 -  analysis
 
-   -  organise and digest the results
+   -  organize and digest the results
    -  apply affinity diagramming methods
    -  create storyboards or experience maps
    -  what action can you take from what you've learned
@@ -396,13 +413,15 @@ Adam Moszt
 -  give them the information they need; don't go off on tangents
 -  don't build a duck (aka a diagram is beautiful if it is functional)
 -  a diagram that is too big exceeds the cognitive bandwidth of the audience
--  if you exceed the cognitive bandwidth of a person on a diagram they no longer can understand it easily
+-  if you exceed the cognitive bandwidth of a person on a diagram they no
+   longer can understand it easily
 -  cognitive bandwidth is 7 +- 2 (aka 5 to 9 items)
 -  create a consistent visual language for your audience to understand
 -  try to prevent lines from crossing
 -  keep visual styles simple and clear
 -  style distinct elements distinctly or use emphasis
--  Gestalt law of promiximity: if you put things close together, people tend to view them as a group
+-  Gestalt law of proximity: if you put things close together, people tend to
+   view them as a group
 
    -  this can help extend the cognitive bandwidth
 
@@ -425,7 +444,7 @@ Maia Sauren
 -  "how do you want to have arguments?"
 -  model good behavior
 -  set standards early
--  normalise conflict resolution or you are normalising unresolved conflict
+-  normalize conflict resolution or you are normalizing unresolved conflict
 -  address issues early and often
 -  adulting: it's for people who don't want to cry even more later
 -  have "pre-meeting meetings" in order to resolve issues before the actual meeting
@@ -444,7 +463,7 @@ Svetlana Marina
 -  consider impact, expectations, SLAs
 -  early and regular communication with the customer is crucial to maintaining their trust
 -  add to guide: communication details (email or phone numbers, who to contact when)
--  add to guide: runbook with resolution steps
+-  add to guide: run book with resolution steps
 -  perform RCA and raise a bug report if required
 -  post mortem: this should have guidelines for how it is conducted
 -  post mortem feedback should be used to improve can help keep the documentation current
@@ -454,12 +473,15 @@ The Bus Plan - Junior Staff Training
 ------------------------------------
 Andrew Jeffree
 
--  the concern is that new staff arrive thinking only about automation (e.g. let's do everything with Puppet)
+-  the concern is that new staff arrive thinking only about automation (e.g.
+   let's do everything with Puppet)
 -  but they don't really understand it
 -  how do we give people the skills to execute on the documentation
--  you have to understand what is happening behind the scenes when you push a button in automation
+-  you have to understand what is happening behind the scenes when you push a
+   button in automation
 -  this is especially important when the function doesn't already exist
--  it helps to spend some time playing with the technology without automation in order to understand it better
+-  it helps to spend some time playing with the technology without automation
+   in order to understand it better
 -  do things manually first, before automating
 -  training
 
@@ -504,3 +526,92 @@ Don't be afraid to break the Agile model when you need to. But if you are going 
 -  do outreach with stakeholders
 -  track your work somehow in the Agile process, but don't go overboard
 -  keep your work in people's minds and give kudos
+
+Wednesday Jan 23
+~~~~~~~~~~~~~~~~
+
+Keynote: #WeAreNotWaiting: how open source is changing healthcare
+-----------------------------------------------------------------
+Dana Lewis
+
+-  food affects blood sugar in about 15 minutes
+-  but insulin can take up to an hour to take effect
+-  even with current tools, like a continuous glucose monitor CGM and an
+   insulin pump, there are a lot of decisions to be made throughout the day
+-  the hardware options are limited (e.g. work on Windows but not on Mac)
+-  hacked the device and uploaded the data to Dropbox then sent appropriate alerts to mobile phone
+-  by adding a RaspPi and a battery, they could create a closed loop artificial pancreas system
+-  so a computer is in charge of the constant decisions, removing human error
+-  open sourced the solution as #OpenAPS (open artificial pancreas system)
+-  they had to design for all possible failure modes
+-  OpenAPS.org has plain language reference for doing this, as the audience is
+   everyone with Type 1 diabetes and they may not be technical.
+-  they have collected over 9 million hours of data from this system, and the
+   data is freely available to anyone who requests it
+
+Plastic is Forever: Designing Tomu's Injection-Molded Case
+----------------------------------------------------------
+Sean "xobs" Cross
+
+-  in order to understand how difficult a project is you need to understand it
+-  discussion on the process of injection-molding a case for the Tomu
+-  they first etch the design in copper, then use EDM to oblate the design into steel
+
+Desktop to Mobile - Developing for Multiple Platforms without Losing Your Mind
+------------------------------------------------------------------------------
+Dirk Hohndel
+
+-  `Subsurface <https://subsurface-divelog.org/>`_ is a dive log program
+-  UI elements on a mobile are different from the desktop. For example, when
+   touching something you cover what you are touching with your finger.
+-  QML is simple, but is lacks widgets, and is declarative rather than procedural
+-  this makes it very difficult to use for anything beyond basic elements
+-  `Kirigami <https://techbase.kde.org/Kirigami>`_ provides a tool kit and docs
+-  Kirigami does not follow Android or iOS design patterns, which is good
+   because it is consistent between them, but it is bad because it doesn't look
+   native
+-  no GUI tool to design the UI
+-  QML developers are hard to find
+-  connecting to C++
+
+   -  challenging documentation
+   -  full of pitfalls
+   -  magic names, magic rules
+   -  object creation heartaches
+   -  once it works it becomes easy
+   -  fix bugs once and it will work on all platforms
+
+-  packaging
+
+   -  poorly documented
+   -  frequently broken in new Qt releases
+   -  magic everywhere
+   -  incredibly hard to debug
+   -  maybe the biggest downside compared to using native tooling
+   -  this is ignoring store and license rules
+
+Game development with Lua, for Beginners
+----------------------------------------
+Seth Kenlon
+
+-  `game design blog <https://mixedsignals.ml>`_
+
+Why linux.conf.au continues to amaze 20 years on!
+-------------------------------------------------
+Steven Hanley, Angus Lees, Hugh Blemings
+
+Right to Not Broadcast
+----------------------
+Karen Sandler
+
+-  the experience of having an electronic heart implant changed her opinion
+   from thinking that open source is cool to thinking that open source is
+   essential
+-  most of the implanted defibrillators broadcast constantly
+-  but even if they don't, the computers that read them and hold data have a
+   large number of security flaws
+-  we have very limited options for people who want to opt out, especially when
+   it comes to medical devices
+-  we need off switches on broadcasting and aggregating data
+-  we need to be able to revisit consent on a regular basis with a presentation
+   of the alternatives

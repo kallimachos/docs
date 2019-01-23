@@ -2,6 +2,7 @@ abugida
 Admin
 admin
 admins
+adulting
 analytics
 Ansible
 ansible
@@ -29,6 +30,7 @@ builtin
 Catarina
 centric
 Chinner
+Cintia
 cirros
 Clubman
 conf
@@ -61,6 +63,8 @@ Django
 django
 Docbook
 doesn
+Dropbox
+Drucker
 Eghbal
 Endsley
 ePub
@@ -83,9 +87,12 @@ Groth
 hackable
 hackathon
 Hamish
+harepoint
 hasn
+healthcare
 heartbleed
 Heroku
+Hohndel
 html
 http
 hypervisor
@@ -96,11 +103,13 @@ internet
 iOS
 isn
 Jacinta
+Jeffree
 Julien
 kallimachos
 kbdash
 kerneldoc
 kerning
+Kirigami
 Kristof
 Kristoff
 kubectl
@@ -125,6 +134,7 @@ minecraft
 Miniconf
 miniconf
 Miniconfs
+mins
 Mirantis
 Mitaka
 mitaka
@@ -132,12 +142,15 @@ modders
 modding
 monocultures
 monolingualism
+mortem
+Moszt
 multi
 multiplayer
 natively
 Nye
 ok
 online
+OpenAPS
 OpenStack
 openstack
 openstackdocstheme
@@ -150,6 +163,7 @@ Pia
 plugin
 plugins
 polylingualism
+pre
 progressbar
 pullall
 py
@@ -170,6 +184,7 @@ relicense
 relicensing
 repo
 repocheck
+repos
 reStructuredText
 Rhiana
 Rikki
@@ -177,11 +192,15 @@ RST
 rst
 runtime
 SaaS
+Sauren
 scalable
 Scheibner
+screenshots
 sdist
+searchable
 Searls
 sharding
+sharepoint
 shouldn
 Sim
 Skulpt
@@ -192,6 +211,8 @@ Stefano
 SUSE
 syllabary
 timestamps
+Tomu
+Tomu
 tox
 txt
 Ubuntu
@@ -200,6 +221,7 @@ ve
 versioning
 VMware
 Voronoi
+WeAreNotWaiting
 webpage
 webserver
 whitepaper
@@ -208,7 +230,9 @@ whitespace
 wiki
 Wikimedia
 Wikipedia
+Wordpress
 work flow
 wouldn
+xobs
 Zanata
 zanata
