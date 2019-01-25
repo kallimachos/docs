@@ -683,7 +683,7 @@ Tessa Bradbury
 -  why are state machines so relevant to React and FPGAs? They are both event oriented systems.
 -  state can help us avoid a many-to-many relationship in a system, as instead
    each function can make to the state
--  be intentional about your states, events, and transistions
+-  be intentional about your states, events, and transitions
 -  draw a diagram
 -  "finite state machines provide a useful abstraction to help us reason about
    the complex behavior of our systems"
@@ -697,7 +697,7 @@ Bdale Garbee
 -  this diversity creates a software commons that we can all benefit from
 -  if upstream behaves unacceptably, the community can fork
 -  collaborative development allows us to recognize the benefit of
-   collaboration on non-differentiaing elements, leaving more resources to
+   collaboration on non-differentiating elements, leaving more resources to
    deliver meaningful value to customers and users
 -  surprisingly, innovation often comes because "amateurs" do something
    established industry doesn't believe they can do
@@ -721,3 +721,39 @@ kathy giori
 
 -  microblocks.fun
 -  https://github.com/kgiori/iot-bus-microblocks
+
+Friday Jan 25
+~~~~~~~~~~~~~
+
+Keynote: A linux.conf.au Story
+------------------------------
+Rusty Russell
+
+Growing TypeScript and Rust
+---------------------------
+Jonathan Turner
+
+Facebook, Dynamite, Uber, Bombs, and You
+----------------------------------------
+Lana Brindley
+
+
+1space: Sharing data across clouds
+----------------------------------
+John Dickinson
+
+STM32 Development Boards (literally) Falling From The Sky
+---------------------------------------------------------
+Mark Jessop, Michael Wheeler
+
+-  earth.nullschool.net
+-  radiosonde = sensors + radio transmitter
+-  measures things like temperature, humidity, pressure, wind speed/direction (via GPS)
+-  lifted aloft by weather balloon, usually filled with hydrogen
+-  takes about 1.5 hours to ascend at 5m/s
+-  burst at ~27000m altitude
+-  lands ~30 min later
+-  radiosonde keeps transmitting for another 6 hours
+-  they descend at different rates depending on various factors
+-  github.com/projecthorus/radiosonde_auto_rx
+-  projecthorus/chasemapper
