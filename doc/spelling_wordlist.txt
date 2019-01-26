@@ -21,7 +21,9 @@ backend
 backends
 bashrc
 Batavia
+Bdale
 Benno
+Blemings
 blog
 bolditalic
 branchlist
@@ -29,6 +31,7 @@ Brindley
 builtin
 Catarina
 centric
+chasemapper
 Chinner
 Cintia
 cirros
@@ -46,6 +49,7 @@ cython
 Dayle
 de
 Debian
+defibrillators
 Deis
 deis
 deliverables
@@ -74,9 +78,11 @@ findable
 Firefox
 Florian
 freeBSD
+Garbee
 Geelong
 Gerrit
 gerrit
+giori
 GitHub
 github
 gits
@@ -86,7 +92,9 @@ govhack
 Groth
 hackable
 hackathon
+Hak
 Hamish
+Hanley
 harepoint
 hasn
 healthcare
@@ -104,9 +112,12 @@ iOS
 isn
 Jacinta
 Jeffree
+Jessop
 Julien
 kallimachos
+kathy
 kbdash
+Kenlon
 kerneldoc
 kerning
 Kirigami
@@ -122,12 +133,14 @@ Linux
 linux
 lithification
 Locost
+Lua
 Magee
 Mahoney
 malware
 Masayuki
 Medeiros
 metadata
+microblocks
 microinteractions
 Minecraft
 minecraft
@@ -165,6 +178,7 @@ plugins
 polylingualism
 pre
 progressbar
+projecthorus
 pullall
 py
 pycharm
@@ -192,6 +206,7 @@ RST
 rst
 runtime
 SaaS
+Sandler
 Sauren
 scalable
 Scheibner
@@ -215,6 +230,7 @@ Tomu
 Tomu
 tox
 txt
+Uber
 Ubuntu
 unikernel
 ve

@@ -746,7 +746,7 @@ STM32 Development Boards (literally) Falling From The Sky
 ---------------------------------------------------------
 Mark Jessop, Michael Wheeler
 
--  earth.nullschool.net
+-  `earth.nullschool.net <earth.nullschool.net>`_
 -  radiosonde = sensors + radio transmitter
 -  measures things like temperature, humidity, pressure, wind speed/direction (via GPS)
 -  lifted aloft by weather balloon, usually filled with hydrogen
@@ -755,5 +755,5 @@ Mark Jessop, Michael Wheeler
 -  lands ~30 min later
 -  radiosonde keeps transmitting for another 6 hours
 -  they descend at different rates depending on various factors
--  github.com/projecthorus/radiosonde_auto_rx
+-  `radiosonde_auto_rx <github.com/projecthorus/radiosonde_auto_rx>`_
 -  projecthorus/chasemapper
