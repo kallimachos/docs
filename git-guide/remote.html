@@ -19,13 +19,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
@@ -33,21 +40,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Kubernetes" href="kubernetes.html" />
     <link rel="prev" title="Working with Local Branches" href="local.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -174,73 +176,73 @@
             
   <div class="section" id="working-with-remote-branches">
 <h1>Working with Remote Branches<a class="headerlink" href="#working-with-remote-branches" title="Permalink to this headline">#</a></h1>
-<table border="1" class="colwidths-given docutils">
+<table class="colwidths-given docutils align-center">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Command</th>
-<th class="head">Result</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Result</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>git checkout –track origin/<em>branch</em></td>
-<td>creates and checks out a local tracking branch for the specified remote
-branch</td>
+<tbody>
+<tr class="row-even"><td><p>git checkout --track origin/<em>branch</em></p></td>
+<td><p>creates and checks out a local tracking branch for the specified remote
+branch</p></td>
 </tr>
-<tr class="row-odd"><td>git fetch origin</td>
-<td>fetches the remote repository and stores it locally, but does not merge
-it with the current branch</td>
+<tr class="row-odd"><td><p>git fetch origin</p></td>
+<td><p>fetches the remote repository and stores it locally, but does not merge
+it with the current branch</p></td>
 </tr>
-<tr class="row-even"><td>git pull</td>
-<td>fetches and merges the remote repository with the local repository</td>
+<tr class="row-even"><td><p>git pull</p></td>
+<td><p>fetches and merges the remote repository with the local repository</p></td>
 </tr>
-<tr class="row-odd"><td>git pull origin <em>branch</em></td>
-<td>fetches and merges the specified remote branch with the current local
-branch</td>
+<tr class="row-odd"><td><p>git pull origin <em>branch</em></p></td>
+<td><p>fetches and merges the specified remote branch with the current local
+branch</p></td>
 </tr>
-<tr class="row-even"><td>git push</td>
-<td>pushes all committed changes on all branches to the remote repo</td>
+<tr class="row-even"><td><p>git push</p></td>
+<td><p>pushes all committed changes on all branches to the remote repo</p></td>
 </tr>
-<tr class="row-odd"><td>git push -f</td>
-<td>force pushes all committed changes on all branches to the remote repo.
-<strong>Warning:</strong> this can overwrite commits on the remote branches.</td>
+<tr class="row-odd"><td><p>git push -f</p></td>
+<td><p>force pushes all committed changes on all branches to the remote repo.
+<strong>Warning:</strong> this can overwrite commits on the remote branches.</p></td>
 </tr>
-<tr class="row-even"><td>git push origin +<em>branch</em></td>
-<td>force pushes committed changes on the specified branch.
-<strong>Warning:</strong> this can overwrite commits on the remote branch.</td>
+<tr class="row-even"><td><p>git push origin +<em>branch</em></p></td>
+<td><p>force pushes committed changes on the specified branch.
+<strong>Warning:</strong> this can overwrite commits on the remote branch.</p></td>
 </tr>
-<tr class="row-odd"><td>git push origin <em>branch1</em>:<em>branch2</em></td>
-<td>creates a remote <em>branch2</em> and pushes the local <em>branch1</em> to it</td>
+<tr class="row-odd"><td><p>git push origin <em>branch1</em>:<em>branch2</em></p></td>
+<td><p>creates a remote <em>branch2</em> and pushes the local <em>branch1</em> to it</p></td>
 </tr>
-<tr class="row-even"><td>git push origin :<em>branch</em></td>
-<td>deletes the specified remote branch (note there is a space between
-<code class="docutils literal notranslate"><span class="pre">origin</span></code> and <code class="docutils literal notranslate"><span class="pre">:branch</span></code>)</td>
+<tr class="row-even"><td><p>git push origin :<em>branch</em></p></td>
+<td><p>deletes the specified remote branch (note there is a space between
+<code class="docutils literal notranslate"><span class="pre">origin</span></code> and <code class="docutils literal notranslate"><span class="pre">:branch</span></code>)</p></td>
 </tr>
-<tr class="row-odd"><td>git reset –hard origin/<em>branch</em></td>
-<td>resets the checked-out local branch to the status of the specified
-remote branch; running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">origin</span></code> first is recommended</td>
+<tr class="row-odd"><td><p>git reset --hard origin/<em>branch</em></p></td>
+<td><p>resets the checked-out local branch to the status of the specified
+remote branch; running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">origin</span></code> first is recommended</p></td>
 </tr>
 </tbody>
 </table>
 <div class="section" id="configuring-an-upstream-remote-for-a-fork">
 <h2>Configuring an upstream remote for a fork<a class="headerlink" href="#configuring-an-upstream-remote-for-a-fork" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
-<li><p class="first">List the current configured remote repository for your fork:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+<li><p>List the current configured remote repository for your fork:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
 <span class="n">origin</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">YOUR_FORK</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
 <span class="n">origin</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">YOUR_FORK</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Specify a new remote upstream repository that will be synced with the fork:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ORIGINAL_OWNER</span><span class="o">/</span><span class="n">ORIGINAL_REPOSITORY</span><span class="o">.</span><span class="n">git</span>
+<li><p>Specify a new remote upstream repository that will be synced with the fork:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ORIGINAL_OWNER</span><span class="o">/</span><span class="n">ORIGINAL_REPOSITORY</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Verify the new upstream repository you’ve specified for your fork:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+<li><p>Verify the new upstream repository you've specified for your fork:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
 <span class="n">origin</span>    <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">YOUR_FORK</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
 <span class="n">origin</span>    <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">YOUR_FORK</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
 <span class="n">upstream</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ORIGINAL_OWNER</span><span class="o">/</span><span class="n">ORIGINAL_REPOSITORY</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
@@ -252,8 +254,8 @@ remote branch; running <code class="docutils literal notranslate"><span class="p
 </div>
 <div class="section" id="adding-commits-to-a-pull-request">
 <h2>Adding commits to a pull request<a class="headerlink" href="#adding-commits-to-a-pull-request" title="Permalink to this headline">#</a></h2>
-<p>Use the following formula to add commits to another person’s pull request:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;/&lt;</span><span class="n">repo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">local_branch_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">remote_branch_name</span><span class="o">&gt;</span>
+<p>Use the following formula to add commits to another person's pull request:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;/&lt;</span><span class="n">repo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">local_branch_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">remote_branch_name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -261,14 +263,14 @@ remote branch; running <code class="docutils literal notranslate"><span class="p
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
 <p>To reset origin remote to upstream remote, run the following commands:</p>
 <blockquote>
-<div><pre class="highlight"><style type="text/css">
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><style type="text/css">
 span.prompt1:before {
   content: "$ ";
 }
 </style><span class="prompt1">git remote update</span>
 <span class="prompt1">git reset --hard upstream/master --</span>
 <span class="prompt1">git push origin +master</span>
-</pre></div></blockquote>
+</pre></div></div></div></blockquote>
 <p>The double hyphen ensures that <code class="docutils literal notranslate"><span class="pre">upstream/master</span></code> is considered as a revision
 and not confused as a path.</p>
 </div>
@@ -285,7 +287,7 @@ and not confused as a path.</p>
         <a href="kubernetes.html" class="btn btn-neutral float-right" title="Kubernetes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="local.html" class="btn btn-neutral" title="Working with Local Branches" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="local.html" class="btn btn-neutral float-left" title="Working with Local Branches" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -311,26 +313,16 @@ and not confused as a path.</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

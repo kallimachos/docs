@@ -19,13 +19,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
@@ -33,21 +40,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Python" href="../python/index.html" />
     <link rel="prev" title="OpenStack" href="index.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -176,29 +178,25 @@ openstack/releases <a class="reference external" href="https://github.com/openst
 <div class="section" id="triggering-a-release">
 <h2>Triggering a release<a class="headerlink" href="#triggering-a-release" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
-<li><p class="first">Clone the <a class="reference external" href="https://review.openstack.org/#/admin/projects/openstack/releases">openstack/release</a>
-repository and create a local working branch.</p>
-</li>
-<li><p class="first">Edit the YAML file for the repository you want to release:</p>
-<dl class="docutils">
-<dt>openstackdocstheme</dt>
-<dd><p class="first last"><code class="docutils literal notranslate"><span class="pre">deliverables/_independent/openstackdocstheme.yaml</span></code></p>
+<li><p>Clone the <a class="reference external" href="https://review.openstack.org/#/admin/projects/openstack/releases">openstack/release</a>
+repository and create a local working branch.</p></li>
+<li><p>Edit the YAML file for the repository you want to release:</p>
+<dl class="simple">
+<dt>openstackdocstheme</dt><dd><p><code class="docutils literal notranslate"><span class="pre">deliverables/_independent/openstackdocstheme.yaml</span></code></p>
 </dd>
-<dt>openstack-doc-tools</dt>
-<dd><p class="first last"><code class="docutils literal notranslate"><span class="pre">deliverables/_independent/openstack-doc-tools.yaml</span></code></p>
+<dt>openstack-doc-tools</dt><dd><p><code class="docutils literal notranslate"><span class="pre">deliverables/_independent/openstack-doc-tools.yaml</span></code></p>
 </dd>
-<dt>os-api-ref</dt>
-<dd><p class="first last"><code class="docutils literal notranslate"><span class="pre">deliverables/_independent/os-api-ref.yaml</span></code></p>
+<dt>os-api-ref</dt><dd><p><code class="docutils literal notranslate"><span class="pre">deliverables/_independent/os-api-ref.yaml</span></code></p>
 </dd>
 </dl>
 </li>
-<li><p class="first">Add an entry for the new release, using the previous release as a template.</p>
+<li><p>Add an entry for the new release, using the previous release as a template.</p>
 <ul class="simple">
-<li>Update the version number using <a class="reference external" href="http://semver.org/">semantic versioning</a>.</li>
-<li>Update the commit hash to the latest commit you want included in the
-release.</li>
-<li>Update the highlights field with important changes. If the release
-contains only minor fixes, you can remove the highlights entry.</li>
+<li><p>Update the version number using <a class="reference external" href="http://semver.org/">semantic versioning</a>.</p></li>
+<li><p>Update the commit hash to the latest commit you want included in the
+release.</p></li>
+<li><p>Update the highlights field with important changes. If the release
+contains only minor fixes, you can remove the highlights entry.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1.6.1</span>
@@ -210,13 +208,13 @@ contains only minor fixes, you can remove the highlights entry.</li>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Commit your changes, stating the package name release number in the commit
+<li><p>Commit your changes, stating the package name release number in the commit
 subject line:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git commit -a -m <span class="s1">&#39;Release openstackdocstheme 1.6.1&#39;</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Push your patch for review:</p>
+<li><p>Push your patch for review:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git review
 </pre></div>
 </div>
@@ -236,7 +234,7 @@ subject line:</p>
         <a href="../python/index.html" class="btn btn-neutral float-right" title="Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="OpenStack" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="OpenStack" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -262,26 +260,16 @@ subject line:</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

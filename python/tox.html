@@ -19,13 +19,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
@@ -33,21 +40,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Rackspace Public Cloud" href="../rax/index.html" />
     <link rel="prev" title="Python" href="index.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -169,21 +171,21 @@
 <p>Tips and tricks for using <a class="reference external" href="https://tox.readthedocs.io/en/latest/">tox</a>.</p>
 <div class="section" id="testing-in-development-packages">
 <h2>Testing in-development packages<a class="headerlink" href="#testing-in-development-packages" title="Permalink to this headline">#</a></h2>
-<p>Test local, in-development packages using tox’s <code class="docutils literal notranslate"><span class="pre">distshare</span></code> feature:</p>
+<p>Test local, in-development packages using tox's <code class="docutils literal notranslate"><span class="pre">distshare</span></code> feature:</p>
 <ol class="arabic">
-<li><p class="first">Run <code class="docutils literal notranslate"><span class="pre">tox</span></code> for the development package. Ensure sdist builds are enabled in
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">tox</span></code> for the development package. Ensure sdist builds are enabled in
 <strong>tox.ini</strong>:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">skipsdist</span> <span class="o">=</span> <span class="kc">False</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">skipsdist</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># skipdist = True</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># skipdist = True</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">The package’s sdist file is now available in <em>~/.tox/distshare/</em>. You can
+<li><p>The package's sdist file is now available in <em>~/.tox/distshare/</em>. You can
 use this file as a dependency by forcing two pip runs in <strong>tox.ini</strong>:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deps</span><span class="o">=</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deps</span><span class="o">=</span>
     <span class="p">{</span><span class="n">distshare</span><span class="p">}</span><span class="o">/</span><span class="n">packagename</span><span class="o">*.</span><span class="n">zip</span>
 <span class="n">commands</span><span class="o">=</span>
     <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">qr</span><span class="p">{</span><span class="n">toxinidir</span><span class="p">}</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
@@ -205,7 +207,7 @@ use this file as a dependency by forcing two pip runs in <strong>tox.ini</strong
         <a href="../rax/index.html" class="btn btn-neutral float-right" title="Rackspace Public Cloud" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -231,26 +233,16 @@ use this file as a dependency by forcing two pip runs in <strong>tox.ini</strong
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -19,13 +19,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
@@ -33,21 +40,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="OpenStack Summit Tokyo October 2015" href="OS_summit_Oct_2015.html" />
     <link rel="prev" title="OpenStack Event Logs" href="openstack.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -183,44 +185,44 @@
 <div class="section" id="openstack-infrastructure-management-with-manageiq-john-hardy-red-hat">
 <h3>OpenStack Infrastructure Management with ManageIQ - John Hardy (Red Hat)<a class="headerlink" href="#openstack-infrastructure-management-with-manageiq-john-hardy-red-hat" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li>apparently they have 5 docs writers and bundles of docs; John specifically
-called this out</li>
-<li>it would seem that having good docs in an upstream project is a selling point</li>
-<li>currently, ManageIQ is being used to migrate thousands of VMs from virtual
+<li><p>apparently they have 5 docs writers and bundles of docs; John specifically
+called this out</p></li>
+<li><p>it would seem that having good docs in an upstream project is a selling point</p></li>
+<li><p>currently, ManageIQ is being used to migrate thousands of VMs from virtual
 environments, e.g. VMware, to OpenStack environments in a batch processing
-mode</li>
-<li>Inventory is the key feature of ManageIQ, as it enables the admin to see into
+mode</p></li>
+<li><p>Inventory is the key feature of ManageIQ, as it enables the admin to see into
 every aspect of their infrastructure and control it based on a large number
-of different metrics</li>
+of different metrics</p></li>
 </ul>
 </div>
 <div class="section" id="openstack-docs-rst-conversion-lana-brindley-rackspace">
 <h3>OpenStack Docs RST Conversion - Lana Brindley (Rackspace)<a class="headerlink" href="#openstack-docs-rst-conversion-lana-brindley-rackspace" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li>UG SG will focus on converting the Cloud Admin Guide to RST</li>
-<li>in the meantime, the rest of the community will focus on converting the
-Install Guide</li>
-<li>the Install Guide will focus on the core components only</li>
-<li>should the upgrade stuff from the Ops Guide go into one of the Admin guides?</li>
-<li>perhaps our audience analysis should be published to the docs convention wiki
-(my thought)</li>
+<li><p>UG SG will focus on converting the Cloud Admin Guide to RST</p></li>
+<li><p>in the meantime, the rest of the community will focus on converting the
+Install Guide</p></li>
+<li><p>the Install Guide will focus on the core components only</p></li>
+<li><p>should the upgrade stuff from the Ops Guide go into one of the Admin guides?</p></li>
+<li><p>perhaps our audience analysis should be published to the docs convention wiki
+(my thought)</p></li>
 </ul>
 </div>
 <div class="section" id="openstack-ops-doc-work-session">
 <h3>OpenStack Ops Doc Work Session<a class="headerlink" href="#openstack-ops-doc-work-session" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li>use cases should guide our ops documentation</li>
-<li>still lots of confusion over what the roles are between operator,
-administrator, and user</li>
-<li>perhaps the distinction between operator and administrator is not real-world
-for many use cases</li>
-<li>Installation Guide is really an Installation Training Guide</li>
-<li>clarity over which guide contains which information</li>
-<li>prerequisites at start (to start this guide you should have done this, be
-familiar with this)</li>
-<li>next steps at end (see this guide for the next things you can do)</li>
-<li>describe the current book and the other books at the top of each book so
-people know where they are and if they are in the correct place</li>
+<li><p>use cases should guide our ops documentation</p></li>
+<li><p>still lots of confusion over what the roles are between operator,
+administrator, and user</p></li>
+<li><p>perhaps the distinction between operator and administrator is not real-world
+for many use cases</p></li>
+<li><p>Installation Guide is really an Installation Training Guide</p></li>
+<li><p>clarity over which guide contains which information</p></li>
+<li><p>prerequisites at start (to start this guide you should have done this, be
+familiar with this)</p></li>
+<li><p>next steps at end (see this guide for the next things you can do)</p></li>
+<li><p>describe the current book and the other books at the top of each book so
+people know where they are and if they are in the correct place</p></li>
 </ul>
 </div>
 </div>
@@ -229,82 +231,89 @@ people know where they are and if they are in the correct place</li>
 <div class="section" id="docs-api-working-session">
 <h3>Docs API Working Session<a class="headerlink" href="#docs-api-working-session" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li>currently in WADL, but this is not very good</li>
-<li>considering alternatives for conversion</li>
-<li>Swagger is open and useful, but development/support may not be mature</li>
-<li>RAML is in a decent place, but all the tools are proprietary</li>
+<li><p>currently in WADL, but this is not very good</p></li>
+<li><p>considering alternatives for conversion</p></li>
+<li><p>Swagger is open and useful, but development/support may not be mature</p></li>
+<li><p>RAML is in a decent place, but all the tools are proprietary</p></li>
 </ul>
 </div>
 <div class="section" id="docs-liberty-blueprint-working-session">
 <h3>Docs Liberty Blueprint Working Session<a class="headerlink" href="#docs-liberty-blueprint-working-session" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li>Networking Guide needs to get finished</li>
-<li>Anne things the Admin User Guide should disappear, with its content split
+<li><p>Networking Guide needs to get finished</p></li>
+<li><p>Anne things the Admin User Guide should disappear, with its content split
 between the Cloud Admin Guide and the End User Guide. Those two guide could
-then probably be renamed to just Admin Guide and User Guide.</li>
-<li>Lana wants to start closing old, irrelevant bugs. Basically she wants to
-clean up the backlog.</li>
+then probably be renamed to just Admin Guide and User Guide.</p></li>
+<li><p>Lana wants to start closing old, irrelevant bugs. Basically she wants to
+clean up the backlog.</p></li>
 </ul>
 </div>
 <div class="section" id="docs-team-structure-fishbowl-session">
 <h3>Docs Team Structure Fishbowl Session<a class="headerlink" href="#docs-team-structure-fishbowl-session" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li>lots of old, irrelevant bugs that need to be closed</li>
-<li>lots of assigned bugs that aren’t being worked on</li>
-<li>DocImpact is a problem<ul>
-<li>subscribe the person who submitted the code patch -&gt; automated?</li>
-<li>maybe get rid of DocImpact entirely?</li>
-<li>can we get the submitter to write the doc?</li>
-<li>no docs no merge?</li>
+<li><p>lots of old, irrelevant bugs that need to be closed</p></li>
+<li><p>lots of assigned bugs that aren't being worked on</p></li>
+<li><p>DocImpact is a problem</p>
+<ul>
+<li><p>subscribe the person who submitted the code patch -&gt; automated?</p></li>
+<li><p>maybe get rid of DocImpact entirely?</p></li>
+<li><p>can we get the submitter to write the doc?</p></li>
+<li><p>no docs no merge?</p></li>
 </ul>
 </li>
-<li>Reviewing<ul>
-<li>Review Guide should be better propagated</li>
-<li>perhaps add a section to the Review Guide telling first time committers
-what they can expect during reviews</li>
+<li><p>Reviewing</p>
+<ul>
+<li><p>Review Guide should be better propagated</p></li>
+<li><p>perhaps add a section to the Review Guide telling first time committers
+what they can expect during reviews</p></li>
 </ul>
 </li>
-<li>Edit How To and How To for First Timers -&gt; add in an example commit message,
+<li><p>Edit How To and How To for First Timers -&gt; add in an example commit message,
 tell them to join the <a class="reference external" href="http://docs.openstack.org/contributor-guide/quickstart.html">OpenStack Docs team</a>,
 put a link to the review guidelines at the top of the page, next to the How
-To links<ul>
-<li>Rewrite the documentation How To, resulting in a good, easy-to-read and
-working getting started guide (Note: Avoid duplication with infra-manual)</li>
+To links</p>
+<ul>
+<li><p>Rewrite the documentation How To, resulting in a good, easy-to-read and
+working getting started guide (Note: Avoid duplication with infra-manual)</p></li>
 </ul>
 </li>
-<li>Making core<ul>
-<li>how this happens needs some thought</li>
-<li>every 3 months based on numbers, but current core can nominate and vote on
-others with good reason</li>
-<li>it would be helpful if core were globally distributed and they were fully
-active</li>
+<li><p>Making core</p>
+<ul>
+<li><p>how this happens needs some thought</p></li>
+<li><p>every 3 months based on numbers, but current core can nominate and vote on
+others with good reason</p></li>
+<li><p>it would be helpful if core were globally distributed and they were fully
+active</p></li>
 </ul>
 </li>
-<li>New contributors<ul>
-<li>tutorial for contributing where writers can work in a sandbox = smaller
-repository to download, changes don’t matter</li>
-<li>make a 5 minute video</li>
+<li><p>New contributors</p>
+<ul>
+<li><p>tutorial for contributing where writers can work in a sandbox = smaller
+repository to download, changes don't matter</p></li>
+<li><p>make a 5 minute video</p></li>
 </ul>
 </li>
-<li>Encouraging technical content for specialty guides
-- each dev team should have a docs liaison</li>
+<li><p>Encouraging technical content for specialty guides
+- each dev team should have a docs liaison</p></li>
 </ul>
 </div>
 <div class="section" id="docs-information-architecture">
 <h3>Docs Information Architecture<a class="headerlink" href="#docs-information-architecture" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li>Audiences are not clear!</li>
-<li>Operations Guides<ul>
-<li>widely loved</li>
-<li>ToC works well</li>
-<li>slightly out of date</li>
-<li>not a reference, not comprehensive; this is a starting point for
-admins/operators</li>
+<li><p>Audiences are not clear!</p></li>
+<li><p>Operations Guides</p>
+<ul>
+<li><p>widely loved</p></li>
+<li><p>ToC works well</p></li>
+<li><p>slightly out of date</p></li>
+<li><p>not a reference, not comprehensive; this is a starting point for
+admins/operators</p></li>
 </ul>
 </li>
-<li>Arch Guide<ul>
-<li>needs heavy editing</li>
-<li>backwards/bottom-up - goes from heavy specific info to examples</li>
+<li><p>Arch Guide</p>
+<ul>
+<li><p>needs heavy editing</p></li>
+<li><p>backwards/bottom-up - goes from heavy specific info to examples</p></li>
 </ul>
 </li>
 </ul>
@@ -313,41 +322,43 @@ admins/operators</li>
 <div class="section" id="post-summit-tasks">
 <h2>Post-summit tasks<a class="headerlink" href="#post-summit-tasks" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li>Move Hot Guide from End User Guide to Heat repository</li>
-<li>Convert Cloud Admin Guide to RST</li>
-<li>Restructure Cloud Admin Guide, Admin User Guide, and End User Guide. End
-result should be an Admin Guide and a User Guide</li>
-<li>Upgrade material from the Ops Guide might fit better in the Admin guide</li>
-<li>Bug list curation</li>
-<li>Update review guide on wiki</li>
-<li>Update How To and How To for First Timers on wiki; make the latter a tutorial
-that works with a sandbox repository for trying out the tools<ul>
-<li>talk to Amanda about this, and run plans past Lana before making big
-changes</li>
-<li>include a section on Git rebasing</li>
-<li>instructions should tell us to clone from git.openstack.org or GitHub;
-right now it is inconsistent</li>
+<li><p>Move Hot Guide from End User Guide to Heat repository</p></li>
+<li><p>Convert Cloud Admin Guide to RST</p></li>
+<li><p>Restructure Cloud Admin Guide, Admin User Guide, and End User Guide. End
+result should be an Admin Guide and a User Guide</p></li>
+<li><p>Upgrade material from the Ops Guide might fit better in the Admin guide</p></li>
+<li><p>Bug list curation</p></li>
+<li><p>Update review guide on wiki</p></li>
+<li><p>Update How To and How To for First Timers on wiki; make the latter a tutorial
+that works with a sandbox repository for trying out the tools</p>
+<ul>
+<li><p>talk to Amanda about this, and run plans past Lana before making big
+changes</p></li>
+<li><p>include a section on Git rebasing</p></li>
+<li><p>instructions should tell us to clone from git.openstack.org or GitHub;
+right now it is inconsistent</p></li>
 </ul>
 </li>
-<li>For each book where it makes sense:<ul>
-<li>prerequisites at start (to start this guide you should have done this, be
-familiar with this)</li>
-<li>next steps at end (see this guide for the next things you can do)</li>
-<li>describe the current book and the other books at the top of each book so
-people know where they are and if they are in the correct place</li>
+<li><p>For each book where it makes sense:</p>
+<ul>
+<li><p>prerequisites at start (to start this guide you should have done this, be
+familiar with this)</p></li>
+<li><p>next steps at end (see this guide for the next things you can do)</p></li>
+<li><p>describe the current book and the other books at the top of each book so
+people know where they are and if they are in the correct place</p></li>
 </ul>
 </li>
-<li>Arch Guide needs IA and heavy editing; what can be done at the swarm and what
+<li><p>Arch Guide needs IA and heavy editing; what can be done at the swarm and what
 should be done beforehand?  Alex sent email to Shilah (Ops and Arch doc team
-lead) and Deon about IA before the swarm.</li>
+lead) and Deon about IA before the swarm.</p></li>
 </ul>
 </div>
 <div class="section" id="notes">
 <h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li>Russell Sim at Aptira for rendering RST</li>
-<li>Move Hot Guide from End User Guide to Heat repository</li>
-<li><a class="reference external" href="https://github.com/GaretJax/sphinx-autobuild">https://github.com/GaretJax/sphinx-autobuild</a></li>
+<li><p>Russell Sim at Aptira for rendering RST</p></li>
+<li><p>Move Hot Guide from End User Guide to Heat repository</p></li>
+<li><p><a class="reference external" href="https://github.com/GaretJax/sphinx-autobuild">https://github.com/GaretJax/sphinx-autobuild</a></p></li>
 </ul>
 </div>
 </div>
@@ -363,7 +374,7 @@ lead) and Deon about IA before the swarm.</li>
         <a href="OS_summit_Oct_2015.html" class="btn btn-neutral float-right" title="OpenStack Summit Tokyo October 2015" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="openstack.html" class="btn btn-neutral" title="OpenStack Event Logs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="openstack.html" class="btn btn-neutral float-left" title="OpenStack Event Logs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -389,26 +400,16 @@ lead) and Deon about IA before the swarm.</li>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

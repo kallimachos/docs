@@ -92,24 +92,24 @@ repositories on your local machine.</p>
 <strong>~/scripts/</strong></p>
 </li>
 <li><p class="first">Make the script executable:</p>
-<pre class="highlight"><style type="text/css">
+<div class="highlight-default notranslate"><div class="highlight"><pre><style type="text/css">
 span.prompt1:before {
   content: "$ ";
 }
 </style><span class="prompt1">chmod a+x myscript.sh</span>
-</pre></li>
+</pre></div></div></li>
 <li><p class="first">Open <strong>~/.bashrc</strong> and add an alias for the script:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">myscript</span><span class="o">=</span><span class="s1">&#39;~/scripts/myscript.sh&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">myscript</span><span class="o">=</span><span class="s1">&#39;~/scripts/myscript.sh&#39;</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Save the change, then reload the file for the current terminal
 session:</p>
-<pre class="highlight"><span class="prompt1"><span class="nb">source</span> ~/.bashrc</span>
-</pre></li>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1"><span class="nb">source</span> ~/.bashrc</span>
+</pre></div></div></li>
 <li><p class="first">Run the script by using the alias on the command line:</p>
-<pre class="highlight"><span class="prompt1">myscript</span>
-</pre></li>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">myscript</span>
+</pre></div></div></li>
 </ol>
 
 
@@ -140,7 +140,7 @@ Note that the output is the short (-s) version. No message means that
 the working directory is clean and you are on the master branch. If you receive
 a message, run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> on the indicated repository for full information.</p>
 <p>Example Output:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
 <span class="c1">## v10...origin/v10</span>
 <span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">release</span><span class="o">-</span><span class="n">notes</span>
 <span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">-</span><span class="n">guide</span>
@@ -164,7 +164,7 @@ a message, run <code class="docutils literal notranslate"><span class="pre">git<
 the local and remote branches, and indicates which branches you have
 checked out. Remove the <code class="docutils literal notranslate"><span class="pre">-a</span></code> option to view only local branches.</p>
 <p>Example Output:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
 <span class="o">*</span> <span class="n">master</span>
   <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="mf">1.0</span>
   <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="mf">1.1</span>
@@ -204,7 +204,7 @@ checked out. Remove the <code class="docutils literal notranslate"><span class="
       <p>This script runs <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> on all remote repositories. It is helpful
 for pulling down changes from all your remote repositories in one action.</p>
 <p>Example Output:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">administration</span><span class="o">-</span><span class="n">guide</span>
 <span class="n">Already</span> <span class="n">up</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">date</span><span class="o">.</span>
 
 <span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">release</span><span class="o">-</span><span class="n">notes</span>

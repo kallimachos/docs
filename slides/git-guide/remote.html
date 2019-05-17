@@ -77,7 +77,7 @@ URL: https://code.google.com/p/io-2012-slides
       <h1>Working with Remote Branches</h1>
     </hgroup>
     <article class="">
-      <table border="1" class="colwidths-given docutils">
+      <table border="1" class="colwidths-given docutils align-center">
 <colgroup>
 <col width="50%" />
 <col width="50%" />
@@ -88,7 +88,7 @@ URL: https://code.google.com/p/io-2012-slides
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>git checkout –track origin/<em>branch</em></td>
+<tr class="row-even"><td>git checkout --track origin/<em>branch</em></td>
 <td>creates and checks out a local tracking branch for the specified remote
 branch</td>
 </tr>
@@ -121,7 +121,7 @@ branch</td>
 <td>deletes the specified remote branch (note there is a space between
 <code class="docutils literal notranslate"><span class="pre">origin</span></code> and <code class="docutils literal notranslate"><span class="pre">:branch</span></code>)</td>
 </tr>
-<tr class="row-odd"><td>git reset –hard origin/<em>branch</em></td>
+<tr class="row-odd"><td>git reset --hard origin/<em>branch</em></td>
 <td>resets the checked-out local branch to the status of the specified
 remote branch; running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">origin</span></code> first is recommended</td>
 </tr>
@@ -139,19 +139,19 @@ remote branch; running <code class="docutils literal notranslate"><span class="p
     <article class="">
       <ol class="arabic">
 <li><p class="first">List the current configured remote repository for your fork:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
 <span class="n">origin</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">YOUR_FORK</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
 <span class="n">origin</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">YOUR_FORK</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Specify a new remote upstream repository that will be synced with the fork:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ORIGINAL_OWNER</span><span class="o">/</span><span class="n">ORIGINAL_REPOSITORY</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ORIGINAL_OWNER</span><span class="o">/</span><span class="n">ORIGINAL_REPOSITORY</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Verify the new upstream repository you’ve specified for your fork:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+<li><p class="first">Verify the new upstream repository you've specified for your fork:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
 <span class="n">origin</span>    <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">YOUR_FORK</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
 <span class="n">origin</span>    <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">YOUR_FORK</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
 <span class="n">upstream</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ORIGINAL_OWNER</span><span class="o">/</span><span class="n">ORIGINAL_REPOSITORY</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
@@ -170,8 +170,8 @@ remote branch; running <code class="docutils literal notranslate"><span class="p
       <h2>Adding commits to a pull request</h2>
     </hgroup>
     <article class="">
-      <p>Use the following formula to add commits to another person’s pull request:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;/&lt;</span><span class="n">repo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">local_branch_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">remote_branch_name</span><span class="o">&gt;</span>
+      <p>Use the following formula to add commits to another person's pull request:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;/&lt;</span><span class="n">repo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">local_branch_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">remote_branch_name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 
@@ -186,14 +186,14 @@ remote branch; running <code class="docutils literal notranslate"><span class="p
     <article class="">
       <p>To reset origin remote to upstream remote, run the following commands:</p>
 <blockquote>
-<div><pre class="highlight"><style type="text/css">
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><style type="text/css">
 span.prompt1:before {
   content: "$ ";
 }
 </style><span class="prompt1">git remote update</span>
 <span class="prompt1">git reset --hard upstream/master --</span>
 <span class="prompt1">git push origin +master</span>
-</pre></div></blockquote>
+</pre></div></div></div></blockquote>
 <p>The double hyphen ensures that <code class="docutils literal notranslate"><span class="pre">upstream/master</span></code> is considered as a revision
 and not confused as a path.</p>
 

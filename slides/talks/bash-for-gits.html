@@ -77,7 +77,7 @@ URL: https://code.google.com/p/io-2012-slides
       <h1>Bash for gits: A Bash scripting tutorial for Git users</h1>
     </hgroup>
     <article class="">
-      <div class="title-image figure">
+      <div class="title-image figure align-center">
 <img alt="../_images/bash-logo.png" src="../_images/bash-logo.png" />
 </div>
 
@@ -99,7 +99,7 @@ shell.</li>
 of how Bash scripting can help with your work flow.</li>
 </ul>
 <ul class="build simple">
-<li>Mac and Linux bash shells have a few minor differences; we’ll see
+<li>Mac and Linux bash shells have a few minor differences; we'll see
 some examples when we look at my <strong>.bashrc</strong> file.</li>
 </ul>
 <ul class="build simple">
@@ -238,7 +238,7 @@ Doing so is likely to cause frustrating errors that are difficult to debug.</p>
 the same commands multiple times.</li>
 </ul>
 <ul class="build simple">
-<li>Bash is Turing complete, but it isn’t really a general purpose programming
+<li>Bash is Turing complete, but it isn't really a general purpose programming
 language. If you start finding things getting complicated, it is probably
 time to consider a fully-featured language like Python.</li>
 </ul>
@@ -260,7 +260,7 @@ quicker and easier.</li>
       <p>As a very simple example, consider what is required to list the contents of
 a directory.</p>
 <p><strong>Bash</strong></p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls
 conf.py  git-guide  images  index.rst  Makefile
 </pre></div>
 </div>
@@ -268,7 +268,7 @@ conf.py  git-guide  images  index.rst  Makefile
 <div class="line"><br /></div>
 </div>
 <p><strong>Python</strong></p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ python3
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python3
 &gt;&gt;&gt; import os
 &gt;&gt;&gt; for file in os.listdir():
 ...     print(file, end=&quot;  &quot;)
@@ -290,7 +290,7 @@ service, then print the status of each monitor to the command line. While this
 could be achieved with Bash, it is easier to do with the syntax and libraries
 available in Python.</p>
 <p><strong>Python</strong></p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://api.uptimerobot.com/getMonitors?apikey=12345&#39;</span>
@@ -298,11 +298,11 @@ available in Python.</p>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="n">e</span><span class="p">)</span>
-    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="n">e</span><span class="p">)</span>
+    <span class="nb">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">monitor</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;monitors&#39;</span><span class="p">][</span><span class="s1">&#39;monitor&#39;</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">status_code</span><span class="p">[</span><span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]]</span> <span class="o">+</span> <span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;friendlyname&#39;</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">status_code</span><span class="p">[</span><span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]]</span> <span class="o">+</span> <span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;friendlyname&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 
@@ -347,7 +347,7 @@ for running the script.</li>
       <p><strong>Running the script</strong></p>
 <ol class="arabic">
 <li><p class="first">Make the script executable:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ chmod +x ~/scripts/bash/bump.sh
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ chmod +x ~/scripts/bash/bump.sh
 </pre></div>
 </div>
 </li>
@@ -359,7 +359,7 @@ for running the script.</li>
 </div>
 </li>
 <li><p class="first">Run from the command line when you are in an appropriate directory:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd docs-rpc
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd docs-rpc
 $ bump
 </pre></div>
 </div>
@@ -457,7 +457,7 @@ bash ~/scripts/bash/rackup.sh
     <article class="">
       <p><strong>repocheck.sh</strong> is one of the scripts I use most often. It runs
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> on all my repositories and tells me if I have uncommitted work
-or if I’m on a non-master branch. I always like to run this before running
+or if I'm on a non-master branch. I always like to run this before running
 update scripts to prevent merge problems.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">repos</span><span class="o">=(</span>openstack rpcdocs code code/python scripts<span class="o">)</span>
 
@@ -588,7 +588,7 @@ sed -i <span class="s1">&#39;s/ \#&lt;/ \&amp;lt\;/g&#39;</span> <span class="nv
       <ul>
 <li><p class="first">To execute commands in a series, separate with <code class="docutils literal notranslate"><span class="pre">;</span></code> or put each command
 on a newline.</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat temp.rst; ls
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat temp.rst; ls
 cat: temp.rst: No such file or directory
 conf.py  git-guide  images  index.rst  Makefile
 </pre></div>
@@ -597,13 +597,13 @@ conf.py  git-guide  images  index.rst  Makefile
 </ul>
 <ul class="build">
 <li><p class="first">Use <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> if you want the line to stop when a command fails.</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat temp.rst &amp;&amp; ls
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat temp.rst &amp;&amp; ls
 cat: temp.rst: No such file or directory
 </pre></div>
 </div>
 </li>
 <li><p class="first">Use <code class="docutils literal notranslate"><span class="pre">|</span></code> to pipe the output of one command to another command.</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls | wc
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls | wc
 12    12    105
 </pre></div>
 </div>
@@ -656,15 +656,15 @@ Test your script several times on dummy files before using in production.</p>
 <p>Be especially careful if you feel tempted to use the force; it leads to the
 dark side.</p>
 <p><strong>BAD</strong></p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">f</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">f</span>
 
 <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span>
 </pre></div>
 </div>
 <p>To some extent, the risks of running destructive commands are mitigated when
 working in Git repositories as you can almost always go back to a previous
-commit. You will be sad, however, if a day’s uncommitted work gets wiped out or
-you clobber someone else’s branch by force pushing to it.</p>
+commit. You will be sad, however, if a day's uncommitted work gets wiped out or
+you clobber someone else's branch by force pushing to it.</p>
 
 
 
@@ -679,7 +679,7 @@ you clobber someone else’s branch by force pushing to it.</p>
 honest though, I generally find it better to search for solutions to specific
 problems. No one is a Bash programmer by trade; it is something you use to get
 things done around your system.</p>
-<p>So Google, use Stack Overflow, and cannibalize other people’s work.</p>
+<p>So Google, use Stack Overflow, and cannibalize other people's work.</p>
 <p>For better of for worse, my bash scripts and <strong>.bashrc</strong> file are all on
 GitHub:</p>
 <ul class="simple">

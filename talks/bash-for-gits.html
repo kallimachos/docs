@@ -19,13 +19,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
@@ -33,21 +40,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Software Development for Technical Writing" href="code-for-writers.html" />
     <link rel="prev" title="Talks and presentations" href="index.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -190,35 +192,35 @@
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li>This tutorial assumes you are familiar with running commands in a Bash
-shell.</li>
+<li><p>This tutorial assumes you are familiar with running commands in a Bash
+shell.</p></li>
 </ul>
 <ul class="build simple">
-<li>It is not a systematic introduction, but is about giving you an idea
-of how Bash scripting can help with your work flow.</li>
+<li><p>It is not a systematic introduction, but is about giving you an idea
+of how Bash scripting can help with your work flow.</p></li>
 </ul>
 <ul class="build simple">
-<li>Mac and Linux bash shells have a few minor differences; we’ll see
-some examples when we look at my <strong>.bashrc</strong> file.</li>
+<li><p>Mac and Linux bash shells have a few minor differences; we'll see
+some examples when we look at my <strong>.bashrc</strong> file.</p></li>
 </ul>
 <ul class="build simple">
-<li>Windows 10 now supports Bash using a Linux subsystem, but it is not
+<li><p>Windows 10 now supports Bash using a Linux subsystem, but it is not
 built-in. Still, the concepts presented here apply to the Windows command
-line, even if the syntax does not.</li>
+line, even if the syntax does not.</p></li>
 </ul>
 </div>
 <div class="section" id="bashrc">
 <h2>.bashrc<a class="headerlink" href="#bashrc" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><strong>.bashrc</strong> is executed when you open a Bash terminal. It is useful for
-setting certain configuration options and creating aliases.</li>
+<li><p><strong>.bashrc</strong> is executed when you open a Bash terminal. It is useful for
+setting certain configuration options and creating aliases.</p></li>
 </ul>
 <ul class="build simple">
-<li>Usually located at <strong>~/.bashrc</strong>. If this file does not exist, you can
-create it.</li>
+<li><p>Usually located at <strong>~/.bashrc</strong>. If this file does not exist, you can
+create it.</p></li>
 </ul>
 <ul class="build">
-<li><p class="first">You may need to add the following code at the top of your
+<li><p>You may need to add the following code at the top of your
 <strong>~/.bash_profile</strong> in order to read <strong>.bashrc</strong>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get aliases and functions</span>
 <span class="k">if</span> <span class="o">[</span> -f ~/.bashrc <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
@@ -229,8 +231,8 @@ create it.</li>
 </li>
 </ul>
 <ul class="build simple">
-<li>If you make a change to <strong>.bashrc</strong>, you must either open a new terminal or
-run <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">.bashrc</span></code> in order for the changes to take effect.</li>
+<li><p>If you make a change to <strong>.bashrc</strong>, you must either open a new terminal or
+run <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">.bashrc</span></code> in order for the changes to take effect.</p></li>
 </ul>
 <p>In this example, we configure the prompt, add an application to the PATH, and
 create some aliases.</p>
@@ -286,8 +288,8 @@ convenient to give them aliases if you use them frequently.</p>
 </pre></div>
 </div>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Do not use an alias that is an existing command or reserved word (e.g.
+<p class="admonition-title">Warning</p>
+<p>Do not use an alias that is an existing command or reserved word (e.g.
 <code class="docutils literal notranslate"><span class="pre">sed</span></code>, <code class="docutils literal notranslate"><span class="pre">done</span></code>) unless you truly want to override their built-in use.
 Doing so is likely to cause frustrating errors that are difficult to debug.</p>
 </div>
@@ -295,18 +297,18 @@ Doing so is likely to cause frustrating errors that are difficult to debug.</p>
 <div class="section" id="scripting-with-bash">
 <h2>Scripting with Bash<a class="headerlink" href="#scripting-with-bash" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li>Scripts are good for stringing a series of commands together or repeating
-the same commands multiple times.</li>
+<li><p>Scripts are good for stringing a series of commands together or repeating
+the same commands multiple times.</p></li>
 </ul>
 <ul class="build simple">
-<li>Bash is Turing complete, but it isn’t really a general purpose programming
+<li><p>Bash is Turing complete, but it isn't really a general purpose programming
 language. If you start finding things getting complicated, it is probably
-time to consider a fully-featured language like Python.</li>
+time to consider a fully-featured language like Python.</p></li>
 </ul>
 <ul class="build simple">
-<li>Of course, you can write scripts in many high-level programming languages as
+<li><p>Of course, you can write scripts in many high-level programming languages as
 well. For automating tasks around your system, however, Bash is often
-quicker and easier.</li>
+quicker and easier.</p></li>
 </ul>
 </div>
 <div class="section" id="bash-python">
@@ -314,7 +316,7 @@ quicker and easier.</li>
 <p>As a very simple example, consider what is required to list the contents of
 a directory.</p>
 <p><strong>Bash</strong></p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls
 conf.py  git-guide  images  index.rst  Makefile
 </pre></div>
 </div>
@@ -322,7 +324,7 @@ conf.py  git-guide  images  index.rst  Makefile
 <div class="line"><br /></div>
 </div>
 <p><strong>Python</strong></p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ python3
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python3
 &gt;&gt;&gt; import os
 &gt;&gt;&gt; for file in os.listdir():
 ...     print(file, end=&quot;  &quot;)
@@ -337,7 +339,7 @@ service, then print the status of each monitor to the command line. While this
 could be achieved with Bash, it is easier to do with the syntax and libraries
 available in Python.</p>
 <p><strong>Python</strong></p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://api.uptimerobot.com/getMonitors?apikey=12345&#39;</span>
@@ -345,11 +347,11 @@ available in Python.</p>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="n">e</span><span class="p">)</span>
-    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="n">e</span><span class="p">)</span>
+    <span class="nb">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">monitor</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;monitors&#39;</span><span class="p">][</span><span class="s1">&#39;monitor&#39;</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">status_code</span><span class="p">[</span><span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]]</span> <span class="o">+</span> <span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;friendlyname&#39;</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">status_code</span><span class="p">[</span><span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]]</span> <span class="o">+</span> <span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;friendlyname&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -368,28 +370,28 @@ git push origin master
 </pre></div>
 </div>
 <ul class="build simple">
-<li><strong>file names</strong> - you to not have to use <strong>.sh</strong>, but extensions are
-helpful for minimizing confusion and easier globbing (<code class="docutils literal notranslate"><span class="pre">*.sh</span></code>).</li>
-<li><strong>shebang</strong> (<code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code>) - this line specifies the interpreter to use
-for running the script.</li>
-<li><code class="docutils literal notranslate"><span class="pre">#</span></code> - the hash symbol comments the text to its right.</li>
+<li><p><strong>file names</strong> - you to not have to use <strong>.sh</strong>, but extensions are
+helpful for minimizing confusion and easier globbing (<code class="docutils literal notranslate"><span class="pre">*.sh</span></code>).</p></li>
+<li><p><strong>shebang</strong> (<code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code>) - this line specifies the interpreter to use
+for running the script.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> - the hash symbol comments the text to its right.</p></li>
 </ul>
 <p><strong>Running the script</strong></p>
 <ol class="arabic">
-<li><p class="first">Make the script executable:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ chmod +x ~/scripts/bash/bump.sh
+<li><p>Make the script executable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ chmod +x ~/scripts/bash/bump.sh
 </pre></div>
 </div>
 </li>
 </ol>
 <ol class="build arabic" start="2">
-<li><p class="first">Alias in <strong>.bashrc</strong>:</p>
+<li><p>Alias in <strong>.bashrc</strong>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">bump</span><span class="o">=</span><span class="s1">&#39;~/scripts/bash/bump.sh&#39;</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Run from the command line when you are in an appropriate directory:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd docs-rpc
+<li><p>Run from the command line when you are in an appropriate directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd docs-rpc
 $ bump
 </pre></div>
 </div>
@@ -459,7 +461,7 @@ bash ~/scripts/bash/rackup.sh
 <h2>Checking the status of your repositories<a class="headerlink" href="#checking-the-status-of-your-repositories" title="Permalink to this headline">#</a></h2>
 <p><strong>repocheck.sh</strong> is one of the scripts I use most often. It runs
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> on all my repositories and tells me if I have uncommitted work
-or if I’m on a non-master branch. I always like to run this before running
+or if I'm on a non-master branch. I always like to run this before running
 update scripts to prevent merge problems.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">repos</span><span class="o">=(</span>openstack rpcdocs code code/python scripts<span class="o">)</span>
 
@@ -484,8 +486,8 @@ update scripts to prevent merge problems.</p>
 <strong>repocheck.sh</strong> first and asks for confirmation to continue. This is because
 it deletes uncommitted files.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Destructive. This script deletes uncommitted files.</p>
+<p class="admonition-title">Warning</p>
+<p>Destructive. This script deletes uncommitted files.</p>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash ~/scripts/bash/repocheck.sh
 <span class="nb">echo</span> -n <span class="s2">&quot;Proceed with git clean? (y/n): &quot;</span>
@@ -547,9 +549,9 @@ sed -i <span class="s1">&#39;s/ \#&lt;/ \&amp;lt\;/g&#39;</span> <span class="nv
 <div class="section" id="stringing-together-commands">
 <h2>Stringing together commands<a class="headerlink" href="#stringing-together-commands" title="Permalink to this headline">#</a></h2>
 <ul>
-<li><p class="first">To execute commands in a series, separate with <code class="docutils literal notranslate"><span class="pre">;</span></code> or put each command
+<li><p>To execute commands in a series, separate with <code class="docutils literal notranslate"><span class="pre">;</span></code> or put each command
 on a newline.</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat temp.rst; ls
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat temp.rst; ls
 cat: temp.rst: No such file or directory
 conf.py  git-guide  images  index.rst  Makefile
 </pre></div>
@@ -557,14 +559,14 @@ conf.py  git-guide  images  index.rst  Makefile
 </li>
 </ul>
 <ul class="build">
-<li><p class="first">Use <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> if you want the line to stop when a command fails.</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat temp.rst &amp;&amp; ls
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> if you want the line to stop when a command fails.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat temp.rst &amp;&amp; ls
 cat: temp.rst: No such file or directory
 </pre></div>
 </div>
 </li>
-<li><p class="first">Use <code class="docutils literal notranslate"><span class="pre">|</span></code> to pipe the output of one command to another command.</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls | wc
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">|</span></code> to pipe the output of one command to another command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls | wc
 12    12    105
 </pre></div>
 </div>
@@ -575,24 +577,24 @@ cat: temp.rst: No such file or directory
 <h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">#</a></h2>
 <p><strong>Exit on error</strong></p>
 <ul class="simple">
-<li>Add <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">-e</span></code> to the top of your script in order to exit immediately if a
-command exits with a non-zero status.</li>
-<li>Cancel using <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">+e</span></code>.</li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">-e</span></code> to the top of your script in order to exit immediately if a
+command exits with a non-zero status.</p></li>
+<li><p>Cancel using <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">+e</span></code>.</p></li>
 </ul>
 <p class="build"><strong>Debugging</strong></p>
 <ul class="build simple">
-<li>Add <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">-x</span></code> at the point you want to start debugging.</li>
-<li>Cancel using <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">+x</span></code>.</li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">-x</span></code> at the point you want to start debugging.</p></li>
+<li><p>Cancel using <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">+x</span></code>.</p></li>
 </ul>
 <p class="build"><strong>GitHub</strong></p>
 <ul class="build simple">
-<li>Keep your code in version control. It gives you practice and makes it
-easier to share your scripts between systems and with other people.</li>
+<li><p>Keep your code in version control. It gives you practice and makes it
+easier to share your scripts between systems and with other people.</p></li>
 </ul>
 <p class="build"><strong>Document</strong></p>
 <ul class="build simple">
-<li>Comment your scripts so you know what they do and how they work. Sharing
-is easier with documentation!</li>
+<li><p>Comment your scripts so you know what they do and how they work. Sharing
+is easier with documentation!</p></li>
 </ul>
 </div>
 <div class="section" id="warning">
@@ -603,15 +605,15 @@ Test your script several times on dummy files before using in production.</p>
 <p>Be especially careful if you feel tempted to use the force; it leads to the
 dark side.</p>
 <p><strong>BAD</strong></p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">f</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">f</span>
 
 <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span>
 </pre></div>
 </div>
 <p>To some extent, the risks of running destructive commands are mitigated when
 working in Git repositories as you can almost always go back to a previous
-commit. You will be sad, however, if a day’s uncommitted work gets wiped out or
-you clobber someone else’s branch by force pushing to it.</p>
+commit. You will be sad, however, if a day's uncommitted work gets wiped out or
+you clobber someone else's branch by force pushing to it.</p>
 </div>
 <div class="section" id="where-to-next">
 <h2>Where to next<a class="headerlink" href="#where-to-next" title="Permalink to this headline">#</a></h2>
@@ -619,11 +621,11 @@ you clobber someone else’s branch by force pushing to it.</p>
 honest though, I generally find it better to search for solutions to specific
 problems. No one is a Bash programmer by trade; it is something you use to get
 things done around your system.</p>
-<p>So Google, use Stack Overflow, and cannibalize other people’s work.</p>
+<p>So Google, use Stack Overflow, and cannibalize other people's work.</p>
 <p>For better of for worse, my bash scripts and <strong>.bashrc</strong> file are all on
 GitHub:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kallimachos/bash">https://github.com/kallimachos/bash</a></li>
+<li><p><a class="reference external" href="https://github.com/kallimachos/bash">https://github.com/kallimachos/bash</a></p></li>
 </ul>
 </div>
 <div class="section" id="congratulations">
@@ -643,7 +645,7 @@ GitHub:</p>
         <a href="code-for-writers.html" class="btn btn-neutral float-right" title="Software Development for Technical Writing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Talks and presentations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Talks and presentations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -669,26 +671,16 @@ GitHub:</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

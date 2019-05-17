@@ -19,13 +19,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
@@ -33,21 +40,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Talks and presentations" href="../talks/index.html" />
     <link rel="prev" title="Sphinx" href="index.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -168,22 +170,22 @@ cells not to wrap. This results in very wide tables with horizontal scroll
 bars.</p>
 <p>You can workaround this issue by defining a custom CCS override file.</p>
 <ol class="arabic">
-<li><p class="first">Change into your documentation directory. This is usually where
+<li><p>Change into your documentation directory. This is usually where
 the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> and <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> files are located:</p>
-<pre class="highlight"><style type="text/css">
+<div class="highlight-default notranslate"><div class="highlight"><pre><style type="text/css">
 span.prompt1:before {
   content: "$ ";
 }
 </style><span class="prompt1"><span class="nb">cd</span> doc</span>
-</pre></li>
-<li><p class="first">If it does not already exist, create a <code class="docutils literal notranslate"><span class="pre">_static</span></code> directory:</p>
-<pre class="highlight"><span class="prompt1">mkdir _static</span>
-</pre></li>
-<li><p class="first">Create a <code class="docutils literal notranslate"><span class="pre">theme_overrides.css</span></code> file in the <code class="docutils literal notranslate"><span class="pre">_static</span></code> directory:</p>
-<pre class="highlight"><span class="prompt1">touch _static/theme_overrides.css</span>
-</pre></li>
-<li><p class="first">Open the <code class="docutils literal notranslate"><span class="pre">theme_overrides.css</span></code> file and add the following CSS:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>/* override table width restrictions */
+</pre></div></div></li>
+<li><p>If it does not already exist, create a <code class="docutils literal notranslate"><span class="pre">_static</span></code> directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">mkdir _static</span>
+</pre></div></div></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">theme_overrides.css</span></code> file in the <code class="docutils literal notranslate"><span class="pre">_static</span></code> directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">touch _static/theme_overrides.css</span>
+</pre></div></div></li>
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">theme_overrides.css</span></code> file and add the following CSS:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/* override table width restrictions */
 @media screen and (min-width: 767px) {
 
    .wy-table-responsive table td {
@@ -199,8 +201,8 @@ span.prompt1:before {
 </pre></div>
 </div>
 </li>
-<li><p class="first">Open the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file and add the following configuration options:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file and add the following configuration options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
 
 <span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;css_files&#39;</span><span class="p">:</span> <span class="p">[</span>
@@ -210,9 +212,8 @@ span.prompt1:before {
 </pre></div>
 </div>
 </li>
-<li><p class="first">Build your documentation using Sphinx and check the tables; cells should
-now wrap correctly.</p>
-</li>
+<li><p>Build your documentation using Sphinx and check the tables; cells should
+now wrap correctly.</p></li>
 </ol>
 </div>
 
@@ -227,7 +228,7 @@ now wrap correctly.</p>
         <a href="../talks/index.html" class="btn btn-neutral float-right" title="Talks and presentations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -253,26 +254,16 @@ now wrap correctly.</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

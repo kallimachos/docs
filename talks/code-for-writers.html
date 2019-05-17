@@ -19,13 +19,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
@@ -33,21 +40,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Docs Down Under 2017" href="DDU-2017.html" />
     <link rel="prev" title="Bash for gits: A Bash scripting tutorial for Git users" href="bash-for-gits.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -94,7 +96,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Talks and presentations</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="bash-for-gits.html">Bash for gits: A Bash scripting tutorial for Git users</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Software Development for Technical Writing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#the-writer-s-guide-to-writing-code">The writer’s guide to writing code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-writer-s-guide-to-writing-code">The writer's guide to writing code</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#abstract">Abstract</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#notes">Notes</a></li>
 </ul>
@@ -173,7 +175,7 @@
   <div class="section" id="software-development-for-technical-writing">
 <h1>Software Development for Technical Writing<a class="headerlink" href="#software-development-for-technical-writing" title="Permalink to this headline">#</a></h1>
 <div class="section" id="the-writer-s-guide-to-writing-code">
-<h2>The writer’s guide to writing code<a class="headerlink" href="#the-writer-s-guide-to-writing-code" title="Permalink to this headline">#</a></h2>
+<h2>The writer's guide to writing code<a class="headerlink" href="#the-writer-s-guide-to-writing-code" title="Permalink to this headline">#</a></h2>
 <p>Some advice based on my experience as a tech writer with no software
 development training.</p>
 <div class="section" id="abstract">
@@ -188,59 +190,59 @@ development requirements and the needs of their users.</p>
 <div class="section" id="notes">
 <h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">#</a></h3>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">I am going to show some examples from my own code. Developers with
+<p class="admonition-title">Warning</p>
+<p>I am going to show some examples from my own code. Developers with
 delicate sensibilities should look away. At the same time, if you are an
 experienced developer, my examples might give you an idea of the kinds of
 things that writers find useful in their work.</p>
 </div>
 <ul class="simple">
-<li>Give it a go. Struggling to get things working is the best way to learn. It
-is empowering to solve your own problems with code, and writers don’t always
-have access to a developer.</li>
-<li>Do have some formal introduction to coding. Many free courses are available
-online that can get you far enough to start experimenting on your own.</li>
-<li>automating little things on your own system is a good place to start</li>
-<li>Coding knowledge is especially useful if you practice docs-as-code, but even
+<li><p>Give it a go. Struggling to get things working is the best way to learn. It
+is empowering to solve your own problems with code, and writers don't always
+have access to a developer.</p></li>
+<li><p>Do have some formal introduction to coding. Many free courses are available
+online that can get you far enough to start experimenting on your own.</p></li>
+<li><p>automating little things on your own system is a good place to start</p></li>
+<li><p>Coding knowledge is especially useful if you practice docs-as-code, but even
 if someone else runs your infrastructure, try to understand as much of it as
 you can. Knowledge is power and it is very useful if you can fix things when
-they break.</li>
-<li>I know I’m preaching to the choir, but document as you go and for a user that
-doesn’t know the work</li>
-<li>gather requirements before you begin</li>
-<li>think about how you want to organize scripts/code on your system; changing
-later is hard. But if you do need to change, go for it.</li>
-<li>work on a branch, not on production, and always be able to roll back</li>
-<li>code with reuse in mind and structure your work with an eye to future changes</li>
-<li>code consistently; look to upstream style guides (this applies to docs too;
-don’t waste time writing and maintaining an entire guide when you can
-adopt one and add your own bits to it)</li>
-<li>contribute upstream; avoid bespoke solutions when possible (don’t just help
-yourself, help everyone)</li>
-<li>get approval from TPB and consensus from your colleagues for changes that
+they break.</p></li>
+<li><p>I know I'm preaching to the choir, but document as you go and for a user that
+doesn't know the work</p></li>
+<li><p>gather requirements before you begin</p></li>
+<li><p>think about how you want to organize scripts/code on your system; changing
+later is hard. But if you do need to change, go for it.</p></li>
+<li><p>work on a branch, not on production, and always be able to roll back</p></li>
+<li><p>code with reuse in mind and structure your work with an eye to future changes</p></li>
+<li><p>code consistently; look to upstream style guides (this applies to docs too;
+don't waste time writing and maintaining an entire guide when you can
+adopt one and add your own bits to it)</p></li>
+<li><p>contribute upstream; avoid bespoke solutions when possible (don't just help
+yourself, help everyone)</p></li>
+<li><p>get approval from TPB and consensus from your colleagues for changes that
 affect work flow (e.g. adding a bolditalic feature is fine, you can advertise
 it after. Changing the structure of a repo or an html theme requires some
-warning.)</li>
-<li>Google, Stack Overflow, and docs are your friends. Plus, consuming tech docs
+warning.)</p></li>
+<li><p>Google, Stack Overflow, and docs are your friends. Plus, consuming tech docs
 improves your own writing no end. You might even find a new project to
-contribute to.</li>
-<li>simplify as much as possible: stick to one language, framework, CI/CD tool,
+contribute to.</p></li>
+<li><p>simplify as much as possible: stick to one language, framework, CI/CD tool,
 etc. Unless your company has mandated products that they buy for you, I
 strongly recommend free and open source software. Most documentation will
-come nowhere close to outgrowing free-tier tools.</li>
-<li>learn Bash scripting and understand how your version control system works;
+come nowhere close to outgrowing free-tier tools.</p></li>
+<li><p>learn Bash scripting and understand how your version control system works;
 run through some sample bash scripts that I use to automate simple repetitive
-things (e.g. up and repocheck)</li>
-<li>get a GitHub account</li>
-<li>learn how to run basic tests on your code (and for that matter, your docs).
+things (e.g. up and repocheck)</p></li>
+<li><p>get a GitHub account</p></li>
+<li><p>learn how to run basic tests on your code (and for that matter, your docs).
 Testing before deployment is very useful; try to enable local builds that are
-identical to CI builds.</li>
-<li>search for other solutions before you start coding; there’s a reasonable
+identical to CI builds.</p></li>
+<li><p>search for other solutions before you start coding; there's a reasonable
 chance someone else has had the same problem. Then borrow as much as you can;
-there’s no point reinventing the wheel. Look for ideas and solutions in
-established projects.</li>
-<li><a class="reference external" href="https://dev.to/edemkumodzi/why-i-became-a-software-engineer">https://dev.to/edemkumodzi/why-i-became-a-software-engineer</a></li>
-<li>Ask what your computer can do for you, not what you can do for your computer.</li>
+there's no point reinventing the wheel. Look for ideas and solutions in
+established projects.</p></li>
+<li><p><a class="reference external" href="https://dev.to/edemkumodzi/why-i-became-a-software-engineer">https://dev.to/edemkumodzi/why-i-became-a-software-engineer</a></p></li>
+<li><p>Ask what your computer can do for you, not what you can do for your computer.</p></li>
 </ul>
 </div>
 </div>
@@ -257,7 +259,7 @@ established projects.</li>
         <a href="DDU-2017.html" class="btn btn-neutral float-right" title="Docs Down Under 2017" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="bash-for-gits.html" class="btn btn-neutral" title="Bash for gits: A Bash scripting tutorial for Git users" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="bash-for-gits.html" class="btn btn-neutral float-left" title="Bash for gits: A Bash scripting tutorial for Git users" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -283,26 +285,16 @@ established projects.</li>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
