@@ -44,7 +44,7 @@ Configuring an upstream remote for a fork
 
    .. code::
 
-      git remote -v
+      $ git remote -v
       origin  git@github.com:YOUR_USERNAME/YOUR_FORK.git (fetch)
       origin  git@github.com:YOUR_USERNAME/YOUR_FORK.git (push)
 
@@ -52,17 +52,30 @@ Configuring an upstream remote for a fork
 
    .. code::
 
-      git remote add upstream git@github.com:ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+      $ git remote add upstream git@github.com:ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
 
 3. Verify the new upstream repository you've specified for your fork:
 
    .. code::
 
-      git remote -v
+      $ git remote -v
       origin    git@github.com:YOUR_USERNAME/YOUR_FORK.git (fetch)
       origin    git@github.com:YOUR_USERNAME/YOUR_FORK.git (push)
       upstream  git@github.com:ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
       upstream  git@github.com:ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
+
+
+Updating a fork from upstream
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+While on your master branch, use the following commands to update your remote fork from the remote
+upstream:
+
+   .. prompt:: bash
+
+      git fetch upstream
+      git merge upstream/master
+      git push origin master
 
 
 Adding commits to a pull request
@@ -70,9 +83,9 @@ Adding commits to a pull request
 
 Use the following formula to add commits to another person's pull request:
 
-.. code::
+   .. prompt:: bash
 
-   git push git@github.com:<user>/<repo> <local_branch_name>:<remote_branch_name>
+      git push git@github.com:<user>/<repo> <local_branch_name>:<remote_branch_name>
 
 
 Troubleshooting
