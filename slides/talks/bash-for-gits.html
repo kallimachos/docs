@@ -77,7 +77,7 @@ URL: https://code.google.com/p/io-2012-slides
       <h1>Bash for gits: A Bash scripting tutorial for Git users</h1>
     </hgroup>
     <article class="">
-      <div class="title-image figure align-center">
+      <div class="title-image figure align-default">
 <img alt="../_images/bash-logo.png" src="../_images/bash-logo.png" />
 </div>
 
@@ -298,11 +298,11 @@ available in Python.</p>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="n">e</span><span class="p">)</span>
-    <span class="nb">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="n">e</span><span class="p">)</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">monitor</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;monitors&#39;</span><span class="p">][</span><span class="s1">&#39;monitor&#39;</span><span class="p">]:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">status_code</span><span class="p">[</span><span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]]</span> <span class="o">+</span> <span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;friendlyname&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">status_code</span><span class="p">[</span><span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]]</span> <span class="o">+</span> <span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;friendlyname&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 

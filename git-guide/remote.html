@@ -93,6 +93,7 @@
 <li class="toctree-l2"><a class="reference internal" href="local.html">Working with Local Branches</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Working with Remote Branches</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#configuring-an-upstream-remote-for-a-fork">Configuring an upstream remote for a fork</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#updating-a-fork-from-upstream">Updating a fork from upstream</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#adding-commits-to-a-pull-request">Adding commits to a pull request</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
 </ul>
@@ -176,7 +177,7 @@
             
   <div class="section" id="working-with-remote-branches">
 <h1>Working with Remote Branches<a class="headerlink" href="#working-with-remote-branches" title="Permalink to this headline">#</a></h1>
-<table class="colwidths-given docutils align-center">
+<table class="colwidths-given docutils align-default">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -230,44 +231,54 @@ remote branch; running <code class="docutils literal notranslate"><span class="p
 <h2>Configuring an upstream remote for a fork<a class="headerlink" href="#configuring-an-upstream-remote-for-a-fork" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
 <li><p>List the current configured remote repository for your fork:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
-<span class="n">origin</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">YOUR_FORK</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
-<span class="n">origin</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">YOUR_FORK</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git remote -v
+origin  git@github.com:YOUR_USERNAME/YOUR_FORK.git (fetch)
+origin  git@github.com:YOUR_USERNAME/YOUR_FORK.git (push)
 </pre></div>
 </div>
 </li>
 <li><p>Specify a new remote upstream repository that will be synced with the fork:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ORIGINAL_OWNER</span><span class="o">/</span><span class="n">ORIGINAL_REPOSITORY</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git remote add upstream git@github.com:ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
 </pre></div>
 </div>
 </li>
 <li><p>Verify the new upstream repository you've specified for your fork:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
-<span class="n">origin</span>    <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">YOUR_FORK</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
-<span class="n">origin</span>    <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">YOUR_FORK</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
-<span class="n">upstream</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ORIGINAL_OWNER</span><span class="o">/</span><span class="n">ORIGINAL_REPOSITORY</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
-<span class="n">upstream</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ORIGINAL_OWNER</span><span class="o">/</span><span class="n">ORIGINAL_REPOSITORY</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git remote -v
+origin    git@github.com:YOUR_USERNAME/YOUR_FORK.git (fetch)
+origin    git@github.com:YOUR_USERNAME/YOUR_FORK.git (push)
+upstream  git@github.com:ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
+upstream  git@github.com:ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
 </pre></div>
 </div>
 </li>
 </ol>
 </div>
-<div class="section" id="adding-commits-to-a-pull-request">
-<h2>Adding commits to a pull request<a class="headerlink" href="#adding-commits-to-a-pull-request" title="Permalink to this headline">#</a></h2>
-<p>Use the following formula to add commits to another person's pull request:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;/&lt;</span><span class="n">repo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">local_branch_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">remote_branch_name</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
-<p>To reset origin remote to upstream remote, run the following commands:</p>
+<div class="section" id="updating-a-fork-from-upstream">
+<h2>Updating a fork from upstream<a class="headerlink" href="#updating-a-fork-from-upstream" title="Permalink to this headline">#</a></h2>
+<p>While on your master branch, use the following commands to update your remote fork from the remote
+upstream:</p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><style type="text/css">
 span.prompt1:before {
   content: "$ ";
 }
-</style><span class="prompt1">git remote update</span>
+</style><span class="prompt1">git fetch upstream</span>
+<span class="prompt1">git merge upstream/master</span>
+<span class="prompt1">git push origin master</span>
+</pre></div></div></div></blockquote>
+</div>
+<div class="section" id="adding-commits-to-a-pull-request">
+<h2>Adding commits to a pull request<a class="headerlink" href="#adding-commits-to-a-pull-request" title="Permalink to this headline">#</a></h2>
+<p>Use the following formula to add commits to another person's pull request:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">git push git@github.com:&lt;user&gt;/&lt;repo&gt; &lt;local_branch_name&gt;:&lt;remote_branch_name&gt;</span>
+</pre></div></div></div></blockquote>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
+<p>To reset origin remote to upstream remote, run the following commands:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">git remote update</span>
 <span class="prompt1">git reset --hard upstream/master --</span>
 <span class="prompt1">git push origin +master</span>
 </pre></div></div></div></blockquote>
