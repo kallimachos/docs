@@ -81,7 +81,10 @@ upstream:
 Adding commits to a pull request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use the following formula to add commits to another person's pull request:
+Use the following formula to add commits to another person's pull request. The other person must
+have `allow edits from maintainers
+<https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork>`__
+enabled for the branch.
 
    .. prompt:: bash
 

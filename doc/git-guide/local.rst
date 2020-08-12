@@ -48,6 +48,15 @@ Working with Local Branches
      - updates list of remote branches on the local machine
 
 
+List files in a commit
+----------------------
+
+To list the files changed in a commit without any other information:
+
+   .. prompt:: bash
+
+      git show --name-only <sha>
+
 .. spelling::
 
    untracked
