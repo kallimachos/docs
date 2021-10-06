@@ -8,3 +8,4 @@ A collection of documents dealing with various aspects of Python.
    :maxdepth: 2
 
    tox.rst
+   twine.rst
