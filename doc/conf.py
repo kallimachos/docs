@@ -26,7 +26,7 @@ if spelling is not None:
 source_suffix = '.rst'
 master_doc = 'index'
 project = 'Document Repository'
-copyright = '%s, Brian Moss' % datetime.now().year
+copyright = f"{datetime.now().year}, Brian Moss"
 exclude_patterns = ['_build', 'samples', 'README.rst', 'common/*']
 pygments_style = 'sphinx'
 if sphinx_rtd_theme:
