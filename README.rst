@@ -2,8 +2,8 @@
 Document repository
 ===================
 
-.. image:: https://travis-ci.org/kallimachos/docs.svg?branch=master
-   :target: https://travis-ci.org/kallimachos/docs
+.. image:: https://img.shields.io/github/deployments/kallimachos/chios/github-pages
+   :alt: GitHub-pages
 
 .. image:: http://img.shields.io/badge/license-GPL-blue.svg?style=flat
    :target: http://opensource.org/licenses/GPL-3.0
