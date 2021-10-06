@@ -1,8 +1,0 @@
-*.pyc
-.cache/
-.tox/
-__pycache__/
-MANIFEST
-.coverage
-_build/
-.DS_Store

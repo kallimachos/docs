@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tox &mdash; Document Repository  documentation</title>
+  <title>Twine &mdash; Document Repository  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
@@ -20,8 +20,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Twine" href="twine.html" />
-    <link rel="prev" title="Python" href="index.html" /> 
+    <link rel="next" title="Rackspace Public Cloud" href="../rax/index.html" />
+    <link rel="prev" title="Tox" href="tox.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,11 +45,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../git-guide/index.html">Git Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openstack/index.html">OpenStack</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Python</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Tox</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#testing-in-development-packages">Testing in-development packages</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="twine.html">Twine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tox.html">Tox</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Twine</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../rax/index.html">Rackspace Public Cloud</a></li>
@@ -72,9 +69,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html">Python</a> &raquo;</li>
-      <li>Tox</li>
+      <li>Twine</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/python/tox.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/python/twine.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -82,42 +79,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="tox">
-<h1>Tox<a class="headerlink" href="#tox" title="Permalink to this headline"></a></h1>
-<p>Tips and tricks for using <a class="reference external" href="https://tox.readthedocs.io/en/latest/">tox</a>.</p>
-<section id="testing-in-development-packages">
-<h2>Testing in-development packages<a class="headerlink" href="#testing-in-development-packages" title="Permalink to this headline"></a></h2>
-<p>Test local, in-development packages using tox's <code class="docutils literal notranslate"><span class="pre">distshare</span></code> feature:</p>
-<ol class="arabic">
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">tox</span></code> for the development package. Ensure sdist builds are enabled in
-<strong>tox.ini</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">skipsdist</span> <span class="o">=</span> <span class="kc">False</span>
-</pre></div>
-</div>
-<p>or</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># skipdist = True</span>
-</pre></div>
-</div>
-</li>
-<li><p>The package's sdist file is now available in <em>~/.tox/distshare/</em>. You can
-use this file as a dependency by forcing two pip runs in <strong>tox.ini</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deps</span><span class="o">=</span>
-    <span class="p">{</span><span class="n">distshare</span><span class="p">}</span><span class="o">/</span><span class="n">packagename</span><span class="o">*.</span><span class="n">zip</span>
-<span class="n">commands</span><span class="o">=</span>
-    <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">qr</span><span class="p">{</span><span class="n">toxinidir</span><span class="p">}</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
-</pre></div>
-</div>
-</li>
-</ol>
-</section>
-</section>
+  <section id="twine">
+<h1>Twine<a class="headerlink" href="#twine" title="Permalink to this headline"></a></h1>
+<p>Run the following commands to build a Python package and upload to <a class="reference external" href="https://pypi.org/">PyPI</a> with
+<a class="reference external" href="https://twine.readthedocs.io/en/latest/#">twine</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><style type="text/css">
+span.prompt1:before {
+  content: "$ ";
+}
+</style><span class="prompt1">python setup.py sdist bdist_wheel</span>
+<span class="prompt1">twine upload dist/*</span>
+</pre></div></div></section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="twine.html" class="btn btn-neutral float-right" title="Twine" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tox.html" class="btn btn-neutral float-left" title="Tox" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../rax/index.html" class="btn btn-neutral float-right" title="Rackspace Public Cloud" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

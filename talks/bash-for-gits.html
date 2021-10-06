@@ -1,74 +1,37 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bash for gits: A Bash scripting tutorial for Git users &mdash; Document Repository  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/red_square.ico"/>
-  
-  
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Software Development for Technical Writing" href="code-for-writers.html" />
     <link rel="prev" title="Talks and presentations" href="index.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Document Repository
-          
-
-          
-            
+            <a href="../index.html" class="icon icon-home"> Document Repository
             <img src="../_static/red_square.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -76,18 +39,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../events/index.html">Event Logs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../git-guide/index.html">Git Guide</a></li>
@@ -124,76 +76,36 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Document Repository</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">Talks and presentations</a> &raquo;</li>
-        
       <li>Bash for gits: A Bash scripting tutorial for Git users</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../_sources/talks/bash-for-gits.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="bash-for-gits-a-bash-scripting-tutorial-for-git-users">
-<h1>Bash for gits: A Bash scripting tutorial for Git users<a class="headerlink" href="#bash-for-gits-a-bash-scripting-tutorial-for-git-users" title="Permalink to this headline">#</a></h1>
+             
+  <section id="bash-for-gits-a-bash-scripting-tutorial-for-git-users">
+<h1>Bash for gits: A Bash scripting tutorial for Git users<a class="headerlink" href="#bash-for-gits-a-bash-scripting-tutorial-for-git-users" title="Permalink to this headline"></a></h1>
 <p><a class="reference external" href="http://kallimachos.github.io/docs/slides/talks/bash-for-gits.html#1">View slide presentation</a></p>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>This tutorial assumes you are familiar with running commands in a Bash
 shell.</p></li>
@@ -211,9 +123,9 @@ some examples when we look at my <strong>.bashrc</strong> file.</p></li>
 built-in. Still, the concepts presented here apply to the Windows command
 line, even if the syntax does not.</p></li>
 </ul>
-</div>
-<div class="section" id="bashrc">
-<h2>.bashrc<a class="headerlink" href="#bashrc" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="bashrc">
+<h2>.bashrc<a class="headerlink" href="#bashrc" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p><strong>.bashrc</strong> is executed when you open a Bash terminal. It is useful for
 setting certain configuration options and creating aliases.</p></li>
@@ -254,9 +166,9 @@ create some aliases.</p>
 <span class="nb">alias</span> <span class="nv">p</span><span class="o">=</span><span class="s1">&#39;python&#39;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="handling-different-operating-systems">
-<h2>Handling different operating systems<a class="headerlink" href="#handling-different-operating-systems" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="handling-different-operating-systems">
+<h2>Handling different operating systems<a class="headerlink" href="#handling-different-operating-systems" title="Permalink to this headline"></a></h2>
 <p>Because <strong>.bashrc</strong> is executed, it can include arbitrary code.</p>
 <p>In this example, an <code class="docutils literal notranslate"><span class="pre">if</span></code> clause is used to set aliases depending on the
 operating system.</p>
@@ -274,9 +186,9 @@ operating system.</p>
 <span class="k">fi</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="script-aliases">
-<h2>Script aliases<a class="headerlink" href="#script-aliases" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="script-aliases">
+<h2>Script aliases<a class="headerlink" href="#script-aliases" title="Permalink to this headline"></a></h2>
 <p>You can call your scripts directly from the command line, but it is much more
 convenient to give them aliases if you use them frequently.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># bash script aliases</span>
@@ -296,9 +208,9 @@ convenient to give them aliases if you use them frequently.</p>
 <code class="docutils literal notranslate"><span class="pre">sed</span></code>, <code class="docutils literal notranslate"><span class="pre">done</span></code>) unless you truly want to override their built-in use.
 Doing so is likely to cause frustrating errors that are difficult to debug.</p>
 </div>
-</div>
-<div class="section" id="scripting-with-bash">
-<h2>Scripting with Bash<a class="headerlink" href="#scripting-with-bash" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="scripting-with-bash">
+<h2>Scripting with Bash<a class="headerlink" href="#scripting-with-bash" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Scripts are good for stringing a series of commands together or repeating
 the same commands multiple times.</p></li>
@@ -313,9 +225,9 @@ time to consider a fully-featured language like Python.</p></li>
 well. For automating tasks around your system, however, Bash is often
 quicker and easier.</p></li>
 </ul>
-</div>
-<div class="section" id="bash-python">
-<h2>Bash &gt; Python<a class="headerlink" href="#bash-python" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="bash-python">
+<h2>Bash &gt; Python<a class="headerlink" href="#bash-python" title="Permalink to this headline"></a></h2>
 <p>As a very simple example, consider what is required to list the contents of
 a directory.</p>
 <p><strong>Bash</strong></p>
@@ -334,9 +246,9 @@ conf.py  git-guide  images  index.rst  Makefile
 conf.py  git-guide  images  index.rst  Makefile
 </pre></div>
 </div>
-</div>
-<div class="section" id="id1">
-<h2>Bash &lt; Python<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="id1">
+<h2>Bash &lt; Python<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
 <p>In this example, we fetch and parse some JSON from an online monitoring
 service, then print the status of each monitor to the command line. While this
 could be achieved with Bash, it is easier to do with the syntax and libraries
@@ -357,9 +269,9 @@ available in Python.</p>
     <span class="nb">print</span><span class="p">(</span><span class="n">status_code</span><span class="p">[</span><span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]]</span> <span class="o">+</span> <span class="n">monitor</span><span class="p">[</span><span class="s1">&#39;friendlyname&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="updating-master-in-a-single-repository">
-<h2>Updating master in a single repository<a class="headerlink" href="#updating-master-in-a-single-repository" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="updating-master-in-a-single-repository">
+<h2>Updating master in a single repository<a class="headerlink" href="#updating-master-in-a-single-repository" title="Permalink to this headline"></a></h2>
 <p><strong>bump.sh</strong> wraps the commands required to fetch from upstream, merge into
 master, then push to origin.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
@@ -400,9 +312,9 @@ $ bump
 </div>
 </li>
 </ol>
-</div>
-<div class="section" id="updating-stable-branches-in-a-single-repository">
-<h2>Updating stable branches in a single repository<a class="headerlink" href="#updating-stable-branches-in-a-single-repository" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="updating-stable-branches-in-a-single-repository">
+<h2>Updating stable branches in a single repository<a class="headerlink" href="#updating-stable-branches-in-a-single-repository" title="Permalink to this headline"></a></h2>
 <p><strong>stable.sh</strong> iterates through a list of branch names, merging upstream into
 each one and pushing them to origin.</p>
 <p>This script uses a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate through an array (i.e. list of
@@ -411,7 +323,7 @@ values).</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">branches</span><span class="o">=(</span>v10 v11 v12 v13<span class="o">)</span>
 
 <span class="nb">echo</span>
-<span class="k">for</span> item in <span class="si">${</span><span class="nv">branches</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
+<span class="k">for</span> item <span class="k">in</span> <span class="si">${</span><span class="nv">branches</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
     git checkout <span class="nv">$item</span>
     git fetch upstream
     git merge upstream/<span class="nv">$item</span>
@@ -422,12 +334,12 @@ git branch
 <span class="nb">echo</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="updating-multiple-repositories">
-<h2>Updating multiple repositories<a class="headerlink" href="#updating-multiple-repositories" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="updating-multiple-repositories">
+<h2>Updating multiple repositories<a class="headerlink" href="#updating-multiple-repositories" title="Permalink to this headline"></a></h2>
 <p><strong>rackup.sh</strong> iterates through repository-containing directories in a single
 directory and updates each one.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> dir in ~/rpcdocs/*<span class="p">;</span> <span class="k">do</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> dir <span class="k">in</span> ~/rpcdocs/*<span class="p">;</span> <span class="k">do</span>
     <span class="k">if</span> <span class="nb">test</span> -d <span class="nv">$dir</span> <span class="o">&amp;&amp;</span> <span class="nb">test</span> -e <span class="nv">$dir</span>/.git<span class="p">;</span> <span class="k">then</span>
         <span class="nb">cd</span> <span class="nv">$dir</span>
         git fetch upstream
@@ -437,9 +349,9 @@ directory and updates each one.</p>
 <span class="k">done</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="updating-multiple-directories-with-multiple-repositories">
-<h2>Updating multiple directories with multiple repositories<a class="headerlink" href="#updating-multiple-directories-with-multiple-repositories" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="updating-multiple-directories-with-multiple-repositories">
+<h2>Updating multiple directories with multiple repositories<a class="headerlink" href="#updating-multiple-directories-with-multiple-repositories" title="Permalink to this headline"></a></h2>
 <p><strong>up.sh</strong> iterates through multiple directories, each containing multiple
 repository-containing directories, and updates each one.</p>
 <p>Note how this script calls other scripts.</p>
@@ -459,18 +371,18 @@ bash ~/scripts/bash/rackup.sh
 <span class="nb">echo</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="checking-the-status-of-your-repositories">
-<h2>Checking the status of your repositories<a class="headerlink" href="#checking-the-status-of-your-repositories" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="checking-the-status-of-your-repositories">
+<h2>Checking the status of your repositories<a class="headerlink" href="#checking-the-status-of-your-repositories" title="Permalink to this headline"></a></h2>
 <p><strong>repocheck.sh</strong> is one of the scripts I use most often. It runs
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> on all my repositories and tells me if I have uncommitted work
 or if I'm on a non-master branch. I always like to run this before running
 update scripts to prevent merge problems.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">repos</span><span class="o">=(</span>openstack rpcdocs code code/python scripts<span class="o">)</span>
 
-<span class="k">for</span> item in <span class="si">${</span><span class="nv">repos</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
+<span class="k">for</span> item <span class="k">in</span> <span class="si">${</span><span class="nv">repos</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
     <span class="nv">root</span><span class="o">=</span>~/<span class="nv">$item</span>/*
-    <span class="k">for</span> dir in <span class="nv">$root</span><span class="p">;</span> <span class="k">do</span>
+    <span class="k">for</span> dir <span class="k">in</span> <span class="nv">$root</span><span class="p">;</span> <span class="k">do</span>
         <span class="k">if</span> <span class="nb">test</span> -d <span class="nv">$dir</span> <span class="o">&amp;&amp;</span> <span class="nb">test</span> -e <span class="nv">$dir</span>/.git<span class="p">;</span> <span class="k">then</span>
             <span class="nb">cd</span> <span class="nv">$dir</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$dir</span>
             <span class="nv">branch</span><span class="o">=</span><span class="k">$(</span>git status -s -b<span class="k">)</span>
@@ -482,9 +394,9 @@ update scripts to prevent merge problems.</p>
 <span class="k">done</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="cleaning-your-repositories">
-<h2>Cleaning your repositories<a class="headerlink" href="#cleaning-your-repositories" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="cleaning-your-repositories">
+<h2>Cleaning your repositories<a class="headerlink" href="#cleaning-your-repositories" title="Permalink to this headline"></a></h2>
 <p><strong>clean.sh</strong> performs a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clean</span></code> on all repositories. It runs
 <strong>repocheck.sh</strong> first and asks for confirmation to continue. This is because
 it deletes uncommitted files.</p>
@@ -504,9 +416,9 @@ it deletes uncommitted files.</p>
 
 <span class="nv">repos</span><span class="o">=(</span>openstack rpcdocs code code/python scripts<span class="o">)</span>
 
-<span class="k">for</span> item in <span class="si">${</span><span class="nv">repos</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
+<span class="k">for</span> item <span class="k">in</span> <span class="si">${</span><span class="nv">repos</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
     <span class="nv">root</span><span class="o">=</span>~/<span class="nv">$item</span>/*
-    <span class="k">for</span> dir in <span class="nv">$root</span><span class="p">;</span> <span class="k">do</span>
+    <span class="k">for</span> dir <span class="k">in</span> <span class="nv">$root</span><span class="p">;</span> <span class="k">do</span>
         <span class="nb">cd</span> <span class="nv">$dir</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$dir</span>
         git clean -xfd <span class="o">&amp;&amp;</span> git remote prune origin
     <span class="k">done</span>
@@ -514,9 +426,9 @@ it deletes uncommitted files.</p>
 <span class="nb">echo</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="scripting-other-things">
-<h2>Scripting other things<a class="headerlink" href="#scripting-other-things" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="scripting-other-things">
+<h2>Scripting other things<a class="headerlink" href="#scripting-other-things" title="Permalink to this headline"></a></h2>
 <p>Scripts can contain anything you can run from the command line, not just git
 commands. For example, this script uses <code class="docutils literal notranslate"><span class="pre">rsync</span></code> to backup a computer running
 Fedora:</p>
@@ -548,9 +460,9 @@ sed -i <span class="s1">&#39;s/ \&amp; / and /g&#39;</span> <span class="nv">$1<
 sed -i <span class="s1">&#39;s/ \#&lt;/ \&amp;lt\;/g&#39;</span> <span class="nv">$1</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="stringing-together-commands">
-<h2>Stringing together commands<a class="headerlink" href="#stringing-together-commands" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="stringing-together-commands">
+<h2>Stringing together commands<a class="headerlink" href="#stringing-together-commands" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>To execute commands in a series, separate with <code class="docutils literal notranslate"><span class="pre">;</span></code> or put each command
 on a newline.</p>
@@ -575,9 +487,9 @@ cat: temp.rst: No such file or directory
 </div>
 </li>
 </ul>
-</div>
-<div class="section" id="tips">
-<h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="tips">
+<h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline"></a></h2>
 <p><strong>Exit on error</strong></p>
 <ul class="simple">
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">-e</span></code> to the top of your script in order to exit immediately if a
@@ -599,9 +511,9 @@ easier to share your scripts between systems and with other people.</p></li>
 <li><p>Comment your scripts so you know what they do and how they work. Sharing
 is easier with documentation!</p></li>
 </ul>
-</div>
-<div class="section" id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="warning">
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline"></a></h2>
 <p><strong>Be very careful when scripting destructive commands.</strong> Iterating through
 directories and changing or deleting files is an easy way to cause problems.
 Test your script several times on dummy files before using in production.</p>
@@ -617,9 +529,9 @@ dark side.</p>
 working in Git repositories as you can almost always go back to a previous
 commit. You will be sad, however, if a day's uncommitted work gets wiped out or
 you clobber someone else's branch by force pushing to it.</p>
-</div>
-<div class="section" id="where-to-next">
-<h2>Where to next<a class="headerlink" href="#where-to-next" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="where-to-next">
+<h2>Where to next<a class="headerlink" href="#where-to-next" title="Permalink to this headline"></a></h2>
 <p>There are many online tutorials and old-school guides to using Bash. To be
 honest though, I generally find it better to search for solutions to specific
 problems. No one is a Bash programmer by trade; it is something you use to get
@@ -630,67 +542,42 @@ GitHub:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/kallimachos/bash">https://github.com/kallimachos/bash</a></p></li>
 </ul>
-</div>
-<div class="section" id="congratulations">
-<h2>Congratulations!<a class="headerlink" href="#congratulations" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="congratulations">
+<h2>Congratulations!<a class="headerlink" href="#congratulations" title="Permalink to this headline"></a></h2>
 <p>You now know enough to be dangerous. Go forth and iterate!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="code-for-writers.html" class="btn btn-neutral float-right" title="Software Development for Technical Writing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral float-left" title="Talks and presentations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Talks and presentations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="code-for-writers.html" class="btn btn-neutral float-right" title="Software Development for Technical Writing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        
-        &copy; Copyright 2020, Brian Moss
-
-    </p>
+    <p>&#169; Copyright 2021, Brian Moss.</p>
   </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
