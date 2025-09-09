@@ -60,3 +60,19 @@ To list the files changed in a commit without any other information:
 .. spelling::
 
    untracked
+
+
+Conventional commits
+--------------------
+
+- feat: A new feature
+- fix: A bug fix
+- docs: Documentation only changes
+- style: Code style changes (formatting, missing semicolons, and so on)
+- refactor: Code changes that neither fix a bug nor add a feature
+- perf: Performance improvements
+- test: Adding or correcting tests
+- build: Changes that affect the build system or external dependencies
+- ci: CI configuration or scripts
+- chore: Maintenance or non-production code changes
+- revert: Reverts a previous commit
