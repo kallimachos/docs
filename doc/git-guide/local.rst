@@ -65,6 +65,16 @@ To list the files changed in a commit without any other information:
 Conventional commits
 --------------------
 
+Examples:
+
+- feat: add user login functionality
+- fix(auth): handle expired tokens correctly
+- docs: update README installation instructions
+- refactor: simplify API response handling
+- chore(deps): update dependency versions
+
+Allowed types:
+
 - feat: A new feature
 - fix: A bug fix
 - docs: Documentation only changes
